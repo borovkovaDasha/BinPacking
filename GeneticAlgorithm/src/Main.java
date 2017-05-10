@@ -16,9 +16,9 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		//String fileName = "D:\\test.txt";
-		GeneticAlgorithm GA = new GeneticAlgorithm();
+		//GeneticAlgorithm GA = new GeneticAlgorithm();
 		//GA.writeFile();
-		GA.go();
+		//GA.go();
 		/*int[][]elements = GA.readFile(fileName);
 		List<Genome> population = GA.initializePopulation();
 		for (int i = 0; i < 10; i++)
@@ -26,8 +26,8 @@ public class Main {
 			System.out.println("h = " + population.get(i).hugeItems + "l = " + population.get(i).largeItems + "m = " + population.get(i).mediumItems + "s = " + population.get(i).smallItems + "r = " + population.get(i).remainingItems + "a = " + population.get(i).algorithmNumber);
 		}*/
 		//testWeka();
-		//MachineLearning ML = new MachineLearning();
-		//ML.start("C:\\data_for_binpacking\\10000test.txt");
+		MachineLearning ML = new MachineLearning();
+		ML.start("C:\\data_for_binpacking\\10000test.txt");
 		//ML.start("C:\\data_for_binpacking\\testxxx.txt");
 	}
 	

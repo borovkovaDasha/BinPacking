@@ -6,7 +6,7 @@ import java.util.List;
 public class Genome {
 	    //final String str;
 	    //final int fitness;
-	public static final int ALGORITHM_NUMBER = 7;
+	public static final int ALGORITHM_NUMBER = 8;
 	double hugeItems, largeItems, mediumItems, smallItems, remainingItems;
 	int algorithmNumber;
 

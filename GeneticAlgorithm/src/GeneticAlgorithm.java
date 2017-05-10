@@ -15,7 +15,7 @@ public class GeneticAlgorithm {
 	public static final int POPULATION_SIZE = 40;
 	//public static final int CHROMOSOME_SIZE = 40;
 	public static final int NUMBER_OF_TASKS = 4;
-	public static final int NUMBER_OF_GA_ITERATIONS = 10000;
+	public static final int NUMBER_OF_GA_ITERATIONS = 1000;
 	public static final String FILE_PATH = "C:\\data_for_binpacking\\result.txt";
 	public static final int NUMBER_OF_FILES = 73;
 	int size;
