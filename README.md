@@ -1,2 +1,2 @@
 # BinPacking
-This is repo for course workю
+This is repo for course work.
