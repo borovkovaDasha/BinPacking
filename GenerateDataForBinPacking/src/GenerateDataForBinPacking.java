@@ -16,9 +16,9 @@ public class GenerateDataForBinPacking {
 	
 	public static void writeFile() throws IOException
 	{
-		for (int i = 0; i < NUM_OF_FILES; i++)
+		for (int i = 1; i <= NUM_OF_FILES; i++)
 		{
-			String filename = FILE_PATH + Integer.toString(i);
+			String filename = FILE_PATH + Integer.toString(i) + ".txt";
 		    FileWriter writer = new FileWriter(filename); 
 			int itemsNum = (int)(Math.random() * (GAP_OF_BIN_SIZE)) + MIN_NUM_OF_ITEMS;
 			int binSize = (int)(Math.random() * (GAP_OF_BIN_SIZE)) +  MIN_NUM_OF_BIN_SIZE;
@@ -31,6 +31,7 @@ public class GenerateDataForBinPacking {
 			{
 				s = "";
 				int newItem = (int)(Math.random() * (binSize)) + 1;
+				s = Integer.toString(newItem) + "\n";
 			    writer.write(s); 
 			}
 		    writer.flush();
