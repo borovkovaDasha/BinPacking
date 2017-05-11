@@ -2,13 +2,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Chromosome {
-	public int CHROMOSOME_SIZE = 40;
-	double fitness;
+	public int CHROMOSOME_SIZE = 16;
+	double fitness = 0;
+	double fitnessSum = 0;
 	
 	public List<Genome> chromosome;
+	public double years;
 	
 	public Chromosome(int flag)
 	{
+		years = 0;
 		//List<Genome> 
 		if (flag == 1)
 		{
@@ -31,10 +34,10 @@ public class Chromosome {
 		}
 	}
 	
-	public double solveProblem(int[][] elements, int size) //List<Genome> chromosome, int size)
+	public double solveProblem(int[][] elements, int size, int alg) //List<Genome> chromosome, int size)
 	{
 		int[] bins = new int[elements.length];
-		
+		years = years + 1;
 		//create array of baskets
 		for (int i = 0; i < bins.length; i++)
 		{
@@ -50,7 +53,10 @@ public class Chromosome {
 			{
 				break;
 			}
-			int alg = findCloser(state);//chromosome, state);
+			if (alg == 0)
+			{
+				alg = findCloser(state);//chromosome, state);
+			}
 			//System.out.println("findCloser " + alg);
 			//alg = 7;
 			switch (alg) {
@@ -96,7 +102,8 @@ public class Chromosome {
 		//System.out.println("numberOfBins = " + numberOfBins);
 		//return fitness;
 		System.out.println("numberOfBins = " + numberOfBins);
-		fitness = numberOfBins/elements.length;
+		fitnessSum = fitnessSum + numberOfBins/elements.length;
+		fitness = fitnessSum/years;
 		if (numberOfBins < 50)
 		{
 			System.out.println("!!! stop ");

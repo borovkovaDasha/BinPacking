@@ -90,7 +90,7 @@ public class DjangAndFinchFilter {
 		
 		for (int i = 0; i < a.length; i++)
 		{
-			if ((a[i][1] != 1) && (size - a[i][0] >= 0))
+			if ((size - a[i][0] >= 0))
 			{
 				//System.out.println("Element " + a[i][0] + " is also packed ");
 				size -= a[i][0];
@@ -110,7 +110,7 @@ public class DjangAndFinchFilter {
 			for (int i = a.length - 1; i >= 0; i--)
 			{
 				//System.out.println("pack 1");
-				if ((a[i][1] == 0) && (size - j - a[i][0] < 0))
+				if ((size - j - a[i][0] < 0))
 				{
 					//System.out.println("stop 1 pack: el - " + a[i][0]);
 					break;
