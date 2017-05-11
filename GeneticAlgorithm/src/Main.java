@@ -15,12 +15,12 @@ import java.util.ArrayList;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		//GeneticAlgorithm GA = new GeneticAlgorithm();
-		//GA.go();
+		GeneticAlgorithm GA = new GeneticAlgorithm();
+		GA.go();
 		//MachineLearning ML = new MachineLearning();
 		//ML.start("C:\\data_for_binpacking\\10000test.txt");
-		TestChromosome TC = new TestChromosome();
-		TC.start();
+		//TestChromosome TC = new TestChromosome();
+		//TC.start();
 	}
 }
 

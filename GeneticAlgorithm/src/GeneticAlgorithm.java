@@ -15,12 +15,12 @@ public class GeneticAlgorithm {
 	public static final int POPULATION_SIZE = 40;
 	//public static final int CHROMOSOME_SIZE = 40;
 	public static final int NUMBER_OF_TASKS = 4;
-	public static final int NUMBER_OF_GA_ITERATIONS = 5;
+	public static final int NUMBER_OF_GA_ITERATIONS = 500;
 	public static final String FILE_PATH = "C:\\data_for_binpacking\\result.txt";
 	public static final int NUMBER_OF_FILES = 750;
 	public static final String DATA_PATH = "C:\\data_for_binpacking\\new_data\\";
 	
-	public static int size;
+	public int size;
 	List<Chromosome> population;
 	List<Chromosome> childrens;
 	
@@ -269,7 +269,7 @@ public class GeneticAlgorithm {
 	}
 	
 	public void initializePopulation(){
-		String fileName = "C:\\data_for_binpacking\\new_data\\5.txt";
+		String fileName = "C:\\data_for_binpacking\\new_data\\1.txt";
 		//String fileName = "D:\\test.txt";
 		int[][]elements = readFile(fileName);
 		population = new ArrayList<Chromosome>();
