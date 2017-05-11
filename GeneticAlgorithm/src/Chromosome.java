@@ -3,11 +3,11 @@ import java.util.List;
 
 public class Chromosome {
 	public int CHROMOSOME_SIZE = 16;
-	double fitness = 0;
-	double fitnessSum = 0;
+	public static double fitness = 0;
+	public static double fitnessSum = 0;
 	
 	public List<Genome> chromosome;
-	public double years;
+	public static double years;
 	
 	public Chromosome(int flag)
 	{

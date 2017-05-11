@@ -24,8 +24,13 @@ public class TestChromosome {
 			for (int j = 0; j <= ALGORITHM_NUMBER; j++)
 			{
 				System.out.println("algorithm " + j);
-				cleverchromosome.solveProblem(elements, GA.size, j);
+				System.out.println("GA.size " + GA.size);
+				//cleverchromosome.solveProblem(elements, GA.size, j);
 				writeFile(elements.length, cleverchromosome.solveProblem(elements, GA.size, j), j);
+				for (int k = 0; k < elements.length; k++)
+				{
+					elements[k][1] = 0;
+				}
 			}			
 		}
 	    writer.flush();

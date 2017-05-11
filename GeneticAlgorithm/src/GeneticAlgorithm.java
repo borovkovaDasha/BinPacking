@@ -20,7 +20,7 @@ public class GeneticAlgorithm {
 	public static final int NUMBER_OF_FILES = 750;
 	public static final String DATA_PATH = "C:\\data_for_binpacking\\new_data\\";
 	
-	int size;
+	public static int size;
 	List<Chromosome> population;
 	List<Chromosome> childrens;
 	
