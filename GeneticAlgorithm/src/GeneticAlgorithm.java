@@ -15,7 +15,7 @@ public class GeneticAlgorithm {
 	public static final int POPULATION_SIZE = 40;
 	//public static final int CHROMOSOME_SIZE = 40;
 	public static final int NUMBER_OF_TASKS = 4;
-	public static final int NUMBER_OF_GA_ITERATIONS = 500;
+	public static final int NUMBER_OF_GA_ITERATIONS = 100;
 	public static final String FILE_PATH = "C:\\data_for_binpacking\\result.txt";
 	public static final int NUMBER_OF_FILES = 750;
 	public static final String DATA_PATH = "C:\\data_for_binpacking\\new_data\\";
@@ -269,7 +269,10 @@ public class GeneticAlgorithm {
 	}
 	
 	public void initializePopulation(){
-		String fileName = "C:\\data_for_binpacking\\new_data\\1.txt";
+		//String fileName = "C:\\data_for_binpacking\\new_data\\1.txt";
+		int xxx = (int)(Math.random() * NUMBER_OF_FILES);
+		String fileName = DATA_PATH + (xxx+1) + ".txt";
+		System.out.println(fileName);
 		//String fileName = "D:\\test.txt";
 		int[][]elements = readFile(fileName);
 		population = new ArrayList<Chromosome>();
@@ -316,7 +319,9 @@ public class GeneticAlgorithm {
         {
         	if ((div + i >= children1.chromosome.size()) && (div + i >= parent2.chromosome.size()))
         	{
-        		//System.out.println("1 ");
+        		System.out.println("children1.chromosome.size() " + children1.chromosome.size());
+        		System.out.println("parent2.chromosome.size() " + parent2.chromosome.size());
+        		System.out.println("div + i " + div + " " + i);
         		children1.chromosome.set((div + i) - children1.chromosome.size(), parent2.chromosome.get((div + i) - parent2.chromosome.size()));
         	}
         	else if (div + i >= children1.chromosome.size())

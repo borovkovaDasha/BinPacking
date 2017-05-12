@@ -44,13 +44,15 @@ public class Chromosome {
 			bins[i] = size;
 		}
 		elements = sort(elements);
+		int flag = 0;
 		//System.out.println("elements.length " + elements.length);
 		int currentBin = 0;
-		for (int i = 0; i < elements.length; i++)
+		for (int i = 0; i < elements.length && flag == 0; i++)
 		{
 			Genome state = getCurrentState(elements, size);
 			if (state.remainingItems == 0)
 			{
+				flag = 1;
 				break;
 			}
 			if (alg == 0)
