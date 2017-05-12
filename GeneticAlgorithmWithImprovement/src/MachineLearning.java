@@ -143,7 +143,7 @@ public class MachineLearning {
 			//targetReader.close();
 			//System.out.println("findCloser " + alg);
 			//System.out.println("findCloser " + alg);
-			//alg = 5;
+			//alg = 1;
 			switch (String.valueOf(alg)) {
 				case "1":  LargestFitDecreasing LFD = new LargestFitDecreasing();
 				currentBin = LFD.startPacking(elements, bins, size);

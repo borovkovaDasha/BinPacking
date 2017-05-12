@@ -2,14 +2,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Chromosome {
-	public int CHROMOSOME_SIZE = 40;
-	double fitness;
+	public int CHROMOSOME_SIZE = 16;
+	public double fitness = 0;
+	public double fitnessSum = 0;
 	
 	public List<Genome> chromosome;
+	public double years;
 	
 	public Chromosome(int flag)
 	{
-		//List<Genome> 
+		years = 0;
+		
 		if (flag == 1)
 		{
 			chromosome = new ArrayList<Genome>();
@@ -18,11 +21,6 @@ public class Chromosome {
 				Genome genome = new Genome(1);
 				chromosome.add(genome);
 			}
-			/*for (int i = 0; i < CHROMOSOME_SIZE; i++)
-			{
-				//System.out.println("h = " + chromosome.get(i).hugeItems + " l = " + chromosome.get(i).largeItems + " m = " + chromosome.get(i).mediumItems + " s = " + chromosome.get(i).smallItems + " r = " + chromosome.get(i).remainingItems + " a = " + chromosome.get(i).algorithmNumber);
-			}
-			return;*/
 		}
 		else 
 		{
@@ -31,26 +29,33 @@ public class Chromosome {
 		}
 	}
 	
-	public double solveProblem(int[][] elements, int size) //List<Genome> chromosome, int size)
+	public double solveProblem(int[][] elements, int size, int alg) //List<Genome> chromosome, int size)
 	{
 		int[] bins = new int[elements.length];
-		
+		years = years + 1;
+		int prevAlgorithm = (int)(Math.random()*8) + 1;
 		//create array of baskets
 		for (int i = 0; i < bins.length; i++)
 		{
 			bins[i] = size;
 		}
 		elements = sort(elements);
+		int flag = 0;
 		//System.out.println("elements.length " + elements.length);
 		int currentBin = 0;
-		for (int i = 0; i < elements.length; i++)
+		for (int i = 0; i < elements.length && flag == 0; i++)
 		{
-			Genome state = getCurrentState(elements, size);
+			Genome state = getCurrentState(elements, size, prevAlgorithm);
 			if (state.remainingItems == 0)
 			{
+				flag = 1;
 				break;
 			}
-			int alg = findCloser(state);//chromosome, state);
+			if (alg == 0)
+			{
+				alg = findCloser(state);
+			}
+			prevAlgorithm = alg;
 			//System.out.println("findCloser " + alg);
 			//alg = 7;
 			switch (alg) {
@@ -96,7 +101,8 @@ public class Chromosome {
 		//System.out.println("numberOfBins = " + numberOfBins);
 		//return fitness;
 		System.out.println("numberOfBins = " + numberOfBins);
-		fitness = numberOfBins/elements.length;
+		fitnessSum = fitnessSum + numberOfBins/elements.length;
+		fitness = fitnessSum/years;
 		if (numberOfBins < 50)
 		{
 			System.out.println("!!! stop ");
@@ -111,73 +117,74 @@ public class Chromosome {
 		for (int i = 0; i < chromosome.size(); i++)
 		{
 			Genome tmp = chromosome.get(i);
-			////System.out.println("distance " + Math.sqrt(Math.pow(tmp.hugeItems-gen.hugeItems,2) + Math.pow(tmp.largeItems-gen.largeItems,2)
+			//System.out.println("distance " + Math.sqrt(Math.pow(tmp.hugeItems-gen.hugeItems,2) + Math.pow(tmp.largeItems-gen.largeItems,2)
 			//+ Math.pow(tmp.smallItems-gen.smallItems,2) + Math.pow(tmp.remainingItems-gen.remainingItems,2)));
 			if(Math.sqrt(Math.pow(tmp.hugeItems-gen.hugeItems,2) + Math.pow(tmp.largeItems-gen.largeItems,2)
-			+ Math.pow(tmp.smallItems-gen.smallItems,2) + Math.pow(tmp.remainingItems-gen.remainingItems,2)) < tmpres)
+			+ Math.pow(tmp.smallItems-gen.smallItems,2) + Math.pow(tmp.remainingItems-gen.remainingItems,2) + Math.pow(tmp.prevAlgorithm-gen.prevAlgorithm,2)) < tmpres)
 			{
 				algorithm = tmp.algorithmNumber;
 				////System.out.println("new closet algorithm is " + algorithm);
 				tmpres = Math.sqrt(Math.pow(tmp.hugeItems-gen.hugeItems,2) + Math.pow(tmp.largeItems-gen.largeItems,2)
-				+ Math.pow(tmp.smallItems-gen.smallItems,2) + Math.pow(tmp.remainingItems-gen.remainingItems,2));
+				+ Math.pow(tmp.smallItems-gen.smallItems,2) + Math.pow(tmp.remainingItems-gen.remainingItems,2) + Math.pow(tmp.prevAlgorithm-gen.prevAlgorithm,2));
 			}
 		}
-		////System.out.println("the closet algorithm is " + algorithm);
+		//System.out.println("the closet algorithm is " + algorithm);
 		return algorithm;
 	}
 	
-	public Genome getCurrentState(int[][]a, int size){
+	public Genome getCurrentState(int[][]a, int size, int prevAlgorithm){
 		Genome gen = new Genome(0);
-		 for (int i = 0; i < a.length; i++)
-	        {
-	        	if (a[i][0] > size/2)
-	        	{
-	        		////System.out.println("huge");
-	        		gen.hugeItems++;
-	        	}
-	        	else if (a[i][0] > size/3)
-	        	{
-	        		////System.out.println("large");
-	        		gen.largeItems++;
-	        	}
-	        	else if (a[i][0] > size/4)
-	        	{
-	        		////System.out.println("medium");
-	        		gen.mediumItems++;
-	        	}
-	        	else
-	        	{
-	        		////System.out.println("small");
-	        		gen.smallItems++;
-	        	}
-	        	if (a[i][1] != 1)
-	        	{
-	        		////System.out.println("remaining");
-	        		gen.remainingItems++;
-	        	}
-	        }
-		 if (gen.hugeItems != 0) 
-		 {
-			 gen.hugeItems = gen.hugeItems/a.length;
-		 }
-		 if (gen.largeItems != 0)
-		 {
-			 gen.largeItems = gen.largeItems/a.length;
-		 }
-		 if (gen.mediumItems != 0)
-		 {
-			 gen.mediumItems = gen.mediumItems/a.length;
-		 }
-		 if (gen.smallItems != 0)
-		 {
-			 gen.smallItems = gen.smallItems/a.length;
-		 }
-		 if (gen.remainingItems != 0)
-		 {
-			 gen.remainingItems = gen.remainingItems/a.length;
-		 }
-		 ////System.out.println("current state: h " + gen.hugeItems + " l " + gen.largeItems + " m " + gen.mediumItems + " s " + gen.smallItems + " r " + gen.remainingItems);
-		 return gen;
+		for (int i = 0; i < a.length; i++)
+		{
+			if (a[i][0] > size/2)
+			{
+				////System.out.println("huge");
+				gen.hugeItems++;
+			}
+			else if (a[i][0] > size/3)
+			{
+				////System.out.println("large");
+				gen.largeItems++;
+			}
+			else if (a[i][0] > size/4)
+			{
+				////System.out.println("medium");
+				gen.mediumItems++;
+			}
+			else
+			{
+				////System.out.println("small");
+				gen.smallItems++;
+			}
+			if (a[i][1] != 1)
+			{
+				////System.out.println("remaining");
+				gen.remainingItems++;
+			}
+		}
+		if (gen.hugeItems != 0) 
+		{
+			gen.hugeItems = gen.hugeItems/a.length;
+		}
+		if (gen.largeItems != 0)
+		{
+			gen.largeItems = gen.largeItems/a.length;
+		}
+		if (gen.mediumItems != 0)
+		{
+			gen.mediumItems = gen.mediumItems/a.length;
+		}
+		if (gen.smallItems != 0)
+		{
+			gen.smallItems = gen.smallItems/a.length;
+		}
+		if (gen.remainingItems != 0)
+		{
+			gen.remainingItems = gen.remainingItems/a.length;
+		}
+		////System.out.println("current state: h " + gen.hugeItems + " l " + gen.largeItems + " m " + gen.mediumItems + " s " + gen.smallItems + " r " + gen.remainingItems);
+		gen.prevAlgorithm = prevAlgorithm;
+		return gen;
 	}
 	static int[][] sort(int[][] sequence)
 	{
