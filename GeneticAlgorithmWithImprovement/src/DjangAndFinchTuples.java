@@ -93,7 +93,7 @@ public class DjangAndFinchTuples {
 					//System.out.println("stop 1 pack: el - " + a[i][0]);
 					break;
 				}
-				if ((a[i][1] == 0) && (size - a[i][0] == j))
+				if ((size - a[i][0] == j))
 				{
 					a[i][1] = 1;
 					//System.out.println("el 1 = " + a[i][0]);

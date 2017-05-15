@@ -39,7 +39,7 @@ public class MachineLearning {
 		GeneticAlgorithm GA = new GeneticAlgorithm();
 		int[][]elements = GA.readFile(fileName);
 		Chromosome chrom = new Chromosome(0);	
-		parseFile("C:\\data_for_binpacking\\result.txt");
+		parseFile("C:\\data_for_binpacking\\improve_results\\the_best_chromosomes.txt");
 		solveProblem(elements,GA.size, chrom);
 	}
 	
@@ -68,7 +68,8 @@ public class MachineLearning {
 				gen.mediumItems = Double.parseDouble(s[2]);
 				gen.smallItems = Double.parseDouble(s[3]);
 				gen.remainingItems = Double.parseDouble(s[4]);
-				gen.algorithmNumber = Integer.parseInt(s[5]);
+				gen.prevAlgorithm = Integer.parseInt(s[5]);
+				gen.algorithmNumber = Integer.parseInt(s[6]);
 				cleverchromosome.add(gen);
 					//size = Integer.parseInt(str);
 			}
@@ -101,13 +102,14 @@ public class MachineLearning {
 			bins[i] = size;
 		}
 		elements = chrom.sort(elements);
+		int prevAlgorithm = (int)(Math.random()*8) + 1;
 		//System.out.println("elements.length " + elements.length);
 		int currentBin = 0;
 		for (int i = 0; i < elements.length; i++)
 		{
-			//System.out.println("i = " + i);
+			System.out.println("i = " + i);
 			//String state = getCurrentState(elements, size);
-			Genome state = getCurrentState(elements, size);
+			Genome state = getCurrentState(elements, size, prevAlgorithm);
 			//Reader targetReader = new StringReader(state);
 			//if (state == "")
 			//{
@@ -117,6 +119,7 @@ public class MachineLearning {
 			//alg = 
 			//String alg = findCloser(gen);
 			int alg = findCloser(state);
+			prevAlgorithm = alg;
 			if (i == 0)
 			{
 				lastalg = alg;
@@ -143,7 +146,7 @@ public class MachineLearning {
 			//targetReader.close();
 			//System.out.println("findCloser " + alg);
 			//System.out.println("findCloser " + alg);
-			//alg = 1;
+			alg = 1;
 			switch (String.valueOf(alg)) {
 				case "1":  LargestFitDecreasing LFD = new LargestFitDecreasing();
 				currentBin = LFD.startPacking(elements, bins, size);
@@ -198,82 +201,75 @@ public class MachineLearning {
 		for (int i = 0; i < cleverchromosome.size(); i++)
 		{
 			Genome tmp = cleverchromosome.get(i);
-			////System.out.println("distance " + Math.sqrt(Math.pow(tmp.hugeItems-gen.hugeItems,2) + Math.pow(tmp.largeItems-gen.largeItems,2)
+			//System.out.println("distance " + Math.sqrt(Math.pow(tmp.hugeItems-gen.hugeItems,2) + Math.pow(tmp.largeItems-gen.largeItems,2)
 			//+ Math.pow(tmp.smallItems-gen.smallItems,2) + Math.pow(tmp.remainingItems-gen.remainingItems,2)));
 			if(Math.sqrt(Math.pow(tmp.hugeItems-gen.hugeItems,2) + Math.pow(tmp.largeItems-gen.largeItems,2)
-			+ Math.pow(tmp.smallItems-gen.smallItems,2) + Math.pow(tmp.remainingItems-gen.remainingItems,2)) < tmpres)
+			+ Math.pow(tmp.smallItems-gen.smallItems,2) + Math.pow(tmp.remainingItems-gen.remainingItems,2) + Math.pow(tmp.prevAlgorithm-gen.prevAlgorithm,2)) < tmpres)
 			{
 				algorithm = tmp.algorithmNumber;
 				////System.out.println("new closet algorithm is " + algorithm);
 				tmpres = Math.sqrt(Math.pow(tmp.hugeItems-gen.hugeItems,2) + Math.pow(tmp.largeItems-gen.largeItems,2)
-				+ Math.pow(tmp.smallItems-gen.smallItems,2) + Math.pow(tmp.remainingItems-gen.remainingItems,2));
+				+ Math.pow(tmp.smallItems-gen.smallItems,2) + Math.pow(tmp.remainingItems-gen.remainingItems,2) + Math.pow(tmp.prevAlgorithm-gen.prevAlgorithm,2));
 			}
 		}
-		////System.out.println("the closet algorithm is " + algorithm);
+		//System.out.println("the closet algorithm is " + algorithm);
 		return algorithm;
 	}
 	
 	//public String getCurrentState(int[][]a, int size)
-	public Genome getCurrentState(int[][]a, int size)
-	{
+	public Genome getCurrentState(int[][]a, int size, int prevAlgorithm){
 		Genome gen = new Genome(0);
-		 for (int i = 0; i < a.length; i++)
-	        {
-	        	if (a[i][0] > size/2)
-	        	{
-	        		////System.out.println("huge");
-	        		gen.hugeItems++;
-	        	}
-	        	else if (a[i][0] > size/3)
-	        	{
-	        		////System.out.println("large");
-	        		gen.largeItems++;
-	        	}
-	        	else if (a[i][0] > size/4)
-	        	{
-	        		////System.out.println("medium");
-	        		gen.mediumItems++;
-	        	}
-	        	else
-	        	{
-	        		////System.out.println("small");
-	        		gen.smallItems++;
-	        	}
-	        	if (a[i][1] != 1)
-	        	{
-	        		////System.out.println("remaining");
-	        		gen.remainingItems++;
-	        	}
-	        }
-		 if (gen.hugeItems != 0) 
-		 {
-			 gen.hugeItems = gen.hugeItems/a.length;
-		 }
-		 if (gen.largeItems != 0)
-		 {
-			 gen.largeItems = gen.largeItems/a.length;
-		 }
-		 if (gen.mediumItems != 0)
-		 {
-			 gen.mediumItems = gen.mediumItems/a.length;
-		 }
-		 if (gen.smallItems != 0)
-		 {
-			 gen.smallItems = gen.smallItems/a.length;
-		 }
-		 if (gen.remainingItems != 0)
-		 {
-			 gen.remainingItems = gen.remainingItems/a.length;
-		 }
-		 //else 
-		 //{
-		//	 return ;
-		 //}
-		 //String str = new String("");
-		 //str = constString + gen.hugeItems + "," + gen.largeItems + "," + gen.mediumItems + "," + gen.smallItems + "," + gen.remainingItems + ",0";
-		 ////System.out.println("current state: h " + gen.hugeItems + " l " + gen.largeItems + " m " + gen.mediumItems + " s " + gen.smallItems + " r " + gen.remainingItems);
-		 //return str;
-		 return gen;
+		for (int i = 0; i < a.length; i++)
+		{
+			if (a[i][0] > size/2)
+			{
+				////System.out.println("huge");
+				gen.hugeItems++;
+			}
+			else if (a[i][0] > size/3)
+			{
+				////System.out.println("large");
+				gen.largeItems++;
+			}
+			else if (a[i][0] > size/4)
+			{
+				////System.out.println("medium");
+				gen.mediumItems++;
+			}
+			else
+			{
+				////System.out.println("small");
+				gen.smallItems++;
+			}
+			if (a[i][1] != 1)
+			{
+				////System.out.println("remaining");
+				gen.remainingItems++;
+			}
+		}
+		if (gen.hugeItems != 0) 
+		{
+			gen.hugeItems = gen.hugeItems/a.length;
+		}
+		if (gen.largeItems != 0)
+		{
+			gen.largeItems = gen.largeItems/a.length;
+		}
+		if (gen.mediumItems != 0)
+		{
+			gen.mediumItems = gen.mediumItems/a.length;
+		}
+		if (gen.smallItems != 0)
+		{
+			gen.smallItems = gen.smallItems/a.length;
+		}
+		if (gen.remainingItems != 0)
+		{
+			gen.remainingItems = gen.remainingItems/a.length;
+		}
+		////System.out.println("current state: h " + gen.hugeItems + " l " + gen.largeItems + " m " + gen.mediumItems + " s " + gen.smallItems + " r " + gen.remainingItems);
+		gen.prevAlgorithm = prevAlgorithm;
+		return gen;
 	}
 	
 	public String findAlgoritm(Reader str) throws Exception

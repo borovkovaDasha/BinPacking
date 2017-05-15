@@ -15,7 +15,7 @@ public class GeneticAlgorithm {
 	public static final int POPULATION_SIZE = 40;
 	//public static final int CHROMOSOME_SIZE = 40;
 	public static final int NUMBER_OF_TASKS = 4;
-	public static final int NUMBER_OF_GA_ITERATIONS = 100;
+	public static final int NUMBER_OF_GA_ITERATIONS = 500;
 	public static final String FILE_PATH = "C:\\data_for_binpacking\\improve_results\\result.txt";
 	public static final int NUMBER_OF_FILES = 750;
 	public static final String DATA_PATH = "C:\\data_for_binpacking\\new_data\\";
@@ -222,6 +222,7 @@ public class GeneticAlgorithm {
 					x = i;
 				}
 			}
+			System.out.println("i = " + i + " size = " + popul.get(i).chromosome.size());
 		}
 		flag[x] = 1;
 		System.out.println("The best years " + popul.get(x).years);
@@ -291,7 +292,7 @@ public class GeneticAlgorithm {
 		Chromosome children1 = new Chromosome(0);
 		Chromosome children2 = new Chromosome(0);
 		int div = (int)(Math.random() * parent1.chromosome.size());
-		while (div >= parent1.chromosome.size() || div >= parent2.chromosome.size())
+		while (div >= parent1.chromosome.size()-1 || div >= parent2.chromosome.size()-1)
 		{
 			div = (int)(Math.random() * parent1.chromosome.size());
 		}
