@@ -15,8 +15,8 @@ public class GeneticAlgorithm {
 	public static final int POPULATION_SIZE = 40;
 	//public static final int CHROMOSOME_SIZE = 40;
 	public static final int NUMBER_OF_TASKS = 4;
-	public static final int NUMBER_OF_GA_ITERATIONS = 500;
-	public static final String FILE_PATH = "C:\\data_for_binpacking\\improve_results\\result.txt";
+	public static final int NUMBER_OF_GA_ITERATIONS = 1000;
+	public static final String FILE_PATH = "C:\\data_for_binpacking\\improve_results1000\\result.txt";
 	public static final int NUMBER_OF_FILES = 750;
 	public static final String DATA_PATH = "C:\\data_for_binpacking\\new_data\\";
 	
@@ -297,6 +297,10 @@ public class GeneticAlgorithm {
 			div = (int)(Math.random() * parent1.chromosome.size());
 		}
         int count = (int)(Math.random() * parent1.chromosome.size());
+		while (count >= parent1.chromosome.size()-1 || count >= parent2.chromosome.size()-1)
+		{
+			count = (int)(Math.random() * parent1.chromosome.size());
+		}
         for (int i = 0; i < parent1.chromosome.size(); i++)
         {
         	children1.chromosome.add(parent1.chromosome.get(i));
