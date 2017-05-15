@@ -15,13 +15,13 @@ import weka.core.Instances;
 public class MachineLearning {
 	Instances trainData;
 	Classifier cModel;
-	String constString = "@RELATION ga\n\n@ATTRIBUTE hugeItems	NUMERIC\n@ATTRIBUTE largeItems	NUMERIC\n@ATTRIBUTE mediumItems	NUMERIC\n@ATTRIBUTE smallItems	NUMERIC\n@ATTRIBUTE remainingItems	NUMERIC\n@ATTRIBUTE class	{0,1,2,3,4,5,6,7}\n\n@DATA\n";
+	String constString = "@RELATION ga\n\n@ATTRIBUTE hugeItems	NUMERIC\n@ATTRIBUTE largeItems	NUMERIC\n@ATTRIBUTE mediumItems	NUMERIC\n@ATTRIBUTE smallItems	NUMERIC\n@ATTRIBUTE remainingItems	NUMERIC\n@ATTRIBUTE class	{0,1,2,3,4,5,6,7,8}\n\n@DATA\n";
 	List<Genome> cleverchromosome;
 	
 	public MachineLearning() throws Exception
 	{
 		/*BufferedReader br = null;
-		br = new BufferedReader(new FileReader("C:\\data_for_binpacking\\result.txt"));
+		br = new BufferedReader(new FileReader("C:\\data_for_binpacking\\results\\the_best_chromosomes.txt"));
 		trainData = new Instances(br);
 		trainData.setClassIndex(trainData.numAttributes() - 1);
 		cModel = (Classifier)new RandomForest();
@@ -39,7 +39,7 @@ public class MachineLearning {
 		GeneticAlgorithm GA = new GeneticAlgorithm();
 		int[][]elements = GA.readFile(fileName);
 		Chromosome chrom = new Chromosome(0);	
-		parseFile("C:\\data_for_binpacking\\results\\result100.txt");
+		parseFile("C:\\data_for_binpacking\\results\\the_best_chromosomes2.txt");
 		solveProblem(elements,GA.size, chrom);
 	}
 	
@@ -94,6 +94,7 @@ public class MachineLearning {
 	public double solveProblem(int[][] elements, int size, Chromosome chrom) throws Exception //List<Genome> chromosome, int size)
 	{
 		int[] bins = new int[elements.length];
+		//String lastalg = "";
 		int lastalg = 0;
 		//create array of baskets
 		for (int i = 0; i < bins.length; i++)
@@ -105,8 +106,9 @@ public class MachineLearning {
 		int currentBin = 0;
 		for (int i = 0; i < elements.length; i++)
 		{
-			System.out.println("i = " + i);
+			//System.out.println("i = " + i);
 			//String state = getCurrentState(elements, size);
+			//System.out.println(state);
 			Genome state = getCurrentState(elements, size);
 			//Reader targetReader = new StringReader(state);
 			//if (state == "")
@@ -123,7 +125,9 @@ public class MachineLearning {
 				System.out.println("first " + lastalg);
 			}
 			//alg = findAlgoritm((targetReader));
+			//System.out.println(alg);
 			//int alg = findCloser(state);
+			//if (!alg.equals(lastalg))
 			if (alg != lastalg)
 			{
 				System.out.println("!findCloser " + alg);
@@ -269,9 +273,9 @@ public class MachineLearning {
 		 //{
 		//	 return ;
 		 //}
-		 //String str = new String("");
-		 //str = constString + gen.hugeItems + "," + gen.largeItems + "," + gen.mediumItems + "," + gen.smallItems + "," + gen.remainingItems + ",0";
-		 ////System.out.println("current state: h " + gen.hugeItems + " l " + gen.largeItems + " m " + gen.mediumItems + " s " + gen.smallItems + " r " + gen.remainingItems);
+		 String str = new String("");
+		 str = constString + gen.hugeItems + "," + gen.largeItems + "," + gen.mediumItems + "," + gen.smallItems + "," + gen.remainingItems + ",0";
+		 //System.out.println(str);
 		 //return str;
 		 return gen;
 	}
@@ -306,6 +310,7 @@ public class MachineLearning {
 			double pred = cModel.classifyInstance(testData.instance(i));
 			System.out.println(pred);
 		}*/
+		//System.out.println(str);
 		Instances testData = new Instances(str);
 		testData.setClassIndex(testData.numAttributes() - 1);
 		Evaluation eTest = new Evaluation(testData);

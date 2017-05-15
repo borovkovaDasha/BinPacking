@@ -15,6 +15,7 @@ import java.util.ArrayList;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
+		System.out.println("GA");
 		//GeneticAlgorithm GA = new GeneticAlgorithm();
 		//GA.go();
 		MachineLearning ML = new MachineLearning();

@@ -206,148 +206,87 @@ public class DjangAndFinchTuplesFilter {
 			flag = 0;
 			for (int i = a.length -1; i >= 0 && flag == 0; i--)
 			{
-				if (a[i][1] == 0)
+				for (int k = i; k >= 0 && flag == 0; k--)
 				{
-					for (int k = i; k >= 0 && flag == 0; k--)
+					for (int l = k; l >= 0 && flag == 0; l--)
 					{
-						if (a[k][1] == 0)
+						for (int p = l; p >= 0 && flag == 0; p--)
 						{
-							for (int l = k; l >= 0 && flag == 0; l--)
+							////System.out.println("pack 4");
+							//if ((i != k) && (l != k) && (i != l) && (i != p) && (p != l) && (p != k)
+							//	&& (size - j - a[i][0] - a[k][0] - a[l][0] - a[p][0] < 0))
+							if (size - j - a[i][0] - a[k][0] - a[l][0] - a[p][0] < 0)
 							{
-								if (a[l][1] == 0)
-								{
-									for (int p = l; p >= 0 && flag == 0; p--)
-									{
-										if (a[p][1] == 0)
-										{
-											////System.out.println("pack 4");
-											//if ((i != k) && (l != k) && (i != l) && (i != p) && (p != l) && (p != k)
-											//	&& (size - j - a[i][0] - a[k][0] - a[l][0] - a[p][0] < 0))
-											if (size - j - a[i][0] - a[k][0] - a[l][0] - a[p][0] < 0)
-											{
-												flag = 1;
-												//System.out.println("stop 4 pack: el - " + a[i][0] + " el - " + a[k][0] + " el - " + a[l][0] + " el - " + a[p][0]);
-												break;
-											}
-											if ((i != k) && (l != k) && (i != l) && (i != p) && (p != l) && (p != k)
-												&& (size - a[i][0] - a[k][0] - a[l][0] - a[p][0] == j))
-											{
-												a[i][1] = 1;
-												a[k][1] = 1;
-												a[l][1] = 1;
-												a[p][1] = 1;
-												//System.out.println("el 1 = " + a[i][0]);
-												//System.out.println("el 2 = " + a[k][0]);
-												//System.out.println("el 3 = " + a[l][0]);
-												//System.out.println("el 4 = " + a[p][0]);
-												return size - a[i][0] - a[k][0] - a[l][0] - a[p][0];
-											}
-										}
-										else
-										{
-											continue;
-										}
-									}
-								}
-								else
-								{
-									continue;
-								}
+								flag = 1;
+								//System.out.println("stop 4 pack: el - " + a[i][0] + " el - " + a[k][0] + " el - " + a[l][0] + " el - " + a[p][0]);
+								break;
+							}
+							if ((i != k) && (l != k) && (i != l) && (i != p) && (p != l) && (p != k) 
+								&& (a[i][1] == 0) && (a[k][1] == 0) && (a[l][1] == 0) & (a[p][1] == 0)
+								&& (size - a[i][0] - a[k][0] - a[l][0] - a[p][0] == j))
+							{
+								a[i][1] = 1;
+								a[k][1] = 1;
+								a[l][1] = 1;
+								a[p][1] = 1;
+								//System.out.println("el 1 = " + a[i][0]);
+								//System.out.println("el 2 = " + a[k][0]);
+								//System.out.println("el 3 = " + a[l][0]);
+								//System.out.println("el 4 = " + a[p][0]);
+								return size - a[i][0] - a[k][0] - a[l][0] - a[p][0];
 							}
 						}
-						else 
-						{
-							continue;
-						}
 					}
-				}
-				else
-				{
-					continue;
 				}
 			}
 			//find 5 element to complete bin
 			flag = 0;
 			for (int i = a.length -1; i >= 0 && flag == 0; i--)
 			{
-				if ((a[i][1] == 0))
+				for (int k = i; k >= 0 && flag == 0; k--)
 				{
-					for (int k = i; k >= 0 && flag == 0; k--)
+					for (int l = k; l >= 0 && flag == 0; l--)
 					{
-						if ((a[k][1] == 0))
+						for (int p = l; p >= 0 && flag == 0; p--)
 						{
-							for (int l = k; l >= 0 && flag == 0; l--)
+							for (int t = p; t >= 0 && flag == 0; t--)
 							{
-								if ((a[l][1] == 0))
+								////System.out.println("pack 5");
+								/*//System.out.println("size - j - a[i][0] - a[k][0] - a[l][0] - a[p][0] - a[t][0] = " + (size - j - a[i][0] - a[k][0] - a[l][0] - a[p][0] - a[t][0]));
+								//System.out.println("a[i][1] " + a[i][1]);
+								//System.out.println("a[k][1] " + a[k][1]);
+								//System.out.println("a[l][1] " + a[l][1]);
+								//System.out.println("a[p][1] " + a[p][1]);
+								//System.out.println("a[t][1] " + a[t][1]);*/
+								//if ((size - j - a[i][0] - a[k][0] - a[l][0] - a[p][0] - a[t][0] < 0) &&
+								//		(i != k) && (l != k) && (i != l) && (i != p) && (p != l) && (p != k)
+								//		&& (t != i) && (t != k) && (t != l) && (t != p))
+								if (size - j - a[i][0] - a[k][0] - a[l][0] - a[p][0] - a[t][0] < 0)
 								{
-									for (int p = l; p >= 0 && flag == 0; p--)
-									{
-										if (a[p][1] == 0)
-										{
-											for (int t = p; t >= 0 && flag == 0; t--)
-											{
-												if (a[t][1] == 0)
-												{
-												////System.out.println("pack 5");
-												/*//System.out.println("size - j - a[i][0] - a[k][0] - a[l][0] - a[p][0] - a[t][0] = " + (size - j - a[i][0] - a[k][0] - a[l][0] - a[p][0] - a[t][0]));
-												//System.out.println("a[i][1] " + a[i][1]);
-												//System.out.println("a[k][1] " + a[k][1]);
-												//System.out.println("a[l][1] " + a[l][1]);
-												//System.out.println("a[p][1] " + a[p][1]);
-												//System.out.println("a[t][1] " + a[t][1]);*/
-													//if ((size - j - a[i][0] - a[k][0] - a[l][0] - a[p][0] - a[t][0] < 0) &&
-													//		(i != k) && (l != k) && (i != l) && (i != p) && (p != l) && (p != k)
-													//		&& (t != i) && (t != k) && (t != l) && (t != p))
-													if (size - j - a[i][0] - a[k][0] - a[l][0] - a[p][0] - a[t][0] < 0)
-													{
-														flag = 1;
-														//System.out.println("stop 5 pack: el - " + a[i][0] + " el - " + a[k][0] + " el - " + a[l][0] + " el - " + a[p][0] + " el - " + a[t][0]);
-														break;
-													}
-													if ((i != k) && (l != k) && (i != l) && (i != p) && (p != l) && (p != k)
-															&& (t != i) && (t != k) && (t != l) && (t != p)
-															&& (size - a[i][0] - a[k][0] - a[l][0] - a[p][0] - a[t][0] == j))
-													{
-														a[i][1] = 1;
-														a[k][1] = 1;
-														a[l][1] = 1;
-														a[p][1] = 1;
-														a[t][1] = 1;
-														//System.out.println("el 1 = " + a[i][0]);
-														//System.out.println("el 2 = " + a[k][0]);
-														//System.out.println("el 3 = " + a[l][0]);
-														//System.out.println("el 4 = " + a[p][0]);
-														//System.out.println("el 5 = " + a[t][0]);
-														return size - a[i][0] - a[k][0] - a[l][0] - a[p][0] - a[t][0];
-													}
-												}
-												else
-												{
-													continue;
-												}
-											}
-										}
-										else
-										{
-											continue;
-										}
-									}
+									flag = 1;
+									//System.out.println("stop 5 pack: el - " + a[i][0] + " el - " + a[k][0] + " el - " + a[l][0] + " el - " + a[p][0] + " el - " + a[t][0]);
+									break;
 								}
-								else
+								if ((i != k) && (l != k) && (i != l) && (i != p) && (p != l) && (p != k)
+										&& (t != i) && (t != k) && (t != l) && (t != p)
+										&& (a[i][1] == 0) && (a[k][1] == 0) && (a[l][1] == 0) && (a[p][1] == 0) && (a[t][1] == 0)
+										&& (size - a[i][0] - a[k][0] - a[l][0] - a[p][0] - a[t][0] == j))
 								{
-									continue;
+									a[i][1] = 1;
+									a[k][1] = 1;
+									a[l][1] = 1;
+									a[p][1] = 1;
+									a[t][1] = 1;
+									//System.out.println("el 1 = " + a[i][0]);
+									//System.out.println("el 2 = " + a[k][0]);
+									//System.out.println("el 3 = " + a[l][0]);
+									//System.out.println("el 4 = " + a[p][0]);
+									//System.out.println("el 5 = " + a[t][0]);
+									return size - a[i][0] - a[k][0] - a[l][0] - a[p][0] - a[t][0];
 								}
 							}
 						}
-						else
-						{
-							continue;
-						}
 					}
-				}
-				else
-				{
-					continue;
 				}
 			}
 		}
