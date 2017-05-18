@@ -29,7 +29,7 @@ public class Chromosome {
 		}
 	}
 	
-	public double solveProblem(int[][] elements, int size, int alg) //List<Genome> chromosome, int size)
+	public double solveProblem(int[][] elements, int size, int algnum) //List<Genome> chromosome, int size)
 	{
 		int[] bins = new int[elements.length];
 		years = years + 1;
@@ -41,6 +41,7 @@ public class Chromosome {
 		}
 		elements = sort(elements);
 		int flag = 0;
+		int alg = 0;
 		//System.out.println("elements.length " + elements.length);
 		int currentBin = 0;
 		for (int i = 0; i < elements.length && flag == 0; i++)
@@ -51,10 +52,10 @@ public class Chromosome {
 				flag = 1;
 				break;
 			}
-			if (alg == 0)
-			{
+			//if (algnum == 0)
+			//{
 				alg = findCloser(state);
-			}
+			//}
 			prevAlgorithm = alg;
 			//System.out.println("findCloser " + alg);
 			//alg = 7;
@@ -136,32 +137,32 @@ public class Chromosome {
 		Genome gen = new Genome(0);
 		for (int i = 0; i < a.length; i++)
 		{
-			if (a[i][0] > size/2)
-			{
-				////System.out.println("huge");
-				gen.hugeItems++;
-			}
-			else if (a[i][0] > size/3)
-			{
-				////System.out.println("large");
-				gen.largeItems++;
-			}
-			else if (a[i][0] > size/4)
-			{
-				////System.out.println("medium");
-				gen.mediumItems++;
-			}
-			else
-			{
-				////System.out.println("small");
-				gen.smallItems++;
-			}
-			if (a[i][1] != 1)
-			{
-				////System.out.println("remaining");
-				gen.remainingItems++;
-			}
-		}
+        	if (a[i][0] > size/2 && a[i][1] == 0)
+        	{
+        		////System.out.println("huge");
+        		gen.hugeItems++;
+        	}
+        	else if (a[i][0] > size/3 && a[i][1] == 0)
+        	{
+        		////System.out.println("large");
+        		gen.largeItems++;
+        	}
+        	else if (a[i][0] > size/4 && a[i][1] == 0)
+        	{
+        		////System.out.println("medium");
+        		gen.mediumItems++;
+        	}
+        	else if (a[i][1] == 0)
+        	{
+        		////System.out.println("small");
+        		gen.smallItems++;
+        	}
+        	if (a[i][1] != 1)
+        	{
+        		////System.out.println("remaining");
+        		gen.remainingItems++;
+        	}
+        }
 		if (gen.hugeItems != 0) 
 		{
 			gen.hugeItems = gen.hugeItems/a.length;

@@ -39,7 +39,7 @@ public class MachineLearning {
 		GeneticAlgorithm GA = new GeneticAlgorithm();
 		int[][]elements = GA.readFile(fileName);
 		Chromosome chrom = new Chromosome(0);	
-		parseFile("C:\\data_for_binpacking\\improve_results\\the_best_chromosomes.txt");
+		parseFile("C:\\data_for_binpacking\\improve_results\\test9.txt");
 		solveProblem(elements,GA.size, chrom);
 	}
 	
@@ -107,7 +107,7 @@ public class MachineLearning {
 		int currentBin = 0;
 		for (int i = 0; i < elements.length; i++)
 		{
-			System.out.println("i = " + i);
+			//System.out.println("i = " + i);
 			//String state = getCurrentState(elements, size);
 			Genome state = getCurrentState(elements, size, prevAlgorithm);
 			//Reader targetReader = new StringReader(state);
@@ -146,7 +146,7 @@ public class MachineLearning {
 			//targetReader.close();
 			//System.out.println("findCloser " + alg);
 			//System.out.println("findCloser " + alg);
-			alg = 1;
+			//alg = 1;
 			switch (String.valueOf(alg)) {
 				case "1":  LargestFitDecreasing LFD = new LargestFitDecreasing();
 				currentBin = LFD.startPacking(elements, bins, size);

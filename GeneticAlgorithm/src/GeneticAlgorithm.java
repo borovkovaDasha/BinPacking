@@ -16,11 +16,11 @@ public class GeneticAlgorithm {
 	//public static final int CHROMOSOME_SIZE = 40;
 	public static final int NUMBER_OF_TASKS = 4;
 	public static final int NUMBER_OF_GA_ITERATIONS = 1000;
-	public static final String FILE_PATH = "C:\\data_for_binpacking\\results1000\\result.txt";
+	public static final String FILE_PATH = "C:\\data_for_binpacking\\results1000\\result";
 	public static final int NUMBER_OF_FILES = 750;
 	public static final String DATA_PATH = "C:\\data_for_binpacking\\new_data\\";
 	
-	public int size;
+	public static int size;
 	List<Chromosome> population;
 	List<Chromosome> childrens;
 	
@@ -79,9 +79,14 @@ public class GeneticAlgorithm {
 		return elements;
 	}
 	
-	public void writeFile() throws IOException
+	public void writeFile(int num) throws IOException
 	{
 		String s = "";
+	    for (int i = 0; i < population.size(); i++)
+	    {
+	    	s = s + "population " + i + " fitness " + population.get(i).fitness + " years " +  population.get(i).years + " length " + population.get(i).chromosome.size() + "\n"; 
+	    }
+	    s = s + "\n";
 	    for (int i = 0; i < population.size(); i++)
 	    {
 	    	for (int j = 0; j < population.get(i).chromosome.size(); j++)
@@ -92,13 +97,14 @@ public class GeneticAlgorithm {
 	    }
 	    
 	    //System.out.println("s - " + s);
-	    FileWriter writer = new FileWriter(FILE_PATH); 
+	    String path = FILE_PATH + num + ".txt";
+	    FileWriter writer = new FileWriter(path); 
 	    writer.write(s); 
 	    writer.flush();
 	    writer.close();
 	}
 	
-	public void go() throws IOException{
+	public void go(int num) throws IOException{
 		initializePopulation();
 		childrens = new ArrayList<Chromosome>();
 		for (int i = 0; i < NUMBER_OF_GA_ITERATIONS; i++)
@@ -172,7 +178,7 @@ public class GeneticAlgorithm {
 		}
 
 		System.out.println("The best result is " + findTheLastTheBest(population, flags));
-		writeFile();
+		writeFile(num);
 	}
 	
 	public Chromosome findTheBest(List<Chromosome> popul, int[] flag)

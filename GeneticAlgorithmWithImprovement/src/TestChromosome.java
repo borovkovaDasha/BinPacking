@@ -7,8 +7,9 @@ import java.util.ArrayList;
 public class TestChromosome {
 	
 	public static final int ALGORITHM_NUMBER = 8;
-	public static final String RESULT_FILE = "C:\\data_for_binpacking\\results\\result.txt";
-	public static final String CHROMOSOME_TEST = "C:\\data_for_binpacking\\results\\test_chromosome.txt";
+	public static final String RESULT_FILE = "C:\\data_for_binpacking\\improve_results\\test9.txt";
+	public static final String CHROMOSOME_TEST = "C:\\data_for_binpacking\\improve_results\\test_chromosome91.txt";
+	public static final String DATA_PATH = "C:\\data_for_binpacking\\giant_data\\";
 	public Chromosome cleverchromosome;
 	public FileWriter writer;
 	 
@@ -17,16 +18,16 @@ public class TestChromosome {
 		GeneticAlgorithm GA = new GeneticAlgorithm();
 		parseFile(RESULT_FILE);
 	    writer = new FileWriter(CHROMOSOME_TEST);  
-		for (int i = 1; i <= 10; i++)//GA.NUMBER_OF_FILES; i++)
+		for (int i = 1; i <= 750; i++)//GA.NUMBER_OF_FILES; i++)
 		{
-			int [][] elements = readFile(GA.DATA_PATH + Integer.toString(i) + ".txt");
+			int [][] elements = readFile(DATA_PATH + Integer.toString(i) + ".txt");
 			System.out.println("file " + i);
 			for (int j = 0; j <= ALGORITHM_NUMBER; j++)
 			{
 				System.out.println("algorithm " + j);
 				System.out.println("GA.size " + GA.size);
 				//cleverchromosome.solveProblem(elements, GA.size, j);
-				writeFile(elements.length, cleverchromosome.solveProblem(elements, GA.size, j), j);
+				writeFile(i, elements.length, cleverchromosome.solveProblem(elements, GA.size, j), j);
 				for (int k = 0; k < elements.length; k++)
 				{
 					elements[k][1] = 0;
@@ -66,7 +67,10 @@ public class TestChromosome {
 				gen.mediumItems = Double.parseDouble(s[2]);
 				gen.smallItems = Double.parseDouble(s[3]);
 				gen.remainingItems = Double.parseDouble(s[4]);
-				gen.algorithmNumber = Integer.parseInt(s[5]);
+				gen.prevAlgorithm = Integer.parseInt(s[5]);
+				gen.algorithmNumber = Integer.parseInt(s[6]);
+				//System.out.println(gen.hugeItems + " " + gen.largeItems + " " + gen.mediumItems + " " + gen.smallItems + " " +
+				//		gen.remainingItems + " " + " " + gen.prevAlgorithm + " " + gen.algorithmNumber);
 				cleverchromosome.chromosome.add(gen);
 			}
 
@@ -88,9 +92,9 @@ public class TestChromosome {
 		return;
 	}
 	
-	public void writeFile(int length, double number_of_bins, int algorithm) throws IOException
+	public void writeFile(int filenum, int length, double number_of_bins, int algorithm) throws IOException
 	{
-		String s = "Number of elements: " + Integer.toString(length) + " number of bins: " + Double.toString(number_of_bins) + " algorithm: " + algorithm + "\n";
+		String s = "File - " + filenum + " Number of elements: " + Integer.toString(length) + " number of bins: " + Double.toString(number_of_bins) + " algorithm: " + algorithm + "\n";
 	    //System.out.println("s - " + s);
 	    writer.write(s); 
 	}

@@ -34,7 +34,7 @@ public class Chromosome {
 		}
 	}
 	
-	public double solveProblem(int[][] elements, int size, int alg) //List<Genome> chromosome, int size)
+	public double solveProblem(int[][] elements, int size, int algnum) //List<Genome> chromosome, int size)
 	{
 		int[] bins = new int[elements.length];
 		years = years + 1;
@@ -43,6 +43,7 @@ public class Chromosome {
 		{
 			bins[i] = size;
 		}
+		int alg = 0;
 		elements = sort(elements);
 		int flag = 0;
 		//System.out.println("elements.length " + elements.length);
@@ -55,10 +56,10 @@ public class Chromosome {
 				flag = 1;
 				break;
 			}
-			if (alg == 0)
-			{
+			//if (alg == 0)
+			//{
 				alg = findCloser(state);//chromosome, state);
-			}
+			//}
 			//System.out.println("findCloser " + alg);
 			//alg = 7;
 			switch (alg) {
@@ -131,7 +132,7 @@ public class Chromosome {
 				+ Math.pow(tmp.smallItems-gen.smallItems,2) + Math.pow(tmp.remainingItems-gen.remainingItems,2));
 			}
 		}
-		////System.out.println("the closet algorithm is " + algorithm);
+		//System.out.println("the closet algorithm is " + algorithm);
 		return algorithm;
 	}
 	
@@ -139,22 +140,22 @@ public class Chromosome {
 		Genome gen = new Genome(0);
 		 for (int i = 0; i < a.length; i++)
 	        {
-	        	if (a[i][0] > size/2)
+	        	if (a[i][0] > size/2 && a[i][1] == 0)
 	        	{
 	        		////System.out.println("huge");
 	        		gen.hugeItems++;
 	        	}
-	        	else if (a[i][0] > size/3)
+	        	else if (a[i][0] > size/3 && a[i][1] == 0)
 	        	{
 	        		////System.out.println("large");
 	        		gen.largeItems++;
 	        	}
-	        	else if (a[i][0] > size/4)
+	        	else if (a[i][0] > size/4 && a[i][1] == 0)
 	        	{
 	        		////System.out.println("medium");
 	        		gen.mediumItems++;
 	        	}
-	        	else
+	        	else if (a[i][1] == 0)
 	        	{
 	        		////System.out.println("small");
 	        		gen.smallItems++;
@@ -185,7 +186,7 @@ public class Chromosome {
 		 {
 			 gen.remainingItems = gen.remainingItems/a.length;
 		 }
-		 ////System.out.println("current state: h " + gen.hugeItems + " l " + gen.largeItems + " m " + gen.mediumItems + " s " + gen.smallItems + " r " + gen.remainingItems);
+		 //System.out.println("current state: h " + gen.hugeItems + " l " + gen.largeItems + " m " + gen.mediumItems + " s " + gen.smallItems + " r " + gen.remainingItems);
 		 return gen;
 	}
 	static int[][] sort(int[][] sequence)
