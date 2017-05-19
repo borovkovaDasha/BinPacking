@@ -16,7 +16,7 @@ public class GeneticAlgorithm {
 	//public static final int CHROMOSOME_SIZE = 40;
 	public static final int NUMBER_OF_TASKS = 4;
 	public static final int NUMBER_OF_GA_ITERATIONS = 500;
-	public static final String FILE_PATH = "C:\\data_for_binpacking\\improve_results\\result";
+	public static final String FILE_PATH = "C:\\data_for_binpacking\\1\\improve_results\\!result";
 	public static final int NUMBER_OF_FILES = 750;
 	public static final String DATA_PATH = "C:\\data_for_binpacking\\new_data\\";
 	
@@ -76,6 +76,12 @@ public class GeneticAlgorithm {
 		
 		System.out.println("size = " + size);
 		System.out.println("n = " + n);
+		int sum = 0;
+		for (int i = 0; i < elements.length; i++)
+		{
+			sum = sum + elements[i][0];
+		}
+		System.out.println("sum = " + sum);
 		return elements;
 	}
 	
@@ -153,10 +159,42 @@ public class GeneticAlgorithm {
 			{
 				flagsss[j] = 0;
 			}
-			population.remove(findTheWorst(population, flagss));
+			Chromosome theworst1 = findTheWorst(population, flagss);
+			Chromosome theworst2 = findTheWorst(population, flagss);
+			Chromosome thebest1 = findTheBest(childrens, flagsss);
+			Chromosome thebest2 = findTheBest(childrens, flagsss);
+			if (theworst1.fitness > thebest1.fitness && theworst2.fitness > thebest2.fitness
+					|| theworst1.fitness > thebest2.fitness && theworst2.fitness > thebest1.fitness)
+			{
+				population.remove(theworst1);
+				population.add(thebest1);
+				population.remove(theworst2);
+				population.add(thebest2);
+			}
+			else if (theworst1.fitness > thebest1.fitness)
+			{
+				population.remove(theworst1);
+				population.add(thebest1);
+			}
+			else if (theworst1.fitness > thebest2.fitness)
+			{
+				population.remove(theworst1);
+				population.add(thebest2);
+			}
+			else if (theworst2.fitness > thebest2.fitness)
+			{
+				population.remove(theworst2);
+				population.add(thebest2);
+			}
+			else if (theworst2.fitness > thebest1.fitness)
+			{
+				population.remove(theworst2);
+				population.add(thebest1);
+			}
+			/*population.remove(findTheWorst(population, flagss));
 			population.remove(findTheWorst(population, flagss));
 			population.add(findTheBest(childrens, flagsss));
-			population.add(findTheBest(childrens, flagsss));
+			population.add(findTheBest(childrens, flagsss));*/
 			childrens.clear();
 			int x = (int)(Math.random() * NUMBER_OF_FILES);
 			String fileName = DATA_PATH + (x+1) + ".txt";

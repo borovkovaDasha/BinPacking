@@ -38,8 +38,14 @@ public class MachineLearning {
 	{
 		GeneticAlgorithm GA = new GeneticAlgorithm();
 		int[][]elements = GA.readFile(fileName);
+		int sum = 0;
+		for (int i = 0; i < elements.length; i++)
+		{
+			sum = sum + elements[i][0];
+		}
+		System.out.println("sum = " + sum);
 		Chromosome chrom = new Chromosome(0);	
-		parseFile("C:\\data_for_binpacking\\improve_results\\test9.txt");
+		parseFile("C:\\data_for_binpacking\\improve_results\\!test.txt");
 		solveProblem(elements,GA.size, chrom);
 	}
 	

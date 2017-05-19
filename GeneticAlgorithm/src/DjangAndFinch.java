@@ -28,7 +28,7 @@ public class DjangAndFinch {
 					{
 						////System.out.println("Try");
 						//ищем комбинацию из 1, 2 или 3 элементов, чтобы максимально заполнить корзину
-						findTrinom(a, bins[currentBin]);
+						bins[currentBin] = findTrinom(a, bins[currentBin]);
 						// берём следующую корзину
 						currentBin = currentBin + 1;
 						//return currentBin;
@@ -58,7 +58,7 @@ public class DjangAndFinch {
 					{
 						//System.out.println("Try");
 						//ищем комбинацию из 1, 2 или 3 элементов, чтобы максимально заполнить корзину
-						findTrinom(a, bins[currentBin]);
+						bins[currentBin] = findTrinom(a, bins[currentBin]);
 						// берём следующую корзину
 						currentBin = currentBin + 1;
 						return currentBin;
@@ -77,9 +77,8 @@ public class DjangAndFinch {
 		
 	}
 	
-	public static void findTrinom(int[][] a, int size)
+	public static int findTrinom(int[][] a, int size)
 	{
-		
 		for (int j = 0; j < size; j++)
 		{
 			//System.out.println("j = " + j);
@@ -87,7 +86,7 @@ public class DjangAndFinch {
 			int flag = 0;
 			for (int i = a.length - 1; i >= 0; i--)
 			{
-				////System.out.println("pack 1");
+				//System.out.println("pack 1");
 				if ((size - j - a[i][0] < 0))
 				{
 					//System.out.println("stop 1 pack: el - " + a[i][0]);
@@ -97,7 +96,7 @@ public class DjangAndFinch {
 				{
 					a[i][1] = 1;
 					//System.out.println("el 1 = " + a[i][0]);
-					return;
+					return size - a[i][0];
 				}
 			}
 			//find 2 element to complete bin
@@ -105,7 +104,7 @@ public class DjangAndFinch {
 			{
 				for (int k = a.length -1; k >= 0 && flag == 0; k--)
 				{
-					////System.out.println("pack 2");
+					//System.out.println("pack 2");
 					//if ((a[i][1] == 0) && (a[k][1] == 0) && (size - j - a[i][0] - a[k][0] < 0))
 					if (size - j - a[i][0] - a[k][0] < 0)
 					{
@@ -119,7 +118,7 @@ public class DjangAndFinch {
 						a[k][1] = 1;
 						//System.out.println("el 1 = " + a[i][0]);
 						//System.out.println("el 2 = " + a[k][0]);
-						return;
+						return size - a[i][0] - a[k][0];
 					}
 				}
 			}
@@ -134,6 +133,7 @@ public class DjangAndFinch {
 					{
 						//x++;
 						////System.out.println("x = " + x);
+						//System.out.println("pack 3");
 						//if ((a[i][1] == 0) && (a[k][1] == 0) && (a[l][1] == 0) && (size - j - a[i][0] - a[k][0] - a[l][0] < 0))
 						if (size - j - a[i][0] - a[k][0] - a[l][0] < 0)
 						{
@@ -151,12 +151,12 @@ public class DjangAndFinch {
 							//System.out.println("el 1 = " + a[i][0]);
 							//System.out.println("el 2 = " + a[k][0]);
 							//System.out.println("el 3 = " + a[l][0]);
-							return;
+							return size - a[i][0] - a[k][0] - a[l][0];
 						}
 					}
 				}
 			}
-
+		}
 		/*for (int j = 0; j < size; j++)
 		{
 			//find 1 element to complete bin
@@ -166,7 +166,7 @@ public class DjangAndFinch {
 				{
 					//System.out.println("el 1 = " + a[i][0]);
 					a[i][1] = 1;
-					return;
+					return size - a[i][0];
 				}
 			}
 			//find 2 element to complete bin
@@ -176,11 +176,11 @@ public class DjangAndFinch {
 				{
 					if ((a[i][1] == 0) && (a[k][1] == 0) && (i != k) && (size - a[i][0] - a[k][0] == j))
 					{
-						//////System.out.println("el 1 = " + a[i][0]);
-						//////System.out.println("el 2 = " + a[k][0]);
+						//System.out.println("el 1 = " + a[i][0]);
+						//System.out.println("el 2 = " + a[k][0]);
 						a[i][1] = 1;
 						a[k][1] = 1;
-						return;
+						return size - a[i][0] - a[k][0];
 					}
 				}
 			}
@@ -195,18 +195,18 @@ public class DjangAndFinch {
 								(i != k) && (l != k) && (i != l)
 								&& (size - a[i][0] - a[k][0] - a[l][0] == j))
 						{
-							////System.out.println("el 1 = " + a[i][0]);
-							////System.out.println("el 2 = " + a[k][0]);
-							////System.out.println("el 3 = " + a[l][0]);
+							//System.out.println("el 1 = " + a[i][0]);
+							//System.out.println("el 2 = " + a[k][0]);
+							//System.out.println("el 3 = " + a[l][0]);
 							a[i][1] = 1;
 							a[k][1] = 1;
 							a[l][1] = 1;
-							return;
+							return size - a[i][0] - a[k][0] - a[l][0];
 						}
 					}
 				}
-			}*/
-		}
-		return;
+			}
+		}*/
+		return size;
 	}
 }

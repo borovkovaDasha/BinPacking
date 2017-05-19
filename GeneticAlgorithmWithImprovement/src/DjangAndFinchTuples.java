@@ -28,7 +28,7 @@ public class DjangAndFinchTuples {
 					{
 						//System.out.println("Try");
 						//ищем комбинацию из 1, 2 или 3 элементов, чтобы максимально заполнить корзину
-						findFive(a, bins[currentBin]);
+						bins[currentBin] = findFive(a, bins[currentBin]);
 						// берём следующую корзину
 						currentBin = currentBin + 1;
 						//return currentBin;
@@ -51,14 +51,17 @@ public class DjangAndFinchTuples {
 				{
 					//System.out.println("New bin");
 					currentBin = currentBin + 1;
-					bins[currentBin] -= a[i][0];	
-					a[i][1] = 1;
+					if (bins[currentBin] - a[i][0] >= 0)
+					{
+						bins[currentBin] -= a[i][0];	
+						a[i][1] = 1;
+					}
 					//System.out.println("Element " + a[i][0] + " is packed to " + currentBin);
 					if ((bins[currentBin] <= size * 2 / 3) && (bins[currentBin] != 0))
 					{
 						//System.out.println("Try");
 						//ищем комбинацию из 1, 2 или 3 элементов, чтобы максимально заполнить корзину
-						findFive(a, bins[currentBin]);
+						bins[currentBin] = findFive(a, bins[currentBin]);
 						// берём следующую корзину
 						currentBin = currentBin + 1;
 						return currentBin;
@@ -76,7 +79,7 @@ public class DjangAndFinchTuples {
 		return currentBin;
 	}
 	
-	public static void findFive(int[][] a, int size)
+	public static int findFive(int[][] a, int size)
 	{
 		//System.out.println("size = " + size);
 		
@@ -87,17 +90,17 @@ public class DjangAndFinchTuples {
 			int flag = 0;
 			for (int i = a.length - 1; i >= 0; i--)
 			{
-				//System.out.println("pack 1");
+				////System.out.println("pack 1");
 				if ((size - j - a[i][0] < 0))
 				{
 					//System.out.println("stop 1 pack: el - " + a[i][0]);
 					break;
 				}
-				if ((size - a[i][0] == j))
+				if ((a[i][1] == 0) && (size - a[i][0] == j))
 				{
 					a[i][1] = 1;
 					//System.out.println("el 1 = " + a[i][0]);
-					return;
+					return size - a[i][0];
 				}
 			}
 			//find 2 element to complete bin
@@ -105,7 +108,7 @@ public class DjangAndFinchTuples {
 			{
 				for (int k = a.length -1; k >= 0 && flag == 0; k--)
 				{
-					//System.out.println("pack 2");
+					////System.out.println("pack 2");
 					//if ((a[i][1] == 0) && (a[k][1] == 0) && (size - j - a[i][0] - a[k][0] < 0))
 					if (size - j - a[i][0] - a[k][0] < 0)
 					{
@@ -119,7 +122,7 @@ public class DjangAndFinchTuples {
 						a[k][1] = 1;
 						//System.out.println("el 1 = " + a[i][0]);
 						//System.out.println("el 2 = " + a[k][0]);
-						return;
+						return size - a[i][0] - a[k][0];
 					}
 				}
 			}
@@ -134,14 +137,8 @@ public class DjangAndFinchTuples {
 					{
 						//x++;
 						////System.out.println("x = " + x);
-						//System.out.println("pack 3");
-						//System.out.println("j = " + j);
-						//System.out.println("size = " + size);
-						//System.out.println("!el 1 = " + a[i][0]);
-						//System.out.println("!el 2 = " + a[k][0]);
-						//System.out.println("!el 3 = " + a[l][0]);
 						//if ((a[i][1] == 0) && (a[k][1] == 0) && (a[l][1] == 0) && (size - j - a[i][0] - a[k][0] - a[l][0] < 0))
-						if ((size - j - a[i][0] - a[k][0] - a[l][0] < 0))	
+						if (size - j - a[i][0] - a[k][0] - a[l][0] < 0)
 						{
 							flag = 1;
 							//System.out.println("stop 3 pack: el - " + a[i][0] + " el - " + a[k][0] + " el - " + a[l][0]);
@@ -157,7 +154,7 @@ public class DjangAndFinchTuples {
 							//System.out.println("el 1 = " + a[i][0]);
 							//System.out.println("el 2 = " + a[k][0]);
 							//System.out.println("el 3 = " + a[l][0]);
-							return;
+							return size - a[i][0] - a[k][0] - a[l][0];
 						}
 					}
 				}
@@ -172,7 +169,7 @@ public class DjangAndFinchTuples {
 					{
 						for (int p = l; p >= 0 && flag == 0; p--)
 						{
-							//System.out.println("pack 4");
+							////System.out.println("pack 4");
 							//if ((i != k) && (l != k) && (i != l) && (i != p) && (p != l) && (p != k)
 							//	&& (size - j - a[i][0] - a[k][0] - a[l][0] - a[p][0] < 0))
 							if (size - j - a[i][0] - a[k][0] - a[l][0] - a[p][0] < 0)
@@ -181,9 +178,9 @@ public class DjangAndFinchTuples {
 								//System.out.println("stop 4 pack: el - " + a[i][0] + " el - " + a[k][0] + " el - " + a[l][0] + " el - " + a[p][0]);
 								break;
 							}
-							if ((i != k) && (l != k) && (i != l) && (i != p) && (p != l) && (p != k)
-								&& (size - a[i][0] - a[k][0] - a[l][0] - a[p][0] == j)
-								&& a[i][1] == 0 && a[k][1] == 0 && a[l][1] == 0 && a[p][1] == 0)
+							if ((i != k) && (l != k) && (i != l) && (i != p) && (p != l) && (p != k) 
+								&& (a[i][1] == 0) && (a[k][1] == 0) && (a[l][1] == 0) & (a[p][1] == 0)
+								&& (size - a[i][0] - a[k][0] - a[l][0] - a[p][0] == j))
 							{
 								a[i][1] = 1;
 								a[k][1] = 1;
@@ -193,13 +190,12 @@ public class DjangAndFinchTuples {
 								//System.out.println("el 2 = " + a[k][0]);
 								//System.out.println("el 3 = " + a[l][0]);
 								//System.out.println("el 4 = " + a[p][0]);
-								return;
+								return size - a[i][0] - a[k][0] - a[l][0] - a[p][0];
 							}
 						}
 					}
 				}
 			}
-
 			//find 5 element to complete bin
 			flag = 0;
 			for (int i = a.length -1; i >= 0 && flag == 0; i--)
@@ -212,7 +208,7 @@ public class DjangAndFinchTuples {
 						{
 							for (int t = p; t >= 0 && flag == 0; t--)
 							{
-								//System.out.println("pack 5");
+								////System.out.println("pack 5");
 								/*//System.out.println("size - j - a[i][0] - a[k][0] - a[l][0] - a[p][0] - a[t][0] = " + (size - j - a[i][0] - a[k][0] - a[l][0] - a[p][0] - a[t][0]));
 								//System.out.println("a[i][1] " + a[i][1]);
 								//System.out.println("a[k][1] " + a[k][1]);
@@ -222,16 +218,16 @@ public class DjangAndFinchTuples {
 								//if ((size - j - a[i][0] - a[k][0] - a[l][0] - a[p][0] - a[t][0] < 0) &&
 								//		(i != k) && (l != k) && (i != l) && (i != p) && (p != l) && (p != k)
 								//		&& (t != i) && (t != k) && (t != l) && (t != p))
-								if ((size - j - a[i][0] - a[k][0] - a[l][0] - a[p][0] - a[t][0] < 0))
+								if (size - j - a[i][0] - a[k][0] - a[l][0] - a[p][0] - a[t][0] < 0)
 								{
 									flag = 1;
 									//System.out.println("stop 5 pack: el - " + a[i][0] + " el - " + a[k][0] + " el - " + a[l][0] + " el - " + a[p][0] + " el - " + a[t][0]);
 									break;
 								}
 								if ((i != k) && (l != k) && (i != l) && (i != p) && (p != l) && (p != k)
-									&& (t != i) && (t != k) && (t != l) && (t != p)
-									&& (size - a[i][0] - a[k][0] - a[l][0] - a[p][0] - a[t][0] == j)
-									&& a[i][1] == 0 && a[k][1] == 0 && a[l][1] == 0 && a[p][1] == 0 && a[t][1] == 0)
+										&& (t != i) && (t != k) && (t != l) && (t != p)
+										&& (a[i][1] == 0) && (a[k][1] == 0) && (a[l][1] == 0) && (a[p][1] == 0) && (a[t][1] == 0)
+										&& (size - a[i][0] - a[k][0] - a[l][0] - a[p][0] - a[t][0] == j))
 								{
 									a[i][1] = 1;
 									a[k][1] = 1;
@@ -243,7 +239,7 @@ public class DjangAndFinchTuples {
 									//System.out.println("el 3 = " + a[l][0]);
 									//System.out.println("el 4 = " + a[p][0]);
 									//System.out.println("el 5 = " + a[t][0]);
-									return;													
+									return size - a[i][0] - a[k][0] - a[l][0] - a[p][0] - a[t][0];
 								}
 							}
 						}
@@ -251,6 +247,6 @@ public class DjangAndFinchTuples {
 				}
 			}
 		}
-		return;
+		return size;
 	}
 }

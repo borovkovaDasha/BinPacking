@@ -51,8 +51,11 @@ public class DjangAndFinchTuplesFilter {
 				{
 					//System.out.println("New bin");
 					currentBin = currentBin + 1;
-					bins[currentBin] -= a[i][0];	
-					a[i][1] = 1;
+					if (bins[currentBin] - a[i][0] >= 0)
+					{
+						bins[currentBin] -= a[i][0];	
+						a[i][1] = 1;
+					}
 					//System.out.println("Element " + a[i][0] + " is packed to " + currentBin);
 					if ((bins[currentBin] <= size * 2 / 3) && (bins[currentBin] != 0))
 					{

@@ -34,10 +34,10 @@ public class NextFitDecreasingFilter {
 					//System.out.println("fill more");
 					bins[currentBin] = fillMore(a, bins[currentBin]);
 					currentBin = currentBin + 1;
-					bins[currentBin] -= a[i][0];
-					a[i][1] = 1;
+					//bins[currentBin] -= a[i][0];
+					//a[i][1] = 1;
 					//System.out.println("2Element " + a[i][0] + " is packed to " + currentBin);
-					return currentBin;
+					//return currentBin;
 				}
 			}
 		}

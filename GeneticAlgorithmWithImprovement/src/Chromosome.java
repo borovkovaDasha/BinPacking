@@ -52,10 +52,14 @@ public class Chromosome {
 				flag = 1;
 				break;
 			}
-			//if (algnum == 0)
-			//{
+			if (algnum == 0)
+			{
 				alg = findCloser(state);
-			//}
+			}
+			else
+			{
+				alg = algnum;
+			}
 			prevAlgorithm = alg;
 			//System.out.println("findCloser " + alg);
 			//alg = 7;
@@ -97,6 +101,20 @@ public class Chromosome {
 				////System.out.println("binsize = " + bins[i]);
 				numberOfBins++;
 			}
+			if (bins[i] < 0)
+			{
+				System.out.println("error ");
+			}
+		}
+		int check = 0;
+		for (int i = 0; i < elements.length; i++)
+		{
+			if (elements[i][1] == 1)
+				check++;
+		}
+		if (check == elements.length)
+		{
+			System.out.println("OK");
 		}
 		//System.out.println("elements.length = " + elements.length);
 		//System.out.println("numberOfBins = " + numberOfBins);

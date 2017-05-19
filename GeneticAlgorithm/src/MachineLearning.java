@@ -39,7 +39,7 @@ public class MachineLearning {
 		GeneticAlgorithm GA = new GeneticAlgorithm();
 		int[][]elements = GA.readFile(fileName);
 		Chromosome chrom = new Chromosome(0);	
-		parseFile("C:\\data_for_binpacking\\results\\test2.txt");
+		parseFile("C:\\data_for_binpacking\\results1000\\test4.txt");
 		solveProblem(elements,GA.size, chrom);
 	}
 	
@@ -213,7 +213,7 @@ public class MachineLearning {
 				+ Math.pow(tmp.smallItems-gen.smallItems,2) + Math.pow(tmp.remainingItems-gen.remainingItems,2));
 			}
 		}
-		////System.out.println("the closet algorithm is " + algorithm);
+		//System.out.println("the closet algorithm is " + algorithm);
 		return algorithm;
 	}
 	

@@ -7,8 +7,8 @@ import java.util.ArrayList;
 public class TestChromosome {
 	
 	public static final int ALGORITHM_NUMBER = 8;
-	public static final String RESULT_FILE = "C:\\data_for_binpacking\\improve_results\\test9.txt";
-	public static final String CHROMOSOME_TEST = "C:\\data_for_binpacking\\improve_results\\test_chromosome91.txt";
+	public static final String RESULT_FILE = "C:\\data_for_binpacking\\improve_results\\!test.txt";
+	public static final String CHROMOSOME_TEST = "C:\\data_for_binpacking\\improve_results\\!test_chromosome!.txt";
 	public static final String DATA_PATH = "C:\\data_for_binpacking\\giant_data\\";
 	public Chromosome cleverchromosome;
 	public FileWriter writer;
@@ -18,16 +18,24 @@ public class TestChromosome {
 		GeneticAlgorithm GA = new GeneticAlgorithm();
 		parseFile(RESULT_FILE);
 	    writer = new FileWriter(CHROMOSOME_TEST);  
-		for (int i = 1; i <= 750; i++)//GA.NUMBER_OF_FILES; i++)
+		for (int i = 1; i <= 100; i++)//GA.NUMBER_OF_FILES; i++)
 		{
-			int [][] elements = readFile(DATA_PATH + Integer.toString(i) + ".txt");
+			//int [][] elements = readFile(DATA_PATH + Integer.toString(i) + ".txt");
+			int [][] elements = readFile(GA.DATA_PATH + Integer.toString(i) + ".txt");
 			System.out.println("file " + i);
+			double p = 0;
 			for (int j = 0; j <= ALGORITHM_NUMBER; j++)
 			{
 				System.out.println("algorithm " + j);
 				System.out.println("GA.size " + GA.size);
 				//cleverchromosome.solveProblem(elements, GA.size, j);
-				writeFile(i, elements.length, cleverchromosome.solveProblem(elements, GA.size, j), j);
+				double t = cleverchromosome.solveProblem(elements, GA.size, j);
+				writeFile(i, elements.length, t, j);
+				if (j == 0)
+					p = t;
+				if (j == 1)
+					if (p < t)
+						System.out.println("!!! 0 is better");
 				for (int k = 0; k < elements.length; k++)
 				{
 					elements[k][1] = 0;

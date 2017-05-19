@@ -56,10 +56,14 @@ public class Chromosome {
 				flag = 1;
 				break;
 			}
-			//if (alg == 0)
-			//{
+			if (algnum == 0)
+			{
 				alg = findCloser(state);//chromosome, state);
-			//}
+			}
+			else
+			{
+				alg = algnum;
+			}
 			//System.out.println("findCloser " + alg);
 			//alg = 7;
 			switch (alg) {
