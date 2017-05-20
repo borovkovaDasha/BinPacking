@@ -19,7 +19,7 @@ public class Main {
 		/*for (int i = 1; i < 6; i++)
 		{
 			System.out.println("!!!!!GA " + i);
-			GeneticAlgorithm GA = new GeneticAlgorithm();
+			GeneticAlgorithm GA = new GeneticAlgorithm()	;
 			GA.go(i);
 		}*/
 		//MachineLearning ML = new MachineLearning();

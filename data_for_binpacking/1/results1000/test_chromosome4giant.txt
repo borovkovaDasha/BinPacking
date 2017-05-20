@@ -1,0 +1,1000 @@
+File - 1Number of elements: 10115 number of bins: 5148.0 algorithm: 0
+File - 1Number of elements: 10115 number of bins: 5148.0 algorithm: 1
+!!!equal
+File - 1Number of elements: 10115 number of bins: 6592.0 algorithm: 2
+File - 1Number of elements: 10115 number of bins: 5151.0 algorithm: 3
+File - 1Number of elements: 10115 number of bins: 5151.0 algorithm: 4
+File - 1Number of elements: 10115 number of bins: 5148.0 algorithm: 5
+File - 1Number of elements: 10115 number of bins: 5148.0 algorithm: 6
+File - 1Number of elements: 10115 number of bins: 5151.0 algorithm: 7
+File - 1Number of elements: 10115 number of bins: 5148.0 algorithm: 8
+File - 2Number of elements: 10181 number of bins: 5203.0 algorithm: 0
+File - 2Number of elements: 10181 number of bins: 5203.0 algorithm: 1
+!!!equal
+File - 2Number of elements: 10181 number of bins: 6625.0 algorithm: 2
+File - 2Number of elements: 10181 number of bins: 5203.0 algorithm: 3
+File - 2Number of elements: 10181 number of bins: 5203.0 algorithm: 4
+File - 2Number of elements: 10181 number of bins: 5203.0 algorithm: 5
+File - 2Number of elements: 10181 number of bins: 5203.0 algorithm: 6
+File - 2Number of elements: 10181 number of bins: 5203.0 algorithm: 7
+File - 2Number of elements: 10181 number of bins: 5203.0 algorithm: 8
+File - 3Number of elements: 10060 number of bins: 5082.0 algorithm: 0
+File - 3Number of elements: 10060 number of bins: 5082.0 algorithm: 1
+!!!equal
+File - 3Number of elements: 10060 number of bins: 6495.0 algorithm: 2
+File - 3Number of elements: 10060 number of bins: 5083.0 algorithm: 3
+File - 3Number of elements: 10060 number of bins: 5083.0 algorithm: 4
+File - 3Number of elements: 10060 number of bins: 5082.0 algorithm: 5
+File - 3Number of elements: 10060 number of bins: 5082.0 algorithm: 6
+File - 3Number of elements: 10060 number of bins: 5083.0 algorithm: 7
+File - 3Number of elements: 10060 number of bins: 5082.0 algorithm: 8
+File - 4Number of elements: 10145 number of bins: 5071.0 algorithm: 0
+File - 4Number of elements: 10145 number of bins: 5071.0 algorithm: 1
+!!!equal
+File - 4Number of elements: 10145 number of bins: 6496.0 algorithm: 2
+File - 4Number of elements: 10145 number of bins: 5082.0 algorithm: 3
+File - 4Number of elements: 10145 number of bins: 5082.0 algorithm: 4
+File - 4Number of elements: 10145 number of bins: 5071.0 algorithm: 5
+File - 4Number of elements: 10145 number of bins: 5071.0 algorithm: 6
+File - 4Number of elements: 10145 number of bins: 5081.0 algorithm: 7
+File - 4Number of elements: 10145 number of bins: 5071.0 algorithm: 8
+File - 5Number of elements: 10156 number of bins: 5129.0 algorithm: 0
+File - 5Number of elements: 10156 number of bins: 5129.0 algorithm: 1
+!!!equal
+File - 5Number of elements: 10156 number of bins: 6559.0 algorithm: 2
+File - 5Number of elements: 10156 number of bins: 5129.0 algorithm: 3
+File - 5Number of elements: 10156 number of bins: 5129.0 algorithm: 4
+File - 5Number of elements: 10156 number of bins: 5129.0 algorithm: 5
+File - 5Number of elements: 10156 number of bins: 5129.0 algorithm: 6
+File - 5Number of elements: 10156 number of bins: 5129.0 algorithm: 7
+File - 5Number of elements: 10156 number of bins: 5129.0 algorithm: 8
+File - 6Number of elements: 10099 number of bins: 5086.0 algorithm: 0
+File - 6Number of elements: 10099 number of bins: 5087.0 algorithm: 1
+!!!better
+File - 6Number of elements: 10099 number of bins: 6523.0 algorithm: 2
+File - 6Number of elements: 10099 number of bins: 5102.0 algorithm: 3
+File - 6Number of elements: 10099 number of bins: 5102.0 algorithm: 4
+File - 6Number of elements: 10099 number of bins: 5087.0 algorithm: 5
+File - 6Number of elements: 10099 number of bins: 5087.0 algorithm: 6
+File - 6Number of elements: 10099 number of bins: 5101.0 algorithm: 7
+File - 6Number of elements: 10099 number of bins: 5087.0 algorithm: 8
+File - 7Number of elements: 10034 number of bins: 5051.0 algorithm: 0
+File - 7Number of elements: 10034 number of bins: 5051.0 algorithm: 1
+!!!equal
+File - 7Number of elements: 10034 number of bins: 6462.0 algorithm: 2
+File - 7Number of elements: 10034 number of bins: 5054.0 algorithm: 3
+File - 7Number of elements: 10034 number of bins: 5054.0 algorithm: 4
+File - 7Number of elements: 10034 number of bins: 5051.0 algorithm: 5
+File - 7Number of elements: 10034 number of bins: 5051.0 algorithm: 6
+File - 7Number of elements: 10034 number of bins: 5054.0 algorithm: 7
+File - 7Number of elements: 10034 number of bins: 5051.0 algorithm: 8
+File - 8Number of elements: 10082 number of bins: 5099.0 algorithm: 0
+File - 8Number of elements: 10082 number of bins: 5099.0 algorithm: 1
+!!!equal
+File - 8Number of elements: 10082 number of bins: 6532.0 algorithm: 2
+File - 8Number of elements: 10082 number of bins: 5099.0 algorithm: 3
+File - 8Number of elements: 10082 number of bins: 5099.0 algorithm: 4
+File - 8Number of elements: 10082 number of bins: 5099.0 algorithm: 5
+File - 8Number of elements: 10082 number of bins: 5099.0 algorithm: 6
+File - 8Number of elements: 10082 number of bins: 5099.0 algorithm: 7
+File - 8Number of elements: 10082 number of bins: 5099.0 algorithm: 8
+File - 9Number of elements: 10199 number of bins: 5117.0 algorithm: 0
+File - 9Number of elements: 10199 number of bins: 5117.0 algorithm: 1
+!!!equal
+File - 9Number of elements: 10199 number of bins: 6590.0 algorithm: 2
+File - 9Number of elements: 10199 number of bins: 5119.0 algorithm: 3
+File - 9Number of elements: 10199 number of bins: 5119.0 algorithm: 4
+File - 9Number of elements: 10199 number of bins: 5117.0 algorithm: 5
+File - 9Number of elements: 10199 number of bins: 5117.0 algorithm: 6
+File - 9Number of elements: 10199 number of bins: 5119.0 algorithm: 7
+File - 9Number of elements: 10199 number of bins: 5117.0 algorithm: 8
+File - 10Number of elements: 10104 number of bins: 5038.0 algorithm: 0
+File - 10Number of elements: 10104 number of bins: 5038.0 algorithm: 1
+!!!equal
+File - 10Number of elements: 10104 number of bins: 6482.0 algorithm: 2
+File - 10Number of elements: 10104 number of bins: 5051.0 algorithm: 3
+File - 10Number of elements: 10104 number of bins: 5051.0 algorithm: 4
+File - 10Number of elements: 10104 number of bins: 5038.0 algorithm: 5
+File - 10Number of elements: 10104 number of bins: 5038.0 algorithm: 6
+File - 10Number of elements: 10104 number of bins: 5050.0 algorithm: 7
+File - 10Number of elements: 10104 number of bins: 5038.0 algorithm: 8
+File - 11Number of elements: 10198 number of bins: 5190.0 algorithm: 0
+File - 11Number of elements: 10198 number of bins: 5190.0 algorithm: 1
+!!!equal
+File - 11Number of elements: 10198 number of bins: 6652.0 algorithm: 2
+File - 11Number of elements: 10198 number of bins: 5190.0 algorithm: 3
+File - 11Number of elements: 10198 number of bins: 5190.0 algorithm: 4
+File - 11Number of elements: 10198 number of bins: 5190.0 algorithm: 5
+File - 11Number of elements: 10198 number of bins: 5190.0 algorithm: 6
+File - 11Number of elements: 10198 number of bins: 5190.0 algorithm: 7
+File - 11Number of elements: 10198 number of bins: 5190.0 algorithm: 8
+File - 12Number of elements: 10036 number of bins: 5083.0 algorithm: 0
+File - 12Number of elements: 10036 number of bins: 5083.0 algorithm: 1
+!!!equal
+File - 12Number of elements: 10036 number of bins: 6511.0 algorithm: 2
+File - 12Number of elements: 10036 number of bins: 5091.0 algorithm: 3
+File - 12Number of elements: 10036 number of bins: 5091.0 algorithm: 4
+File - 12Number of elements: 10036 number of bins: 5083.0 algorithm: 5
+File - 12Number of elements: 10036 number of bins: 5083.0 algorithm: 6
+File - 12Number of elements: 10036 number of bins: 5090.0 algorithm: 7
+File - 12Number of elements: 10036 number of bins: 5083.0 algorithm: 8
+File - 13Number of elements: 10141 number of bins: 5078.0 algorithm: 0
+File - 13Number of elements: 10141 number of bins: 5078.0 algorithm: 1
+!!!equal
+File - 13Number of elements: 10141 number of bins: 6528.0 algorithm: 2
+File - 13Number of elements: 10141 number of bins: 5093.0 algorithm: 3
+File - 13Number of elements: 10141 number of bins: 5093.0 algorithm: 4
+File - 13Number of elements: 10141 number of bins: 5078.0 algorithm: 5
+File - 13Number of elements: 10141 number of bins: 5078.0 algorithm: 6
+File - 13Number of elements: 10141 number of bins: 5091.0 algorithm: 7
+File - 13Number of elements: 10141 number of bins: 5078.0 algorithm: 8
+File - 14Number of elements: 10112 number of bins: 5054.0 algorithm: 0
+File - 14Number of elements: 10112 number of bins: 5054.0 algorithm: 1
+!!!equal
+File - 14Number of elements: 10112 number of bins: 6470.0 algorithm: 2
+File - 14Number of elements: 10112 number of bins: 5075.0 algorithm: 3
+File - 14Number of elements: 10112 number of bins: 5075.0 algorithm: 4
+File - 14Number of elements: 10112 number of bins: 5054.0 algorithm: 5
+File - 14Number of elements: 10112 number of bins: 5054.0 algorithm: 6
+File - 14Number of elements: 10112 number of bins: 5073.0 algorithm: 7
+File - 14Number of elements: 10112 number of bins: 5054.0 algorithm: 8
+File - 15Number of elements: 10022 number of bins: 5045.0 algorithm: 0
+File - 15Number of elements: 10022 number of bins: 5045.0 algorithm: 1
+!!!equal
+File - 15Number of elements: 10022 number of bins: 6487.0 algorithm: 2
+File - 15Number of elements: 10022 number of bins: 5053.0 algorithm: 3
+File - 15Number of elements: 10022 number of bins: 5053.0 algorithm: 4
+File - 15Number of elements: 10022 number of bins: 5045.0 algorithm: 5
+File - 15Number of elements: 10022 number of bins: 5045.0 algorithm: 6
+File - 15Number of elements: 10022 number of bins: 5053.0 algorithm: 7
+File - 15Number of elements: 10022 number of bins: 5045.0 algorithm: 8
+File - 16Number of elements: 10145 number of bins: 5196.0 algorithm: 0
+File - 16Number of elements: 10145 number of bins: 5196.0 algorithm: 1
+!!!equal
+File - 16Number of elements: 10145 number of bins: 6641.0 algorithm: 2
+File - 16Number of elements: 10145 number of bins: 5196.0 algorithm: 3
+File - 16Number of elements: 10145 number of bins: 5196.0 algorithm: 4
+File - 16Number of elements: 10145 number of bins: 5196.0 algorithm: 5
+File - 16Number of elements: 10145 number of bins: 5196.0 algorithm: 6
+File - 16Number of elements: 10145 number of bins: 5196.0 algorithm: 7
+File - 16Number of elements: 10145 number of bins: 5196.0 algorithm: 8
+File - 17Number of elements: 10095 number of bins: 5112.0 algorithm: 0
+File - 17Number of elements: 10095 number of bins: 5112.0 algorithm: 1
+!!!equal
+File - 17Number of elements: 10095 number of bins: 6554.0 algorithm: 2
+File - 17Number of elements: 10095 number of bins: 5112.0 algorithm: 3
+File - 17Number of elements: 10095 number of bins: 5112.0 algorithm: 4
+File - 17Number of elements: 10095 number of bins: 5112.0 algorithm: 5
+File - 17Number of elements: 10095 number of bins: 5112.0 algorithm: 6
+File - 17Number of elements: 10095 number of bins: 5112.0 algorithm: 7
+File - 17Number of elements: 10095 number of bins: 5112.0 algorithm: 8
+File - 18Number of elements: 10159 number of bins: 5057.0 algorithm: 0
+File - 18Number of elements: 10159 number of bins: 5057.0 algorithm: 1
+!!!equal
+File - 18Number of elements: 10159 number of bins: 6471.0 algorithm: 2
+File - 18Number of elements: 10159 number of bins: 5077.0 algorithm: 3
+File - 18Number of elements: 10159 number of bins: 5077.0 algorithm: 4
+File - 18Number of elements: 10159 number of bins: 5057.0 algorithm: 5
+File - 18Number of elements: 10159 number of bins: 5057.0 algorithm: 6
+File - 18Number of elements: 10159 number of bins: 5076.0 algorithm: 7
+File - 18Number of elements: 10159 number of bins: 5057.0 algorithm: 8
+File - 19Number of elements: 10196 number of bins: 5164.0 algorithm: 0
+File - 19Number of elements: 10196 number of bins: 5164.0 algorithm: 1
+!!!equal
+File - 19Number of elements: 10196 number of bins: 6603.0 algorithm: 2
+File - 19Number of elements: 10196 number of bins: 5164.0 algorithm: 3
+File - 19Number of elements: 10196 number of bins: 5164.0 algorithm: 4
+File - 19Number of elements: 10196 number of bins: 5164.0 algorithm: 5
+File - 19Number of elements: 10196 number of bins: 5164.0 algorithm: 6
+File - 19Number of elements: 10196 number of bins: 5164.0 algorithm: 7
+File - 19Number of elements: 10196 number of bins: 5164.0 algorithm: 8
+File - 20Number of elements: 10017 number of bins: 5136.0 algorithm: 0
+File - 20Number of elements: 10017 number of bins: 5136.0 algorithm: 1
+!!!equal
+File - 20Number of elements: 10017 number of bins: 6520.0 algorithm: 2
+File - 20Number of elements: 10017 number of bins: 5136.0 algorithm: 3
+File - 20Number of elements: 10017 number of bins: 5136.0 algorithm: 4
+File - 20Number of elements: 10017 number of bins: 5136.0 algorithm: 5
+File - 20Number of elements: 10017 number of bins: 5136.0 algorithm: 6
+File - 20Number of elements: 10017 number of bins: 5136.0 algorithm: 7
+File - 20Number of elements: 10017 number of bins: 5136.0 algorithm: 8
+File - 21Number of elements: 10180 number of bins: 5131.0 algorithm: 0
+File - 21Number of elements: 10180 number of bins: 5131.0 algorithm: 1
+!!!equal
+File - 21Number of elements: 10180 number of bins: 6560.0 algorithm: 2
+File - 21Number of elements: 10180 number of bins: 5132.0 algorithm: 3
+File - 21Number of elements: 10180 number of bins: 5132.0 algorithm: 4
+File - 21Number of elements: 10180 number of bins: 5131.0 algorithm: 5
+File - 21Number of elements: 10180 number of bins: 5131.0 algorithm: 6
+File - 21Number of elements: 10180 number of bins: 5131.0 algorithm: 7
+File - 21Number of elements: 10180 number of bins: 5131.0 algorithm: 8
+File - 22Number of elements: 10168 number of bins: 5151.0 algorithm: 0
+File - 22Number of elements: 10168 number of bins: 5151.0 algorithm: 1
+!!!equal
+File - 22Number of elements: 10168 number of bins: 6602.0 algorithm: 2
+File - 22Number of elements: 10168 number of bins: 5151.0 algorithm: 3
+File - 22Number of elements: 10168 number of bins: 5151.0 algorithm: 4
+File - 22Number of elements: 10168 number of bins: 5151.0 algorithm: 5
+File - 22Number of elements: 10168 number of bins: 5151.0 algorithm: 6
+File - 22Number of elements: 10168 number of bins: 5151.0 algorithm: 7
+File - 22Number of elements: 10168 number of bins: 5151.0 algorithm: 8
+File - 23Number of elements: 10068 number of bins: 5142.0 algorithm: 0
+File - 23Number of elements: 10068 number of bins: 5142.0 algorithm: 1
+!!!equal
+File - 23Number of elements: 10068 number of bins: 6560.0 algorithm: 2
+File - 23Number of elements: 10068 number of bins: 5142.0 algorithm: 3
+File - 23Number of elements: 10068 number of bins: 5142.0 algorithm: 4
+File - 23Number of elements: 10068 number of bins: 5142.0 algorithm: 5
+File - 23Number of elements: 10068 number of bins: 5142.0 algorithm: 6
+File - 23Number of elements: 10068 number of bins: 5142.0 algorithm: 7
+File - 23Number of elements: 10068 number of bins: 5142.0 algorithm: 8
+File - 24Number of elements: 10111 number of bins: 5135.0 algorithm: 0
+File - 24Number of elements: 10111 number of bins: 5135.0 algorithm: 1
+!!!equal
+File - 24Number of elements: 10111 number of bins: 6540.0 algorithm: 2
+File - 24Number of elements: 10111 number of bins: 5136.0 algorithm: 3
+File - 24Number of elements: 10111 number of bins: 5136.0 algorithm: 4
+File - 24Number of elements: 10111 number of bins: 5135.0 algorithm: 5
+File - 24Number of elements: 10111 number of bins: 5135.0 algorithm: 6
+File - 24Number of elements: 10111 number of bins: 5136.0 algorithm: 7
+File - 24Number of elements: 10111 number of bins: 5135.0 algorithm: 8
+File - 25Number of elements: 10105 number of bins: 5063.0 algorithm: 0
+File - 25Number of elements: 10105 number of bins: 5063.0 algorithm: 1
+!!!equal
+File - 25Number of elements: 10105 number of bins: 6506.0 algorithm: 2
+File - 25Number of elements: 10105 number of bins: 5077.0 algorithm: 3
+File - 25Number of elements: 10105 number of bins: 5077.0 algorithm: 4
+File - 25Number of elements: 10105 number of bins: 5063.0 algorithm: 5
+File - 25Number of elements: 10105 number of bins: 5063.0 algorithm: 6
+File - 25Number of elements: 10105 number of bins: 5076.0 algorithm: 7
+File - 25Number of elements: 10105 number of bins: 5063.0 algorithm: 8
+File - 26Number of elements: 10030 number of bins: 5112.0 algorithm: 0
+File - 26Number of elements: 10030 number of bins: 5112.0 algorithm: 1
+!!!equal
+File - 26Number of elements: 10030 number of bins: 6510.0 algorithm: 2
+File - 26Number of elements: 10030 number of bins: 5112.0 algorithm: 3
+File - 26Number of elements: 10030 number of bins: 5112.0 algorithm: 4
+File - 26Number of elements: 10030 number of bins: 5112.0 algorithm: 5
+File - 26Number of elements: 10030 number of bins: 5112.0 algorithm: 6
+File - 26Number of elements: 10030 number of bins: 5112.0 algorithm: 7
+File - 26Number of elements: 10030 number of bins: 5112.0 algorithm: 8
+File - 27Number of elements: 10154 number of bins: 5190.0 algorithm: 0
+File - 27Number of elements: 10154 number of bins: 5190.0 algorithm: 1
+!!!equal
+File - 27Number of elements: 10154 number of bins: 6603.0 algorithm: 2
+File - 27Number of elements: 10154 number of bins: 5190.0 algorithm: 3
+File - 27Number of elements: 10154 number of bins: 5190.0 algorithm: 4
+File - 27Number of elements: 10154 number of bins: 5190.0 algorithm: 5
+File - 27Number of elements: 10154 number of bins: 5190.0 algorithm: 6
+File - 27Number of elements: 10154 number of bins: 5190.0 algorithm: 7
+File - 27Number of elements: 10154 number of bins: 5190.0 algorithm: 8
+File - 28Number of elements: 10153 number of bins: 5156.0 algorithm: 0
+File - 28Number of elements: 10153 number of bins: 5156.0 algorithm: 1
+!!!equal
+File - 28Number of elements: 10153 number of bins: 6574.0 algorithm: 2
+File - 28Number of elements: 10153 number of bins: 5159.0 algorithm: 3
+File - 28Number of elements: 10153 number of bins: 5159.0 algorithm: 4
+File - 28Number of elements: 10153 number of bins: 5156.0 algorithm: 5
+File - 28Number of elements: 10153 number of bins: 5156.0 algorithm: 6
+File - 28Number of elements: 10153 number of bins: 5159.0 algorithm: 7
+File - 28Number of elements: 10153 number of bins: 5156.0 algorithm: 8
+File - 29Number of elements: 10048 number of bins: 5064.0 algorithm: 0
+File - 29Number of elements: 10048 number of bins: 5064.0 algorithm: 1
+!!!equal
+File - 29Number of elements: 10048 number of bins: 6514.0 algorithm: 2
+File - 29Number of elements: 10048 number of bins: 5064.0 algorithm: 3
+File - 29Number of elements: 10048 number of bins: 5064.0 algorithm: 4
+File - 29Number of elements: 10048 number of bins: 5064.0 algorithm: 5
+File - 29Number of elements: 10048 number of bins: 5064.0 algorithm: 6
+File - 29Number of elements: 10048 number of bins: 5064.0 algorithm: 7
+File - 29Number of elements: 10048 number of bins: 5064.0 algorithm: 8
+File - 30Number of elements: 10006 number of bins: 5042.0 algorithm: 0
+File - 30Number of elements: 10006 number of bins: 5042.0 algorithm: 1
+!!!equal
+File - 30Number of elements: 10006 number of bins: 6450.0 algorithm: 2
+File - 30Number of elements: 10006 number of bins: 5043.0 algorithm: 3
+File - 30Number of elements: 10006 number of bins: 5043.0 algorithm: 4
+File - 30Number of elements: 10006 number of bins: 5042.0 algorithm: 5
+File - 30Number of elements: 10006 number of bins: 5042.0 algorithm: 6
+File - 30Number of elements: 10006 number of bins: 5042.0 algorithm: 7
+File - 30Number of elements: 10006 number of bins: 5042.0 algorithm: 8
+File - 31Number of elements: 10136 number of bins: 5076.0 algorithm: 0
+File - 31Number of elements: 10136 number of bins: 5076.0 algorithm: 1
+!!!equal
+File - 31Number of elements: 10136 number of bins: 6507.0 algorithm: 2
+File - 31Number of elements: 10136 number of bins: 5091.0 algorithm: 3
+File - 31Number of elements: 10136 number of bins: 5091.0 algorithm: 4
+File - 31Number of elements: 10136 number of bins: 5076.0 algorithm: 5
+File - 31Number of elements: 10136 number of bins: 5076.0 algorithm: 6
+File - 31Number of elements: 10136 number of bins: 5088.0 algorithm: 7
+File - 31Number of elements: 10136 number of bins: 5076.0 algorithm: 8
+File - 32Number of elements: 10099 number of bins: 5100.0 algorithm: 0
+File - 32Number of elements: 10099 number of bins: 5100.0 algorithm: 1
+!!!equal
+File - 32Number of elements: 10099 number of bins: 6557.0 algorithm: 2
+File - 32Number of elements: 10099 number of bins: 5106.0 algorithm: 3
+File - 32Number of elements: 10099 number of bins: 5106.0 algorithm: 4
+File - 32Number of elements: 10099 number of bins: 5100.0 algorithm: 5
+File - 32Number of elements: 10099 number of bins: 5100.0 algorithm: 6
+File - 32Number of elements: 10099 number of bins: 5106.0 algorithm: 7
+File - 32Number of elements: 10099 number of bins: 5100.0 algorithm: 8
+File - 33Number of elements: 10068 number of bins: 5139.0 algorithm: 0
+File - 33Number of elements: 10068 number of bins: 5139.0 algorithm: 1
+!!!equal
+File - 33Number of elements: 10068 number of bins: 6541.0 algorithm: 2
+File - 33Number of elements: 10068 number of bins: 5139.0 algorithm: 3
+File - 33Number of elements: 10068 number of bins: 5139.0 algorithm: 4
+File - 33Number of elements: 10068 number of bins: 5139.0 algorithm: 5
+File - 33Number of elements: 10068 number of bins: 5139.0 algorithm: 6
+File - 33Number of elements: 10068 number of bins: 5139.0 algorithm: 7
+File - 33Number of elements: 10068 number of bins: 5139.0 algorithm: 8
+File - 34Number of elements: 10161 number of bins: 5070.0 algorithm: 0
+File - 34Number of elements: 10161 number of bins: 5070.0 algorithm: 1
+!!!equal
+File - 34Number of elements: 10161 number of bins: 6486.0 algorithm: 2
+File - 34Number of elements: 10161 number of bins: 5091.0 algorithm: 3
+File - 34Number of elements: 10161 number of bins: 5091.0 algorithm: 4
+File - 34Number of elements: 10161 number of bins: 5070.0 algorithm: 5
+File - 34Number of elements: 10161 number of bins: 5070.0 algorithm: 6
+File - 34Number of elements: 10161 number of bins: 5091.0 algorithm: 7
+File - 34Number of elements: 10161 number of bins: 5070.0 algorithm: 8
+File - 35Number of elements: 10009 number of bins: 5142.0 algorithm: 0
+File - 35Number of elements: 10009 number of bins: 5142.0 algorithm: 1
+!!!equal
+File - 35Number of elements: 10009 number of bins: 6553.0 algorithm: 2
+File - 35Number of elements: 10009 number of bins: 5142.0 algorithm: 3
+File - 35Number of elements: 10009 number of bins: 5142.0 algorithm: 4
+File - 35Number of elements: 10009 number of bins: 5142.0 algorithm: 5
+File - 35Number of elements: 10009 number of bins: 5142.0 algorithm: 6
+File - 35Number of elements: 10009 number of bins: 5142.0 algorithm: 7
+File - 35Number of elements: 10009 number of bins: 5142.0 algorithm: 8
+File - 36Number of elements: 10032 number of bins: 5062.0 algorithm: 0
+File - 36Number of elements: 10032 number of bins: 5062.0 algorithm: 1
+!!!equal
+File - 36Number of elements: 10032 number of bins: 6505.0 algorithm: 2
+File - 36Number of elements: 10032 number of bins: 5069.0 algorithm: 3
+File - 36Number of elements: 10032 number of bins: 5069.0 algorithm: 4
+File - 36Number of elements: 10032 number of bins: 5062.0 algorithm: 5
+File - 36Number of elements: 10032 number of bins: 5062.0 algorithm: 6
+File - 36Number of elements: 10032 number of bins: 5068.0 algorithm: 7
+File - 36Number of elements: 10032 number of bins: 5062.0 algorithm: 8
+File - 37Number of elements: 10002 number of bins: 5094.0 algorithm: 0
+File - 37Number of elements: 10002 number of bins: 5094.0 algorithm: 1
+!!!equal
+File - 37Number of elements: 10002 number of bins: 6510.0 algorithm: 2
+File - 37Number of elements: 10002 number of bins: 5094.0 algorithm: 3
+File - 37Number of elements: 10002 number of bins: 5094.0 algorithm: 4
+File - 37Number of elements: 10002 number of bins: 5094.0 algorithm: 5
+File - 37Number of elements: 10002 number of bins: 5094.0 algorithm: 6
+File - 37Number of elements: 10002 number of bins: 5094.0 algorithm: 7
+File - 37Number of elements: 10002 number of bins: 5094.0 algorithm: 8
+File - 38Number of elements: 10123 number of bins: 5170.0 algorithm: 0
+File - 38Number of elements: 10123 number of bins: 5170.0 algorithm: 1
+!!!equal
+File - 38Number of elements: 10123 number of bins: 6595.0 algorithm: 2
+File - 38Number of elements: 10123 number of bins: 5170.0 algorithm: 3
+File - 38Number of elements: 10123 number of bins: 5170.0 algorithm: 4
+File - 38Number of elements: 10123 number of bins: 5170.0 algorithm: 5
+File - 38Number of elements: 10123 number of bins: 5170.0 algorithm: 6
+File - 38Number of elements: 10123 number of bins: 5170.0 algorithm: 7
+File - 38Number of elements: 10123 number of bins: 5170.0 algorithm: 8
+File - 39Number of elements: 10076 number of bins: 5052.0 algorithm: 0
+File - 39Number of elements: 10076 number of bins: 5052.0 algorithm: 1
+!!!equal
+File - 39Number of elements: 10076 number of bins: 6493.0 algorithm: 2
+File - 39Number of elements: 10076 number of bins: 5056.0 algorithm: 3
+File - 39Number of elements: 10076 number of bins: 5056.0 algorithm: 4
+File - 39Number of elements: 10076 number of bins: 5052.0 algorithm: 5
+File - 39Number of elements: 10076 number of bins: 5052.0 algorithm: 6
+File - 39Number of elements: 10076 number of bins: 5055.0 algorithm: 7
+File - 39Number of elements: 10076 number of bins: 5052.0 algorithm: 8
+File - 40Number of elements: 10053 number of bins: 5051.0 algorithm: 0
+File - 40Number of elements: 10053 number of bins: 5051.0 algorithm: 1
+!!!equal
+File - 40Number of elements: 10053 number of bins: 6461.0 algorithm: 2
+File - 40Number of elements: 10053 number of bins: 5060.0 algorithm: 3
+File - 40Number of elements: 10053 number of bins: 5060.0 algorithm: 4
+File - 40Number of elements: 10053 number of bins: 5051.0 algorithm: 5
+File - 40Number of elements: 10053 number of bins: 5051.0 algorithm: 6
+File - 40Number of elements: 10053 number of bins: 5059.0 algorithm: 7
+File - 40Number of elements: 10053 number of bins: 5051.0 algorithm: 8
+File - 41Number of elements: 10065 number of bins: 5059.0 algorithm: 0
+File - 41Number of elements: 10065 number of bins: 5059.0 algorithm: 1
+!!!equal
+File - 41Number of elements: 10065 number of bins: 6476.0 algorithm: 2
+File - 41Number of elements: 10065 number of bins: 5072.0 algorithm: 3
+File - 41Number of elements: 10065 number of bins: 5072.0 algorithm: 4
+File - 41Number of elements: 10065 number of bins: 5059.0 algorithm: 5
+File - 41Number of elements: 10065 number of bins: 5059.0 algorithm: 6
+File - 41Number of elements: 10065 number of bins: 5072.0 algorithm: 7
+File - 41Number of elements: 10065 number of bins: 5059.0 algorithm: 8
+File - 42Number of elements: 10025 number of bins: 5095.0 algorithm: 0
+File - 42Number of elements: 10025 number of bins: 5095.0 algorithm: 1
+!!!equal
+File - 42Number of elements: 10025 number of bins: 6505.0 algorithm: 2
+File - 42Number of elements: 10025 number of bins: 5095.0 algorithm: 3
+File - 42Number of elements: 10025 number of bins: 5095.0 algorithm: 4
+File - 42Number of elements: 10025 number of bins: 5095.0 algorithm: 5
+File - 42Number of elements: 10025 number of bins: 5095.0 algorithm: 6
+File - 42Number of elements: 10025 number of bins: 5095.0 algorithm: 7
+File - 42Number of elements: 10025 number of bins: 5095.0 algorithm: 8
+File - 43Number of elements: 10123 number of bins: 5099.0 algorithm: 0
+File - 43Number of elements: 10123 number of bins: 5099.0 algorithm: 1
+!!!equal
+File - 43Number of elements: 10123 number of bins: 6556.0 algorithm: 2
+File - 43Number of elements: 10123 number of bins: 5104.0 algorithm: 3
+File - 43Number of elements: 10123 number of bins: 5104.0 algorithm: 4
+File - 43Number of elements: 10123 number of bins: 5099.0 algorithm: 5
+File - 43Number of elements: 10123 number of bins: 5099.0 algorithm: 6
+File - 43Number of elements: 10123 number of bins: 5103.0 algorithm: 7
+File - 43Number of elements: 10123 number of bins: 5099.0 algorithm: 8
+File - 44Number of elements: 10093 number of bins: 5123.0 algorithm: 0
+File - 44Number of elements: 10093 number of bins: 5123.0 algorithm: 1
+!!!equal
+File - 44Number of elements: 10093 number of bins: 6541.0 algorithm: 2
+File - 44Number of elements: 10093 number of bins: 5123.0 algorithm: 3
+File - 44Number of elements: 10093 number of bins: 5123.0 algorithm: 4
+File - 44Number of elements: 10093 number of bins: 5123.0 algorithm: 5
+File - 44Number of elements: 10093 number of bins: 5123.0 algorithm: 6
+File - 44Number of elements: 10093 number of bins: 5123.0 algorithm: 7
+File - 44Number of elements: 10093 number of bins: 5123.0 algorithm: 8
+File - 45Number of elements: 10091 number of bins: 5040.0 algorithm: 0
+File - 45Number of elements: 10091 number of bins: 5040.0 algorithm: 1
+!!!equal
+File - 45Number of elements: 10091 number of bins: 6476.0 algorithm: 2
+File - 45Number of elements: 10091 number of bins: 5050.0 algorithm: 3
+File - 45Number of elements: 10091 number of bins: 5050.0 algorithm: 4
+File - 45Number of elements: 10091 number of bins: 5040.0 algorithm: 5
+File - 45Number of elements: 10091 number of bins: 5040.0 algorithm: 6
+File - 45Number of elements: 10091 number of bins: 5049.0 algorithm: 7
+File - 45Number of elements: 10091 number of bins: 5040.0 algorithm: 8
+File - 46Number of elements: 10100 number of bins: 5016.0 algorithm: 0
+File - 46Number of elements: 10100 number of bins: 5016.0 algorithm: 1
+!!!equal
+File - 46Number of elements: 10100 number of bins: 6458.0 algorithm: 2
+File - 46Number of elements: 10100 number of bins: 5035.0 algorithm: 3
+File - 46Number of elements: 10100 number of bins: 5035.0 algorithm: 4
+File - 46Number of elements: 10100 number of bins: 5016.0 algorithm: 5
+File - 46Number of elements: 10100 number of bins: 5016.0 algorithm: 6
+File - 46Number of elements: 10100 number of bins: 5033.0 algorithm: 7
+File - 46Number of elements: 10100 number of bins: 5016.0 algorithm: 8
+File - 47Number of elements: 10164 number of bins: 5143.0 algorithm: 0
+File - 47Number of elements: 10164 number of bins: 5143.0 algorithm: 1
+!!!equal
+File - 47Number of elements: 10164 number of bins: 6594.0 algorithm: 2
+File - 47Number of elements: 10164 number of bins: 5151.0 algorithm: 3
+File - 47Number of elements: 10164 number of bins: 5151.0 algorithm: 4
+File - 47Number of elements: 10164 number of bins: 5143.0 algorithm: 5
+File - 47Number of elements: 10164 number of bins: 5143.0 algorithm: 6
+File - 47Number of elements: 10164 number of bins: 5150.0 algorithm: 7
+File - 47Number of elements: 10164 number of bins: 5143.0 algorithm: 8
+File - 48Number of elements: 10039 number of bins: 5051.0 algorithm: 0
+File - 48Number of elements: 10039 number of bins: 5051.0 algorithm: 1
+!!!equal
+File - 48Number of elements: 10039 number of bins: 6506.0 algorithm: 2
+File - 48Number of elements: 10039 number of bins: 5051.0 algorithm: 3
+File - 48Number of elements: 10039 number of bins: 5051.0 algorithm: 4
+File - 48Number of elements: 10039 number of bins: 5051.0 algorithm: 5
+File - 48Number of elements: 10039 number of bins: 5051.0 algorithm: 6
+File - 48Number of elements: 10039 number of bins: 5051.0 algorithm: 7
+File - 48Number of elements: 10039 number of bins: 5051.0 algorithm: 8
+File - 49Number of elements: 10142 number of bins: 5099.0 algorithm: 0
+File - 49Number of elements: 10142 number of bins: 5099.0 algorithm: 1
+!!!equal
+File - 49Number of elements: 10142 number of bins: 6533.0 algorithm: 2
+File - 49Number of elements: 10142 number of bins: 5112.0 algorithm: 3
+File - 49Number of elements: 10142 number of bins: 5112.0 algorithm: 4
+File - 49Number of elements: 10142 number of bins: 5099.0 algorithm: 5
+File - 49Number of elements: 10142 number of bins: 5099.0 algorithm: 6
+File - 49Number of elements: 10142 number of bins: 5111.0 algorithm: 7
+File - 49Number of elements: 10142 number of bins: 5099.0 algorithm: 8
+File - 50Number of elements: 10075 number of bins: 5085.0 algorithm: 0
+File - 50Number of elements: 10075 number of bins: 5085.0 algorithm: 1
+!!!equal
+File - 50Number of elements: 10075 number of bins: 6510.0 algorithm: 2
+File - 50Number of elements: 10075 number of bins: 5085.0 algorithm: 3
+File - 50Number of elements: 10075 number of bins: 5085.0 algorithm: 4
+File - 50Number of elements: 10075 number of bins: 5085.0 algorithm: 5
+File - 50Number of elements: 10075 number of bins: 5085.0 algorithm: 6
+File - 50Number of elements: 10075 number of bins: 5085.0 algorithm: 7
+File - 50Number of elements: 10075 number of bins: 5085.0 algorithm: 8
+File - 51Number of elements: 10114 number of bins: 5077.0 algorithm: 0
+File - 51Number of elements: 10114 number of bins: 5077.0 algorithm: 1
+!!!equal
+File - 51Number of elements: 10114 number of bins: 6527.0 algorithm: 2
+File - 51Number of elements: 10114 number of bins: 5084.0 algorithm: 3
+File - 51Number of elements: 10114 number of bins: 5084.0 algorithm: 4
+File - 51Number of elements: 10114 number of bins: 5077.0 algorithm: 5
+File - 51Number of elements: 10114 number of bins: 5077.0 algorithm: 6
+File - 51Number of elements: 10114 number of bins: 5083.0 algorithm: 7
+File - 51Number of elements: 10114 number of bins: 5077.0 algorithm: 8
+File - 52Number of elements: 10051 number of bins: 5090.0 algorithm: 0
+File - 52Number of elements: 10051 number of bins: 5090.0 algorithm: 1
+!!!equal
+File - 52Number of elements: 10051 number of bins: 6536.0 algorithm: 2
+File - 52Number of elements: 10051 number of bins: 5090.0 algorithm: 3
+File - 52Number of elements: 10051 number of bins: 5090.0 algorithm: 4
+File - 52Number of elements: 10051 number of bins: 5090.0 algorithm: 5
+File - 52Number of elements: 10051 number of bins: 5090.0 algorithm: 6
+File - 52Number of elements: 10051 number of bins: 5090.0 algorithm: 7
+File - 52Number of elements: 10051 number of bins: 5090.0 algorithm: 8
+File - 53Number of elements: 10079 number of bins: 5008.0 algorithm: 0
+File - 53Number of elements: 10079 number of bins: 5008.0 algorithm: 1
+!!!equal
+File - 53Number of elements: 10079 number of bins: 6437.0 algorithm: 2
+File - 53Number of elements: 10079 number of bins: 5026.0 algorithm: 3
+File - 53Number of elements: 10079 number of bins: 5026.0 algorithm: 4
+File - 53Number of elements: 10079 number of bins: 5008.0 algorithm: 5
+File - 53Number of elements: 10079 number of bins: 5008.0 algorithm: 6
+File - 53Number of elements: 10079 number of bins: 5024.0 algorithm: 7
+File - 53Number of elements: 10079 number of bins: 5008.0 algorithm: 8
+File - 54Number of elements: 10114 number of bins: 5087.0 algorithm: 0
+File - 54Number of elements: 10114 number of bins: 5087.0 algorithm: 1
+!!!equal
+File - 54Number of elements: 10114 number of bins: 6519.0 algorithm: 2
+File - 54Number of elements: 10114 number of bins: 5091.0 algorithm: 3
+File - 54Number of elements: 10114 number of bins: 5091.0 algorithm: 4
+File - 54Number of elements: 10114 number of bins: 5087.0 algorithm: 5
+File - 54Number of elements: 10114 number of bins: 5087.0 algorithm: 6
+File - 54Number of elements: 10114 number of bins: 5091.0 algorithm: 7
+File - 54Number of elements: 10114 number of bins: 5087.0 algorithm: 8
+File - 55Number of elements: 10005 number of bins: 5044.0 algorithm: 0
+File - 55Number of elements: 10005 number of bins: 5044.0 algorithm: 1
+!!!equal
+File - 55Number of elements: 10005 number of bins: 6490.0 algorithm: 2
+File - 55Number of elements: 10005 number of bins: 5044.0 algorithm: 3
+File - 55Number of elements: 10005 number of bins: 5044.0 algorithm: 4
+File - 55Number of elements: 10005 number of bins: 5044.0 algorithm: 5
+File - 55Number of elements: 10005 number of bins: 5044.0 algorithm: 6
+File - 55Number of elements: 10005 number of bins: 5044.0 algorithm: 7
+File - 55Number of elements: 10005 number of bins: 5044.0 algorithm: 8
+File - 56Number of elements: 10059 number of bins: 5125.0 algorithm: 0
+File - 56Number of elements: 10059 number of bins: 5125.0 algorithm: 1
+!!!equal
+File - 56Number of elements: 10059 number of bins: 6545.0 algorithm: 2
+File - 56Number of elements: 10059 number of bins: 5125.0 algorithm: 3
+File - 56Number of elements: 10059 number of bins: 5125.0 algorithm: 4
+File - 56Number of elements: 10059 number of bins: 5125.0 algorithm: 5
+File - 56Number of elements: 10059 number of bins: 5125.0 algorithm: 6
+File - 56Number of elements: 10059 number of bins: 5125.0 algorithm: 7
+File - 56Number of elements: 10059 number of bins: 5125.0 algorithm: 8
+File - 57Number of elements: 10035 number of bins: 5044.0 algorithm: 0
+File - 57Number of elements: 10035 number of bins: 5044.0 algorithm: 1
+!!!equal
+File - 57Number of elements: 10035 number of bins: 6481.0 algorithm: 2
+File - 57Number of elements: 10035 number of bins: 5044.0 algorithm: 3
+File - 57Number of elements: 10035 number of bins: 5044.0 algorithm: 4
+File - 57Number of elements: 10035 number of bins: 5044.0 algorithm: 5
+File - 57Number of elements: 10035 number of bins: 5044.0 algorithm: 6
+File - 57Number of elements: 10035 number of bins: 5044.0 algorithm: 7
+File - 57Number of elements: 10035 number of bins: 5044.0 algorithm: 8
+File - 58Number of elements: 10185 number of bins: 5119.0 algorithm: 0
+File - 58Number of elements: 10185 number of bins: 5119.0 algorithm: 1
+!!!equal
+File - 58Number of elements: 10185 number of bins: 6598.0 algorithm: 2
+File - 58Number of elements: 10185 number of bins: 5131.0 algorithm: 3
+File - 58Number of elements: 10185 number of bins: 5131.0 algorithm: 4
+File - 58Number of elements: 10185 number of bins: 5119.0 algorithm: 5
+File - 58Number of elements: 10185 number of bins: 5119.0 algorithm: 6
+File - 58Number of elements: 10185 number of bins: 5130.0 algorithm: 7
+File - 58Number of elements: 10185 number of bins: 5119.0 algorithm: 8
+File - 59Number of elements: 10063 number of bins: 5053.0 algorithm: 0
+File - 59Number of elements: 10063 number of bins: 5053.0 algorithm: 1
+!!!equal
+File - 59Number of elements: 10063 number of bins: 6510.0 algorithm: 2
+File - 59Number of elements: 10063 number of bins: 5061.0 algorithm: 3
+File - 59Number of elements: 10063 number of bins: 5061.0 algorithm: 4
+File - 59Number of elements: 10063 number of bins: 5053.0 algorithm: 5
+File - 59Number of elements: 10063 number of bins: 5053.0 algorithm: 6
+File - 59Number of elements: 10063 number of bins: 5061.0 algorithm: 7
+File - 59Number of elements: 10063 number of bins: 5053.0 algorithm: 8
+File - 60Number of elements: 10175 number of bins: 5163.0 algorithm: 0
+File - 60Number of elements: 10175 number of bins: 5163.0 algorithm: 1
+!!!equal
+File - 60Number of elements: 10175 number of bins: 6610.0 algorithm: 2
+File - 60Number of elements: 10175 number of bins: 5171.0 algorithm: 3
+File - 60Number of elements: 10175 number of bins: 5171.0 algorithm: 4
+File - 60Number of elements: 10175 number of bins: 5163.0 algorithm: 5
+File - 60Number of elements: 10175 number of bins: 5163.0 algorithm: 6
+File - 60Number of elements: 10175 number of bins: 5170.0 algorithm: 7
+File - 60Number of elements: 10175 number of bins: 5163.0 algorithm: 8
+File - 61Number of elements: 10025 number of bins: 5118.0 algorithm: 0
+File - 61Number of elements: 10025 number of bins: 5118.0 algorithm: 1
+!!!equal
+File - 61Number of elements: 10025 number of bins: 6519.0 algorithm: 2
+File - 61Number of elements: 10025 number of bins: 5120.0 algorithm: 3
+File - 61Number of elements: 10025 number of bins: 5120.0 algorithm: 4
+File - 61Number of elements: 10025 number of bins: 5118.0 algorithm: 5
+File - 61Number of elements: 10025 number of bins: 5118.0 algorithm: 6
+File - 61Number of elements: 10025 number of bins: 5120.0 algorithm: 7
+File - 61Number of elements: 10025 number of bins: 5118.0 algorithm: 8
+File - 62Number of elements: 10087 number of bins: 5085.0 algorithm: 0
+File - 62Number of elements: 10087 number of bins: 5085.0 algorithm: 1
+!!!equal
+File - 62Number of elements: 10087 number of bins: 6530.0 algorithm: 2
+File - 62Number of elements: 10087 number of bins: 5095.0 algorithm: 3
+File - 62Number of elements: 10087 number of bins: 5095.0 algorithm: 4
+File - 62Number of elements: 10087 number of bins: 5085.0 algorithm: 5
+File - 62Number of elements: 10087 number of bins: 5085.0 algorithm: 6
+File - 62Number of elements: 10087 number of bins: 5095.0 algorithm: 7
+File - 62Number of elements: 10087 number of bins: 5085.0 algorithm: 8
+File - 63Number of elements: 10093 number of bins: 5125.0 algorithm: 0
+File - 63Number of elements: 10093 number of bins: 5125.0 algorithm: 1
+!!!equal
+File - 63Number of elements: 10093 number of bins: 6557.0 algorithm: 2
+File - 63Number of elements: 10093 number of bins: 5125.0 algorithm: 3
+File - 63Number of elements: 10093 number of bins: 5125.0 algorithm: 4
+File - 63Number of elements: 10093 number of bins: 5125.0 algorithm: 5
+File - 63Number of elements: 10093 number of bins: 5125.0 algorithm: 6
+File - 63Number of elements: 10093 number of bins: 5125.0 algorithm: 7
+File - 63Number of elements: 10093 number of bins: 5125.0 algorithm: 8
+File - 64Number of elements: 10076 number of bins: 5145.0 algorithm: 0
+File - 64Number of elements: 10076 number of bins: 5145.0 algorithm: 1
+!!!equal
+File - 64Number of elements: 10076 number of bins: 6560.0 algorithm: 2
+File - 64Number of elements: 10076 number of bins: 5145.0 algorithm: 3
+File - 64Number of elements: 10076 number of bins: 5145.0 algorithm: 4
+File - 64Number of elements: 10076 number of bins: 5145.0 algorithm: 5
+File - 64Number of elements: 10076 number of bins: 5145.0 algorithm: 6
+File - 64Number of elements: 10076 number of bins: 5145.0 algorithm: 7
+File - 64Number of elements: 10076 number of bins: 5145.0 algorithm: 8
+File - 65Number of elements: 10088 number of bins: 5091.0 algorithm: 0
+File - 65Number of elements: 10088 number of bins: 5091.0 algorithm: 1
+!!!equal
+File - 65Number of elements: 10088 number of bins: 6504.0 algorithm: 2
+File - 65Number of elements: 10088 number of bins: 5092.0 algorithm: 3
+File - 65Number of elements: 10088 number of bins: 5092.0 algorithm: 4
+File - 65Number of elements: 10088 number of bins: 5091.0 algorithm: 5
+File - 65Number of elements: 10088 number of bins: 5091.0 algorithm: 6
+File - 65Number of elements: 10088 number of bins: 5092.0 algorithm: 7
+File - 65Number of elements: 10088 number of bins: 5091.0 algorithm: 8
+File - 66Number of elements: 10084 number of bins: 5099.0 algorithm: 0
+File - 66Number of elements: 10084 number of bins: 5099.0 algorithm: 1
+!!!equal
+File - 66Number of elements: 10084 number of bins: 6505.0 algorithm: 2
+File - 66Number of elements: 10084 number of bins: 5099.0 algorithm: 3
+File - 66Number of elements: 10084 number of bins: 5099.0 algorithm: 4
+File - 66Number of elements: 10084 number of bins: 5099.0 algorithm: 5
+File - 66Number of elements: 10084 number of bins: 5099.0 algorithm: 6
+File - 66Number of elements: 10084 number of bins: 5099.0 algorithm: 7
+File - 66Number of elements: 10084 number of bins: 5099.0 algorithm: 8
+File - 67Number of elements: 10110 number of bins: 5153.0 algorithm: 0
+File - 67Number of elements: 10110 number of bins: 5153.0 algorithm: 1
+!!!equal
+File - 67Number of elements: 10110 number of bins: 6562.0 algorithm: 2
+File - 67Number of elements: 10110 number of bins: 5153.0 algorithm: 3
+File - 67Number of elements: 10110 number of bins: 5153.0 algorithm: 4
+File - 67Number of elements: 10110 number of bins: 5153.0 algorithm: 5
+File - 67Number of elements: 10110 number of bins: 5153.0 algorithm: 6
+File - 67Number of elements: 10110 number of bins: 5153.0 algorithm: 7
+File - 67Number of elements: 10110 number of bins: 5153.0 algorithm: 8
+File - 68Number of elements: 10049 number of bins: 5077.0 algorithm: 0
+File - 68Number of elements: 10049 number of bins: 5077.0 algorithm: 1
+!!!equal
+File - 68Number of elements: 10049 number of bins: 6498.0 algorithm: 2
+File - 68Number of elements: 10049 number of bins: 5080.0 algorithm: 3
+File - 68Number of elements: 10049 number of bins: 5080.0 algorithm: 4
+File - 68Number of elements: 10049 number of bins: 5077.0 algorithm: 5
+File - 68Number of elements: 10049 number of bins: 5077.0 algorithm: 6
+File - 68Number of elements: 10049 number of bins: 5079.0 algorithm: 7
+File - 68Number of elements: 10049 number of bins: 5077.0 algorithm: 8
+File - 69Number of elements: 10099 number of bins: 5190.0 algorithm: 0
+File - 69Number of elements: 10099 number of bins: 5190.0 algorithm: 1
+!!!equal
+File - 69Number of elements: 10099 number of bins: 6617.0 algorithm: 2
+File - 69Number of elements: 10099 number of bins: 5190.0 algorithm: 3
+File - 69Number of elements: 10099 number of bins: 5190.0 algorithm: 4
+File - 69Number of elements: 10099 number of bins: 5190.0 algorithm: 5
+File - 69Number of elements: 10099 number of bins: 5190.0 algorithm: 6
+File - 69Number of elements: 10099 number of bins: 5190.0 algorithm: 7
+File - 69Number of elements: 10099 number of bins: 5190.0 algorithm: 8
+File - 70Number of elements: 10006 number of bins: 5040.0 algorithm: 0
+File - 70Number of elements: 10006 number of bins: 5040.0 algorithm: 1
+!!!equal
+File - 70Number of elements: 10006 number of bins: 6463.0 algorithm: 2
+File - 70Number of elements: 10006 number of bins: 5051.0 algorithm: 3
+File - 70Number of elements: 10006 number of bins: 5051.0 algorithm: 4
+File - 70Number of elements: 10006 number of bins: 5040.0 algorithm: 5
+File - 70Number of elements: 10006 number of bins: 5040.0 algorithm: 6
+File - 70Number of elements: 10006 number of bins: 5050.0 algorithm: 7
+File - 70Number of elements: 10006 number of bins: 5040.0 algorithm: 8
+File - 71Number of elements: 10049 number of bins: 5140.0 algorithm: 0
+File - 71Number of elements: 10049 number of bins: 5140.0 algorithm: 1
+!!!equal
+File - 71Number of elements: 10049 number of bins: 6516.0 algorithm: 2
+File - 71Number of elements: 10049 number of bins: 5140.0 algorithm: 3
+File - 71Number of elements: 10049 number of bins: 5140.0 algorithm: 4
+File - 71Number of elements: 10049 number of bins: 5140.0 algorithm: 5
+File - 71Number of elements: 10049 number of bins: 5140.0 algorithm: 6
+File - 71Number of elements: 10049 number of bins: 5140.0 algorithm: 7
+File - 71Number of elements: 10049 number of bins: 5140.0 algorithm: 8
+File - 72Number of elements: 10031 number of bins: 5036.0 algorithm: 0
+File - 72Number of elements: 10031 number of bins: 5036.0 algorithm: 1
+!!!equal
+File - 72Number of elements: 10031 number of bins: 6463.0 algorithm: 2
+File - 72Number of elements: 10031 number of bins: 5050.0 algorithm: 3
+File - 72Number of elements: 10031 number of bins: 5050.0 algorithm: 4
+File - 72Number of elements: 10031 number of bins: 5036.0 algorithm: 5
+File - 72Number of elements: 10031 number of bins: 5036.0 algorithm: 6
+File - 72Number of elements: 10031 number of bins: 5048.0 algorithm: 7
+File - 72Number of elements: 10031 number of bins: 5036.0 algorithm: 8
+File - 73Number of elements: 10077 number of bins: 5057.0 algorithm: 0
+File - 73Number of elements: 10077 number of bins: 5057.0 algorithm: 1
+!!!equal
+File - 73Number of elements: 10077 number of bins: 6500.0 algorithm: 2
+File - 73Number of elements: 10077 number of bins: 5057.0 algorithm: 3
+File - 73Number of elements: 10077 number of bins: 5057.0 algorithm: 4
+File - 73Number of elements: 10077 number of bins: 5057.0 algorithm: 5
+File - 73Number of elements: 10077 number of bins: 5057.0 algorithm: 6
+File - 73Number of elements: 10077 number of bins: 5057.0 algorithm: 7
+File - 73Number of elements: 10077 number of bins: 5057.0 algorithm: 8
+File - 74Number of elements: 10044 number of bins: 5052.0 algorithm: 0
+File - 74Number of elements: 10044 number of bins: 5052.0 algorithm: 1
+!!!equal
+File - 74Number of elements: 10044 number of bins: 6468.0 algorithm: 2
+File - 74Number of elements: 10044 number of bins: 5055.0 algorithm: 3
+File - 74Number of elements: 10044 number of bins: 5055.0 algorithm: 4
+File - 74Number of elements: 10044 number of bins: 5052.0 algorithm: 5
+File - 74Number of elements: 10044 number of bins: 5052.0 algorithm: 6
+File - 74Number of elements: 10044 number of bins: 5055.0 algorithm: 7
+File - 74Number of elements: 10044 number of bins: 5052.0 algorithm: 8
+File - 75Number of elements: 10196 number of bins: 5081.0 algorithm: 0
+File - 75Number of elements: 10196 number of bins: 5081.0 algorithm: 1
+!!!equal
+File - 75Number of elements: 10196 number of bins: 6524.0 algorithm: 2
+File - 75Number of elements: 10196 number of bins: 5091.0 algorithm: 3
+File - 75Number of elements: 10196 number of bins: 5091.0 algorithm: 4
+File - 75Number of elements: 10196 number of bins: 5081.0 algorithm: 5
+File - 75Number of elements: 10196 number of bins: 5081.0 algorithm: 6
+File - 75Number of elements: 10196 number of bins: 5090.0 algorithm: 7
+File - 75Number of elements: 10196 number of bins: 5081.0 algorithm: 8
+File - 76Number of elements: 10000 number of bins: 5107.0 algorithm: 0
+File - 76Number of elements: 10000 number of bins: 5107.0 algorithm: 1
+!!!equal
+File - 76Number of elements: 10000 number of bins: 6507.0 algorithm: 2
+File - 76Number of elements: 10000 number of bins: 5107.0 algorithm: 3
+File - 76Number of elements: 10000 number of bins: 5107.0 algorithm: 4
+File - 76Number of elements: 10000 number of bins: 5107.0 algorithm: 5
+File - 76Number of elements: 10000 number of bins: 5107.0 algorithm: 6
+File - 76Number of elements: 10000 number of bins: 5107.0 algorithm: 7
+File - 76Number of elements: 10000 number of bins: 5107.0 algorithm: 8
+File - 77Number of elements: 10163 number of bins: 5047.0 algorithm: 0
+File - 77Number of elements: 10163 number of bins: 5047.0 algorithm: 1
+!!!equal
+File - 77Number of elements: 10163 number of bins: 6462.0 algorithm: 2
+File - 77Number of elements: 10163 number of bins: 5064.0 algorithm: 3
+File - 77Number of elements: 10163 number of bins: 5064.0 algorithm: 4
+File - 77Number of elements: 10163 number of bins: 5047.0 algorithm: 5
+File - 77Number of elements: 10163 number of bins: 5047.0 algorithm: 6
+File - 77Number of elements: 10163 number of bins: 5063.0 algorithm: 7
+File - 77Number of elements: 10163 number of bins: 5047.0 algorithm: 8
+File - 78Number of elements: 10188 number of bins: 5074.0 algorithm: 0
+File - 78Number of elements: 10188 number of bins: 5074.0 algorithm: 1
+!!!equal
+File - 78Number of elements: 10188 number of bins: 6526.0 algorithm: 2
+File - 78Number of elements: 10188 number of bins: 5083.0 algorithm: 3
+File - 78Number of elements: 10188 number of bins: 5083.0 algorithm: 4
+File - 78Number of elements: 10188 number of bins: 5074.0 algorithm: 5
+File - 78Number of elements: 10188 number of bins: 5074.0 algorithm: 6
+File - 78Number of elements: 10188 number of bins: 5083.0 algorithm: 7
+File - 78Number of elements: 10188 number of bins: 5074.0 algorithm: 8
+File - 79Number of elements: 10047 number of bins: 5078.0 algorithm: 0
+File - 79Number of elements: 10047 number of bins: 5078.0 algorithm: 1
+!!!equal
+File - 79Number of elements: 10047 number of bins: 6508.0 algorithm: 2
+File - 79Number of elements: 10047 number of bins: 5078.0 algorithm: 3
+File - 79Number of elements: 10047 number of bins: 5078.0 algorithm: 4
+File - 79Number of elements: 10047 number of bins: 5078.0 algorithm: 5
+File - 79Number of elements: 10047 number of bins: 5078.0 algorithm: 6
+File - 79Number of elements: 10047 number of bins: 5078.0 algorithm: 7
+File - 79Number of elements: 10047 number of bins: 5078.0 algorithm: 8
+File - 80Number of elements: 10190 number of bins: 5211.0 algorithm: 0
+File - 80Number of elements: 10190 number of bins: 5211.0 algorithm: 1
+!!!equal
+File - 80Number of elements: 10190 number of bins: 6581.0 algorithm: 2
+File - 80Number of elements: 10190 number of bins: 5211.0 algorithm: 3
+File - 80Number of elements: 10190 number of bins: 5211.0 algorithm: 4
+File - 80Number of elements: 10190 number of bins: 5211.0 algorithm: 5
+File - 80Number of elements: 10190 number of bins: 5211.0 algorithm: 6
+File - 80Number of elements: 10190 number of bins: 5211.0 algorithm: 7
+File - 80Number of elements: 10190 number of bins: 5211.0 algorithm: 8
+File - 81Number of elements: 10187 number of bins: 5163.0 algorithm: 0
+File - 81Number of elements: 10187 number of bins: 5163.0 algorithm: 1
+!!!equal
+File - 81Number of elements: 10187 number of bins: 6601.0 algorithm: 2
+File - 81Number of elements: 10187 number of bins: 5164.0 algorithm: 3
+File - 81Number of elements: 10187 number of bins: 5164.0 algorithm: 4
+File - 81Number of elements: 10187 number of bins: 5163.0 algorithm: 5
+File - 81Number of elements: 10187 number of bins: 5163.0 algorithm: 6
+File - 81Number of elements: 10187 number of bins: 5163.0 algorithm: 7
+File - 81Number of elements: 10187 number of bins: 5163.0 algorithm: 8
+File - 82Number of elements: 10023 number of bins: 5027.0 algorithm: 0
+File - 82Number of elements: 10023 number of bins: 5027.0 algorithm: 1
+!!!equal
+File - 82Number of elements: 10023 number of bins: 6446.0 algorithm: 2
+File - 82Number of elements: 10023 number of bins: 5034.0 algorithm: 3
+File - 82Number of elements: 10023 number of bins: 5034.0 algorithm: 4
+File - 82Number of elements: 10023 number of bins: 5027.0 algorithm: 5
+File - 82Number of elements: 10023 number of bins: 5027.0 algorithm: 6
+File - 82Number of elements: 10023 number of bins: 5034.0 algorithm: 7
+File - 82Number of elements: 10023 number of bins: 5027.0 algorithm: 8
+File - 83Number of elements: 10050 number of bins: 5083.0 algorithm: 0
+File - 83Number of elements: 10050 number of bins: 5083.0 algorithm: 1
+!!!equal
+File - 83Number of elements: 10050 number of bins: 6489.0 algorithm: 2
+File - 83Number of elements: 10050 number of bins: 5083.0 algorithm: 3
+File - 83Number of elements: 10050 number of bins: 5083.0 algorithm: 4
+File - 83Number of elements: 10050 number of bins: 5083.0 algorithm: 5
+File - 83Number of elements: 10050 number of bins: 5083.0 algorithm: 6
+File - 83Number of elements: 10050 number of bins: 5083.0 algorithm: 7
+File - 83Number of elements: 10050 number of bins: 5083.0 algorithm: 8
+File - 84Number of elements: 10145 number of bins: 5163.0 algorithm: 0
+File - 84Number of elements: 10145 number of bins: 5163.0 algorithm: 1
+!!!equal
+File - 84Number of elements: 10145 number of bins: 6611.0 algorithm: 2
+File - 84Number of elements: 10145 number of bins: 5163.0 algorithm: 3
+File - 84Number of elements: 10145 number of bins: 5163.0 algorithm: 4
+File - 84Number of elements: 10145 number of bins: 5163.0 algorithm: 5
+File - 84Number of elements: 10145 number of bins: 5163.0 algorithm: 6
+File - 84Number of elements: 10145 number of bins: 5163.0 algorithm: 7
+File - 84Number of elements: 10145 number of bins: 5163.0 algorithm: 8
+File - 85Number of elements: 10121 number of bins: 5138.0 algorithm: 0
+File - 85Number of elements: 10121 number of bins: 5138.0 algorithm: 1
+!!!equal
+File - 85Number of elements: 10121 number of bins: 6577.0 algorithm: 2
+File - 85Number of elements: 10121 number of bins: 5143.0 algorithm: 3
+File - 85Number of elements: 10121 number of bins: 5143.0 algorithm: 4
+File - 85Number of elements: 10121 number of bins: 5138.0 algorithm: 5
+File - 85Number of elements: 10121 number of bins: 5138.0 algorithm: 6
+File - 85Number of elements: 10121 number of bins: 5142.0 algorithm: 7
+File - 85Number of elements: 10121 number of bins: 5138.0 algorithm: 8
+File - 86Number of elements: 10147 number of bins: 5105.0 algorithm: 0
+File - 86Number of elements: 10147 number of bins: 5105.0 algorithm: 1
+!!!equal
+File - 86Number of elements: 10147 number of bins: 6579.0 algorithm: 2
+File - 86Number of elements: 10147 number of bins: 5107.0 algorithm: 3
+File - 86Number of elements: 10147 number of bins: 5107.0 algorithm: 4
+File - 86Number of elements: 10147 number of bins: 5105.0 algorithm: 5
+File - 86Number of elements: 10147 number of bins: 5105.0 algorithm: 6
+File - 86Number of elements: 10147 number of bins: 5107.0 algorithm: 7
+File - 86Number of elements: 10147 number of bins: 5105.0 algorithm: 8
+File - 87Number of elements: 10162 number of bins: 5176.0 algorithm: 0
+File - 87Number of elements: 10162 number of bins: 5176.0 algorithm: 1
+!!!equal
+File - 87Number of elements: 10162 number of bins: 6610.0 algorithm: 2
+File - 87Number of elements: 10162 number of bins: 5176.0 algorithm: 3
+File - 87Number of elements: 10162 number of bins: 5176.0 algorithm: 4
+File - 87Number of elements: 10162 number of bins: 5176.0 algorithm: 5
+File - 87Number of elements: 10162 number of bins: 5176.0 algorithm: 6
+File - 87Number of elements: 10162 number of bins: 5176.0 algorithm: 7
+File - 87Number of elements: 10162 number of bins: 5176.0 algorithm: 8
+File - 88Number of elements: 10125 number of bins: 5116.0 algorithm: 0
+File - 88Number of elements: 10125 number of bins: 5116.0 algorithm: 1
+!!!equal
+File - 88Number of elements: 10125 number of bins: 6538.0 algorithm: 2
+File - 88Number of elements: 10125 number of bins: 5117.0 algorithm: 3
+File - 88Number of elements: 10125 number of bins: 5117.0 algorithm: 4
+File - 88Number of elements: 10125 number of bins: 5116.0 algorithm: 5
+File - 88Number of elements: 10125 number of bins: 5116.0 algorithm: 6
+File - 88Number of elements: 10125 number of bins: 5117.0 algorithm: 7
+File - 88Number of elements: 10125 number of bins: 5116.0 algorithm: 8
+File - 89Number of elements: 10064 number of bins: 5096.0 algorithm: 0
+File - 89Number of elements: 10064 number of bins: 5096.0 algorithm: 1
+!!!equal
+File - 89Number of elements: 10064 number of bins: 6528.0 algorithm: 2
+File - 89Number of elements: 10064 number of bins: 5096.0 algorithm: 3
+File - 89Number of elements: 10064 number of bins: 5096.0 algorithm: 4
+File - 89Number of elements: 10064 number of bins: 5096.0 algorithm: 5
+File - 89Number of elements: 10064 number of bins: 5096.0 algorithm: 6
+File - 89Number of elements: 10064 number of bins: 5096.0 algorithm: 7
+File - 89Number of elements: 10064 number of bins: 5096.0 algorithm: 8
+File - 90Number of elements: 10190 number of bins: 5088.0 algorithm: 0
+File - 90Number of elements: 10190 number of bins: 5088.0 algorithm: 1
+!!!equal
+File - 90Number of elements: 10190 number of bins: 6549.0 algorithm: 2
+File - 90Number of elements: 10190 number of bins: 5101.0 algorithm: 3
+File - 90Number of elements: 10190 number of bins: 5101.0 algorithm: 4
+File - 90Number of elements: 10190 number of bins: 5088.0 algorithm: 5
+File - 90Number of elements: 10190 number of bins: 5088.0 algorithm: 6
+File - 90Number of elements: 10190 number of bins: 5100.0 algorithm: 7
+File - 90Number of elements: 10190 number of bins: 5088.0 algorithm: 8
+File - 91Number of elements: 10016 number of bins: 5065.0 algorithm: 0
+File - 91Number of elements: 10016 number of bins: 5065.0 algorithm: 1
+!!!equal
+File - 91Number of elements: 10016 number of bins: 6475.0 algorithm: 2
+File - 91Number of elements: 10016 number of bins: 5065.0 algorithm: 3
+File - 91Number of elements: 10016 number of bins: 5065.0 algorithm: 4
+File - 91Number of elements: 10016 number of bins: 5065.0 algorithm: 5
+File - 91Number of elements: 10016 number of bins: 5065.0 algorithm: 6
+File - 91Number of elements: 10016 number of bins: 5065.0 algorithm: 7
+File - 91Number of elements: 10016 number of bins: 5065.0 algorithm: 8
+File - 92Number of elements: 10175 number of bins: 5104.0 algorithm: 0
+File - 92Number of elements: 10175 number of bins: 5104.0 algorithm: 1
+!!!equal
+File - 92Number of elements: 10175 number of bins: 6575.0 algorithm: 2
+File - 92Number of elements: 10175 number of bins: 5113.0 algorithm: 3
+File - 92Number of elements: 10175 number of bins: 5113.0 algorithm: 4
+File - 92Number of elements: 10175 number of bins: 5104.0 algorithm: 5
+File - 92Number of elements: 10175 number of bins: 5104.0 algorithm: 6
+File - 92Number of elements: 10175 number of bins: 5113.0 algorithm: 7
+File - 92Number of elements: 10175 number of bins: 5104.0 algorithm: 8
+File - 93Number of elements: 10064 number of bins: 5090.0 algorithm: 0
+File - 93Number of elements: 10064 number of bins: 5090.0 algorithm: 1
+!!!equal
+File - 93Number of elements: 10064 number of bins: 6511.0 algorithm: 2
+File - 93Number of elements: 10064 number of bins: 5090.0 algorithm: 3
+File - 93Number of elements: 10064 number of bins: 5090.0 algorithm: 4
+File - 93Number of elements: 10064 number of bins: 5090.0 algorithm: 5
+File - 93Number of elements: 10064 number of bins: 5090.0 algorithm: 6
+File - 93Number of elements: 10064 number of bins: 5090.0 algorithm: 7
+File - 93Number of elements: 10064 number of bins: 5090.0 algorithm: 8
+File - 94Number of elements: 10158 number of bins: 5129.0 algorithm: 0
+File - 94Number of elements: 10158 number of bins: 5129.0 algorithm: 1
+!!!equal
+File - 94Number of elements: 10158 number of bins: 6567.0 algorithm: 2
+File - 94Number of elements: 10158 number of bins: 5130.0 algorithm: 3
+File - 94Number of elements: 10158 number of bins: 5130.0 algorithm: 4
+File - 94Number of elements: 10158 number of bins: 5129.0 algorithm: 5
+File - 94Number of elements: 10158 number of bins: 5129.0 algorithm: 6
+File - 94Number of elements: 10158 number of bins: 5130.0 algorithm: 7
+File - 94Number of elements: 10158 number of bins: 5129.0 algorithm: 8
+File - 95Number of elements: 10109 number of bins: 5054.0 algorithm: 0
+File - 95Number of elements: 10109 number of bins: 5054.0 algorithm: 1
+!!!equal
+File - 95Number of elements: 10109 number of bins: 6508.0 algorithm: 2
+File - 95Number of elements: 10109 number of bins: 5064.0 algorithm: 3
+File - 95Number of elements: 10109 number of bins: 5064.0 algorithm: 4
+File - 95Number of elements: 10109 number of bins: 5054.0 algorithm: 5
+File - 95Number of elements: 10109 number of bins: 5054.0 algorithm: 6
+File - 95Number of elements: 10109 number of bins: 5063.0 algorithm: 7
+File - 95Number of elements: 10109 number of bins: 5054.0 algorithm: 8
+File - 96Number of elements: 10113 number of bins: 5013.0 algorithm: 0
+File - 96Number of elements: 10113 number of bins: 5013.0 algorithm: 1
+!!!equal
+File - 96Number of elements: 10113 number of bins: 6416.0 algorithm: 2
+File - 96Number of elements: 10113 number of bins: 5034.0 algorithm: 3
+File - 96Number of elements: 10113 number of bins: 5034.0 algorithm: 4
+File - 96Number of elements: 10113 number of bins: 5013.0 algorithm: 5
+File - 96Number of elements: 10113 number of bins: 5013.0 algorithm: 6
+File - 96Number of elements: 10113 number of bins: 5033.0 algorithm: 7
+File - 96Number of elements: 10113 number of bins: 5013.0 algorithm: 8
+File - 97Number of elements: 10131 number of bins: 5111.0 algorithm: 0
+File - 97Number of elements: 10131 number of bins: 5111.0 algorithm: 1
+!!!equal
+File - 97Number of elements: 10131 number of bins: 6552.0 algorithm: 2
+File - 97Number of elements: 10131 number of bins: 5111.0 algorithm: 3
+File - 97Number of elements: 10131 number of bins: 5111.0 algorithm: 4
+File - 97Number of elements: 10131 number of bins: 5111.0 algorithm: 5
+File - 97Number of elements: 10131 number of bins: 5111.0 algorithm: 6
+File - 97Number of elements: 10131 number of bins: 5111.0 algorithm: 7
+File - 97Number of elements: 10131 number of bins: 5111.0 algorithm: 8
+File - 98Number of elements: 10052 number of bins: 5076.0 algorithm: 0
+File - 98Number of elements: 10052 number of bins: 5076.0 algorithm: 1
+!!!equal
+File - 98Number of elements: 10052 number of bins: 6469.0 algorithm: 2
+File - 98Number of elements: 10052 number of bins: 5084.0 algorithm: 3
+File - 98Number of elements: 10052 number of bins: 5084.0 algorithm: 4
+File - 98Number of elements: 10052 number of bins: 5076.0 algorithm: 5
+File - 98Number of elements: 10052 number of bins: 5076.0 algorithm: 6
+File - 98Number of elements: 10052 number of bins: 5084.0 algorithm: 7
+File - 98Number of elements: 10052 number of bins: 5076.0 algorithm: 8
+File - 99Number of elements: 10169 number of bins: 5190.0 algorithm: 0
+File - 99Number of elements: 10169 number of bins: 5190.0 algorithm: 1
+!!!equal
+File - 99Number of elements: 10169 number of bins: 6621.0 algorithm: 2
+File - 99Number of elements: 10169 number of bins: 5190.0 algorithm: 3
+File - 99Number of elements: 10169 number of bins: 5190.0 algorithm: 4
+File - 99Number of elements: 10169 number of bins: 5190.0 algorithm: 5
+File - 99Number of elements: 10169 number of bins: 5190.0 algorithm: 6
+File - 99Number of elements: 10169 number of bins: 5190.0 algorithm: 7
+File - 99Number of elements: 10169 number of bins: 5190.0 algorithm: 8
+File - 100Number of elements: 10013 number of bins: 5010.0 algorithm: 0
+File - 100Number of elements: 10013 number of bins: 5010.0 algorithm: 1
+!!!equal
+File - 100Number of elements: 10013 number of bins: 6450.0 algorithm: 2
+File - 100Number of elements: 10013 number of bins: 5019.0 algorithm: 3
+File - 100Number of elements: 10013 number of bins: 5019.0 algorithm: 4
+File - 100Number of elements: 10013 number of bins: 5010.0 algorithm: 5
+File - 100Number of elements: 10013 number of bins: 5010.0 algorithm: 6
+File - 100Number of elements: 10013 number of bins: 5018.0 algorithm: 7
+File - 100Number of elements: 10013 number of bins: 5010.0 algorithm: 8

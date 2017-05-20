@@ -45,7 +45,7 @@ public class MachineLearning {
 		}
 		System.out.println("sum = " + sum);
 		Chromosome chrom = new Chromosome(0);	
-		parseFile("C:\\data_for_binpacking\\improve_results\\!test.txt");
+		parseFile("C:\\data_for_binpacking\\1\\improve_results1000\\test8.txt");
 		solveProblem(elements,GA.size, chrom);
 	}
 	
