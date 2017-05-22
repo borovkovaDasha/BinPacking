@@ -1,0 +1,2535 @@
+Population 28 solves problem C:\data_for_binpacking\new_data\736.txt bins - 0.507167780969584
+numberOfBins = 287.0
+Population 29 solves problem C:\data_for_binpacking\new_data\736.txt bins - 0.507198595455457
+numberOfBins = 287.0
+Population 30 solves problem C:\data_for_binpacking\new_data\736.txt bins - 0.5029650709472486
+numberOfBins = 287.0
+Population 31 solves problem C:\data_for_binpacking\new_data\736.txt bins - 0.5032812673768691
+numberOfBins = 287.0
+Population 32 solves problem C:\data_for_binpacking\new_data\736.txt bins - 0.5038406777475956
+numberOfBins = 287.0
+Population 33 solves problem C:\data_for_binpacking\new_data\736.txt bins - 0.5039264515666051
+numberOfBins = 287.0
+Population 34 solves problem C:\data_for_binpacking\new_data\736.txt bins - 0.5031694666989195
+numberOfBins = 287.0
+Population 35 solves problem C:\data_for_binpacking\new_data\736.txt bins - 0.5038158323513092
+numberOfBins = 287.0
+Population 36 solves problem C:\data_for_binpacking\new_data\736.txt bins - 0.49957288393364846
+numberOfBins = 287.0
+Population 37 solves problem C:\data_for_binpacking\new_data\736.txt bins - 0.5035237741423347
+numberOfBins = 287.0
+Population 38 solves problem C:\data_for_binpacking\new_data\736.txt bins - 0.4956068245153545
+numberOfBins = 287.0
+Population 39 solves problem C:\data_for_binpacking\new_data\736.txt bins - 0.4977429851015215
+!!!Generation is - 497
+children1.chromosome.size() 17
+parent2.chromosome.size() 15
+div + i 6 11
+children1.chromosome.size() 17
+parent2.chromosome.size() 15
+div + i 6 12
+children1.chromosome.size() 17
+parent2.chromosome.size() 16
+div + i 14 3
+children1.chromosome.size() 17
+parent2.chromosome.size() 16
+div + i 14 4
+children1.chromosome.size() 17
+parent2.chromosome.size() 16
+div + i 14 5
+children1.chromosome.size() 17
+parent2.chromosome.size() 16
+div + i 14 6
+children1.chromosome.size() 17
+parent2.chromosome.size() 16
+div + i 14 7
+children1.chromosome.size() 17
+parent2.chromosome.size() 16
+div + i 14 8
+children1.chromosome.size() 17
+parent2.chromosome.size() 16
+div + i 14 9
+children1.chromosome.size() 17
+parent2.chromosome.size() 16
+div + i 14 10
+children1.chromosome.size() 17
+parent2.chromosome.size() 16
+div + i 14 11
+children1.chromosome.size() 17
+parent2.chromosome.size() 16
+div + i 14 12
+children1.chromosome.size() 17
+parent2.chromosome.size() 16
+div + i 14 13
+children1.chromosome.size() 17
+parent2.chromosome.size() 16
+div + i 14 14
+children1.chromosome.size() 17
+parent2.chromosome.size() 16
+div + i 14 15
+size = 185
+n = 670
+numberOfBins = 347.0
+Children 0 solves problem C:\data_for_binpacking\new_data\346.txt bins - 0.517910447761194
+size = 185
+n = 530
+numberOfBins = 274.0
+Children 0 solves problem C:\data_for_binpacking\new_data\597.txt bins - 0.5174457899183329
+size = 114
+n = 507
+numberOfBins = 266.0
+Children 0 solves problem C:\data_for_binpacking\new_data\487.txt bins - 0.5198488040612687
+size = 213
+n = 604
+numberOfBins = 297.0
+Children 0 solves problem C:\data_for_binpacking\new_data\564.txt bins - 0.5128170666221104
+Children 0 fitness - 0.5128170666221104
+size = 133
+n = 681
+numberOfBins = 339.0
+Children 1 solves problem C:\data_for_binpacking\new_data\332.txt bins - 0.4977973568281938
+size = 156
+n = 521
+numberOfBins = 266.0
+Children 1 solves problem C:\data_for_binpacking\new_data\625.txt bins - 0.504176989354596
+size = 208
+n = 651
+numberOfBins = 347.0
+Children 1 solves problem C:\data_for_binpacking\new_data\594.txt bins - 0.5137933641268223
+size = 215
+n = 501
+numberOfBins = 256.0
+Children 1 solves problem C:\data_for_binpacking\new_data\211.txt bins - 0.5130895340731607
+Children 1 fitness - 0.5130895340731607
+size = 180
+n = 576
+numberOfBins = 292.0
+Children 2 solves problem C:\data_for_binpacking\new_data\36.txt bins - 0.5069444444444444
+size = 213
+n = 509
+numberOfBins = 256.0
+Children 2 solves problem C:\data_for_binpacking\new_data\424.txt bins - 0.5049456996289019
+size = 213
+n = 597
+numberOfBins = 303.0
+Children 2 solves problem C:\data_for_binpacking\new_data\637.txt bins - 0.5058096959000049
+size = 164
+n = 521
+numberOfBins = 268.0
+Children 2 solves problem C:\data_for_binpacking\new_data\382.txt bins - 0.5079561202935258
+Children 2 fitness - 0.5079561202935258
+size = 191
+n = 512
+numberOfBins = 264.0
+Children 3 solves problem C:\data_for_binpacking\new_data\19.txt bins - 0.515625
+size = 251
+n = 596
+numberOfBins = 307.0
+Children 3 solves problem C:\data_for_binpacking\new_data\616.txt bins - 0.5153628355704698
+size = 157
+n = 519
+numberOfBins = 255.0
+Children 3 solves problem C:\data_for_binpacking\new_data\104.txt bins - 0.5073517169699086
+size = 224
+n = 682
+numberOfBins = 355.0
+Children 3 solves problem C:\data_for_binpacking\new_data\151.txt bins - 0.5106457525368155
+Children 3 fitness - 0.5106457525368155
+size = 295
+n = 651
+numberOfBins = 331.0
+Children 4 solves problem C:\data_for_binpacking\new_data\195.txt bins - 0.5084485407066052
+size = 123
+n = 523
+numberOfBins = 266.0
+Children 4 solves problem C:\data_for_binpacking\new_data\587.txt bins - 0.5085263736037806
+size = 292
+n = 634
+numberOfBins = 328.0
+Children 4 solves problem C:\data_for_binpacking\new_data\696.txt bins - 0.5114676349787559
+size = 213
+n = 597
+numberOfBins = 303.0
+Children 4 solves problem C:\data_for_binpacking\new_data\637.txt bins - 0.5104851483446197
+Children 4 fitness - 0.5104851483446197
+size = 214
+n = 532
+numberOfBins = 300.0
+Children 5 solves problem C:\data_for_binpacking\new_data\12.txt bins - 0.5639097744360902
+size = 158
+n = 656
+numberOfBins = 350.0
+Children 5 solves problem C:\data_for_binpacking\new_data\278.txt bins - 0.548723179900972
+size = 102
+n = 580
+numberOfBins = 309.0
+Children 5 solves problem C:\data_for_binpacking\new_data\434.txt bins - 0.5434016601638664
+size = 133
+n = 681
+numberOfBins = 339.0
+Children 5 solves problem C:\data_for_binpacking\new_data\332.txt bins - 0.5320005843299482
+Children 5 fitness - 0.5320005843299482
+size = 138
+n = 508
+numberOfBins = 255.0
+Children 6 solves problem C:\data_for_binpacking\new_data\662.txt bins - 0.5019685039370079
+size = 175
+n = 505
+numberOfBins = 259.0
+Children 6 solves problem C:\data_for_binpacking\new_data\470.txt bins - 0.5074198955328604
+size = 122
+n = 684
+numberOfBins = 340.0
+Children 6 solves problem C:\data_for_binpacking\new_data\329.txt bins - 0.5039719381525112
+size = 113
+n = 602
+numberOfBins = 317.0
+Children 6 solves problem C:\data_for_binpacking\new_data\550.txt bins - 0.5096234718868087
+Children 6 fitness - 0.5096234718868087
+size = 148
+n = 526
+numberOfBins = 284.0
+Children 7 solves problem C:\data_for_binpacking\new_data\323.txt bins - 0.5399239543726235
+size = 241
+n = 532
+numberOfBins = 266.0
+Children 7 solves problem C:\data_for_binpacking\new_data\465.txt bins - 0.5199619771863118
+size = 119
+n = 502
+numberOfBins = 253.0
+Children 7 solves problem C:\data_for_binpacking\new_data\566.txt bins - 0.5146360060392144
+size = 260
+n = 669
+numberOfBins = 346.0
+Children 7 solves problem C:\data_for_binpacking\new_data\276.txt bins - 0.5152744634232823
+Children 7 fitness - 0.5152744634232823
+size = 285
+n = 605
+numberOfBins = 320.0
+Children 8 solves problem C:\data_for_binpacking\new_data\527.txt bins - 0.5289256198347108
+size = 184
+n = 595
+numberOfBins = 314.0
+Children 8 solves problem C:\data_for_binpacking\new_data\658.txt bins - 0.5283283561358427
+size = 208
+n = 536
+numberOfBins = 262.0
+Children 8 solves problem C:\data_for_binpacking\new_data\609.txt bins - 0.5151542274736464
+size = 172
+n = 520
+numberOfBins = 261.0
+Children 8 solves problem C:\data_for_binpacking\new_data\590.txt bins - 0.5118464398360041
+Children 8 fitness - 0.5118464398360041
+size = 284
+n = 599
+numberOfBins = 302.0
+Children 9 solves problem C:\data_for_binpacking\new_data\634.txt bins - 0.5041736227045075
+size = 101
+n = 698
+numberOfBins = 355.0
+Children 9 solves problem C:\data_for_binpacking\new_data\60.txt bins - 0.5063848056215947
+size = 215
+n = 501
+numberOfBins = 256.0
+Children 9 solves problem C:\data_for_binpacking\new_data\211.txt bins - 0.5079158850517883
+size = 207
+n = 580
+numberOfBins = 300.0
+Children 9 solves problem C:\data_for_binpacking\new_data\98.txt bins - 0.5102472586164275
+Children 9 fitness - 0.5102472586164275
+size = 115
+n = 553
+numberOfBins = 283.0
+Children 10 solves problem C:\data_for_binpacking\new_data\463.txt bins - 0.5117540687160941
+size = 161
+n = 640
+numberOfBins = 335.0
+Children 10 solves problem C:\data_for_binpacking\new_data\749.txt bins - 0.517595784358047
+size = 162
+n = 609
+numberOfBins = 314.0
+Children 10 solves problem C:\data_for_binpacking\new_data\32.txt bins - 0.5169303039672147
+size = 135
+n = 598
+numberOfBins = 311.0
+Children 10 solves problem C:\data_for_binpacking\new_data\522.txt bins - 0.5177144503834378
+Children 10 fitness - 0.5177144503834378
+size = 223
+n = 634
+numberOfBins = 327.0
+Children 11 solves problem C:\data_for_binpacking\new_data\10.txt bins - 0.5157728706624606
+size = 217
+n = 521
+numberOfBins = 270.0
+Children 11 solves problem C:\data_for_binpacking\new_data\200.txt bins - 0.5170035178648196
+size = 267
+n = 662
+numberOfBins = 346.0
+Children 11 solves problem C:\data_for_binpacking\new_data\563.txt bins - 0.5188885486671808
+size = 256
+n = 526
+numberOfBins = 278.0
+Children 11 solves problem C:\data_for_binpacking\new_data\505.txt bins - 0.5212956890669256
+Children 11 fitness - 0.5212956890669256
+size = 103
+n = 686
+numberOfBins = 383.0
+Children 12 solves problem C:\data_for_binpacking\new_data\747.txt bins - 0.5583090379008746
+size = 163
+n = 553
+numberOfBins = 285.0
+Children 12 solves problem C:\data_for_binpacking\new_data\437.txt bins - 0.5368398715724988
+size = 294
+n = 597
+numberOfBins = 293.0
+Children 12 solves problem C:\data_for_binpacking\new_data\80.txt bins - 0.5214890042755799
+size = 259
+n = 668
+numberOfBins = 348.0
+Children 12 solves problem C:\data_for_binpacking\new_data\4.txt bins - 0.5213562741647688
+Children 12 fitness - 0.5213562741647688
+size = 119
+n = 601
+numberOfBins = 316.0
+Children 13 solves problem C:\data_for_binpacking\new_data\92.txt bins - 0.5257903494176372
+size = 169
+n = 664
+numberOfBins = 330.0
+Children 13 solves problem C:\data_for_binpacking\new_data\284.txt bins - 0.5113891506124331
+size = 135
+n = 514
+numberOfBins = 269.0
+Children 13 solves problem C:\data_for_binpacking\new_data\35.txt bins - 0.5153748682422705
+size = 288
+n = 592
+numberOfBins = 317.0
+Children 13 solves problem C:\data_for_binpacking\new_data\147.txt bins - 0.5203993944249461
+Children 13 fitness - 0.5203993944249461
+size = 216
+n = 656
+numberOfBins = 337.0
+Children 14 solves problem C:\data_for_binpacking\new_data\691.txt bins - 0.5137195121951219
+size = 294
+n = 643
+numberOfBins = 319.0
+Children 14 solves problem C:\data_for_binpacking\new_data\621.txt bins - 0.5049157436558813
+size = 136
+n = 639
+numberOfBins = 336.0
+Children 14 solves problem C:\data_for_binpacking\new_data\50.txt bins - 0.511884361185298
+size = 208
+n = 536
+numberOfBins = 262.0
+Children 14 solves problem C:\data_for_binpacking\new_data\609.txt bins - 0.506114763426287
+Children 14 fitness - 0.506114763426287
+size = 190
+n = 634
+numberOfBins = 337.0
+Children 15 solves problem C:\data_for_binpacking\new_data\1.txt bins - 0.5315457413249212
+size = 181
+n = 699
+numberOfBins = 361.0
+Children 15 solves problem C:\data_for_binpacking\new_data\220.txt bins - 0.5239989078584548
+size = 260
+n = 536
+numberOfBins = 273.0
+Children 15 solves problem C:\data_for_binpacking\new_data\401.txt bins - 0.519108724641955
+size = 245
+n = 587
+numberOfBins = 292.0
+Children 15 solves problem C:\data_for_binpacking\new_data\192.txt bins - 0.5136927019141749
+Children 15 fitness - 0.5136927019141749
+size = 220
+n = 640
+numberOfBins = 333.0
+Children 16 solves problem C:\data_for_binpacking\new_data\171.txt bins - 0.5203125
+size = 106
+n = 660
+numberOfBins = 354.0
+Children 16 solves problem C:\data_for_binpacking\new_data\719.txt bins - 0.5283380681818182
+size = 148
+n = 576
+numberOfBins = 291.0
+Children 16 solves problem C:\data_for_binpacking\new_data\40.txt bins - 0.5206281565656566
+size = 223
+n = 626
+numberOfBins = 309.0
+Children 16 solves problem C:\data_for_binpacking\new_data\66.txt bins - 0.5138736733347856
+Children 16 fitness - 0.5138736733347856
+size = 213
+n = 567
+numberOfBins = 294.0
+Children 17 solves problem C:\data_for_binpacking\new_data\576.txt bins - 0.5185185185185185
+size = 185
+n = 670
+numberOfBins = 347.0
+Children 17 solves problem C:\data_for_binpacking\new_data\346.txt bins - 0.5182144831398563
+size = 111
+n = 662
+numberOfBins = 318.0
+Children 17 solves problem C:\data_for_binpacking\new_data\727.txt bins - 0.5055971680146877
+size = 276
+n = 568
+numberOfBins = 292.0
+Children 17 solves problem C:\data_for_binpacking\new_data\612.txt bins - 0.5077190027715791
+Children 17 fitness - 0.5077190027715791
+size = 185
+n = 669
+numberOfBins = 327.0
+Children 18 solves problem C:\data_for_binpacking\new_data\343.txt bins - 0.48878923766816146
+size = 275
+n = 680
+numberOfBins = 342.0
+Children 18 solves problem C:\data_for_binpacking\new_data\584.txt bins - 0.49586520706937487
+size = 216
+n = 519
+numberOfBins = 266.0
+Children 18 solves problem C:\data_for_binpacking\new_data\460.txt bins - 0.5014181663057232
+size = 153
+n = 683
+numberOfBins = 342.0
+Children 18 solves problem C:\data_for_binpacking\new_data\462.txt bins - 0.5012466408347097
+Children 18 fitness - 0.5012466408347097
+size = 286
+n = 614
+numberOfBins = 313.0
+Children 19 solves problem C:\data_for_binpacking\new_data\528.txt bins - 0.509771986970684
+size = 165
+n = 676
+numberOfBins = 341.0
+Children 19 solves problem C:\data_for_binpacking\new_data\363.txt bins - 0.5071049283965846
+size = 164
+n = 657
+numberOfBins = 351.0
+Children 19 solves problem C:\data_for_binpacking\new_data\146.txt bins - 0.5161521440452117
+size = 240
+n = 504
+numberOfBins = 261.0
+Children 19 solves problem C:\data_for_binpacking\new_data\657.txt bins - 0.5165783937481945
+Children 19 fitness - 0.5165783937481945
+size = 144
+n = 656
+numberOfBins = 340.0
+Children 20 solves problem C:\data_for_binpacking\new_data\113.txt bins - 0.5182926829268293
+size = 172
+n = 520
+numberOfBins = 261.0
+Children 20 solves problem C:\data_for_binpacking\new_data\590.txt bins - 0.5101078799249531
+size = 241
+n = 529
+numberOfBins = 258.0
+Children 20 solves problem C:\data_for_binpacking\new_data\75.txt bins - 0.5026428084187778
+size = 223
+n = 603
+numberOfBins = 321.0
+Children 20 solves problem C:\data_for_binpacking\new_data\595.txt bins - 0.5100666834285112
+Children 20 fitness - 0.5100666834285112
+size = 158
+n = 568
+numberOfBins = 309.0
+Children 21 solves problem C:\data_for_binpacking\new_data\271.txt bins - 0.5440140845070423
+size = 181
+n = 581
+numberOfBins = 290.0
+Children 21 solves problem C:\data_for_binpacking\new_data\313.txt bins - 0.5215767496545538
+size = 135
+n = 582
+numberOfBins = 316.0
+Children 21 solves problem C:\data_for_binpacking\new_data\728.txt bins - 0.5287029419231962
+size = 142
+n = 569
+numberOfBins = 294.0
+Children 21 solves problem C:\data_for_binpacking\new_data\421.txt bins - 0.5257011958975817
+Children 21 fitness - 0.5257011958975817
+size = 241
+n = 529
+numberOfBins = 258.0
+Children 22 solves problem C:\data_for_binpacking\new_data\75.txt bins - 0.4877126654064272
+size = 164
+n = 521
+numberOfBins = 268.0
+Children 22 solves problem C:\data_for_binpacking\new_data\382.txt bins - 0.5010540294402577
+size = 199
+n = 530
+numberOfBins = 261.0
+Children 22 solves problem C:\data_for_binpacking\new_data\64.txt bins - 0.49818696302306487
+size = 295
+n = 550
+numberOfBins = 293.0
+Children 22 solves problem C:\data_for_binpacking\new_data\575.txt bins - 0.5068220404491168
+Children 22 fitness - 0.5068220404491168
+size = 202
+n = 668
+numberOfBins = 341.0
+Children 23 solves problem C:\data_for_binpacking\new_data\141.txt bins - 0.5104790419161677
+size = 187
+n = 642
+numberOfBins = 307.0
+Children 23 solves problem C:\data_for_binpacking\new_data\99.txt bins - 0.49433609416680657
+size = 102
+n = 571
+numberOfBins = 282.0
+Children 23 solves problem C:\data_for_binpacking\new_data\386.txt bins - 0.4941808637119049
+size = 136
+n = 509
+numberOfBins = 258.0
+Children 23 solves problem C:\data_for_binpacking\new_data\567.txt bins - 0.4973547047583884
+Children 23 fitness - 0.4973547047583884
+size = 170
+n = 588
+numberOfBins = 305.0
+Children 24 solves problem C:\data_for_binpacking\new_data\350.txt bins - 0.5187074829931972
+size = 259
+n = 668
+numberOfBins = 348.0
+Children 24 solves problem C:\data_for_binpacking\new_data\4.txt bins - 0.5198327834127663
+size = 246
+n = 553
+numberOfBins = 271.0
+Children 24 solves problem C:\data_for_binpacking\new_data\737.txt bins - 0.5099066054578176
+size = 296
+n = 630
+numberOfBins = 334.0
+Children 24 solves problem C:\data_for_binpacking\new_data\497.txt bins - 0.5149696366330457
+Children 24 fitness - 0.5149696366330457
+size = 272
+n = 594
+numberOfBins = 329.0
+Children 25 solves problem C:\data_for_binpacking\new_data\133.txt bins - 0.5538720538720538
+size = 262
+n = 690
+numberOfBins = 353.0
+Children 25 solves problem C:\data_for_binpacking\new_data\183.txt bins - 0.5327331283853023
+size = 260
+n = 545
+numberOfBins = 272.0
+Children 25 solves problem C:\data_for_binpacking\new_data\438.txt bins - 0.521516275192648
+size = 262
+n = 570
+numberOfBins = 296.0
+Children 25 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5209617677979947
+Children 25 fitness - 0.5209617677979947
+size = 115
+n = 679
+numberOfBins = 350.0
+Children 26 solves problem C:\data_for_binpacking\new_data\678.txt bins - 0.5154639175257731
+size = 108
+n = 582
+numberOfBins = 327.0
+Children 26 solves problem C:\data_for_binpacking\new_data\513.txt bins - 0.538659793814433
+size = 283
+n = 646
+numberOfBins = 332.0
+Children 26 solves problem C:\data_for_binpacking\new_data\267.txt bins - 0.5304171587245858
+size = 138
+n = 508
+numberOfBins = 255.0
+Children 26 solves problem C:\data_for_binpacking\new_data\662.txt bins - 0.5233049950276913
+Children 26 fitness - 0.5233049950276913
+size = 157
+n = 514
+numberOfBins = 270.0
+Children 27 solves problem C:\data_for_binpacking\new_data\236.txt bins - 0.5252918287937743
+size = 133
+n = 681
+numberOfBins = 339.0
+Children 27 solves problem C:\data_for_binpacking\new_data\332.txt bins - 0.5115445928109841
+size = 278
+n = 684
+numberOfBins = 371.0
+Children 27 solves problem C:\data_for_binpacking\new_data\130.txt bins - 0.5218289488135605
+size = 236
+n = 536
+numberOfBins = 270.0
+Children 27 solves problem C:\data_for_binpacking\new_data\681.txt bins - 0.5173045474310659
+Children 27 fitness - 0.5173045474310659
+size = 259
+n = 682
+numberOfBins = 360.0
+Children 28 solves problem C:\data_for_binpacking\new_data\68.txt bins - 0.5278592375366569
+size = 238
+n = 597
+numberOfBins = 297.0
+Children 28 solves problem C:\data_for_binpacking\new_data\679.txt bins - 0.5126733373612933
+size = 240
+n = 539
+numberOfBins = 283.0
+Children 28 solves problem C:\data_for_binpacking\new_data\453.txt bins - 0.5167976856372754
+size = 113
+n = 623
+numberOfBins = 311.0
+Children 28 solves problem C:\data_for_binpacking\new_data\533.txt bins - 0.5123976221733819
+Children 28 fitness - 0.5123976221733819
+size = 210
+n = 569
+numberOfBins = 303.0
+Children 29 solves problem C:\data_for_binpacking\new_data\636.txt bins - 0.5325131810193322
+size = 182
+n = 522
+numberOfBins = 285.0
+Children 29 solves problem C:\data_for_binpacking\new_data\194.txt bins - 0.5392450962567925
+size = 219
+n = 563
+numberOfBins = 275.0
+Children 29 solves problem C:\data_for_binpacking\new_data\135.txt bins - 0.5223149664802537
+size = 174
+n = 556
+numberOfBins = 295.0
+Children 29 solves problem C:\data_for_binpacking\new_data\5.txt bins - 0.5243801097522766
+Children 29 fitness - 0.5243801097522766
+size = 267
+n = 696
+numberOfBins = 352.0
+Children 30 solves problem C:\data_for_binpacking\new_data\224.txt bins - 0.5057471264367817
+size = 107
+n = 517
+numberOfBins = 264.0
+Children 30 solves problem C:\data_for_binpacking\new_data\743.txt bins - 0.5081927121545611
+size = 252
+n = 689
+numberOfBins = 354.0
+Children 30 solves problem C:\data_for_binpacking\new_data\741.txt bins - 0.5100578410009604
+size = 289
+n = 642
+numberOfBins = 329.0
+Children 30 solves problem C:\data_for_binpacking\new_data\539.txt bins - 0.510658645548228
+Children 30 fitness - 0.510658645548228
+size = 298
+n = 599
+numberOfBins = 310.0
+Children 31 solves problem C:\data_for_binpacking\new_data\479.txt bins - 0.5175292153589316
+size = 234
+n = 659
+numberOfBins = 337.0
+Children 31 solves problem C:\data_for_binpacking\new_data\428.txt bins - 0.5144550477401638
+size = 212
+n = 510
+numberOfBins = 255.0
+Children 31 solves problem C:\data_for_binpacking\new_data\454.txt bins - 0.5096366984934425
+size = 139
+n = 683
+numberOfBins = 358.0
+Children 31 solves problem C:\data_for_binpacking\new_data\294.txt bins - 0.5132670553488521
+Children 31 fitness - 0.5132670553488521
+size = 105
+n = 567
+numberOfBins = 310.0
+Children 32 solves problem C:\data_for_binpacking\new_data\683.txt bins - 0.54673721340388
+size = 272
+n = 648
+numberOfBins = 335.0
+Children 32 solves problem C:\data_for_binpacking\new_data\456.txt bins - 0.5318562610229276
+size = 151
+n = 611
+numberOfBins = 321.0
+Children 32 solves problem C:\data_for_binpacking\new_data\159.txt bins - 0.5296935902727865
+size = 286
+n = 614
+numberOfBins = 313.0
+Children 32 solves problem C:\data_for_binpacking\new_data\528.txt bins - 0.5247131894472609
+Children 32 fitness - 0.5247131894472609
+size = 111
+n = 616
+numberOfBins = 313.0
+Children 33 solves problem C:\data_for_binpacking\new_data\95.txt bins - 0.5081168831168831
+size = 188
+n = 562
+numberOfBins = 286.0
+Children 33 solves problem C:\data_for_binpacking\new_data\301.txt bins - 0.508506840134954
+size = 181
+n = 633
+numberOfBins = 320.0
+Children 33 solves problem C:\data_for_binpacking\new_data\84.txt bins - 0.5075143020594269
+size = 118
+n = 505
+numberOfBins = 265.0
+Children 33 solves problem C:\data_for_binpacking\new_data\213.txt bins - 0.5118238453564514
+Children 33 fitness - 0.5118238453564514
+size = 285
+n = 506
+numberOfBins = 257.0
+Children 34 solves problem C:\data_for_binpacking\new_data\17.txt bins - 0.5079051383399209
+size = 180
+n = 658
+numberOfBins = 324.0
+Children 34 solves problem C:\data_for_binpacking\new_data\515.txt bins - 0.500153177072696
+size = 161
+n = 640
+numberOfBins = 335.0
+Children 34 solves problem C:\data_for_binpacking\new_data\749.txt bins - 0.507914618048464
+size = 143
+n = 570
+numberOfBins = 301.0
+Children 34 solves problem C:\data_for_binpacking\new_data\122.txt bins - 0.5129535073959971
+Children 34 fitness - 0.5129535073959971
+size = 262
+n = 570
+numberOfBins = 296.0
+Children 35 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.519298245614035
+size = 208
+n = 536
+numberOfBins = 262.0
+Children 35 solves problem C:\data_for_binpacking\new_data\609.txt bins - 0.5040521078816445
+size = 153
+n = 658
+numberOfBins = 342.0
+Children 35 solves problem C:\data_for_binpacking\new_data\43.txt bins - 0.5092870182230214
+size = 135
+n = 514
+numberOfBins = 269.0
+Children 35 solves problem C:\data_for_binpacking\new_data\35.txt bins - 0.5128018395427524
+Children 35 fitness - 0.5128018395427524
+size = 159
+n = 542
+numberOfBins = 274.0
+Children 36 solves problem C:\data_for_binpacking\new_data\394.txt bins - 0.5055350553505535
+size = 211
+n = 587
+numberOfBins = 293.0
+Children 36 solves problem C:\data_for_binpacking\new_data\222.txt bins - 0.5023416332970826
+size = 201
+n = 598
+numberOfBins = 294.0
+Children 36 solves problem C:\data_for_binpacking\new_data\289.txt bins - 0.49877402086026246
+size = 181
+n = 564
+numberOfBins = 285.0
+Children 36 solves problem C:\data_for_binpacking\new_data\383.txt bins - 0.5004103028792394
+Children 36 fitness - 0.5004103028792394
+size = 226
+n = 680
+numberOfBins = 343.0
+Children 37 solves problem C:\data_for_binpacking\new_data\201.txt bins - 0.5044117647058823
+size = 273
+n = 662
+numberOfBins = 343.0
+Children 37 solves problem C:\data_for_binpacking\new_data\699.txt bins - 0.5112693264617025
+size = 154
+n = 583
+numberOfBins = 296.0
+Children 37 solves problem C:\data_for_binpacking\new_data\214.txt bins - 0.5100857831071156
+size = 191
+n = 615
+numberOfBins = 316.0
+Children 37 solves problem C:\data_for_binpacking\new_data\688.txt bins - 0.5110196218831822
+Children 37 fitness - 0.5110196218831822
+size = 296
+n = 642
+numberOfBins = 327.0
+Children 38 solves problem C:\data_for_binpacking\new_data\230.txt bins - 0.5093457943925234
+size = 191
+n = 646
+numberOfBins = 329.0
+Children 38 solves problem C:\data_for_binpacking\new_data\119.txt bins - 0.5093168600445589
+size = 297
+n = 536
+numberOfBins = 269.0
+Children 38 solves problem C:\data_for_binpacking\new_data\510.txt bins - 0.5068331305769697
+size = 125
+n = 666
+numberOfBins = 326.0
+Children 38 solves problem C:\data_for_binpacking\new_data\430.txt bins - 0.5024972203050996
+Children 38 fitness - 0.5024972203050996
+size = 231
+n = 570
+numberOfBins = 289.0
+Children 39 solves problem C:\data_for_binpacking\new_data\742.txt bins - 0.5070175438596491
+size = 240
+n = 649
+numberOfBins = 336.0
+Children 39 solves problem C:\data_for_binpacking\new_data\327.txt bins - 0.5123685562133377
+size = 257
+n = 640
+numberOfBins = 328.0
+Children 39 solves problem C:\data_for_binpacking\new_data\228.txt bins - 0.5124123708088918
+size = 219
+n = 682
+numberOfBins = 354.0
+Children 39 solves problem C:\data_for_binpacking\new_data\129.txt bins - 0.514074674001097
+Children 39 fitness - 0.514074674001097
+size = 262
+n = 570
+numberOfBins = 296.0
+Population 0 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5111621934510705
+numberOfBins = 296.0
+Population 1 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.510027981124591
+numberOfBins = 296.0
+Population 2 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5104585925025829
+numberOfBins = 296.0
+Population 3 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5104674274257832
+numberOfBins = 296.0
+Population 4 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5110623544535398
+numberOfBins = 296.0
+Population 5 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5111569559576964
+numberOfBins = 296.0
+Population 6 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.511045131064891
+numberOfBins = 296.0
+Population 7 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5084554771074089
+numberOfBins = 296.0
+Population 8 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5098850394787989
+numberOfBins = 296.0
+Population 9 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.508907593387563
+numberOfBins = 296.0
+Population 10 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5090703533804427
+numberOfBins = 296.0
+Population 11 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.508230717912088
+numberOfBins = 296.0
+Population 12 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5095282813777686
+numberOfBins = 296.0
+Population 13 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5089950624136645
+numberOfBins = 296.0
+Population 14 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5091613645074227
+numberOfBins = 296.0
+Population 15 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.508795800756951
+numberOfBins = 296.0
+Population 16 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5090282450812279
+numberOfBins = 296.0
+Population 17 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5099220698617737
+numberOfBins = 296.0
+Population 18 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5104767800703995
+numberOfBins = 296.0
+Population 19 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5095706950023574
+numberOfBins = 296.0
+Population 20 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5099507393235428
+numberOfBins = 296.0
+Population 21 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5095607187748863
+numberOfBins = 296.0
+Population 22 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5072013065445297
+numberOfBins = 296.0
+Population 23 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5074381882169667
+numberOfBins = 296.0
+Population 24 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5072697110856398
+numberOfBins = 296.0
+Population 25 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5076409655265003
+numberOfBins = 296.0
+Population 26 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.508270550482716
+numberOfBins = 296.0
+Population 27 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5082985636516913
+numberOfBins = 296.0
+Population 28 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5045983884139272
+numberOfBins = 296.0
+Population 29 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5048829652005857
+numberOfBins = 296.0
+Population 30 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5055581852883111
+numberOfBins = 296.0
+Population 31 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5056344286829861
+numberOfBins = 296.0
+Population 32 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.505185564063309
+numberOfBins = 296.0
+Population 33 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.50575113400915
+numberOfBins = 296.0
+Population 34 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5023907927451322
+numberOfBins = 296.0
+Population 35 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5057772700668633
+numberOfBins = 296.0
+Population 36 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.4995553946984679
+numberOfBins = 296.0
+Population 37 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5013355285202737
+numberOfBins = 296.0
+Population 38 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5017434129295177
+numberOfBins = 296.0
+Population 39 solves problem C:\data_for_binpacking\new_data\500.txt bins - 0.5041878914261985
+!!!Generation is - 498
+children1.chromosome.size() 18
+parent2.chromosome.size() 17
+div + i 14 4
+children1.chromosome.size() 18
+parent2.chromosome.size() 17
+div + i 14 5
+children1.chromosome.size() 18
+parent2.chromosome.size() 17
+div + i 14 6
+children1.chromosome.size() 18
+parent2.chromosome.size() 17
+div + i 14 7
+children1.chromosome.size() 18
+parent2.chromosome.size() 17
+div + i 14 8
+children1.chromosome.size() 18
+parent2.chromosome.size() 17
+div + i 14 9
+children1.chromosome.size() 18
+parent2.chromosome.size() 17
+div + i 14 10
+children1.chromosome.size() 18
+parent2.chromosome.size() 17
+div + i 14 11
+children1.chromosome.size() 18
+parent2.chromosome.size() 17
+div + i 14 12
+children1.chromosome.size() 18
+parent2.chromosome.size() 17
+div + i 14 13
+children1.chromosome.size() 18
+parent2.chromosome.size() 17
+div + i 14 14
+children1.chromosome.size() 18
+parent2.chromosome.size() 17
+div + i 14 15
+children1.chromosome.size() 17
+parent2.chromosome.size() 17
+div + i 3 14
+children1.chromosome.size() 17
+parent2.chromosome.size() 17
+div + i 3 15
+size = 267
+n = 656
+numberOfBins = 349.0
+Children 0 solves problem C:\data_for_binpacking\new_data\499.txt bins - 0.5320121951219512
+size = 148
+n = 520
+numberOfBins = 288.0
+Children 0 solves problem C:\data_for_binpacking\new_data\635.txt bins - 0.5429291744840525
+size = 171
+n = 607
+numberOfBins = 304.0
+Children 0 solves problem C:\data_for_binpacking\new_data\486.txt bins - 0.5288940240657
+size = 103
+n = 616
+numberOfBins = 308.0
+Children 0 solves problem C:\data_for_binpacking\new_data\41.txt bins - 0.521670518049275
+Children 0 fitness - 0.521670518049275
+size = 288
+n = 592
+numberOfBins = 317.0
+Children 1 solves problem C:\data_for_binpacking\new_data\147.txt bins - 0.535472972972973
+size = 276
+n = 696
+numberOfBins = 349.0
+Children 1 solves problem C:\data_for_binpacking\new_data\306.txt bins - 0.5184548772910842
+size = 139
+n = 561
+numberOfBins = 293.0
+Children 1 solves problem C:\data_for_binpacking\new_data\125.txt bins - 0.5197304648369557
+size = 154
+n = 526
+numberOfBins = 273.0
+Children 1 solves problem C:\data_for_binpacking\new_data\605.txt bins - 0.5195507003387434
+Children 1 fitness - 0.5195507003387434
+size = 285
+n = 629
+numberOfBins = 314.0
+Children 2 solves problem C:\data_for_binpacking\new_data\275.txt bins - 0.49920508744038156
+size = 260
+n = 664
+numberOfBins = 340.0
+Children 2 solves problem C:\data_for_binpacking\new_data\693.txt bins - 0.505626640105733
+size = 170
+n = 690
+numberOfBins = 351.0
+Children 2 solves problem C:\data_for_binpacking\new_data\74.txt bins - 0.5066496441284597
+size = 213
+n = 604
+numberOfBins = 323.0
+Children 2 solves problem C:\data_for_binpacking\new_data\712.txt bins - 0.5136792860764772
+Children 2 fitness - 0.5136792860764772
+size = 170
+n = 668
+numberOfBins = 340.0
+Children 3 solves problem C:\data_for_binpacking\new_data\252.txt bins - 0.5089820359281437
+size = 270
+n = 540
+numberOfBins = 294.0
+Children 3 solves problem C:\data_for_binpacking\new_data\251.txt bins - 0.5267132401862941
+size = 145
+n = 547
+numberOfBins = 285.0
+Children 3 solves problem C:\data_for_binpacking\new_data\698.txt bins - 0.5248167487896439
+size = 223
+n = 603
+numberOfBins = 321.0
+Children 3 solves problem C:\data_for_binpacking\new_data\595.txt bins - 0.5266971387066608
+Children 3 fitness - 0.5266971387066608
+size = 204
+n = 646
+numberOfBins = 344.0
+Children 4 solves problem C:\data_for_binpacking\new_data\399.txt bins - 0.5325077399380805
+size = 210
+n = 635
+numberOfBins = 329.0
+Children 4 solves problem C:\data_for_binpacking\new_data\27.txt bins - 0.5253089880792765
+size = 139
+n = 699
+numberOfBins = 361.0
+Children 4 solves problem C:\data_for_binpacking\new_data\586.txt bins - 0.5223566835168473
+size = 196
+n = 647
+numberOfBins = 335.0
+Children 4 solves problem C:\data_for_binpacking\new_data\139.txt bins - 0.5212110984181609
+Children 4 fitness - 0.5212110984181609
+size = 205
+n = 504
+numberOfBins = 272.0
+Children 5 solves problem C:\data_for_binpacking\new_data\614.txt bins - 0.5396825396825397
+size = 213
+n = 597
+numberOfBins = 303.0
+Children 5 solves problem C:\data_for_binpacking\new_data\637.txt bins - 0.5236101140623753
+size = 182
+n = 592
+numberOfBins = 309.0
+Children 5 solves problem C:\data_for_binpacking\new_data\243.txt bins - 0.5230598958614033
+size = 171
+n = 687
+numberOfBins = 345.0
+Children 5 solves problem C:\data_for_binpacking\new_data\402.txt bins - 0.5178407734244368
+Children 5 fitness - 0.5178407734244368
+size = 130
+n = 517
+numberOfBins = 260.0
+Children 6 solves problem C:\data_for_binpacking\new_data\308.txt bins - 0.5029013539651838
+size = 272
+n = 594
+numberOfBins = 329.0
+Children 6 solves problem C:\data_for_binpacking\new_data\133.txt bins - 0.5283867039186187
+size = 199
+n = 534
+numberOfBins = 282.0
+Children 6 solves problem C:\data_for_binpacking\new_data\372.txt bins - 0.5282877651592289
+size = 136
+n = 639
+numberOfBins = 336.0
+Children 6 solves problem C:\data_for_binpacking\new_data\50.txt bins - 0.5276712229304545
+Children 6 fitness - 0.5276712229304545
+size = 119
+n = 601
+numberOfBins = 316.0
+Children 7 solves problem C:\data_for_binpacking\new_data\92.txt bins - 0.5257903494176372
+size = 127
+n = 502
+numberOfBins = 256.0
+Children 7 solves problem C:\data_for_binpacking\new_data\442.txt bins - 0.5178752543900935
+size = 274
+n = 540
+numberOfBins = 276.0
+Children 7 solves problem C:\data_for_binpacking\new_data\26.txt bins - 0.515620539963766
+size = 216
+n = 519
+numberOfBins = 266.0
+Children 7 solves problem C:\data_for_binpacking\new_data\460.txt bins - 0.5148464261674295
+Children 7 fitness - 0.5148464261674295
+size = 278
+n = 625
+numberOfBins = 331.0
+Children 8 solves problem C:\data_for_binpacking\new_data\105.txt bins - 0.5296
+size = 117
+n = 649
+numberOfBins = 322.0
+Children 8 solves problem C:\data_for_binpacking\new_data\31.txt bins - 0.5128739599383667
+size = 148
+n = 507
+numberOfBins = 268.0
+Children 8 solves problem C:\data_for_binpacking\new_data\334.txt bins - 0.5181158417998053
+size = 172
+n = 671
+numberOfBins = 359.0
+Children 8 solves problem C:\data_for_binpacking\new_data\260.txt bins - 0.5223424700234754
+Children 8 fitness - 0.5223424700234754
+size = 288
+n = 592
+numberOfBins = 317.0
+Children 9 solves problem C:\data_for_binpacking\new_data\147.txt bins - 0.535472972972973
+size = 202
+n = 587
+numberOfBins = 316.0
+Children 9 solves problem C:\data_for_binpacking\new_data\114.txt bins - 0.5369017335052259
+size = 125
+n = 658
+numberOfBins = 331.0
+Children 9 solves problem C:\data_for_binpacking\new_data\116.txt bins - 0.5256143268960877
+size = 269
+n = 543
+numberOfBins = 275.0
+Children 9 solves problem C:\data_for_binpacking\new_data\439.txt bins - 0.5208221632199479
+Children 9 fitness - 0.5208221632199479
+size = 231
+n = 570
+numberOfBins = 289.0
+Children 10 solves problem C:\data_for_binpacking\new_data\742.txt bins - 0.5070175438596491
+size = 126
+n = 521
+numberOfBins = 256.0
+Children 10 solves problem C:\data_for_binpacking\new_data\561.txt bins - 0.4991901538875981
+size = 144
+n = 577
+numberOfBins = 297.0
+Children 10 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5043705589753253
+size = 184
+n = 651
+numberOfBins = 312.0
+Children 10 solves problem C:\data_for_binpacking\new_data\541.txt bins - 0.49809358743425897
+Children 10 fitness - 0.49809358743425897
+size = 298
+n = 599
+numberOfBins = 310.0
+Children 11 solves problem C:\data_for_binpacking\new_data\479.txt bins - 0.5175292153589316
+size = 135
+n = 543
+numberOfBins = 282.0
+Children 11 solves problem C:\data_for_binpacking\new_data\706.txt bins - 0.5184331159667586
+size = 105
+n = 550
+numberOfBins = 264.0
+Children 11 solves problem C:\data_for_binpacking\new_data\326.txt bins - 0.5056220773111724
+size = 216
+n = 656
+numberOfBins = 337.0
+Children 11 solves problem C:\data_for_binpacking\new_data\691.txt bins - 0.5076464360321598
+Children 11 fitness - 0.5076464360321598
+size = 253
+n = 616
+numberOfBins = 334.0
+Children 12 solves problem C:\data_for_binpacking\new_data\187.txt bins - 0.5422077922077922
+size = 201
+n = 569
+numberOfBins = 285.0
+Children 12 solves problem C:\data_for_binpacking\new_data\426.txt bins - 0.5215432634149682
+size = 253
+n = 604
+numberOfBins = 314.0
+Children 12 solves problem C:\data_for_binpacking\new_data\670.txt bins - 0.5209846921662701
+size = 263
+n = 669
+numberOfBins = 349.0
+Children 12 solves problem C:\data_for_binpacking\new_data\677.txt bins - 0.5211570542517578
+Children 12 fitness - 0.5211570542517578
+size = 246
+n = 578
+numberOfBins = 310.0
+Children 13 solves problem C:\data_for_binpacking\new_data\722.txt bins - 0.5363321799307958
+size = 285
+n = 605
+numberOfBins = 320.0
+Children 13 solves problem C:\data_for_binpacking\new_data\527.txt bins - 0.5326288998827533
+size = 264
+n = 686
+numberOfBins = 363.0
+Children 13 solves problem C:\data_for_binpacking\new_data\557.txt bins - 0.5314707729053146
+size = 136
+n = 615
+numberOfBins = 330.0
+Children 13 solves problem C:\data_for_binpacking\new_data\429.txt bins - 0.5327494211424006
+Children 13 fitness - 0.5327494211424006
+size = 122
+n = 692
+numberOfBins = 353.0
+Children 14 solves problem C:\data_for_binpacking\new_data\314.txt bins - 0.5101156069364162
+size = 126
+n = 561
+numberOfBins = 292.0
+Children 14 solves problem C:\data_for_binpacking\new_data\259.txt bins - 0.5153073578354095
+size = 185
+n = 695
+numberOfBins = 381.0
+Children 14 solves problem C:\data_for_binpacking\new_data\3.txt bins - 0.52627205150658
+size = 127
+n = 526
+numberOfBins = 262.0
+Children 14 solves problem C:\data_for_binpacking\new_data\542.txt bins - 0.5192287534588323
+Children 14 fitness - 0.5192287534588323
+size = 170
+n = 628
+numberOfBins = 312.0
+Children 15 solves problem C:\data_for_binpacking\new_data\138.txt bins - 0.4968152866242038
+size = 148
+n = 576
+numberOfBins = 291.0
+Children 15 solves problem C:\data_for_binpacking\new_data\40.txt bins - 0.5010118099787686
+size = 157
+n = 514
+numberOfBins = 270.0
+Children 15 solves problem C:\data_for_binpacking\new_data\236.txt bins - 0.5091051495837705
+size = 173
+n = 510
+numberOfBins = 274.0
+Children 15 solves problem C:\data_for_binpacking\new_data\231.txt bins - 0.5161425876780239
+Children 15 fitness - 0.5161425876780239
+size = 147
+n = 667
+numberOfBins = 329.0
+Children 16 solves problem C:\data_for_binpacking\new_data\436.txt bins - 0.49325337331334335
+size = 110
+n = 652
+numberOfBins = 320.0
+Children 16 solves problem C:\data_for_binpacking\new_data\388.txt bins - 0.49202545966280664
+size = 206
+n = 583
+numberOfBins = 303.0
+Children 16 solves problem C:\data_for_binpacking\new_data\216.txt bins - 0.5012588255956733
+size = 152
+n = 656
+numberOfBins = 329.0
+Children 16 solves problem C:\data_for_binpacking\new_data\30.txt bins - 0.5013252167577306
+Children 16 fitness - 0.5013252167577306
+size = 270
+n = 619
+numberOfBins = 324.0
+Children 17 solves problem C:\data_for_binpacking\new_data\203.txt bins - 0.5234248788368336
+size = 238
+n = 520
+numberOfBins = 263.0
+Children 17 solves problem C:\data_for_binpacking\new_data\407.txt bins - 0.5145970548030322
+size = 201
+n = 575
+numberOfBins = 294.0
+Children 17 solves problem C:\data_for_binpacking\new_data\469.txt bins - 0.513499485810717
+size = 204
+n = 657
+numberOfBins = 340.0
+Children 17 solves problem C:\data_for_binpacking\new_data\131.txt bins - 0.5145005656517974
+Children 17 fitness - 0.5145005656517974
+size = 111
+n = 616
+numberOfBins = 313.0
+Children 18 solves problem C:\data_for_binpacking\new_data\95.txt bins - 0.5081168831168831
+size = 145
+n = 547
+numberOfBins = 285.0
+Children 18 solves problem C:\data_for_binpacking\new_data\698.txt bins - 0.5145703245566133
+size = 183
+n = 577
+numberOfBins = 291.0
+Children 18 solves problem C:\data_for_binpacking\new_data\701.txt bins - 0.5111578015819364
+size = 281
+n = 631
+numberOfBins = 313.0
+Children 18 solves problem C:\data_for_binpacking\new_data\303.txt bins - 0.5073778599027755
+Children 18 fitness - 0.5073778599027755
+size = 198
+n = 673
+numberOfBins = 346.0
+Children 19 solves problem C:\data_for_binpacking\new_data\167.txt bins - 0.5141158989598811
+size = 196
+n = 511
+numberOfBins = 249.0
+Children 19 solves problem C:\data_for_binpacking\new_data\53.txt bins - 0.500697871202054
+size = 189
+n = 684
+numberOfBins = 355.0
+Children 19 solves problem C:\data_for_binpacking\new_data\716.txt bins - 0.5068005301191082
+size = 273
+n = 506
+numberOfBins = 266.0
+Children 19 solves problem C:\data_for_binpacking\new_data\518.txt bins - 0.5115233224905169
+Children 19 fitness - 0.5115233224905169
+size = 123
+n = 593
+numberOfBins = 315.0
+Children 20 solves problem C:\data_for_binpacking\new_data\140.txt bins - 0.5311973018549747
+size = 149
+n = 612
+numberOfBins = 307.0
+Children 20 solves problem C:\data_for_binpacking\new_data\643.txt bins - 0.5164156443915396
+size = 157
+n = 514
+numberOfBins = 270.0
+Children 20 solves problem C:\data_for_binpacking\new_data\236.txt bins - 0.5193743725256179
+size = 267
+n = 662
+numberOfBins = 346.0
+Children 20 solves problem C:\data_for_binpacking\new_data\563.txt bins - 0.5201954319621893
+Children 20 fitness - 0.5201954319621893
+size = 251
+n = 658
+numberOfBins = 322.0
+Children 21 solves problem C:\data_for_binpacking\new_data\596.txt bins - 0.48936170212765956
+size = 168
+n = 645
+numberOfBins = 322.0
+Children 21 solves problem C:\data_for_binpacking\new_data\514.txt bins - 0.494293254164605
+size = 240
+n = 520
+numberOfBins = 251.0
+Children 21 solves problem C:\data_for_binpacking\new_data\746.txt bins - 0.4904262720071726
+size = 191
+n = 634
+numberOfBins = 327.0
+Children 21 solves problem C:\data_for_binpacking\new_data\483.txt bins - 0.49676292167099456
+Children 21 fitness - 0.49676292167099456
+size = 189
+n = 599
+numberOfBins = 316.0
+Children 22 solves problem C:\data_for_binpacking\new_data\344.txt bins - 0.5275459098497496
+size = 183
+n = 698
+numberOfBins = 357.0
+Children 22 solves problem C:\data_for_binpacking\new_data\680.txt bins - 0.5195036139506628
+size = 168
+n = 576
+numberOfBins = 300.0
+Children 22 solves problem C:\data_for_binpacking\new_data\272.txt bins - 0.5199468537448864
+size = 191
+n = 563
+numberOfBins = 291.0
+Children 22 solves problem C:\data_for_binpacking\new_data\435.txt bins - 0.5191786127775813
+Children 22 fitness - 0.5191786127775813
+size = 250
+n = 695
+numberOfBins = 345.0
+Children 23 solves problem C:\data_for_binpacking\new_data\100.txt bins - 0.49640287769784175
+size = 243
+n = 506
+numberOfBins = 262.0
+Children 23 solves problem C:\data_for_binpacking\new_data\59.txt bins - 0.507094719481332
+size = 199
+n = 515
+numberOfBins = 264.0
+Children 23 solves problem C:\data_for_binpacking\new_data\54.txt bins - 0.508936932728655
+size = 185
+n = 646
+numberOfBins = 319.0
+Children 23 solves problem C:\data_for_binpacking\new_data\458.txt bins - 0.5051547119303922
+Children 23 fitness - 0.5051547119303922
+size = 111
+n = 504
+numberOfBins = 268.0
+Children 24 solves problem C:\data_for_binpacking\new_data\223.txt bins - 0.5317460317460317
+size = 231
+n = 651
+numberOfBins = 329.0
+Children 24 solves problem C:\data_for_binpacking\new_data\562.txt bins - 0.5185611879160266
+size = 138
+n = 510
+numberOfBins = 255.0
+Children 24 solves problem C:\data_for_binpacking\new_data\65.txt bins - 0.512374125277351
+size = 165
+n = 550
+numberOfBins = 273.0
+Children 24 solves problem C:\data_for_binpacking\new_data\295.txt bins - 0.5083715030489224
+Children 24 fitness - 0.5083715030489224
+size = 292
+n = 567
+numberOfBins = 287.0
+Children 25 solves problem C:\data_for_binpacking\new_data\641.txt bins - 0.5061728395061729
+size = 215
+n = 550
+numberOfBins = 289.0
+Children 25 solves problem C:\data_for_binpacking\new_data\250.txt bins - 0.5158136924803591
+size = 240
+n = 681
+numberOfBins = 352.0
+Children 25 solves problem C:\data_for_binpacking\new_data\611.txt bins - 0.5161714386481885
+size = 204
+n = 646
+numberOfBins = 344.0
+Children 25 solves problem C:\data_for_binpacking\new_data\399.txt bins - 0.5202555139706615
+Children 25 fitness - 0.5202555139706615
+size = 195
+n = 585
+numberOfBins = 319.0
+Children 26 solves problem C:\data_for_binpacking\new_data\158.txt bins - 0.5452991452991452
+size = 148
+n = 586
+numberOfBins = 314.0
+Children 26 solves problem C:\data_for_binpacking\new_data\618.txt bins - 0.540567661386774
+size = 238
+n = 697
+numberOfBins = 363.0
+Children 26 solves problem C:\data_for_binpacking\new_data\502.txt bins - 0.5339795887006996
+size = 298
+n = 679
+numberOfBins = 353.0
+Children 26 solves problem C:\data_for_binpacking\new_data\254.txt bins - 0.5304552364445233
+Children 26 fitness - 0.5304552364445233
+size = 295
+n = 688
+numberOfBins = 343.0
+Children 27 solves problem C:\data_for_binpacking\new_data\240.txt bins - 0.498546511627907
+size = 286
+n = 614
+numberOfBins = 313.0
+Children 27 solves problem C:\data_for_binpacking\new_data\528.txt bins - 0.5041592492992955
+size = 169
+n = 604
+numberOfBins = 302.0
+Children 27 solves problem C:\data_for_binpacking\new_data\264.txt bins - 0.502772832866197
+size = 243
+n = 607
+numberOfBins = 305.0
+Children 27 solves problem C:\data_for_binpacking\new_data\6.txt bins - 0.502697417071394
+Children 27 fitness - 0.502697417071394
+size = 162
+n = 565
+numberOfBins = 273.0
+Children 28 solves problem C:\data_for_binpacking\new_data\134.txt bins - 0.4831858407079646
+size = 185
+n = 670
+numberOfBins = 347.0
+Children 28 solves problem C:\data_for_binpacking\new_data\346.txt bins - 0.5005481442345793
+size = 148
+n = 520
+numberOfBins = 288.0
+Children 28 solves problem C:\data_for_binpacking\new_data\635.txt bins - 0.5183141474384375
+size = 244
+n = 579
+numberOfBins = 297.0
+Children 28 solves problem C:\data_for_binpacking\new_data\255.txt bins - 0.51697395254774
+Children 28 fitness - 0.51697395254774
+size = 256
+n = 669
+numberOfBins = 339.0
+Children 29 solves problem C:\data_for_binpacking\new_data\109.txt bins - 0.5067264573991032
+size = 223
+n = 674
+numberOfBins = 355.0
+Children 29 solves problem C:\data_for_binpacking\new_data\374.txt bins - 0.5167163444265546
+size = 132
+n = 603
+numberOfBins = 328.0
+Children 29 solves problem C:\data_for_binpacking\new_data\279.txt bins - 0.5257932069532475
+size = 166
+n = 602
+numberOfBins = 308.0
+Children 29 solves problem C:\data_for_binpacking\new_data\89.txt bins - 0.5222518819591218
+Children 29 fitness - 0.5222518819591218
+size = 130
+n = 517
+numberOfBins = 260.0
+Children 30 solves problem C:\data_for_binpacking\new_data\308.txt bins - 0.5029013539651838
+size = 129
+n = 682
+numberOfBins = 358.0
+Children 30 solves problem C:\data_for_binpacking\new_data\78.txt bins - 0.5139140200910963
+size = 252
+n = 561
+numberOfBins = 296.0
+Children 30 solves problem C:\data_for_binpacking\new_data\412.txt bins - 0.5184857578979264
+size = 139
+n = 561
+numberOfBins = 293.0
+Children 30 solves problem C:\data_for_binpacking\new_data\125.txt bins - 0.5194347284056194
+Children 30 fitness - 0.5194347284056194
+size = 112
+n = 598
+numberOfBins = 309.0
+Children 31 solves problem C:\data_for_binpacking\new_data\144.txt bins - 0.5167224080267558
+size = 158
+n = 568
+numberOfBins = 309.0
+Children 31 solves problem C:\data_for_binpacking\new_data\271.txt bins - 0.530368246266899
+size = 271
+n = 597
+numberOfBins = 304.0
+Children 31 solves problem C:\data_for_binpacking\new_data\477.txt bins - 0.5233164076173521
+size = 205
+n = 563
+numberOfBins = 280.0
+Children 31 solves problem C:\data_for_binpacking\new_data\703.txt bins - 0.5168212311126588
+Children 31 fitness - 0.5168212311126588
+size = 185
+n = 670
+numberOfBins = 347.0
+Children 32 solves problem C:\data_for_binpacking\new_data\346.txt bins - 0.517910447761194
+size = 181
+n = 606
+numberOfBins = 327.0
+Children 32 solves problem C:\data_for_binpacking\new_data\400.txt bins - 0.5287572040786168
+size = 262
+n = 637
+numberOfBins = 341.0
+Children 32 solves problem C:\data_for_binpacking\new_data\734.txt bins - 0.5309454097311135
+size = 145
+n = 528
+numberOfBins = 270.0
+Children 32 solves problem C:\data_for_binpacking\new_data\153.txt bins - 0.5260499663892442
+Children 32 fitness - 0.5260499663892442
+size = 269
+n = 543
+numberOfBins = 275.0
+Children 33 solves problem C:\data_for_binpacking\new_data\439.txt bins - 0.5064456721915286
+size = 165
+n = 622
+numberOfBins = 313.0
+Children 33 solves problem C:\data_for_binpacking\new_data\373.txt bins - 0.504830553137565
+size = 126
+n = 521
+numberOfBins = 256.0
+Children 33 solves problem C:\data_for_binpacking\new_data\561.txt bins - 0.500341290063559
+size = 263
+n = 534
+numberOfBins = 276.0
+Children 33 solves problem C:\data_for_binpacking\new_data\39.txt bins - 0.5044694506937366
+Children 33 fitness - 0.5044694506937366
+size = 293
+n = 503
+numberOfBins = 261.0
+Children 34 solves problem C:\data_for_binpacking\new_data\623.txt bins - 0.5188866799204771
+size = 252
+n = 504
+numberOfBins = 254.0
+Children 34 solves problem C:\data_for_binpacking\new_data\219.txt bins - 0.5114274669443655
+size = 209
+n = 535
+numberOfBins = 288.0
+Children 34 solves problem C:\data_for_binpacking\new_data\461.txt bins - 0.5203908969660256
+size = 263
+n = 669
+numberOfBins = 349.0
+Children 34 solves problem C:\data_for_binpacking\new_data\677.txt bins - 0.5207117078515745
+Children 34 fitness - 0.5207117078515745
+size = 214
+n = 598
+numberOfBins = 295.0
+Children 35 solves problem C:\data_for_binpacking\new_data\379.txt bins - 0.49331103678929766
+size = 171
+n = 607
+numberOfBins = 304.0
+Children 35 solves problem C:\data_for_binpacking\new_data\486.txt bins - 0.49706738000914635
+size = 257
+n = 640
+numberOfBins = 328.0
+Children 35 solves problem C:\data_for_binpacking\new_data\228.txt bins - 0.5022115866727642
+size = 267
+n = 662
+numberOfBins = 346.0
+Children 35 solves problem C:\data_for_binpacking\new_data\563.txt bins - 0.507323342572549
+Children 35 fitness - 0.507323342572549
+size = 189
+n = 599
+numberOfBins = 316.0
+Children 36 solves problem C:\data_for_binpacking\new_data\344.txt bins - 0.5275459098497496
+size = 159
+n = 615
+numberOfBins = 300.0
+Children 36 solves problem C:\data_for_binpacking\new_data\544.txt bins - 0.5076753939492651
+size = 205
+n = 504
+numberOfBins = 272.0
+Children 36 solves problem C:\data_for_binpacking\new_data\614.txt bins - 0.5183444425270233
+size = 256
+n = 669
+numberOfBins = 339.0
+Children 36 solves problem C:\data_for_binpacking\new_data\109.txt bins - 0.5154399462450432
+Children 36 fitness - 0.5154399462450432
+size = 181
+n = 535
+numberOfBins = 282.0
+Children 37 solves problem C:\data_for_binpacking\new_data\585.txt bins - 0.5271028037383177
+size = 256
+n = 590
+numberOfBins = 294.0
+Children 37 solves problem C:\data_for_binpacking\new_data\647.txt bins - 0.5127039442420402
+size = 187
+n = 547
+numberOfBins = 289.0
+Children 37 solves problem C:\data_for_binpacking\new_data\538.txt bins - 0.517914756246674
+size = 128
+n = 623
+numberOfBins = 325.0
+Children 37 solves problem C:\data_for_binpacking\new_data\520.txt bins - 0.5188534026585208
+Children 37 fitness - 0.5188534026585208
+size = 264
+n = 686
+numberOfBins = 363.0
+Children 38 solves problem C:\data_for_binpacking\new_data\557.txt bins - 0.5291545189504373
+size = 157
+n = 514
+numberOfBins = 270.0
+Children 38 solves problem C:\data_for_binpacking\new_data\236.txt bins - 0.5272231738721058
+size = 156
+n = 616
+numberOfBins = 314.0
+Children 38 solves problem C:\data_for_binpacking\new_data\28.txt bins - 0.5213955358281571
+size = 112
+n = 650
+numberOfBins = 327.0
+Children 38 solves problem C:\data_for_binpacking\new_data\18.txt bins - 0.5168158826403486
+Children 38 fitness - 0.5168158826403486
+size = 142
+n = 569
+numberOfBins = 294.0
+Children 39 solves problem C:\data_for_binpacking\new_data\421.txt bins - 0.5166959578207382
+size = 158
+n = 668
+numberOfBins = 353.0
+Children 39 solves problem C:\data_for_binpacking\new_data\282.txt bins - 0.5225695357965967
+size = 272
+n = 501
+numberOfBins = 256.0
+Children 39 solves problem C:\data_for_binpacking\new_data\242.txt bins - 0.5187057051684564
+size = 259
+n = 698
+numberOfBins = 355.0
+Children 39 solves problem C:\data_for_binpacking\new_data\172.txt bins - 0.5161782760110127
+Children 39 fitness - 0.5161782760110127
+size = 144
+n = 577
+numberOfBins = 297.0
+Population 0 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5101797033189842
+numberOfBins = 297.0
+Population 1 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5105964240073634
+numberOfBins = 297.0
+Population 2 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5106095588166164
+numberOfBins = 297.0
+Population 3 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.511193390692727
+numberOfBins = 297.0
+Population 4 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5111869094528099
+numberOfBins = 297.0
+Population 5 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5087407449275622
+numberOfBins = 297.0
+Population 6 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5101053271911616
+numberOfBins = 297.0
+Population 7 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5091849160429542
+numberOfBins = 297.0
+Population 8 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5093399255599825
+numberOfBins = 297.0
+Population 9 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5085557504740226
+numberOfBins = 297.0
+Population 10 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5097884357664192
+numberOfBins = 297.0
+Population 11 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5092969732945655
+numberOfBins = 297.0
+Population 12 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5094545226465468
+numberOfBins = 297.0
+Population 13 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5091255545566082
+numberOfBins = 297.0
+Population 14 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5093450853073141
+numberOfBins = 297.0
+Population 15 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5102049698199506
+numberOfBins = 297.0
+Population 16 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5107270500163043
+numberOfBins = 297.0
+Population 17 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5098932371366338
+numberOfBins = 297.0
+Population 18 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5102495286877452
+numberOfBins = 297.0
+Population 19 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5099054287999458
+numberOfBins = 297.0
+Population 20 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5077391681592618
+numberOfBins = 297.0
+Population 21 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5079591297122391
+numberOfBins = 297.0
+Population 22 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5078436847829583
+numberOfBins = 297.0
+Population 23 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5081863811899063
+numberOfBins = 297.0
+Population 24 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5088089520383879
+numberOfBins = 297.0
+Population 25 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5088346307766154
+numberOfBins = 297.0
+Population 26 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5055195684809138
+numberOfBins = 297.0
+Population 27 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5057782746506033
+numberOfBins = 297.0
+Population 28 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5064755036745578
+numberOfBins = 297.0
+Population 29 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5065441227297656
+numberOfBins = 297.0
+Population 30 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5062462090730279
+numberOfBins = 297.0
+Population 31 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5067489379137755
+numberOfBins = 297.0
+Population 32 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5039333647958382
+numberOfBins = 297.0
+Population 33 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5068965324523529
+numberOfBins = 297.0
+Population 34 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5017233910487982
+numberOfBins = 297.0
+Population 35 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5032492200389175
+numberOfBins = 297.0
+Population 36 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5039080722997281
+numberOfBins = 297.0
+Population 37 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5059451377136287
+numberOfBins = 297.0
+Population 38 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5003566111669516
+numberOfBins = 297.0
+Population 39 solves problem C:\data_for_binpacking\new_data\351.txt bins - 0.5014211437775631
+!!!Generation is - 499
+children1.chromosome.size() 16
+parent2.chromosome.size() 16
+div + i 8 8
+children1.chromosome.size() 16
+parent2.chromosome.size() 16
+div + i 8 9
+children1.chromosome.size() 17
+parent2.chromosome.size() 17
+div + i 8 9
+children1.chromosome.size() 18
+parent2.chromosome.size() 17
+div + i 11 7
+children1.chromosome.size() 18
+parent2.chromosome.size() 17
+div + i 11 8
+children1.chromosome.size() 18
+parent2.chromosome.size() 17
+div + i 11 9
+children1.chromosome.size() 18
+parent2.chromosome.size() 17
+div + i 11 10
+children1.chromosome.size() 18
+parent2.chromosome.size() 17
+div + i 11 11
+children1.chromosome.size() 17
+parent2.chromosome.size() 17
+div + i 12 5
+children1.chromosome.size() 17
+parent2.chromosome.size() 17
+div + i 12 6
+children1.chromosome.size() 17
+parent2.chromosome.size() 17
+div + i 12 7
+children1.chromosome.size() 17
+parent2.chromosome.size() 17
+div + i 12 8
+children1.chromosome.size() 17
+parent2.chromosome.size() 17
+div + i 12 9
+children1.chromosome.size() 17
+parent2.chromosome.size() 17
+div + i 12 10
+children1.chromosome.size() 17
+parent2.chromosome.size() 17
+div + i 12 11
+children1.chromosome.size() 17
+parent2.chromosome.size() 17
+div + i 12 12
+children1.chromosome.size() 17
+parent2.chromosome.size() 17
+div + i 12 13
+children1.chromosome.size() 17
+parent2.chromosome.size() 17
+div + i 12 14
+size = 104
+n = 654
+numberOfBins = 333.0
+Children 0 solves problem C:\data_for_binpacking\new_data\490.txt bins - 0.5091743119266054
+size = 196
+n = 624
+numberOfBins = 320.0
+Children 0 solves problem C:\data_for_binpacking\new_data\229.txt bins - 0.5109974123735591
+size = 142
+n = 696
+numberOfBins = 367.0
+Children 0 solves problem C:\data_for_binpacking\new_data\73.txt bins - 0.516431225107277
+size = 224
+n = 648
+numberOfBins = 337.0
+Children 0 solves problem C:\data_for_binpacking\new_data\269.txt bins - 0.5173388509292232
+Children 0 fitness - 0.5173388509292232
+size = 143
+n = 521
+numberOfBins = 262.0
+Children 1 solves problem C:\data_for_binpacking\new_data\723.txt bins - 0.5028790786948176
+size = 186
+n = 525
+numberOfBins = 264.0
+Children 1 solves problem C:\data_for_binpacking\new_data\417.txt bins - 0.5028681107759803
+size = 174
+n = 552
+numberOfBins = 268.0
+Children 1 solves problem C:\data_for_binpacking\new_data\292.txt bins - 0.49708115597625735
+size = 223
+n = 634
+numberOfBins = 327.0
+Children 1 solves problem C:\data_for_binpacking\new_data\10.txt bins - 0.5017540846478081
+Children 1 fitness - 0.5017540846478081
+size = 205
+n = 563
+numberOfBins = 280.0
+Children 2 solves problem C:\data_for_binpacking\new_data\703.txt bins - 0.49733570159857904
+size = 231
+n = 570
+numberOfBins = 289.0
+Children 2 solves problem C:\data_for_binpacking\new_data\742.txt bins - 0.5021766227291141
+size = 210
+n = 569
+numberOfBins = 303.0
+Children 2 solves problem C:\data_for_binpacking\new_data\636.txt bins - 0.5122888088258535
+size = 127
+n = 511
+numberOfBins = 260.0
+Children 2 solves problem C:\data_for_binpacking\new_data\485.txt bins - 0.51141817217712
+Children 2 fitness - 0.51141817217712
+size = 107
+n = 662
+numberOfBins = 331.0
+Children 3 solves problem C:\data_for_binpacking\new_data\443.txt bins - 0.5
+size = 161
+n = 640
+numberOfBins = 335.0
+Children 3 solves problem C:\data_for_binpacking\new_data\749.txt bins - 0.51171875
+size = 115
+n = 559
+numberOfBins = 292.0
+Children 3 solves problem C:\data_for_binpacking\new_data\322.txt bins - 0.5152662865235539
+size = 192
+n = 567
+numberOfBins = 296.0
+Children 3 solves problem C:\data_for_binpacking\new_data\359.txt bins - 0.5169611787374626
+Children 3 fitness - 0.5169611787374626
+size = 217
+n = 653
+numberOfBins = 325.0
+Children 4 solves problem C:\data_for_binpacking\new_data\441.txt bins - 0.49770290964777947
+size = 194
+n = 569
+numberOfBins = 295.0
+Children 4 solves problem C:\data_for_binpacking\new_data\188.txt bins - 0.508078168356403
+size = 113
+n = 623
+numberOfBins = 311.0
+Children 4 solves problem C:\data_for_binpacking\new_data\533.txt bins - 0.5051179228315025
+size = 127
+n = 502
+numberOfBins = 256.0
+Children 4 solves problem C:\data_for_binpacking\new_data\442.txt bins - 0.5063284819642643
+Children 4 fitness - 0.5063284819642643
+size = 122
+n = 548
+numberOfBins = 291.0
+Children 5 solves problem C:\data_for_binpacking\new_data\137.txt bins - 0.531021897810219
+size = 283
+n = 536
+numberOfBins = 277.0
+Children 5 solves problem C:\data_for_binpacking\new_data\715.txt bins - 0.5239064712931691
+size = 207
+n = 675
+numberOfBins = 359.0
+Children 5 solves problem C:\data_for_binpacking\new_data\646.txt bins - 0.5265549314793967
+size = 120
+n = 586
+numberOfBins = 304.0
+Children 5 solves problem C:\data_for_binpacking\new_data\630.txt bins - 0.5246090313740526
+Children 5 fitness - 0.5246090313740526
+size = 226
+n = 635
+numberOfBins = 322.0
+Children 6 solves problem C:\data_for_binpacking\new_data\354.txt bins - 0.5070866141732283
+size = 199
+n = 515
+numberOfBins = 264.0
+Children 6 solves problem C:\data_for_binpacking\new_data\54.txt bins - 0.5098539866982646
+size = 147
+n = 624
+numberOfBins = 320.0
+Children 6 solves problem C:\data_for_binpacking\new_data\325.txt bins - 0.510842828739014
+size = 205
+n = 504
+numberOfBins = 272.0
+Children 6 solves problem C:\data_for_binpacking\new_data\614.txt bins - 0.5180527564748955
+Children 6 fitness - 0.5180527564748955
+size = 277
+n = 622
+numberOfBins = 321.0
+Children 7 solves problem C:\data_for_binpacking\new_data\740.txt bins - 0.5160771704180064
+size = 117
+n = 571
+numberOfBins = 304.0
+Children 7 solves problem C:\data_for_binpacking\new_data\593.txt bins - 0.5242382349463062
+size = 185
+n = 530
+numberOfBins = 274.0
+Children 7 solves problem C:\data_for_binpacking\new_data\597.txt bins - 0.521819200656028
+size = 179
+n = 574
+numberOfBins = 290.0
+Children 7 solves problem C:\data_for_binpacking\new_data\340.txt bins - 0.5176710207010803
+Children 7 fitness - 0.5176710207010803
+size = 266
+n = 594
+numberOfBins = 317.0
+Children 8 solves problem C:\data_for_binpacking\new_data\556.txt bins - 0.5336700336700336
+size = 135
+n = 598
+numberOfBins = 311.0
+Children 8 solves problem C:\data_for_binpacking\new_data\522.txt bins - 0.5268684616510704
+size = 267
+n = 662
+numberOfBins = 346.0
+Children 8 solves problem C:\data_for_binpacking\new_data\563.txt bins - 0.5254651778580147
+size = 220
+n = 555
+numberOfBins = 279.0
+Children 8 solves problem C:\data_for_binpacking\new_data\577.txt bins - 0.5197745590691867
+Children 8 fitness - 0.5197745590691867
+size = 220
+n = 640
+numberOfBins = 333.0
+Children 9 solves problem C:\data_for_binpacking\new_data\171.txt bins - 0.5203125
+size = 184
+n = 595
+numberOfBins = 314.0
+Children 9 solves problem C:\data_for_binpacking\new_data\658.txt bins - 0.5240217962184874
+size = 264
+n = 554
+numberOfBins = 279.0
+Children 9 solves problem C:\data_for_binpacking\new_data\29.txt bins - 0.5172179002467413
+size = 231
+n = 570
+numberOfBins = 289.0
+Children 9 solves problem C:\data_for_binpacking\new_data\742.txt bins - 0.5146678111499683
+Children 9 fitness - 0.5146678111499683
+size = 126
+n = 561
+numberOfBins = 292.0
+Children 10 solves problem C:\data_for_binpacking\new_data\259.txt bins - 0.5204991087344029
+size = 119
+n = 601
+numberOfBins = 316.0
+Children 10 solves problem C:\data_for_binpacking\new_data\92.txt bins - 0.52314472907602
+size = 246
+n = 576
+numberOfBins = 292.0
+Children 10 solves problem C:\data_for_binpacking\new_data\357.txt bins - 0.5177446341988282
+size = 208
+n = 651
+numberOfBins = 347.0
+Children 10 solves problem C:\data_for_binpacking\new_data\594.txt bins - 0.5215650040669398
+Children 10 fitness - 0.5215650040669398
+size = 231
+n = 649
+numberOfBins = 325.0
+Children 11 solves problem C:\data_for_binpacking\new_data\617.txt bins - 0.5007704160246533
+size = 253
+n = 604
+numberOfBins = 314.0
+Children 11 solves problem C:\data_for_binpacking\new_data\670.txt bins - 0.5103189828467638
+size = 243
+n = 607
+numberOfBins = 305.0
+Children 11 solves problem C:\data_for_binpacking\new_data\6.txt bins - 0.5077030451268376
+size = 177
+n = 606
+numberOfBins = 324.0
+Children 11 solves problem C:\data_for_binpacking\new_data\69.txt bins - 0.5144406501817619
+Children 11 fitness - 0.5144406501817619
+size = 252
+n = 504
+numberOfBins = 241.0
+Children 12 solves problem C:\data_for_binpacking\new_data\420.txt bins - 0.4781746031746032
+size = 212
+n = 510
+numberOfBins = 255.0
+Children 12 solves problem C:\data_for_binpacking\new_data\454.txt bins - 0.4890873015873016
+size = 170
+n = 628
+numberOfBins = 312.0
+Children 12 solves problem C:\data_for_binpacking\new_data\138.txt bins - 0.49166329659960234
+size = 234
+n = 627
+numberOfBins = 320.0
+Children 12 solves problem C:\data_for_binpacking\new_data\120.txt bins - 0.49633917898877666
+Children 12 fitness - 0.49633917898877666
+size = 259
+n = 698
+numberOfBins = 355.0
+Children 13 solves problem C:\data_for_binpacking\new_data\172.txt bins - 0.5085959885386819
+size = 122
+n = 674
+numberOfBins = 333.0
+Children 13 solves problem C:\data_for_binpacking\new_data\11.txt bins - 0.5013306352188959
+size = 163
+n = 664
+numberOfBins = 346.0
+Children 13 solves problem C:\data_for_binpacking\new_data\403.txt bins - 0.5079152025957298
+size = 224
+n = 682
+numberOfBins = 355.0
+Children 13 solves problem C:\data_for_binpacking\new_data\151.txt bins - 0.5110683667561815
+Children 13 fitness - 0.5110683667561815
+size = 117
+n = 564
+numberOfBins = 290.0
+Children 14 solves problem C:\data_for_binpacking\new_data\427.txt bins - 0.5141843971631206
+size = 112
+n = 598
+numberOfBins = 309.0
+Children 14 solves problem C:\data_for_binpacking\new_data\144.txt bins - 0.5154534025949382
+size = 209
+n = 612
+numberOfBins = 299.0
+Children 14 solves problem C:\data_for_binpacking\new_data\632.txt bins - 0.5064896322310481
+size = 122
+n = 566
+numberOfBins = 297.0
+Children 14 solves problem C:\data_for_binpacking\new_data\629.txt bins - 0.511050969756325
+Children 14 fitness - 0.511050969756325
+size = 187
+n = 640
+numberOfBins = 331.0
+Children 15 solves problem C:\data_for_binpacking\new_data\71.txt bins - 0.5171875
+size = 191
+n = 634
+numberOfBins = 327.0
+Children 15 solves problem C:\data_for_binpacking\new_data\483.txt bins - 0.5164801853312303
+size = 130
+n = 642
+numberOfBins = 326.0
+Children 15 solves problem C:\data_for_binpacking\new_data\358.txt bins - 0.5135828442187433
+size = 156
+n = 616
+numberOfBins = 314.0
+Children 15 solves problem C:\data_for_binpacking\new_data\28.txt bins - 0.5126221980991225
+Children 15 fitness - 0.5126221980991225
+size = 158
+n = 668
+numberOfBins = 353.0
+Children 16 solves problem C:\data_for_binpacking\new_data\282.txt bins - 0.5284431137724551
+size = 254
+n = 603
+numberOfBins = 303.0
+Children 16 solves problem C:\data_for_binpacking\new_data\468.txt bins - 0.515465337980755
+size = 111
+n = 662
+numberOfBins = 318.0
+Children 16 solves problem C:\data_for_binpacking\new_data\727.txt bins - 0.5037644045752868
+size = 166
+n = 602
+numberOfBins = 308.0
+Children 16 solves problem C:\data_for_binpacking\new_data\89.txt bins - 0.5057302801756511
+Children 16 fitness - 0.5057302801756511
+size = 252
+n = 561
+numberOfBins = 296.0
+Children 17 solves problem C:\data_for_binpacking\new_data\412.txt bins - 0.5276292335115864
+size = 240
+n = 539
+numberOfBins = 283.0
+Children 17 solves problem C:\data_for_binpacking\new_data\453.txt bins - 0.5263378078504128
+size = 157
+n = 550
+numberOfBins = 271.0
+Children 17 solves problem C:\data_for_binpacking\new_data\265.txt bins - 0.5151342961426995
+size = 280
+n = 673
+numberOfBins = 363.0
+Children 17 solves problem C:\data_for_binpacking\new_data\360.txt bins - 0.5211947042764153
+Children 17 fitness - 0.5211947042764153
+size = 120
+n = 517
+numberOfBins = 265.0
+Children 18 solves problem C:\data_for_binpacking\new_data\413.txt bins - 0.5125725338491296
+size = 119
+n = 601
+numberOfBins = 316.0
+Children 18 solves problem C:\data_for_binpacking\new_data\92.txt bins - 0.5191814416333834
+size = 112
+n = 560
+numberOfBins = 281.0
+Children 18 solves problem C:\data_for_binpacking\new_data\102.txt bins - 0.513382865850827
+size = 165
+n = 676
+numberOfBins = 341.0
+Children 18 solves problem C:\data_for_binpacking\new_data\363.txt bins - 0.5111466168437415
+Children 18 fitness - 0.5111466168437415
+size = 247
+n = 635
+numberOfBins = 334.0
+Children 19 solves problem C:\data_for_binpacking\new_data\262.txt bins - 0.525984251968504
+size = 106
+n = 666
+numberOfBins = 348.0
+Children 19 solves problem C:\data_for_binpacking\new_data\739.txt bins - 0.5242533872455133
+size = 105
+n = 643
+numberOfBins = 328.0
+Children 19 solves problem C:\data_for_binpacking\new_data\377.txt bins - 0.5195385463959202
+size = 294
+n = 643
+numberOfBins = 319.0
+Children 19 solves problem C:\data_for_binpacking\new_data\621.txt bins - 0.5136819035761003
+Children 19 fitness - 0.5136819035761003
+size = 208
+n = 629
+numberOfBins = 318.0
+Children 20 solves problem C:\data_for_binpacking\new_data\444.txt bins - 0.505564387917329
+size = 120
+n = 528
+numberOfBins = 278.0
+Children 20 solves problem C:\data_for_binpacking\new_data\667.txt bins - 0.5160397697162402
+size = 179
+n = 601
+numberOfBins = 296.0
+Children 20 solves problem C:\data_for_binpacking\new_data\687.txt bins - 0.5081973395446039
+size = 159
+n = 589
+numberOfBins = 307.0
+Children 20 solves problem C:\data_for_binpacking\new_data\245.txt bins - 0.5114536073749215
+Children 20 fitness - 0.5114536073749215
+size = 195
+n = 585
+numberOfBins = 319.0
+Children 21 solves problem C:\data_for_binpacking\new_data\158.txt bins - 0.5452991452991452
+size = 131
+n = 555
+numberOfBins = 288.0
+Children 21 solves problem C:\data_for_binpacking\new_data\37.txt bins - 0.532109032109032
+size = 176
+n = 500
+numberOfBins = 253.0
+Children 21 solves problem C:\data_for_binpacking\new_data\298.txt bins - 0.5234060214060213
+size = 273
+n = 506
+numberOfBins = 266.0
+Children 21 solves problem C:\data_for_binpacking\new_data\518.txt bins - 0.5239774409557018
+Children 21 fitness - 0.5239774409557018
+size = 292
+n = 552
+numberOfBins = 284.0
+Children 22 solves problem C:\data_for_binpacking\new_data\686.txt bins - 0.5144927536231884
+size = 157
+n = 550
+numberOfBins = 271.0
+Children 22 solves problem C:\data_for_binpacking\new_data\265.txt bins - 0.5036100131752306
+size = 251
+n = 592
+numberOfBins = 305.0
+Children 22 solves problem C:\data_for_binpacking\new_data\440.txt bins - 0.5074742430177213
+size = 169
+n = 664
+numberOfBins = 330.0
+Children 22 solves problem C:\data_for_binpacking\new_data\284.txt bins - 0.5048526702150982
+Children 22 fitness - 0.5048526702150982
+size = 191
+n = 512
+numberOfBins = 264.0
+Children 23 solves problem C:\data_for_binpacking\new_data\19.txt bins - 0.515625
+size = 224
+n = 555
+numberOfBins = 275.0
+Children 23 solves problem C:\data_for_binpacking\new_data\671.txt bins - 0.5055602477477478
+size = 256
+n = 669
+numberOfBins = 339.0
+Children 23 solves problem C:\data_for_binpacking\new_data\109.txt bins - 0.5059489842981996
+size = 262
+n = 637
+numberOfBins = 341.0
+Children 23 solves problem C:\data_for_binpacking\new_data\734.txt bins - 0.5132921934826764
+Children 23 fitness - 0.5132921934826764
+size = 225
+n = 577
+numberOfBins = 325.0
+Children 24 solves problem C:\data_for_binpacking\new_data\558.txt bins - 0.5632582322357019
+size = 226
+n = 635
+numberOfBins = 322.0
+Children 24 solves problem C:\data_for_binpacking\new_data\354.txt bins - 0.5351724232044651
+size = 180
+n = 611
+numberOfBins = 303.0
+Children 24 solves problem C:\data_for_binpacking\new_data\154.txt bins - 0.5220843977937023
+size = 189
+n = 684
+numberOfBins = 355.0
+Children 24 solves problem C:\data_for_binpacking\new_data\716.txt bins - 0.5213147603335808
+Children 24 fitness - 0.5213147603335808
+size = 154
+n = 526
+numberOfBins = 273.0
+Children 25 solves problem C:\data_for_binpacking\new_data\605.txt bins - 0.5190114068441065
+size = 176
+n = 544
+numberOfBins = 268.0
+Children 25 solves problem C:\data_for_binpacking\new_data\591.txt bins - 0.505829232833818
+size = 182
+n = 592
+numberOfBins = 309.0
+Children 25 solves problem C:\data_for_binpacking\new_data\243.txt bins - 0.5112059750423651
+size = 126
+n = 521
+numberOfBins = 256.0
+Children 25 solves problem C:\data_for_binpacking\new_data\561.txt bins - 0.5062451722606606
+Children 25 fitness - 0.5062451722606606
+size = 103
+n = 699
+numberOfBins = 365.0
+Children 26 solves problem C:\data_for_binpacking\new_data\316.txt bins - 0.5221745350500715
+size = 266
+n = 580
+numberOfBins = 300.0
+Children 26 solves problem C:\data_for_binpacking\new_data\478.txt bins - 0.5197079571802081
+size = 209
+n = 612
+numberOfBins = 299.0
+Children 26 solves problem C:\data_for_binpacking\new_data\632.txt bins - 0.5093260019545615
+size = 176
+n = 500
+numberOfBins = 253.0
+Children 26 solves problem C:\data_for_binpacking\new_data\298.txt bins - 0.508494501465921
+Children 26 fitness - 0.508494501465921
+size = 166
+n = 656
+numberOfBins = 337.0
+Children 27 solves problem C:\data_for_binpacking\new_data\416.txt bins - 0.5137195121951219
+size = 270
+n = 540
+numberOfBins = 294.0
+Children 27 solves problem C:\data_for_binpacking\new_data\251.txt bins - 0.5290819783197831
+size = 267
+n = 575
+numberOfBins = 290.0
+Children 27 solves problem C:\data_for_binpacking\new_data\489.txt bins - 0.5208372609088409
+size = 105
+n = 600
+numberOfBins = 302.0
+Children 27 solves problem C:\data_for_binpacking\new_data\663.txt bins - 0.516461279014964
+Children 27 fitness - 0.516461279014964
+size = 215
+n = 629
+numberOfBins = 317.0
+Children 28 solves problem C:\data_for_binpacking\new_data\684.txt bins - 0.5039745627980922
+size = 227
+n = 623
+numberOfBins = 327.0
+Children 28 solves problem C:\data_for_binpacking\new_data\735.txt bins - 0.5144270887826736
+size = 142
+n = 696
+numberOfBins = 367.0
+Children 28 solves problem C:\data_for_binpacking\new_data\73.txt bins - 0.5187176760466866
+size = 257
+n = 640
+numberOfBins = 328.0
+Children 28 solves problem C:\data_for_binpacking\new_data\228.txt bins - 0.5171632570350149
+Children 28 fitness - 0.5171632570350149
+size = 188
+n = 562
+numberOfBins = 286.0
+Children 29 solves problem C:\data_for_binpacking\new_data\301.txt bins - 0.5088967971530249
+size = 292
+n = 674
+numberOfBins = 343.0
+Children 29 solves problem C:\data_for_binpacking\new_data\708.txt bins - 0.5088994371521801
+size = 278
+n = 684
+numberOfBins = 371.0
+Children 29 solves problem C:\data_for_binpacking\new_data\130.txt bins - 0.5200655117076912
+size = 275
+n = 582
+numberOfBins = 287.0
+Children 29 solves problem C:\data_for_binpacking\new_data\648.txt bins - 0.5133309207223492
+Children 29 fitness - 0.5133309207223492
+size = 214
+n = 598
+numberOfBins = 295.0
+Children 30 solves problem C:\data_for_binpacking\new_data\379.txt bins - 0.49331103678929766
+size = 152
+n = 569
+numberOfBins = 298.0
+Children 30 solves problem C:\data_for_binpacking\new_data\106.txt bins - 0.5085184357935943
+size = 112
+n = 611
+numberOfBins = 311.0
+Children 30 solves problem C:\data_for_binpacking\new_data\152.txt bins - 0.5086795027494666
+size = 240
+n = 649
+numberOfBins = 336.0
+Children 30 solves problem C:\data_for_binpacking\new_data\327.txt bins - 0.5109395192038565
+Children 30 fitness - 0.5109395192038565
+size = 115
+n = 535
+numberOfBins = 262.0
+Children 31 solves problem C:\data_for_binpacking\new_data\521.txt bins - 0.4897196261682243
+size = 105
+n = 642
+numberOfBins = 325.0
+Children 31 solves problem C:\data_for_binpacking\new_data\163.txt bins - 0.49797507788161993
+size = 292
+n = 634
+numberOfBins = 328.0
+Children 31 solves problem C:\data_for_binpacking\new_data\696.txt bins - 0.5044334378306489
+size = 289
+n = 511
+numberOfBins = 253.0
+Children 31 solves problem C:\data_for_binpacking\new_data\49.txt bins - 0.50210198639647
+Children 31 fitness - 0.50210198639647
+size = 174
+n = 556
+numberOfBins = 295.0
+Children 32 solves problem C:\data_for_binpacking\new_data\5.txt bins - 0.5305755395683454
+size = 176
+n = 544
+numberOfBins = 268.0
+Children 32 solves problem C:\data_for_binpacking\new_data\591.txt bins - 0.5116112991959374
+size = 196
+n = 624
+numberOfBins = 320.0
+Children 32 solves problem C:\data_for_binpacking\new_data\229.txt bins - 0.5120143704041292
+size = 174
+n = 552
+numberOfBins = 268.0
+Children 32 solves problem C:\data_for_binpacking\new_data\292.txt bins - 0.5053875893972998
+Children 32 fitness - 0.5053875893972998
+size = 164
+n = 629
+numberOfBins = 329.0
+Children 33 solves problem C:\data_for_binpacking\new_data\689.txt bins - 0.5230524642289348
+size = 109
+n = 679
+numberOfBins = 364.0
+Children 33 solves problem C:\data_for_binpacking\new_data\180.txt bins - 0.5295674692278695
+size = 277
+n = 697
+numberOfBins = 343.0
+Children 33 solves problem C:\data_for_binpacking\new_data\232.txt bins - 0.5170813257310617
+size = 281
+n = 631
+numberOfBins = 313.0
+Children 33 solves problem C:\data_for_binpacking\new_data\303.txt bins - 0.5118205030146196
+Children 33 fitness - 0.5118205030146196
+size = 260
+n = 664
+numberOfBins = 340.0
+Children 34 solves problem C:\data_for_binpacking\new_data\693.txt bins - 0.5120481927710844
+size = 251
+n = 650
+numberOfBins = 324.0
+Children 34 solves problem C:\data_for_binpacking\new_data\335.txt bins - 0.5052548656163114
+size = 213
+n = 567
+numberOfBins = 294.0
+Children 34 solves problem C:\data_for_binpacking\new_data\576.txt bins - 0.5096760832503805
+size = 121
+n = 597
+numberOfBins = 310.0
+Children 34 solves problem C:\data_for_binpacking\new_data\311.txt bins - 0.5120728078314202
+Children 34 fitness - 0.5120728078314202
+size = 107
+n = 662
+numberOfBins = 331.0
+Children 35 solves problem C:\data_for_binpacking\new_data\443.txt bins - 0.5
+size = 164
+n = 671
+numberOfBins = 337.0
+Children 35 solves problem C:\data_for_binpacking\new_data\674.txt bins - 0.5011177347242921
+size = 213
+n = 509
+numberOfBins = 256.0
+Children 35 solves problem C:\data_for_binpacking\new_data\424.txt bins - 0.5017274747539813
+size = 147
+n = 680
+numberOfBins = 340.0
+Children 35 solves problem C:\data_for_binpacking\new_data\178.txt bins - 0.501295606065486
+Children 35 fitness - 0.501295606065486
+size = 171
+n = 573
+numberOfBins = 287.0
+Children 36 solves problem C:\data_for_binpacking\new_data\312.txt bins - 0.5008726003490401
+size = 148
+n = 526
+numberOfBins = 284.0
+Children 36 solves problem C:\data_for_binpacking\new_data\323.txt bins - 0.5203982773608318
+size = 136
+n = 691
+numberOfBins = 361.0
+Children 36 solves problem C:\data_for_binpacking\new_data\414.txt bins - 0.5210759379221753
+size = 277
+n = 622
+numberOfBins = 321.0
+Children 36 solves problem C:\data_for_binpacking\new_data\740.txt bins - 0.5198262460461331
+Children 36 fitness - 0.5198262460461331
+size = 248
+n = 637
+numberOfBins = 321.0
+Children 37 solves problem C:\data_for_binpacking\new_data\389.txt bins - 0.5039246467817896
+size = 277
+n = 556
+numberOfBins = 295.0
+Children 37 solves problem C:\data_for_binpacking\new_data\517.txt bins - 0.5172500931750674
+size = 235
+n = 520
+numberOfBins = 264.0
+Children 37 solves problem C:\data_for_binpacking\new_data\118.txt bins - 0.5140641646808142
+size = 209
+n = 501
+numberOfBins = 249.0
+Children 37 solves problem C:\data_for_binpacking\new_data\608.txt bins - 0.5097996205165987
+Children 37 fitness - 0.5097996205165987
+size = 235
+n = 592
+numberOfBins = 303.0
+Children 38 solves problem C:\data_for_binpacking\new_data\24.txt bins - 0.5118243243243243
+size = 292
+n = 674
+numberOfBins = 343.0
+Children 38 solves problem C:\data_for_binpacking\new_data\708.txt bins - 0.5103632007378298
+size = 191
+n = 512
+numberOfBins = 264.0
+Children 38 solves problem C:\data_for_binpacking\new_data\19.txt bins - 0.5121171338252198
+size = 244
+n = 546
+numberOfBins = 280.0
+Children 38 solves problem C:\data_for_binpacking\new_data\744.txt bins - 0.5122929785740431
+Children 38 fitness - 0.5122929785740431
+size = 177
+n = 606
+numberOfBins = 324.0
+Children 39 solves problem C:\data_for_binpacking\new_data\69.txt bins - 0.5346534653465347
+size = 162
+n = 586
+numberOfBins = 305.0
+Children 39 solves problem C:\data_for_binpacking\new_data\509.txt bins - 0.5275656405230966
+size = 164
+n = 629
+numberOfBins = 329.0
+Children 39 solves problem C:\data_for_binpacking\new_data\689.txt bins - 0.5260612484250426
+size = 281
+n = 655
+numberOfBins = 338.0
+Children 39 solves problem C:\data_for_binpacking\new_data\537.txt bins - 0.5235535699065682
+Children 39 fitness - 0.5235535699065682
+size = 230
+n = 523
+numberOfBins = 274.0
+Population 0 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5106084805156962
+numberOfBins = 274.0
+Population 1 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5110121786825635
+numberOfBins = 274.0
+Population 2 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5110383012294277
+numberOfBins = 274.0
+Population 3 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5116577859032156
+numberOfBins = 274.0
+Population 4 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5093998679139189
+numberOfBins = 274.0
+Population 5 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5107051205138837
+numberOfBins = 274.0
+Population 6 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5098538095689004
+numberOfBins = 274.0
+Population 7 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.510001773198791
+numberOfBins = 274.0
+Population 8 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.50928645633782
+numberOfBins = 274.0
+Population 9 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5104604423305786
+numberOfBins = 274.0
+Population 10 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5100271533105255
+numberOfBins = 274.0
+Population 11 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5101768251949078
+numberOfBins = 274.0
+Population 12 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.509903187138564
+numberOfBins = 274.0
+Population 13 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5101111636392327
+numberOfBins = 274.0
+Population 14 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5109658366973848
+numberOfBins = 274.0
+Population 15 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.510717198105877
+numberOfBins = 274.0
+Population 16 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5110525313304524
+numberOfBins = 274.0
+Population 17 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5107801253508096
+numberOfBins = 274.0
+Population 18 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5088165951895621
+numberOfBins = 274.0
+Population 19 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5090218926390075
+numberOfBins = 274.0
+Population 20 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5089906054137303
+numberOfBins = 274.0
+Population 21 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5093088235058963
+numberOfBins = 274.0
+Population 22 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5099698460057247
+numberOfBins = 274.0
+Population 23 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5099935494563963
+numberOfBins = 274.0
+Population 24 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5070513189086515
+numberOfBins = 274.0
+Population 25 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5072884662308669
+numberOfBins = 274.0
+Population 26 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5080596009417587
+numberOfBins = 274.0
+Population 27 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5081219819010383
+numberOfBins = 274.0
+Population 28 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5080116455271018
+numberOfBins = 274.0
+Population 29 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5084641014837745
+numberOfBins = 274.0
+Population 30 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5061519435533858
+numberOfBins = 274.0
+Population 31 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5087858703591767
+numberOfBins = 274.0
+Population 32 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5044955388694192
+numberOfBins = 274.0
+Population 33 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5058306392357736
+numberOfBins = 274.0
+Population 34 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5067641439160193
+numberOfBins = 274.0
+Population 35 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.508510199985077
+numberOfBins = 274.0
+Population 36 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5042806049080876
+numberOfBins = 274.0
+Population 37 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5051677154169304
+numberOfBins = 274.0
+Population 38 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5018514579137747
+numberOfBins = 274.0
+Population 39 solves problem C:\data_for_binpacking\new_data\545.txt bins - 0.5058165995751421
+i = 0 size = 15
+i = 1 size = 17
+i = 2 size = 17
+i = 3 size = 17
+i = 4 size = 17
+i = 5 size = 17
+i = 6 size = 16
+i = 7 size = 16
+i = 8 size = 15
+i = 9 size = 15
+i = 10 size = 17
+i = 11 size = 17
+i = 12 size = 16
+i = 13 size = 17
+i = 14 size = 17
+i = 15 size = 17
+i = 16 size = 17
+i = 17 size = 16
+i = 18 size = 17
+i = 19 size = 18
+i = 20 size = 17
+i = 21 size = 15
+i = 22 size = 17
+i = 23 size = 17
+i = 24 size = 16
+i = 25 size = 16
+i = 26 size = 17
+i = 27 size = 17
+i = 28 size = 17
+i = 29 size = 17
+i = 30 size = 14
+i = 31 size = 16
+i = 32 size = 17
+i = 33 size = 17
+i = 34 size = 18
+i = 35 size = 17
+i = 36 size = 17
+i = 37 size = 16
+i = 38 size = 17
+i = 39 size = 17
+The best years 5.0
+The best result is 38
+years - 32.0
+years - 32.0
+years - 31.0
+years - 27.0
+years - 23.0
+years - 23.0
+years - 22.0
+years - 22.0
+years - 21.0
+years - 21.0
+years - 20.0
+years - 20.0
+years - 19.0
+years - 19.0
+years - 18.0
+years - 17.0
+years - 17.0
+years - 16.0
+years - 15.0
+years - 15.0
+years - 14.0
+years - 14.0
+years - 13.0
+years - 13.0
+years - 12.0
+years - 12.0
+years - 11.0
+years - 11.0
+years - 10.0
+years - 10.0
+years - 9.0
+years - 9.0
+years - 8.0
+years - 8.0
+years - 7.0
+years - 7.0
+years - 6.0
+years - 6.0
+years - 5.0
+years - 5.0

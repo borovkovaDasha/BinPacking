@@ -3,12 +3,12 @@ import java.io.IOException;
 
 public class GenerateDataForBinPacking {
 
-	public static final String FILE_PATH = "C:\\data_for_binpacking\\giant_data\\";
-	public static final int GAP_OF_ITEMS = 1000;
-	public static final int MIN_NUM_OF_ITEMS = 10000;
+	public static final String FILE_PATH = "C:\\data_for_binpacking\\new_data\\";
+	public static final int GAP_OF_ITEMS = 300;
+	public static final int MIN_NUM_OF_ITEMS = 500;
 	public static final int GAP_OF_BIN_SIZE = 200;
 	public static final int MIN_NUM_OF_BIN_SIZE = 100;
-	public static final int NUM_OF_FILES = 100;
+	public static final int NUM_OF_FILES = 1000;
 	
 	public static void main(String[] args) throws IOException {
 		writeFile();
