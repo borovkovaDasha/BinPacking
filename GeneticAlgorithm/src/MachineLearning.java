@@ -39,7 +39,7 @@ public class MachineLearning {
 		GeneticAlgorithm GA = new GeneticAlgorithm();
 		int[][]elements = GA.readFile(fileName);
 		Chromosome chrom = new Chromosome(0);	
-		parseFile("C:\\data_for_binpacking\\1\\results1000\\test4.txt");
+		parseFile("C:\\data_for_binpacking\\1\\results\\test1.txt");
 		solveProblem(elements,GA.size, chrom);
 	}
 	

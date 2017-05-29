@@ -44,7 +44,7 @@ public class Chromosome {
 		int alg = 0;
 		//System.out.println("elements.length " + elements.length);
 		int currentBin = 0;
-		for (int i = 0; i < elements.length && flag == 0; i++)
+		while (flag == 0)
 		{
 			Genome state = getCurrentState(elements, size, prevAlgorithm);
 			if (state.remainingItems == 0)
@@ -62,7 +62,7 @@ public class Chromosome {
 			}
 			prevAlgorithm = alg;
 			//System.out.println("findCloser " + alg);
-			//alg = 7;
+			//alg = 1;
 			switch (alg) {
 				case 1:  LargestFitDecreasing LFD = new LargestFitDecreasing();
 				currentBin = LFD.startPacking(elements, bins, size);

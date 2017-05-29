@@ -45,7 +45,7 @@ public class MachineLearning {
 		}
 		System.out.println("sum = " + sum);
 		Chromosome chrom = new Chromosome(0);	
-		parseFile("C:\\data_for_binpacking\\1\\improve_results1000\\test8.txt");
+		parseFile("C:\\data_for_binpacking\\1\\improve_results1000\\test7.txt");
 		solveProblem(elements,GA.size, chrom);
 	}
 	
@@ -190,6 +190,10 @@ public class MachineLearning {
 			{
 				////System.out.println("binsize = " + bins[i]);
 				numberOfBins++;
+			}
+			else if (bins[i] < 0)
+			{
+				System.out.println("error!!!");
 			}
 		}
 		//System.out.println("elements.length = " + elements.length);

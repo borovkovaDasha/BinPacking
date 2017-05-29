@@ -48,7 +48,7 @@ public class Chromosome {
 		int flag = 0;
 		//System.out.println("elements.length " + elements.length);
 		int currentBin = 0;
-		for (int i = 0; i < elements.length && flag == 0; i++)
+		while (flag == 0)
 		{
 			Genome state = getCurrentState(elements, size);
 			if (state.remainingItems == 0)
@@ -94,8 +94,10 @@ public class Chromosome {
 				default:
 					break;
 			}
+			
 		}
 		double numberOfBins = 0;
+		int remainbunssize = 0; 
 		for (int i = 0; i < bins.length; i++)
 		{
 			//System.out.println("binsize = " + bins[i]);
@@ -103,19 +105,33 @@ public class Chromosome {
 			{
 				////System.out.println("binsize = " + bins[i]);
 				numberOfBins++;
+				remainbunssize = remainbunssize + size - bins[i];
+			}
+			if (bins[i] < 0)
+			{
+				System.out.println("!!!Error1");
+				System.exit(1);
 			}
 		}
-		//System.out.println("elements.length = " + elements.length);
+		System.out.println("remainbunssize = " + remainbunssize);
 		//System.out.println("numberOfBins = " + numberOfBins);
 		//return fitness;
 		System.out.println("numberOfBins = " + numberOfBins);
 		fitnessSum = fitnessSum + numberOfBins/elements.length;
-		fitness = fitnessSum/years;
-		if (numberOfBins < 50)
+		for (int i = 0; i < elements.length; i++)
 		{
-			System.out.println("!!! stop ");
-			System.exit(1);
+			if (elements[i][1] == 0)
+			{
+				System.out.println("!!!Error3");
+				System.exit(1);
+			}
 		}
+		/*if (numberOfBins < bestBinNums-5)
+		{
+			System.out.println("!!!Error2");
+			System.exit(2);
+		}*/
+		fitness = fitnessSum/years;
 		return numberOfBins;
 	}
 	

@@ -33,10 +33,10 @@ public class NextFitDecreasing {
 				else
 				{
 					currentBin = currentBin + 1;
-					bins[currentBin] -= a[i][0];	
-					a[i][1] = 1;
+					//bins[currentBin] -= a[i][0];	
+					//a[i][1] = 1;
 					//System.out.println("Element " + a[i][0] + " is packed to new " + currentBin);
-					return currentBin;
+					//return currentBin;
 				}
 			}
 		}

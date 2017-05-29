@@ -15,12 +15,17 @@ public class GeneticAlgorithm {
 	public static final int POPULATION_SIZE = 40;
 	//public static final int CHROMOSOME_SIZE = 40;
 	public static final int NUMBER_OF_TASKS = 4;
-	public static final int NUMBER_OF_GA_ITERATIONS = 500;
-	public static final String FILE_PATH = "C:\\data_for_binpacking\\results\\result";
-	public static final int NUMBER_OF_FILES = 750;
-	public static final String DATA_PATH = "C:\\data_for_binpacking\\new_data\\";
+	public static final int NUMBER_OF_GA_ITERATIONS = 1000;
+	public static final String FILE_PATH = "C:\\data_for_binpacking\\results1000\\result";
+	public static final int NUMBER_OF_FILES = 700;
+	//public static final int NUMBER_OF_FILES1 = 700;
+	//public static final int NUMBER_OF_FILES2 = 400;
+	//public static final int NUMBER_OF_FOLDER = 1;
+	public static final String DATA_PATH = "C:\\data_for_binpacking\\shlak\\new_data\\";
+	//public static final String DATA = "data\\";
 	
 	public static int size;
+	public static int bestBinNums;
 	List<Chromosome> population;
 	List<Chromosome> childrens;
 	
@@ -50,11 +55,29 @@ public class GeneticAlgorithm {
 					n = Integer.parseInt(str);
 					elements = new int[n][2];
 				}
-				else
+				else if (sCurrentLine.contains("Num of Bins:"))
 				{
+					int space = 0;
+					str = sCurrentLine.substring(23, sCurrentLine.length());
+					if (str.contains(" "))
+					{
+						str = sCurrentLine.substring(23, sCurrentLine.length()-1);
+					}
+					else
+						str = sCurrentLine.substring(23, sCurrentLine.length());
+					bestBinNums = Integer.parseInt(str);
+					System.out.println("bestBinNums " + bestBinNums);
+				}
+				else //if (sCurrentLine.equals(""))
+				{
+					//System.out.println(sCurrentLine);
 					elements[i][0] = Integer.parseInt(sCurrentLine);
 					elements[i][1] = 0;
 					i++;
+					if (i == n - 1)
+					{
+						break;
+					}
 				}
 			}
 
@@ -73,7 +96,13 @@ public class GeneticAlgorithm {
 				ex.printStackTrace();
 			}
 		}
-		
+		int sum = 0;
+		for (int i = 0; i < elements.length; i++)
+		{
+			sum = sum + elements[i][0];
+		}
+		System.out.println("sum = " + sum);
+		System.out.println("read file " + fileName);
 		System.out.println("size = " + size);
 		System.out.println("n = " + n);
 		return elements;
@@ -135,10 +164,23 @@ public class GeneticAlgorithm {
 			{
 				for (int k = 0; k < NUMBER_OF_TASKS; k++)
 				{
+					/*int tmp = 0;
+					int foldernum = 0;
+					if (k < NUMBER_OF_TASKS - 1)
+					{
+						foldernum = 1;
+						tmp = (int)(Math.random() * NUMBER_OF_FILES1);
+					}
+					else 
+					{
+						foldernum = 2;
+						tmp = (int)(Math.random() * NUMBER_OF_FILES2);
+					}
+					String fileName = DATA_PATH + foldernum + DATA + (tmp+2) + ".txt";*/
 					int tmp = (int)(Math.random() * NUMBER_OF_FILES);
 					String fileName = DATA_PATH + (tmp+1) + ".txt";
 					int[][]elements = readFile(fileName);
-					childrens.get(j).solveProblem(elements, size,0);
+					childrens.get(j).solveProblem(elements, size, 0);
 					System.out.println("Children " + j + " solves problem " + fileName + " bins - " + childrens.get(j).fitness);
 				}
 				System.out.println("Children " + j + " fitness - " + childrens.get(j).fitness);
@@ -159,11 +201,21 @@ public class GeneticAlgorithm {
 			population.add(findTheBest(childrens, flagsss));
 			childrens.clear();
 			int x = (int)(Math.random() * NUMBER_OF_FILES);
+			/*int foldernum = (int)(Math.random() * NUMBER_OF_FOLDER) + 1;
+			if (foldernum == 1)
+			{
+				x = (int)(Math.random() * NUMBER_OF_FILES1);
+			}
+			else 
+			{
+				x = (int)(Math.random() * NUMBER_OF_FILES2);
+			}
+			String fileName = DATA_PATH + foldernum + DATA + (x+2) + ".txt";*/
 			String fileName = DATA_PATH + (x+1) + ".txt";
 			int[][]elements = readFile(fileName);
 			for (int j = 0; j < population.size(); j ++)
 			{
-				population.get(j).solveProblem(elements, size,0);
+				population.get(j).solveProblem(elements, size, 0);
 				System.out.println("Population " + j + " solves problem " + fileName + " bins - " + population.get(j).fitness);
 				for (int k = 0; k < elements.length; k++)
 				{
@@ -204,6 +256,7 @@ public class GeneticAlgorithm {
 			}
 		}
 		flag[x] = 1;
+		System.out.println("The best x " + x);
 		return popul.get(x);
 	}
 	
@@ -258,6 +311,7 @@ public class GeneticAlgorithm {
 			}
 		}
 		flag[x] = 1;
+		System.out.println("The worst x " + x);
 		return popul.get(x);
 	}
 	
@@ -277,17 +331,27 @@ public class GeneticAlgorithm {
 	
 	public void initializePopulation(){
 		//String fileName = "C:\\data_for_binpacking\\new_data\\1.txt";
-		int xxx = (int)(Math.random() * NUMBER_OF_FILES);
-		String fileName = DATA_PATH + (xxx+1) + ".txt";
+		/*int foldernum = (int)(Math.random() * NUMBER_OF_FOLDER) + 1;
+		int xxx = 0;
+		if (foldernum == 1)
+		{
+			xxx = (int)(Math.random() * NUMBER_OF_FILES1) + 2;
+		}
+		else 
+		{
+			xxx = (int)(Math.random() * NUMBER_OF_FILES2) + 2;
+		}
+		String fileName = DATA_PATH + foldernum + DATA + (xxx) + ".txt";*/
+		int xxx = (int)(Math.random() * NUMBER_OF_FILES) + 1;
+		String fileName = DATA_PATH + (xxx + 1) + ".txt";
 		System.out.println(fileName);
-		//String fileName = "D:\\test.txt";
 		int[][]elements = readFile(fileName);
 		population = new ArrayList<Chromosome>();
 		
 		for (int i = 0; i < POPULATION_SIZE; i++)
 		{
 			Chromosome tmp = new Chromosome(1);
-			tmp.solveProblem(elements, size,0);
+			tmp.solveProblem(elements, size, 0);
 			System.out.println("chromosome - " + i +" uses number of bins = " + tmp.fitness);
 			population.add(tmp);
 			for (int j = 0; j < elements.length; j++)
@@ -439,7 +503,7 @@ public class GeneticAlgorithm {
 		for (int i = 0; i < tmp; i ++)
 		{
 			int var = (int)(Math.random() * 10);
-	        if (var == 9)
+	        if (var > 4)
 	        {
 	        	if ((parent1.chromosome.size() > i) && (parent2.chromosome.size() > i))
 	        	{

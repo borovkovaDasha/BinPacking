@@ -1,7 +1,6 @@
 Number of elements: 50
 Bin size: 100
-Num of Bins: N1C1W1_I 	25
-100
+Num of Bins: N1C1W1_H 	31 
 97
 93
 93

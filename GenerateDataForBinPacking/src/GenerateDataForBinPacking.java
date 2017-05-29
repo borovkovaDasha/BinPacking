@@ -14,7 +14,7 @@ public class GenerateDataForBinPacking {
 	public static final int GAP_OF_BIN_SIZE = 200;
 	public static final int MIN_NUM_OF_BIN_SIZE = 100;
 	public static final int NUM_OF_FILES = 1000;
-	public static final int NUM_OF_FILES_REWRITE = 640;
+	public static final int NUM_OF_FILES_REWRITE = 2000;
 	public static List<String> results;
 	public static List<String> files;
 	public static final int A = 20;
@@ -54,11 +54,12 @@ public class GenerateDataForBinPacking {
 		int alpha = 0;
 		int b = 1;
 		int w = 1;
+		//int c = 1;
 		int n = 1;
-		int r = 1;
+		int r = -1;
 		readFile("", 0);
-		int index = 1;
-		for (int i = 1; i <= NUM_OF_FILES_REWRITE; i++)
+		int index = 0;
+		for (int i = 1; i <= 1; i++)//NUM_OF_FILES_REWRITE; i++)
 		{
 			/*String alp = new String("");
 			if (alpha == 1)
@@ -101,18 +102,18 @@ public class GenerateDataForBinPacking {
 				alp = "S";
 			if (alpha == 20)
 				alp = "T";
-			if (alpha == 20)
+			if (alpha == 21)
 			{
 				w++;
 				alpha = 1;
+				alp = "A";
 			}
 			else 
 			{
-				if (alpha == 0)
-					alp = "A";
 				alpha++;
 			}*/
-			if (r == 10)
+			r++;
+			if (r == 11)
 			{
 				b++;
 				r = 1;
@@ -127,13 +128,27 @@ public class GenerateDataForBinPacking {
 				n++;
 				w = 1;
 			}
+			/*if (w == 5)
+			{
+				c++;
+				w = 1;
+			}
+			if (c == 5)
+			{
+				n++;
+				c = 1;
+			}*/
+			if (n == 5)
+			{
+				System.exit(1);
+			}
 			String fileName = FILE_PATH + "\\N" + Integer.toString(n) + "W" + Integer.toString(w) + "B" + Integer.toString(b) + "R" + Integer.toString(r) + ".BPP";
 			System.out.println(fileName);
 			index = readFile(fileName, index);
 		}
 	}
 	
-	public static void writeFile(int index) throws IOException
+	public static void writeFile(int index, String filename) throws IOException
 	{
 		FileWriter writer = new FileWriter(FILE_PATH + Integer.toString(index) + ".txt");  
 		for (int i = 0; i < files.size(); i++)
@@ -193,24 +208,36 @@ public class GenerateDataForBinPacking {
 						String tmp = new String("Bin size: " + sCurrentLine);
 						files.add(tmp);
 						System.out.println("index " + index);
-						System.out.println(results.get(index));
-						tmp = "Num of Bins: " + results.get(index - 1);//.substring(10, sCurrentLine.length());
+						String x = fileName.substring(33,41);
+						System.out.println("x " + x);
+						int ii = 0;
+						for (int j = 0; j < results.size(); j++)
+						{
+							if (results.get(j).contains(x))
+							{
+								ii = j;
+								break;
+							}
+						}
+						System.out.println(results.get(ii));
+						tmp = "Num of Bins: " + results.get(ii);//.substring(10, sCurrentLine.length());
 						System.out.println("tmp " + tmp);
 						files.add(tmp);
 					}
-					if (i == 0)
+					else if (i == 0)
 					{
 						String tmp = new String("Number of elements: " + sCurrentLine);
 						files.add(tmp);
+						index++;
 					}
 					else
 						files.add(sCurrentLine);
 					i++;
 				}
 				System.out.println("! ");
-				writeFile(index);
+				writeFile(index, fileName);
 				files.clear();
-				index++;
+				//index++;
 			} 
 			catch (IOException e) {
 				e.printStackTrace();
