@@ -16,11 +16,17 @@ public class GeneticAlgorithm {
 	//public static final int CHROMOSOME_SIZE = 40;
 	public static final int NUMBER_OF_TASKS = 4;
 	public static final int NUMBER_OF_GA_ITERATIONS = 1000;
-	public static final String FILE_PATH = "C:\\data_for_binpacking\\improve_results1000\\result";
+	public static final String FILE_PATH = "C:\\data_for_binpacking\\results1000\\result";
 	public static final int NUMBER_OF_FILES = 700;
+	//public static final int NUMBER_OF_FILES1 = 700;
+	//public static final int NUMBER_OF_FILES2 = 400;
+	//public static final int NUMBER_OF_FOLDER = 1;
 	public static final String DATA_PATH = "C:\\data_for_binpacking\\shlak\\new_data\\";
+	//public static final String DATA = "data\\";
 	
 	public static int size;
+	public static int bestBinNums;
+	public static int sum;
 	List<Chromosome> population;
 	List<Chromosome> childrens;
 	
@@ -50,11 +56,29 @@ public class GeneticAlgorithm {
 					n = Integer.parseInt(str);
 					elements = new int[n][2];
 				}
-				else
+				else if (sCurrentLine.contains("Num of Bins:"))
 				{
+					int space = 0;
+					str = sCurrentLine.substring(23, sCurrentLine.length());
+					if (str.contains(" "))
+					{
+						str = sCurrentLine.substring(23, sCurrentLine.length()-1);
+					}
+					else
+						str = sCurrentLine.substring(23, sCurrentLine.length());
+					bestBinNums = Integer.parseInt(str);
+					System.out.println("bestBinNums " + bestBinNums);
+				}
+				else //if (sCurrentLine.equals(""))
+				{
+					//System.out.println(sCurrentLine);
 					elements[i][0] = Integer.parseInt(sCurrentLine);
 					elements[i][1] = 0;
 					i++;
+					if (i == n - 1)
+					{
+						break;
+					}
 				}
 			}
 
@@ -73,15 +97,15 @@ public class GeneticAlgorithm {
 				ex.printStackTrace();
 			}
 		}
-		
-		System.out.println("size = " + size);
-		System.out.println("n = " + n);
-		int sum = 0;
+		sum = 0;
 		for (int i = 0; i < elements.length; i++)
 		{
 			sum = sum + elements[i][0];
 		}
 		System.out.println("sum = " + sum);
+		System.out.println("read file " + fileName);
+		System.out.println("size = " + size);
+		System.out.println("n = " + n);
 		return elements;
 	}
 	

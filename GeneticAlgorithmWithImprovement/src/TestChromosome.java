@@ -7,29 +7,46 @@ import java.util.ArrayList;
 public class TestChromosome {
 	
 	public static final int ALGORITHM_NUMBER = 8;
-	public static final String RESULT_FILE = "C:\\data_for_binpacking\\1\\improve_results1000\\testx.txt";
-	public static final String CHROMOSOME_TEST = "C:\\data_for_binpacking\\1\\improve_results1000\\test_chromosomexgiant.txt";
-	public static final String DATA_PATH = "C:\\data_for_binpacking\\giant_data\\";
+	public static final String RESULT_FILE = "C:\\data_for_binpacking\\improve_results\\test5.txt";
+	public static final String CHROMOSOME_TEST = "C:\\data_for_binpacking\\improve_results\\testing5bin2.txt";
+	public static final String DATA_PATH = "C:\\data_for_binpacking\\bin2data\\";
 	public Chromosome cleverchromosome;
+	public GeneticAlgorithm GA;
+	public int sumOfBest;
+	public double sumOfBins;
+	
 	public FileWriter writer;
 	 
 	public void start() throws Exception
 	{
-		GeneticAlgorithm GA = new GeneticAlgorithm();
+		GA = new GeneticAlgorithm();
 		parseFile(RESULT_FILE);
 	    writer = new FileWriter(CHROMOSOME_TEST);  
-		for (int i = 1; i <= 100; i++)//GA.NUMBER_OF_FILES; i++)
+	    for (int j = 0; j <= 0; j++)
+	    {
+	    	sumOfBest = 0;
+	    	sumOfBins = 0;
+		for (int i = 2; i <= 434; i++)//GA.NUMBER_OF_FILES; i++)
 		{
 			int [][] elements = readFile(DATA_PATH + Integer.toString(i) + ".txt");
 			//int [][] elements = readFile(GA.DATA_PATH + Integer.toString(i) + ".txt");
 			System.out.println("file " + i);
 			double p = 0;
-			for (int j = 0; j <= ALGORITHM_NUMBER; j++)
-			{
+			//for (int j = 0; j <= ALGORITHM_NUMBER; j++)
+			//{
 				System.out.println("algorithm " + j);
 				System.out.println("GA.size " + GA.size);
+				System.out.println("GA.bestBinNums " + GA.bestBinNums);
+				sumOfBest = sumOfBest + GA.bestBinNums;
 				//cleverchromosome.solveProblem(elements, GA.size, j);
 				double t = cleverchromosome.solveProblem(elements, GA.size, j);
+				if (GA.sum != cleverchromosome.remainbunssize)
+				{
+					System.out.println("!!!");
+					System.exit(1);
+				}
+				sumOfBins = sumOfBins + t;
+				//double t = 0;
 				//writeFile(i, elements.length, t, j);
 				if (j == 0)
 					p = t;
@@ -55,8 +72,10 @@ public class TestChromosome {
 				{
 					elements[k][1] = 0;
 				}
-			}			
+			//}			
 		}
+		writeFile(0, 0, 0, 0,4);
+	    }
 	    writer.flush();
 	    writer.close();
 	}
@@ -117,9 +136,10 @@ public class TestChromosome {
 	
 	public void writeFile(int filenum, int length, double number_of_bins, int algorithm, int flag) throws IOException
 	{
-		String s = "File - " + filenum + " Number of elements: " + Integer.toString(length) + " number of bins: " + Double.toString(number_of_bins) + " algorithm: " + algorithm + "\n";
-		writer.write(s);
-		if (flag == 1)
+		String s = "File - " + filenum + " Number of elements: " + Integer.toString(length) + " number of bins: " + Double.toString(number_of_bins) + " best bins: " + GA.bestBinNums + " algorithm: " + algorithm + "\n";
+	    //System.out.println("s - " + s);
+	    writer.write(s); 
+		/*if (flag == 1)
 		{
 			writer.write("!!!better\n");
 		}
@@ -130,8 +150,10 @@ public class TestChromosome {
 		if (flag == 3)
 		{
 			writer.write("!!!worse\n");
+		}*/
+		if (flag == 4)
+		{
+			writer.write("sumOfBest " + sumOfBest + " sumOfBins " + sumOfBins + "\n");
 		}
-	    //System.out.println("s - " + s);
-	    //writer.write(s); 
 	}
 }

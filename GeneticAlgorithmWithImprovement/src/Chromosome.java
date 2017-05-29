@@ -8,6 +8,7 @@ public class Chromosome {
 	
 	public List<Genome> chromosome;
 	public double years;
+	public int remainbunssize;
 	
 	public Chromosome(int flag)
 	{
@@ -93,6 +94,7 @@ public class Chromosome {
 			}
 		}
 		double numberOfBins = 0;
+		remainbunssize = 0; 
 		for (int i = 0; i < bins.length; i++)
 		{
 			//System.out.println("binsize = " + bins[i]);
@@ -100,33 +102,33 @@ public class Chromosome {
 			{
 				////System.out.println("binsize = " + bins[i]);
 				numberOfBins++;
+				remainbunssize = remainbunssize + size - bins[i];
 			}
 			if (bins[i] < 0)
 			{
-				System.out.println("error ");
+				System.out.println("!!!Error1");
+				System.exit(1);
 			}
 		}
-		int check = 0;
-		for (int i = 0; i < elements.length; i++)
-		{
-			if (elements[i][1] == 1)
-				check++;
-		}
-		if (check == elements.length)
-		{
-			System.out.println("OK");
-		}
-		//System.out.println("elements.length = " + elements.length);
+		System.out.println("remainbunssize = " + remainbunssize);
 		//System.out.println("numberOfBins = " + numberOfBins);
 		//return fitness;
 		System.out.println("numberOfBins = " + numberOfBins);
 		fitnessSum = fitnessSum + numberOfBins/elements.length;
-		fitness = fitnessSum/years;
-		if (numberOfBins < 50)
+		for (int i = 0; i < elements.length; i++)
 		{
-			System.out.println("!!! stop ");
-			System.exit(1);
+			if (elements[i][1] == 0)
+			{
+				System.out.println("!!!Error3");
+				System.exit(1);
+			}
 		}
+		/*if (numberOfBins < bestBinNums-5)
+		{
+			System.out.println("!!!Error2");
+			System.exit(2);
+		}*/
+		fitness = fitnessSum/years;
 		return numberOfBins;
 	}
 	

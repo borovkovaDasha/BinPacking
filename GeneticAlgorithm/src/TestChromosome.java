@@ -7,9 +7,9 @@ import java.util.ArrayList;
 public class TestChromosome {
 	
 	public static final int ALGORITHM_NUMBER = 8;
-	public static final String RESULT_FILE = "C:\\data_for_binpacking\\results\\test1.txt";
-	public static final String CHROMOSOME_TEST = "C:\\data_for_binpacking\\results\\testing1bin2.txt";
-	public static final String DATA_PATH = "C:\\data_for_binpacking\\bin2data\\";
+	public static final String RESULT_FILE = "C:\\data_for_binpacking\\results1000\\test4.txt";
+	public static final String CHROMOSOME_TEST = "C:\\data_for_binpacking\\results1000\\testing4bin1.txt";
+	public static final String DATA_PATH = "C:\\data_for_binpacking\\bin1data\\";
 	public Chromosome cleverchromosome;
 	public GeneticAlgorithm GA;
 	public int sumOfBest;
@@ -22,11 +22,11 @@ public class TestChromosome {
 		GA = new GeneticAlgorithm();
 		parseFile(RESULT_FILE);
 	    writer = new FileWriter(CHROMOSOME_TEST);  
-	    for (int j = 0; j <= ALGORITHM_NUMBER; j++)
+	    for (int j = 0; j <= 0; j++)
 	    {
 	    	sumOfBest = 0;
 	    	sumOfBins = 0;
-		for (int i = 2; i <= 434; i++)//GA.NUMBER_OF_FILES; i++)
+		for (int i = 2; i <= 756; i++)//GA.NUMBER_OF_FILES; i++)
 		{
 			int [][] elements = readFile(DATA_PATH + Integer.toString(i) + ".txt");
 			//int [][] elements = readFile(GA.DATA_PATH + Integer.toString(i) + ".txt");
