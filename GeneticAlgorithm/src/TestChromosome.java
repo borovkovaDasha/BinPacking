@@ -8,8 +8,8 @@ public class TestChromosome {
 	
 	public static final int ALGORITHM_NUMBER = 8;
 	public static final String RESULT_FILE = "C:\\data_for_binpacking\\results1000\\test4.txt";
-	public static final String CHROMOSOME_TEST = "C:\\data_for_binpacking\\results1000\\testing4bin1.txt";
-	public static final String DATA_PATH = "C:\\data_for_binpacking\\bin1data\\";
+	public static final String CHROMOSOME_TEST = "C:\\data_for_binpacking\\results1000\\testing4bin3.txt";
+	public static final String DATA_PATH = "C:\\data_for_binpacking\\bin3data\\";
 	public Chromosome cleverchromosome;
 	public GeneticAlgorithm GA;
 	public int sumOfBest;
@@ -26,7 +26,7 @@ public class TestChromosome {
 	    {
 	    	sumOfBest = 0;
 	    	sumOfBins = 0;
-		for (int i = 2; i <= 756; i++)//GA.NUMBER_OF_FILES; i++)
+		for (int i = 1; i <= 10; i++)//GA.NUMBER_OF_FILES; i++)
 		{
 			int [][] elements = readFile(DATA_PATH + Integer.toString(i) + ".txt");
 			//int [][] elements = readFile(GA.DATA_PATH + Integer.toString(i) + ".txt");
