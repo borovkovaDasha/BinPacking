@@ -16,12 +16,12 @@ public class GeneticAlgorithm {
 	//public static final int CHROMOSOME_SIZE = 40;
 	public static final int NUMBER_OF_TASKS = 4;
 	public static final int NUMBER_OF_GA_ITERATIONS = 1000;
-	public static final String FILE_PATH = "C:\\data_for_binpacking\\results1000\\result";
-	public static final int NUMBER_OF_FILES = 700;
+	public static final String FILE_PATH = "C:\\data_for_binpacking\\improve_results1000\\result";
+	public static final int NUMBER_OF_FILES = 955;
 	//public static final int NUMBER_OF_FILES1 = 700;
 	//public static final int NUMBER_OF_FILES2 = 400;
 	//public static final int NUMBER_OF_FOLDER = 1;
-	public static final String DATA_PATH = "C:\\data_for_binpacking\\shlak\\new_data\\";
+	public static final String DATA_PATH = "C:\\data_for_binpacking\\data\\";
 	//public static final String DATA = "data\\";
 	
 	public static int size;
