@@ -15,9 +15,9 @@ public class GeneticAlgorithm {
 	public static final int POPULATION_SIZE = 40;
 	//public static final int CHROMOSOME_SIZE = 40;
 	public static final int NUMBER_OF_TASKS = 4;
-	public static final int NUMBER_OF_GA_ITERATIONS = 1000;
-	public static final String FILE_PATH = "C:\\data_for_binpacking\\improve_results1000\\result";
-	public static final int NUMBER_OF_FILES = 955;
+	public static final int NUMBER_OF_GA_ITERATIONS = 500;
+	public static final String FILE_PATH = "C:\\data_for_binpacking\\improve_resultsdata\\result";
+	public static final int NUMBER_OF_FILES = 800;
 	//public static final int NUMBER_OF_FILES1 = 700;
 	//public static final int NUMBER_OF_FILES2 = 400;
 	//public static final int NUMBER_OF_FOLDER = 1;
@@ -168,7 +168,7 @@ public class GeneticAlgorithm {
 					int tmp = (int)(Math.random() * NUMBER_OF_FILES);
 					String fileName = DATA_PATH + (tmp+1) + ".txt";
 					int[][]elements = readFile(fileName);
-					childrens.get(j).solveProblem(elements, size,0);
+					childrens.get(j).solveProblem(elements, size,0, bestBinNums);
 					System.out.println("Children " + j + " solves problem " + fileName + " bins - " + childrens.get(j).fitness);
 				}
 				System.out.println("Children " + j + " fitness - " + childrens.get(j).fitness);
@@ -225,7 +225,7 @@ public class GeneticAlgorithm {
 			int[][]elements = readFile(fileName);
 			for (int j = 0; j < population.size(); j ++)
 			{
-				population.get(j).solveProblem(elements, size,0);
+				population.get(j).solveProblem(elements, size,0, bestBinNums);
 				System.out.println("Population " + j + " solves problem " + fileName + " bins - " + population.get(j).fitness);
 				for (int k = 0; k < elements.length; k++)
 				{
@@ -346,7 +346,7 @@ public class GeneticAlgorithm {
 		for (int i = 0; i < POPULATION_SIZE; i++)
 		{
 			Chromosome tmp = new Chromosome(1);
-			tmp.solveProblem(elements, size,0);
+			tmp.solveProblem(elements, size,0, bestBinNums);
 			System.out.println("chromosome - " + i +" uses number of bins = " + tmp.fitness);
 			population.add(tmp);
 			for (int j = 0; j < elements.length; j++)

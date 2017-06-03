@@ -17,7 +17,7 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		//GeneticAlgorithm GA = new GeneticAlgorithm();
 		//GA.go();
-		for (int i = 11; i < 21; i++)
+		for (int i = 1; i < 11; i++)
 		{
 			System.out.println("!!!!!GA " + i);
 			GeneticAlgorithm GA = new GeneticAlgorithm();

@@ -19,7 +19,15 @@ public class Genome {
 		    smallItems = Math.random();
 		    remainingItems = Math.random();
 		    algorithmNumber = (int)(Math.random()*ALGORITHM_NUMBER) + 1;
+		    /*while (algorithmNumber == 2)
+		    {
+		    	algorithmNumber = (int)(Math.random()*ALGORITHM_NUMBER) + 1;
+		    }*/
 		    prevAlgorithm =(int)(Math.random()*ALGORITHM_NUMBER) + 1;
+		    /*while (prevAlgorithm == 2)
+		    {
+		    	prevAlgorithm = (int)(Math.random()*ALGORITHM_NUMBER) + 1;
+		    }*/
 		}
 		else
 		{

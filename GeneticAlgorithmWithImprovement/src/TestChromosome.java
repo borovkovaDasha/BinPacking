@@ -7,13 +7,14 @@ import java.util.ArrayList;
 public class TestChromosome {
 	
 	public static final int ALGORITHM_NUMBER = 8;
-	public static final String RESULT_FILE = "C:\\data_for_binpacking\\improve_results\\test5.txt";
-	public static final String CHROMOSOME_TEST = "C:\\data_for_binpacking\\improve_results\\testing5bin33.txt";
+	public static final String RESULT_FILE = "C:\\data_for_binpacking\\improve_results1000\\test36.txt";
+	public static final String CHROMOSOME_TEST = "C:\\data_for_binpacking\\improve_results1000\\testing36bin2.txt";
 	public static final String DATA_PATH = "C:\\data_for_binpacking\\bin2data\\";
 	public Chromosome cleverchromosome;
 	public GeneticAlgorithm GA;
 	public int sumOfBest;
 	public double sumOfBins;
+	public double diff;
 	
 	public FileWriter writer;
 	 
@@ -26,7 +27,8 @@ public class TestChromosome {
 	    {
 	    	sumOfBest = 0;
 	    	sumOfBins = 0;
-		for (int i = 301; i <= 434; i++)//GA.NUMBER_OF_FILES; i++)
+	    	diff = 0;
+		for (int i = 2; i <= 299; i++)//GA.NUMBER_OF_FILES; i++)
 		{
 			int [][] elements = readFile(DATA_PATH + Integer.toString(i) + ".txt");
 			//int [][] elements = readFile(GA.DATA_PATH + Integer.toString(i) + ".txt");
@@ -39,7 +41,7 @@ public class TestChromosome {
 				System.out.println("GA.bestBinNums " + GA.bestBinNums);
 				sumOfBest = sumOfBest + GA.bestBinNums;
 				//cleverchromosome.solveProblem(elements, GA.size, j);
-				double t = cleverchromosome.solveProblem(elements, GA.size, j);
+				double t = 0;//cleverchromosome.solveProblem(elements, GA.size, j);
 				if (GA.sum != cleverchromosome.remainbunssize)
 				{
 					System.out.println("!!!");
@@ -154,6 +156,7 @@ public class TestChromosome {
 		if (flag == 4)
 		{
 			writer.write("sumOfBest " + sumOfBest + " sumOfBins " + sumOfBins + "\n");
+			System.out.println("sumOfBest " + sumOfBest + " sumOfBins " + sumOfBins + "\n");
 		}
 	}
 }

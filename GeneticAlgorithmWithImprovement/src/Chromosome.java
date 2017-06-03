@@ -30,7 +30,8 @@ public class Chromosome {
 		}
 	}
 	
-	public double solveProblem(int[][] elements, int size, int algnum) //List<Genome> chromosome, int size)
+	///public double solveProblem(int[][] elements, int size, int algnum) //List<Genome> chromosome, int size)
+	public double solveProblem(int[][] elements, int size, int algnum, int bestsize)
 	{
 		int[] bins = new int[elements.length];
 		years = years + 1;
@@ -69,6 +70,8 @@ public class Chromosome {
 				currentBin = LFD.startPacking(elements, bins, size);
 				break;
 				case 2:  NextFitDecreasing NFD = new NextFitDecreasing();
+				//System.out.println("!!!NFD");
+				//System.exit(1);
 				currentBin = NFD.startPacking(elements, bins, currentBin, size);
 				break;
 				case 3:  DjangAndFinch DAF = new DjangAndFinch();
@@ -114,7 +117,7 @@ public class Chromosome {
 		//System.out.println("numberOfBins = " + numberOfBins);
 		//return fitness;
 		System.out.println("numberOfBins = " + numberOfBins);
-		fitnessSum = fitnessSum + numberOfBins/elements.length;
+		fitnessSum = fitnessSum + (numberOfBins - bestsize);
 		for (int i = 0; i < elements.length; i++)
 		{
 			if (elements[i][1] == 0)
