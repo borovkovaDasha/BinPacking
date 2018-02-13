@@ -7,9 +7,14 @@ import java.util.ArrayList;
 public class TestChromosome {
 	
 	public static final int ALGORITHM_NUMBER = 8;
-	public static final String RESULT_FILE = "C:\\data_for_binpacking\\results1000\\test4.txt";
-	public static final String CHROMOSOME_TEST = "C:\\data_for_binpacking\\results1000\\testing4bin3.txt";
-	public static final String DATA_PATH = "C:\\data_for_binpacking\\bin3data\\";
+	public static final String RESULT_FILE = "C:\\data_for_binpacking\\GAsolution500\\test1.txt";
+	public static final String CHROMOSOME_TEST = "C:\\data_for_binpacking\\GAresults500\\testing1bin2.txt";
+//	public static final String DATA_PATH = "C:\\data_for_binpacking\\bin1out\\";
+//	public static final int NUMBER_OF_FILES = 720; // bin1
+	public static final String DATA_PATH = "C:\\data_for_binpacking\\bin2out\\";
+	public static final int NUMBER_OF_FILES = 480; // bin2
+//	public static final String DATA_PATH = "C:\\data_for_binpacking\\bin3out\\";
+	//public static final int NUMBER_OF_FILES = 10; //bin3
 	public Chromosome cleverchromosome;
 	public GeneticAlgorithm GA;
 	public int sumOfBest;
@@ -21,55 +26,28 @@ public class TestChromosome {
 	{
 		GA = new GeneticAlgorithm();
 		parseFile(RESULT_FILE);
-	    writer = new FileWriter(CHROMOSOME_TEST);  
-	    for (int j = 0; j <= 0; j++)
-	    {
-	    	sumOfBest = 0;
-	    	sumOfBins = 0;
-		for (int i = 1; i <= 10; i++)//GA.NUMBER_OF_FILES; i++)
+	    writer = new FileWriter(CHROMOSOME_TEST); 
+		for (int j = 0; j <= ALGORITHM_NUMBER; j++)
+//	    for (int j = 0; j <= 0; j++)
 		{
-			int [][] elements = readFile(DATA_PATH + Integer.toString(i) + ".txt");
-			//int [][] elements = readFile(GA.DATA_PATH + Integer.toString(i) + ".txt");
-			System.out.println("file " + i);
+			System.out.println("algorithm " + j);
 			double p = 0;
-			//for (int j = 0; j <= ALGORITHM_NUMBER; j++)
-			//{
-				System.out.println("algorithm " + j);
+			for (int i = 1; i <= NUMBER_OF_FILES; i++)//GA.NUMBER_OF_FILES; i++)
+			{
+				if (i == 21)
+					continue;
+				int [][] elements = readFile(DATA_PATH + Integer.toString(i) + ".txt");
+				System.out.println("file " + i);
 				System.out.println("GA.size " + GA.size);
 				System.out.println("GA.bestBinNums " + GA.bestBinNums);
 				sumOfBest = sumOfBest + GA.bestBinNums;
-				//cleverchromosome.solveProblem(elements, GA.size, j);
-				double t = cleverchromosome.solveProblem(elements, GA.size, j);
+				double t = cleverchromosome.solveProblem(elements, GA.size, j, GA.bestBinNums);
 				sumOfBins = sumOfBins + t;
-				//double t = 0;
-				//writeFile(i, elements.length, t, j);
-				if (j == 0)
-					p = t;
-				if (j == 1)
-				{
-					if (p < t)
-					{
-						writeFile(i, elements.length, t, j,1);
-					}
-					else if (p == t)
-					{
-						writeFile(i, elements.length, t, j,2);
-					}
-					else
-					{
-						writeFile(i, elements.length, t, j,3);
-					}
-				}
-				else
-					writeFile(i, elements.length, t, j,0);
-						//System.out.println("!!! 0 is better");
-				for (int k = 0; k < elements.length; k++)
-				{
-					elements[k][1] = 0;
-				}
-			//}			
-		}
-		writeFile(0, 0, 0, 0,4);
+				writeFile(i, GA.bestBinNums, t, j);
+			}
+			writeResFile(sumOfBest,sumOfBins,j);
+			sumOfBest = 0;
+			sumOfBins = 0;
 	    }
 	    writer.flush();
 	    writer.close();
@@ -126,26 +104,19 @@ public class TestChromosome {
 		return;
 	}
 	
-	public void writeFile(int filenum, int length, double number_of_bins, int algorithm, int flag) throws IOException
+	public void writeFile(int filenum, double number_of_best_bins, double number_of_bins, int algorithm) throws IOException
 	{
-		String s = "File - " + filenum + " Number of elements: " + Integer.toString(length) + " number of bins: " + Double.toString(number_of_bins) + " best bins: " + GA.bestBinNums + " algorithm: " + algorithm + "\n";
+		String s = "File - " + filenum + " Number of best bins: " + Double.toString(number_of_best_bins) + " number of bins: " + Double.toString(number_of_bins) + " best bins: " + GA.bestBinNums + " algorithm: " + algorithm + "\n";
 	    //System.out.println("s - " + s);
 	    writer.write(s); 
-		/*if (flag == 1)
-		{
-			writer.write("!!!better\n");
-		}
-		if (flag == 2)
-		{
-			writer.write("!!!equal\n");
-		}
-		if (flag == 3)
-		{
-			writer.write("!!!worse\n");
-		}*/
-		if (flag == 4)
-		{
-			writer.write("sumOfBest " + sumOfBest + " sumOfBins " + sumOfBins + "\n");
-		}
+		//writer.write("sumOfBest " + sumOfBest + " sumOfBins " + sumOfBins + "\n");
+	}
+	
+	public void writeResFile(double sum_of_best_bins, double sum_of_sol_bins, int algorithm) throws IOException
+	{
+		String s = "Result of - " + algorithm + " sum of best: " + Double.toString(sum_of_best_bins) + " sum of bins: " + Double.toString(sum_of_sol_bins) + " coeff: " + Double.toString(sum_of_sol_bins/sum_of_best_bins) + "\n";
+	    //System.out.println("s - " + s);
+	    writer.write(s); 
+		writer.write("sumOfBest " + sumOfBest + " sumOfBins " + sumOfBins + "\n");
 	}
 }

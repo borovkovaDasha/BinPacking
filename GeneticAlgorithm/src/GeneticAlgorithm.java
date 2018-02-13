@@ -15,14 +15,14 @@ public class GeneticAlgorithm {
 	public static final int POPULATION_SIZE = 40;
 	//public static final int CHROMOSOME_SIZE = 40;
 	public static final int NUMBER_OF_TASKS = 4;
-	public static final int NUMBER_OF_GA_ITERATIONS = 1000;
-	public static final String FILE_PATH = "C:\\data_for_binpacking\\results1000\\result";
-	public static final int NUMBER_OF_FILES = 700;
+	public static final int NUMBER_OF_GA_ITERATIONS = 500;
+	public static final String RESULT_PATH = "C:\\data_for_binpacking\\GAsolution500\\";
+	public static final int NUMBER_OF_FILES = 720;
 	//public static final int NUMBER_OF_FILES1 = 700;
 	//public static final int NUMBER_OF_FILES2 = 400;
 	//public static final int NUMBER_OF_FOLDER = 1;
-	public static final String DATA_PATH = "C:\\data_for_binpacking\\shlak\\new_data\\";
-	//public static final String DATA = "data\\";
+	public static final String DATA_PATH = "C:\\data_for_binpacking\\bin1out\\";
+	//public static final String FILE_WITH_RESULTS = "C:\\data_for_binpacking\\bin1data\\results.txt";
 	
 	public static int size;
 	public static int bestBinNums;
@@ -51,7 +51,7 @@ public class GeneticAlgorithm {
 				}
 				else if (sCurrentLine.contains("Number of elements:"))
 				{
-					str = sCurrentLine.substring(20, sCurrentLine.length());
+					str = sCurrentLine.substring(24, sCurrentLine.length());
 					n = Integer.parseInt(str);
 					elements = new int[n][2];
 				}
@@ -68,16 +68,11 @@ public class GeneticAlgorithm {
 					bestBinNums = Integer.parseInt(str);
 					System.out.println("bestBinNums " + bestBinNums);
 				}
-				else //if (sCurrentLine.equals(""))
+				else
 				{
-					//System.out.println(sCurrentLine);
 					elements[i][0] = Integer.parseInt(sCurrentLine);
 					elements[i][1] = 0;
 					i++;
-					if (i == n - 1)
-					{
-						break;
-					}
 				}
 			}
 
@@ -97,10 +92,6 @@ public class GeneticAlgorithm {
 			}
 		}
 		int sum = 0;
-		for (int i = 0; i < elements.length; i++)
-		{
-			sum = sum + elements[i][0];
-		}
 		System.out.println("sum = " + sum);
 		System.out.println("read file " + fileName);
 		System.out.println("size = " + size);
@@ -124,9 +115,7 @@ public class GeneticAlgorithm {
 	    	}
 	    	System.out.println("years - " + population.get(i).years);
 	    }
-	    
-	    //System.out.println("s - " + s);
-	    String path = FILE_PATH + num + ".txt";
+	    String path = RESULT_PATH + num + ".txt";
 	    FileWriter writer = new FileWriter(path); 
 	    writer.write(s); 
 	    writer.flush();
@@ -164,24 +153,11 @@ public class GeneticAlgorithm {
 			{
 				for (int k = 0; k < NUMBER_OF_TASKS; k++)
 				{
-					/*int tmp = 0;
-					int foldernum = 0;
-					if (k < NUMBER_OF_TASKS - 1)
-					{
-						foldernum = 1;
-						tmp = (int)(Math.random() * NUMBER_OF_FILES1);
-					}
-					else 
-					{
-						foldernum = 2;
-						tmp = (int)(Math.random() * NUMBER_OF_FILES2);
-					}
-					String fileName = DATA_PATH + foldernum + DATA + (tmp+2) + ".txt";*/
 					int tmp = (int)(Math.random() * NUMBER_OF_FILES);
 					String fileName = DATA_PATH + (tmp+1) + ".txt";
 					int[][]elements = readFile(fileName);
-					childrens.get(j).solveProblem(elements, size, 0);
-					System.out.println("Children " + j + " solves problem " + fileName + " bins - " + childrens.get(j).fitness);
+					childrens.get(j).solveProblem(elements, size, 0, bestBinNums);
+					System.out.println("Children " + j + " solves problem " + fileName + " bins - " + childrens.get(j).fitness + " bestResult = " + bestBinNums);
 				}
 				System.out.println("Children " + j + " fitness - " + childrens.get(j).fitness);
 			}
@@ -201,22 +177,12 @@ public class GeneticAlgorithm {
 			population.add(findTheBest(childrens, flagsss));
 			childrens.clear();
 			int x = (int)(Math.random() * NUMBER_OF_FILES);
-			/*int foldernum = (int)(Math.random() * NUMBER_OF_FOLDER) + 1;
-			if (foldernum == 1)
-			{
-				x = (int)(Math.random() * NUMBER_OF_FILES1);
-			}
-			else 
-			{
-				x = (int)(Math.random() * NUMBER_OF_FILES2);
-			}
-			String fileName = DATA_PATH + foldernum + DATA + (x+2) + ".txt";*/
 			String fileName = DATA_PATH + (x+1) + ".txt";
 			int[][]elements = readFile(fileName);
 			for (int j = 0; j < population.size(); j ++)
 			{
-				population.get(j).solveProblem(elements, size, 0);
-				System.out.println("Population " + j + " solves problem " + fileName + " bins - " + population.get(j).fitness);
+				population.get(j).solveProblem(elements, size, 0, bestBinNums);
+				System.out.println("Population " + j + " solves problem " + fileName + " bins - " + population.get(j).fitness + " bestResult = " + bestBinNums);
 				for (int k = 0; k < elements.length; k++)
 				{
 					elements[k][1] = 0;				
@@ -330,20 +296,8 @@ public class GeneticAlgorithm {
 	}
 	
 	public void initializePopulation(){
-		//String fileName = "C:\\data_for_binpacking\\new_data\\1.txt";
-		/*int foldernum = (int)(Math.random() * NUMBER_OF_FOLDER) + 1;
-		int xxx = 0;
-		if (foldernum == 1)
-		{
-			xxx = (int)(Math.random() * NUMBER_OF_FILES1) + 2;
-		}
-		else 
-		{
-			xxx = (int)(Math.random() * NUMBER_OF_FILES2) + 2;
-		}
-		String fileName = DATA_PATH + foldernum + DATA + (xxx) + ".txt";*/
 		int xxx = (int)(Math.random() * NUMBER_OF_FILES) + 1;
-		String fileName = DATA_PATH + (xxx + 1) + ".txt";
+		String fileName = DATA_PATH + (xxx+1) + ".txt";
 		System.out.println(fileName);
 		int[][]elements = readFile(fileName);
 		population = new ArrayList<Chromosome>();
@@ -351,26 +305,14 @@ public class GeneticAlgorithm {
 		for (int i = 0; i < POPULATION_SIZE; i++)
 		{
 			Chromosome tmp = new Chromosome(1);
-			tmp.solveProblem(elements, size, 0);
-			System.out.println("chromosome - " + i +" uses number of bins = " + tmp.fitness);
+			tmp.solveProblem(elements, size, 0, bestBinNums);
+			System.out.println("chromosome - " + i +" uses number of bins = " + tmp.fitness + " bestResult = " + bestBinNums);
 			population.add(tmp);
 			for (int j = 0; j < elements.length; j++)
 			{
 				elements[j][1] = 0;				
 			}
 		}
-		/*for (int i = 0; i < POPULATION_SIZE; i++)
-		{
-			System.out.println("chromosome = " + i + " number of bins = " + population.get(i).fitness);
-			Chromosome tmp = new Chromosome(1);
-			int bins = tmp.solveProblem(elements, size);
-			//System.out.println("number of bins = " + bins);
-			population.add(tmp);
-		}*/
-		/*Chromosome chromosome = new Chromosome();
-		List<Genome> chrom = chromosome.initializeChromosome();
-		int numberOfBins = chromosome.solveProblem(elements, size);// chrom, size);
-		System.out.println("number of bins = " + numberOfBins);*/
 	}
 	
 	void first_crossover(Chromosome parent1, Chromosome parent2) {
@@ -398,24 +340,18 @@ public class GeneticAlgorithm {
         {
         	if ((div + i >= children1.chromosome.size()) && (div + i >= parent2.chromosome.size()))
         	{
-        		//System.out.println("children1.chromosome.size() " + children1.chromosome.size());
-        		//System.out.println("parent2.chromosome.size() " + parent2.chromosome.size());
-        		//System.out.println("div + i " + div + " " + i);
         		children1.chromosome.set((div + i) - children1.chromosome.size(), parent2.chromosome.get((div + i) - parent2.chromosome.size()));
         	}
         	else if (div + i >= children1.chromosome.size())
         	{
-        		//System.out.println("2 ");
         		children1.chromosome.set((div + i) - children1.chromosome.size(), parent2.chromosome.get(div + i));
         	}
         	else if (div + i >= parent2.chromosome.size())
         	{
-        		//System.out.println("3 ");
         		children1.chromosome.set((div + i), parent2.chromosome.get((div + i) - parent2.chromosome.size()));
         	}
         	else
         	{
-        		//System.out.println("4 ");
         		children1.chromosome.set((div + i), parent2.chromosome.get(div + i));
         	}
         }
@@ -423,33 +359,21 @@ public class GeneticAlgorithm {
         {
         	if ((div + i >= children2.chromosome.size()) && (div + i >= parent1.chromosome.size()))
         	{
-        		//System.out.println("1 ");
         		children2.chromosome.set((div + i) - children2.chromosome.size(), parent1.chromosome.get((div + i) - parent1.chromosome.size()));
         	}
         	else if (div + i >= children2.chromosome.size())
         	{
-        		//System.out.println("2 ");
         		children2.chromosome.set((div + i) - children2.chromosome.size(), parent1.chromosome.get(div + i));
         	}
         	else if (div + i >= parent1.chromosome.size())
         	{
-        		//System.out.println("3 ");
         		children2.chromosome.set((div + i), parent1.chromosome.get((div + i) - parent1.chromosome.size()));
         	}
         	else
         	{
-        		//System.out.println("4 ");
         		children2.chromosome.set((div + i), parent1.chromosome.get(div + i));
         	}
         }
-		//for (int i = 0; i < children1.chromosome.size(); i++)
-		//{
-			//System.out.println("1h = " + children1.chromosome.get(i).hugeItems + " l = " + children1.chromosome.get(i).largeItems + " m = " + children1.chromosome.get(i).mediumItems + " s = " + children1.chromosome.get(i).smallItems + " r = " + children1.chromosome.get(i).remainingItems + " a = " + children1.chromosome.get(i).algorithmNumber);
-		//}
-		//for (int i = 0; i < children2.chromosome.size(); i++)
-		//{
-			//System.out.println("2h = " + children2.chromosome.get(i).hugeItems + " l = " + children2.chromosome.get(i).largeItems + " m = " + children2.chromosome.get(i).mediumItems + " s = " + children2.chromosome.get(i).smallItems + " r = " + children2.chromosome.get(i).remainingItems + " a = " + children2.chromosome.get(i).algorithmNumber);
-		//}
 		int tmp = (int)(Math.random() * 10);
 		if (tmp == 0)
 		{
@@ -507,18 +431,15 @@ public class GeneticAlgorithm {
 	        {
 	        	if ((parent1.chromosome.size() > i) && (parent2.chromosome.size() > i))
 	        	{
-	        		//System.out.println("1 ");
 		        	children1.chromosome.add(parent2.chromosome.get(i));
 		        	children2.chromosome.add(parent1.chromosome.get(i));
 	        	}
 	        	else if (parent1.chromosome.size() > i)
 	        	{
-	        		//System.out.println("2 ");
 	        		children2.chromosome.add(parent1.chromosome.get(i));
 	        	}
 	        	else if (parent2.chromosome.size() > i)
 	        	{
-	        		//System.out.println("3 ");
 	        		children1.chromosome.add(parent2.chromosome.get(i));
 	        	}
 	        }
@@ -526,30 +447,19 @@ public class GeneticAlgorithm {
 	        {
 	        	if ((parent1.chromosome.size() > i) && (parent2.chromosome.size() > i))
 	        	{
-	        		//System.out.println("11 ");
 		        	children1.chromosome.add(parent1.chromosome.get(i));
 		        	children2.chromosome.add(parent2.chromosome.get(i));
 	        	}
 	        	else if (parent1.chromosome.size() > i)
 	        	{
-	        		//System.out.println("22 ");
 	        		children1.chromosome.add(parent1.chromosome.get(i));
 	        	}
 	        	else if (parent2.chromosome.size() > i)
 	        	{
-	        		//System.out.println("33 ");
 	        		children2.chromosome.add(parent2.chromosome.get(i));
 	        	}
 	        }
 		}
-		//for (int i = 0; i < children1.chromosome.size(); i++)
-		//{
-			//System.out.println("1h = " + children1.chromosome.get(i).hugeItems + " l = " + children1.chromosome.get(i).largeItems + " m = " + children1.chromosome.get(i).mediumItems + " s = " + children1.chromosome.get(i).smallItems + " r = " + children1.chromosome.get(i).remainingItems + " a = " + children1.chromosome.get(i).algorithmNumber);
-		//}
-		//for (int i = 0; i < children2.chromosome.size(); i++)
-		//{
-			//System.out.println("2h = " + children2.chromosome.get(i).hugeItems + " l = " + children2.chromosome.get(i).largeItems + " m = " + children2.chromosome.get(i).mediumItems + " s = " + children2.chromosome.get(i).smallItems + " r = " + children2.chromosome.get(i).remainingItems + " a = " + children2.chromosome.get(i).algorithmNumber);
-		//}
 		tmp = (int)(Math.random() * 10);
 		if (tmp == 0)
 		{

@@ -1,16 +1,19 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+
 //This is a java program to implement Djang and Finch Tuples with Filter for 1D objects using N bins
 
 public class DjangAndFinchTuplesFilter {
 
-	public static int startPacking(int[][] a, int[] bins, int currentBin, int size)
+	public static int startPacking(int[][] a, int[] bins, int currentBin, int size, ArrayList<Integer> solel, ArrayList<Integer> solbin)
 	{
 		//System.out.println("BIN - PACKING Algorithm 1D Objects(Djang and Finch Tuples with Filter)");
 		//bin packing
-		return binPacking(a, bins, currentBin, size, a.length);
+		return binPacking(a, bins, currentBin, size, a.length, solel, solbin);
 	}
 	
 	//a - array of elements, size - size of baskets, n - number of elements
-	public static int binPacking(int[][] a, int[] bins, int currentBin, int size, int n)
+	public static int binPacking(int[][] a, int[] bins, int currentBin, int size, int n, ArrayList<Integer> solel, ArrayList<Integer> solbin)
 	{
 		//проходимся по всем элементам
 		for (int i = 0; i < n; i++)
@@ -22,15 +25,17 @@ public class DjangAndFinchTuplesFilter {
 				{
 					bins[currentBin] -= a[i][0];
 					a[i][1] = 1;
+					solel.add(a[i][0]);
+					solbin.add(currentBin);
 					//System.out.println("Element " + a[i][0] + " is packed to " + currentBin);
 					// и занимает больше 1/3 корзины и не полностью, то
 					if ((bins[currentBin] <= size * 2 / 3) && (bins[currentBin] != 0))
 					{
 						//System.out.println("Try");
 						//ищем комбинацию из 1, 2 или 3 элементов, чтобы максимально заполнить корзину
-						bins[currentBin] = findFive(a, bins[currentBin]);
+						bins[currentBin] = findFive(a, bins[currentBin], currentBin, solel, solbin);
 						//заполняем корзину до конца, прежде, чем открыть следующую
-						bins[currentBin] = fillMore(a, bins[currentBin]);
+						bins[currentBin] = fillMore(a, bins[currentBin], currentBin, solel, solbin);
 						// берём следующую корзину
 						currentBin = currentBin + 1;
 					}
@@ -55,14 +60,16 @@ public class DjangAndFinchTuplesFilter {
 					{
 						bins[currentBin] -= a[i][0];	
 						a[i][1] = 1;
+						solel.add(a[i][0]);
+						solbin.add(currentBin);
 					}
 					//System.out.println("Element " + a[i][0] + " is packed to " + currentBin);
 					if ((bins[currentBin] <= size * 2 / 3) && (bins[currentBin] != 0))
 					{
 						//System.out.println("Try");
 						//ищем комбинацию из 1, 2 или 3 элементов, чтобы максимально заполнить корзину
-						bins[currentBin] = findFive(a, bins[currentBin]);
-						bins[currentBin] = fillMore(a, bins[currentBin]);
+						bins[currentBin] = findFive(a, bins[currentBin], currentBin, solel, solbin);
+						bins[currentBin] = fillMore(a, bins[currentBin], currentBin, solel, solbin);
 						// берём следующую корзину
 						currentBin = currentBin + 1;
 						//return currentBin;
@@ -80,7 +87,7 @@ public class DjangAndFinchTuplesFilter {
 		return currentBin;
 	}
 	
-	public static int fillMore(int[][] a, int size)
+	public static int fillMore(int[][] a, int size, int currentBin, ArrayList<Integer> solel, ArrayList<Integer> solbin)
 	{
 		if(size == 0)
 		{
@@ -95,6 +102,8 @@ public class DjangAndFinchTuplesFilter {
 				//System.out.println("Element " + a[i][0] + " is also packed ");
 				size -= a[i][0];
 				a[i][1] = 1;
+				solel.add(a[i][0]);
+				solbin.add(currentBin);
 			}
 		}
 		return size;	
@@ -125,7 +134,7 @@ public class DjangAndFinchTuplesFilter {
 		return size;	
 	}*/
 	
-	public static int findFive(int[][] a, int size)
+	public static int findFive(int[][] a, int size, int currentBin, ArrayList<Integer> solel, ArrayList<Integer> solbin)
 	{
 		//System.out.println("size = " + size);
 		
@@ -145,6 +154,8 @@ public class DjangAndFinchTuplesFilter {
 				if ((a[i][1] == 0) && (size - a[i][0] == j))
 				{
 					a[i][1] = 1;
+					solel.add(a[i][0]);
+					solbin.add(currentBin);
 					//System.out.println("el 1 = " + a[i][0]);
 					return size - a[i][0];
 				}
@@ -166,6 +177,10 @@ public class DjangAndFinchTuplesFilter {
 					{
 						a[i][1] = 1;
 						a[k][1] = 1;
+						solel.add(a[i][0]);
+						solbin.add(currentBin);
+						solel.add(a[k][0]);
+						solbin.add(currentBin);
 						//System.out.println("el 1 = " + a[i][0]);
 						//System.out.println("el 2 = " + a[k][0]);
 						return size - a[i][0] - a[k][0];
@@ -197,6 +212,12 @@ public class DjangAndFinchTuplesFilter {
 							a[i][1] = 1;
 							a[k][1] = 1;
 							a[l][1] = 1;
+							solel.add(a[i][0]);
+							solbin.add(currentBin);
+							solel.add(a[k][0]);
+							solbin.add(currentBin);
+							solel.add(a[l][0]);
+							solbin.add(currentBin);
 							//System.out.println("el 1 = " + a[i][0]);
 							//System.out.println("el 2 = " + a[k][0]);
 							//System.out.println("el 3 = " + a[l][0]);
@@ -232,6 +253,14 @@ public class DjangAndFinchTuplesFilter {
 								a[k][1] = 1;
 								a[l][1] = 1;
 								a[p][1] = 1;
+								solel.add(a[i][0]);
+								solbin.add(currentBin);
+								solel.add(a[k][0]);
+								solbin.add(currentBin);
+								solel.add(a[l][0]);
+								solbin.add(currentBin);
+								solel.add(a[p][0]);
+								solbin.add(currentBin);
 								//System.out.println("el 1 = " + a[i][0]);
 								//System.out.println("el 2 = " + a[k][0]);
 								//System.out.println("el 3 = " + a[l][0]);
@@ -280,6 +309,16 @@ public class DjangAndFinchTuplesFilter {
 									a[l][1] = 1;
 									a[p][1] = 1;
 									a[t][1] = 1;
+									solel.add(a[i][0]);
+									solbin.add(currentBin);
+									solel.add(a[k][0]);
+									solbin.add(currentBin);
+									solel.add(a[l][0]);
+									solbin.add(currentBin);
+									solel.add(a[p][0]);
+									solbin.add(currentBin);
+									solel.add(a[t][0]);
+									solbin.add(currentBin);
 									//System.out.println("el 1 = " + a[i][0]);
 									//System.out.println("el 2 = " + a[k][0]);
 									//System.out.println("el 3 = " + a[l][0]);

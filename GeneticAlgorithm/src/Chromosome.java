@@ -1,5 +1,8 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Chromosome {
 	public int CHROMOSOME_SIZE = 16;
@@ -12,7 +15,7 @@ public class Chromosome {
 	public Chromosome(int flag)
 	{
 		years = 0;
-		//List<Genome> 
+		// create random chromosome
 		if (flag == 1)
 		{
 			chromosome = new ArrayList<Genome>();
@@ -21,12 +24,8 @@ public class Chromosome {
 				Genome genome = new Genome(1);
 				chromosome.add(genome);
 			}
-			/*for (int i = 0; i < CHROMOSOME_SIZE; i++)
-			{
-				//System.out.println("h = " + chromosome.get(i).hugeItems + " l = " + chromosome.get(i).largeItems + " m = " + chromosome.get(i).mediumItems + " s = " + chromosome.get(i).smallItems + " r = " + chromosome.get(i).remainingItems + " a = " + chromosome.get(i).algorithmNumber);
-			}
-			return;*/
 		}
+		// create chromosome initialized by null
 		else 
 		{
 			chromosome = new ArrayList<Genome>();
@@ -34,9 +33,12 @@ public class Chromosome {
 		}
 	}
 	
-	public double solveProblem(int[][] elements, int size, int algnum) //List<Genome> chromosome, int size)
+	public double solveProblem(int[][] elements, int size, int algnum, int bestResult)
 	{
 		int[] bins = new int[elements.length];
+		final ArrayList<Integer> solel = new ArrayList<Integer>();
+		final ArrayList<Integer> solbin = new ArrayList<Integer>();
+		final HashMap<Integer, Integer> solution = new HashMap<Integer, Integer>();
 		years = years + 1;
 		//create array of baskets
 		for (int i = 0; i < bins.length; i++)
@@ -46,7 +48,6 @@ public class Chromosome {
 		int alg = 0;
 		elements = sort(elements);
 		int flag = 0;
-		//System.out.println("elements.length " + elements.length);
 		int currentBin = 0;
 		while (flag == 0)
 		{
@@ -58,101 +59,86 @@ public class Chromosome {
 			}
 			if (algnum == 0)
 			{
-				alg = findCloser(state);//chromosome, state);
+				alg = findCloser(state);
 			}
 			else
 			{
 				alg = algnum;
 			}
-			//System.out.println("findCloser " + alg);
-			//alg = 7;
 			switch (alg) {
 				case 1:  LargestFitDecreasing LFD = new LargestFitDecreasing();
-				currentBin = LFD.startPacking(elements, bins, size);
+				currentBin = LFD.startPacking(elements, bins, size, solel, solbin);
 				break;
 				case 2:  NextFitDecreasing NFD = new NextFitDecreasing();
-				currentBin = NFD.startPacking(elements, bins, currentBin, size);
+				currentBin = NFD.startPacking(elements, bins, currentBin, size, solel, solbin);
 				break;
 				case 3:  DjangAndFinch DAF = new DjangAndFinch();
-				currentBin = DAF.startPacking(elements, bins, currentBin, size);
+				currentBin = DAF.startPacking(elements, bins, currentBin, size, solel, solbin);
 				break;
 				case 4:  DjangAndFinchTuples DAFT = new DjangAndFinchTuples();
-				currentBin = DAFT.startPacking(elements, bins, currentBin, size);
+				currentBin = DAFT.startPacking(elements, bins, currentBin, size, solel, solbin);
 				break;
 				case 5:	LargestFitDecreasingFilter LFDF = new LargestFitDecreasingFilter();
-				currentBin = LFDF.startPacking(elements, bins, currentBin, size);
+				currentBin = LFDF.startPacking(elements, bins, currentBin, size, solel, solbin);
 				break;
 				case 6:	NextFitDecreasingFilter NFDF = new NextFitDecreasingFilter();
-				currentBin = NFDF.startPacking(elements, bins, currentBin, size);
+				currentBin = NFDF.startPacking(elements, bins, currentBin, size, solel, solbin);
 				break;
 				case 7:	DjangAndFinchFilter DAFF = new DjangAndFinchFilter();
-				currentBin = DAFF.startPacking(elements, bins, currentBin, size);
+				currentBin = DAFF.startPacking(elements, bins, currentBin, size, solel, solbin);
 				break;
 				case 8:	DjangAndFinchTuplesFilter DAFTF = new DjangAndFinchTuplesFilter();
-				currentBin = DAFTF.startPacking(elements, bins, currentBin, size);
+				currentBin = DAFTF.startPacking(elements, bins, currentBin, size, solel, solbin);
 				break;
 				default:
 					break;
 			}
 			
 		}
-		double numberOfBins = 0;
-		int remainbunssize = 0; 
-		for (int i = 0; i < bins.length; i++)
-		{
-			//System.out.println("binsize = " + bins[i]);
-			if (bins[i] < size)
-			{
-				////System.out.println("binsize = " + bins[i]);
-				numberOfBins++;
-				remainbunssize = remainbunssize + size - bins[i];
+		double notEmptyBins = 0;
+		int sumOfElements = 0;
+		int sumOfElements1 = 0;
+		for (int i = 0; i < bins.length; i++) {
+			if (bins[i] < size) {
+				notEmptyBins++;
+				sumOfElements = sumOfElements + size-bins[i]; 
 			}
-			if (bins[i] < 0)
-			{
-				System.out.println("!!!Error1");
+			if (bins[i] < 0) {
+				System.out.println("!!!");
 				System.exit(1);
 			}
 		}
-		System.out.println("remainbunssize = " + remainbunssize);
-		//System.out.println("numberOfBins = " + numberOfBins);
-		//return fitness;
-		System.out.println("numberOfBins = " + numberOfBins);
-		fitnessSum = fitnessSum + numberOfBins/elements.length;
-		for (int i = 0; i < elements.length; i++)
-		{
-			if (elements[i][1] == 0)
-			{
-				System.out.println("!!!Error3");
-				System.exit(1);
-			}
+		for (int i = 0; i < elements.length; i++) {
+			sumOfElements1 = sumOfElements1 + elements[i][0];
 		}
-		/*if (numberOfBins < bestBinNums-5)
-		{
-			System.out.println("!!!Error2");
-			System.exit(2);
-		}*/
+		if (notEmptyBins/bestResult < 1) {
+			System.out.println("!!!error " + notEmptyBins/bestResult);
+			/*for (int i =0; i<solel.size(); i++) {
+				System.out.println(solel.get(i) + " " + solbin.get(i));
+			}*/
+			System.exit(1);
+		}
+		System.out.println("notEmptyBins " + notEmptyBins);
+		System.out.println("elements.length " + elements.length);
+		fitnessSum = fitnessSum + notEmptyBins/bestResult;
 		fitness = fitnessSum/years;
-		return numberOfBins;
+		return notEmptyBins;
 	}
 	
-	public int findCloser(Genome gen){//List<Genome> chromosome, Genome gen){
+	public int findCloser(Genome gen){
 		int algorithm = 0;
 		double tmpres = 100;
 		for (int i = 0; i < chromosome.size(); i++)
 		{
 			Genome tmp = chromosome.get(i);
-			////System.out.println("distance " + Math.sqrt(Math.pow(tmp.hugeItems-gen.hugeItems,2) + Math.pow(tmp.largeItems-gen.largeItems,2)
-			//+ Math.pow(tmp.smallItems-gen.smallItems,2) + Math.pow(tmp.remainingItems-gen.remainingItems,2)));
 			if(Math.sqrt(Math.pow(tmp.hugeItems-gen.hugeItems,2) + Math.pow(tmp.largeItems-gen.largeItems,2)
 			+ Math.pow(tmp.smallItems-gen.smallItems,2) + Math.pow(tmp.remainingItems-gen.remainingItems,2)) < tmpres)
 			{
 				algorithm = tmp.algorithmNumber;
-				////System.out.println("new closet algorithm is " + algorithm);
 				tmpres = Math.sqrt(Math.pow(tmp.hugeItems-gen.hugeItems,2) + Math.pow(tmp.largeItems-gen.largeItems,2)
 				+ Math.pow(tmp.smallItems-gen.smallItems,2) + Math.pow(tmp.remainingItems-gen.remainingItems,2));
 			}
 		}
-		//System.out.println("the closet algorithm is " + algorithm);
 		return algorithm;
 	}
 	
@@ -162,27 +148,22 @@ public class Chromosome {
 	        {
 	        	if (a[i][0] > size/2 && a[i][1] == 0)
 	        	{
-	        		////System.out.println("huge");
 	        		gen.hugeItems++;
 	        	}
 	        	else if (a[i][0] > size/3 && a[i][1] == 0)
 	        	{
-	        		////System.out.println("large");
 	        		gen.largeItems++;
 	        	}
 	        	else if (a[i][0] > size/4 && a[i][1] == 0)
 	        	{
-	        		////System.out.println("medium");
 	        		gen.mediumItems++;
 	        	}
 	        	else if (a[i][1] == 0)
 	        	{
-	        		////System.out.println("small");
 	        		gen.smallItems++;
 	        	}
 	        	if (a[i][1] != 1)
 	        	{
-	        		////System.out.println("remaining");
 	        		gen.remainingItems++;
 	        	}
 	        }
@@ -206,9 +187,9 @@ public class Chromosome {
 		 {
 			 gen.remainingItems = gen.remainingItems/a.length;
 		 }
-		 //System.out.println("current state: h " + gen.hugeItems + " l " + gen.largeItems + " m " + gen.mediumItems + " s " + gen.smallItems + " r " + gen.remainingItems);
 		 return gen;
 	}
+	
 	static int[][] sort(int[][] sequence)
 	{
 		// Bubble Sort descending order
