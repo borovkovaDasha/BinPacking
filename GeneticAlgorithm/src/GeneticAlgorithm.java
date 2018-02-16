@@ -16,12 +16,12 @@ public class GeneticAlgorithm {
 	//public static final int CHROMOSOME_SIZE = 40;
 	public static final int NUMBER_OF_TASKS = 4;
 	public static final int NUMBER_OF_GA_ITERATIONS = 500;
-	public static final String RESULT_PATH = "C:\\data_for_binpacking\\GAsolution500\\";
+	public static final String RESULT_PATH = "D:\\data_for_binpacking\\GAsolution500test\\";
 	public static final int NUMBER_OF_FILES = 720;
 	//public static final int NUMBER_OF_FILES1 = 700;
 	//public static final int NUMBER_OF_FILES2 = 400;
 	//public static final int NUMBER_OF_FOLDER = 1;
-	public static final String DATA_PATH = "C:\\data_for_binpacking\\bin1out\\";
+	public static final String DATA_PATH = "D:\\data_for_binpacking\\bin1out\\";
 	//public static final String FILE_WITH_RESULTS = "C:\\data_for_binpacking\\bin1data\\results.txt";
 	
 	public static int size;
@@ -296,7 +296,7 @@ public class GeneticAlgorithm {
 	}
 	
 	public void initializePopulation(){
-		int xxx = (int)(Math.random() * NUMBER_OF_FILES) + 1;
+		int xxx = (int)(Math.random() * NUMBER_OF_FILES);
 		String fileName = DATA_PATH + (xxx+1) + ".txt";
 		System.out.println(fileName);
 		int[][]elements = readFile(fileName);

@@ -66,6 +66,29 @@ public class Chromosome {
 				alg = algnum;
 			}
 			switch (alg) {
+			/*case 1:  LargestFitDecreasing LFD = new LargestFitDecreasing();
+			currentBin = LFD.startPacking(elements, bins, size, solel, solbin);
+			break;
+			case 2:  DjangAndFinch DAF = new DjangAndFinch();
+			currentBin = DAF.startPacking(elements, bins, currentBin, size, solel, solbin);
+			break;
+			case 3:  DjangAndFinchTuples DAFT = new DjangAndFinchTuples();
+			currentBin = DAFT.startPacking(elements, bins, currentBin, size, solel, solbin);
+			break;
+			case 4:	LargestFitDecreasingFilter LFDF = new LargestFitDecreasingFilter();
+			currentBin = LFDF.startPacking(elements, bins, currentBin, size, solel, solbin);
+			break;
+			case 5:	NextFitDecreasingFilter NFDF = new NextFitDecreasingFilter();
+			currentBin = NFDF.startPacking(elements, bins, currentBin, size, solel, solbin);
+			break;
+			case 6:	DjangAndFinchFilter DAFF = new DjangAndFinchFilter();
+			currentBin = DAFF.startPacking(elements, bins, currentBin, size, solel, solbin);
+			break;
+			case 7:	DjangAndFinchTuplesFilter DAFTF = new DjangAndFinchTuplesFilter();
+			currentBin = DAFTF.startPacking(elements, bins, currentBin, size, solel, solbin);
+			break;
+			default:
+				break;*/
 				case 1:  LargestFitDecreasing LFD = new LargestFitDecreasing();
 				currentBin = LFD.startPacking(elements, bins, size, solel, solbin);
 				break;

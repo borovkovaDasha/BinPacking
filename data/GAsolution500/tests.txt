@@ -1,0 +1,35 @@
+test5 best
+1. population 32 fitness 1.0013071895424837 years 9.0 length 16
+2. population 0 fitness 1.0020886126069053 years 28.0 length 15
+3. population 18 fitness 1.0 years 26.0 length 14
+4. population 8 fitness 1.0 years 36.0 length 16
+5. population 26 fitness 1.001068376068376 years 18.0 length 16
+
+test6 balanced
+1. population 10 fitness 1.0018521595960974 years 21.0 length 16
+2. population 0 fitness 1.0020886126069053 years 28.0 length 15
+3. population 18 fitness 1.0 years 26.0 length 14
+4. population 8 fitness 1.0 years 36.0 length 16
+5. population 10 fitness 1.0033962144602875 years 25.0 length 16
+
+test7 best
+1. population 23 fitness 1.0 years 22.0 length 15
+2. population 26 fitness 1.0 years 18.0 length 16
+3. population 36 fitness 1.0 years 6.0 length 16
+4. population 20 fitness 1.0 years 15.0 length 16
+5. population 38 fitness 1.0 years 6.0 length 14
+
+test8 balanced
+1. population 4 fitness 1.0018564832627934 years 23.0 length 15
+2. population 20 fitness 1.0020330859616575 years 24.0 length 16
+3. population 0 fitness 1.0018994646912205 years 39.0 length 17
+4. population 2 fitness 1.001217871369704 years 54.0 length 16
+5. population 6 fitness 1.0032933896851954 years 66.0 length 15
+
+test9 test5+test7
+
+test10 test6+test8
+
+test11 test1+test3
+
+test12 test2+test4

@@ -7,11 +7,11 @@ import java.util.ArrayList;
 public class TestChromosome {
 	
 	public static final int ALGORITHM_NUMBER = 8;
-	public static final String RESULT_FILE = "C:\\data_for_binpacking\\GAIsolution500test\\test3.txt";
-	public static final String CHROMOSOME_TEST = "C:\\data_for_binpacking\\GAIresults500test\\testing3bin1.txt";
-	public static final String DATA_PATH = "C:\\data_for_binpacking\\bin1out\\";
+//	public static final String RESULT_FILE = "C:\\data_for_binpacking\\GAIsolution500test\\test3.txt";
+//	public static final String CHROMOSOME_TEST = "C:\\data_for_binpacking\\GAIresults500test\\testing3bin1.txt";
+	public static final String DATA_PATH = "D:\\data_for_binpacking\\bin1out\\";
 	public static final int NUMBER_OF_FILES = 720; // bin1
-	//public static final int NUMBER_OF_FILES = 400; // bin2
+//	public static final int NUMBER_OF_FILES = 480; // bin2
 	//public static final int NUMBER_OF_FILES = 1; //bin3
 	public Chromosome cleverchromosome;
 	public GeneticAlgorithm GA;
@@ -20,11 +20,11 @@ public class TestChromosome {
 	
 	public FileWriter writer;
 	 
-	public void start() throws Exception
+	public void start(String result_file, String chromosome_file) throws Exception
 	{
 		GA = new GeneticAlgorithm();
-		parseFile(RESULT_FILE);
-	    writer = new FileWriter(CHROMOSOME_TEST); 
+		parseFile(result_file);
+	    writer = new FileWriter(chromosome_file); 
 //		for (int j = 0; j <= ALGORITHM_NUMBER; j++)
 	    for (int j = 0; j <= 0; j++)
 		{
@@ -32,6 +32,9 @@ public class TestChromosome {
 			double p = 0;
 			for (int i = 1; i <= NUMBER_OF_FILES; i++)//GA.NUMBER_OF_FILES; i++)
 			{
+//				if (i >=310 && i < 400 || i > 420) {
+//					continue;
+//				}
 				int [][] elements = readFile(DATA_PATH + Integer.toString(i) + ".txt");
 				System.out.println("file " + i);
 				System.out.println("GA.size " + GA.size);
