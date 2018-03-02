@@ -58,13 +58,16 @@ public class GeneticAlgorithm {
 				else if (sCurrentLine.contains("Num of Bins:"))
 				{
 					int space = 0;
-					str = sCurrentLine.substring(23, sCurrentLine.length());
+					//str = sCurrentLine.substring(23, sCurrentLine.length());
+					str = sCurrentLine.substring(20, sCurrentLine.length());
 					if (str.contains(" "))
 					{
-						str = sCurrentLine.substring(23, sCurrentLine.length()-1);
+						str = sCurrentLine.substring(20, 22);
+						//str = sCurrentLine.substring(23, sCurrentLine.length()-1);
 					}
 					else
-						str = sCurrentLine.substring(23, sCurrentLine.length());
+						str = sCurrentLine.substring(20, 22);
+						//str = sCurrentLine.substring(23, sCurrentLine.length());
 					bestBinNums = Integer.parseInt(str);
 					System.out.println("bestBinNums " + bestBinNums);
 				}

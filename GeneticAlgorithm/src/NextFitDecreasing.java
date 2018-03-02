@@ -10,7 +10,7 @@ public class NextFitDecreasing {
 		//System.out.println("BIN - PACKING Algorithm 1D Objects(Next Fit Decreasing)");
 
 		//bin packing
-		System.exit(1);
+		//System.exit(1);
 		return binPacking(a, bins, currentBin, size, a.length, solel, solbin);
 	}
 	

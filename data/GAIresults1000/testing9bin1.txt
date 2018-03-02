@@ -148,7 +148,7 @@ File - 147 Number of best bins: 23.0 number of bins: 23.0 best bins: 23 algorith
 File - 148 Number of best bins: 23.0 number of bins: 23.0 best bins: 23 algorithm: 0
 File - 149 Number of best bins: 19.0 number of bins: 20.0 best bins: 19 algorithm: 0
 File - 150 Number of best bins: 22.0 number of bins: 22.0 best bins: 22 algorithm: 0
-File - 151 Number of best bins: 21.0 number of bins: 22.0 best bins: 21 algorithm: 0
+File - 151 Number of best bins: 21.0 number of bins: 21.0 best bins: 21 algorithm: 0
 File - 152 Number of best bins: 21.0 number of bins: 21.0 best bins: 21 algorithm: 0
 File - 153 Number of best bins: 21.0 number of bins: 22.0 best bins: 21 algorithm: 0
 File - 154 Number of best bins: 22.0 number of bins: 22.0 best bins: 22 algorithm: 0
@@ -328,7 +328,7 @@ File - 327 Number of best bins: 41.0 number of bins: 41.0 best bins: 41 algorith
 File - 328 Number of best bins: 38.0 number of bins: 38.0 best bins: 38 algorithm: 0
 File - 329 Number of best bins: 44.0 number of bins: 45.0 best bins: 44 algorithm: 0
 File - 330 Number of best bins: 43.0 number of bins: 44.0 best bins: 43 algorithm: 0
-File - 331 Number of best bins: 42.0 number of bins: 42.0 best bins: 42 algorithm: 0
+File - 331 Number of best bins: 42.0 number of bins: 43.0 best bins: 42 algorithm: 0
 File - 332 Number of best bins: 41.0 number of bins: 42.0 best bins: 41 algorithm: 0
 File - 333 Number of best bins: 43.0 number of bins: 44.0 best bins: 43 algorithm: 0
 File - 334 Number of best bins: 41.0 number of bins: 42.0 best bins: 41 algorithm: 0
@@ -508,7 +508,7 @@ File - 507 Number of best bins: 81.0 number of bins: 82.0 best bins: 81 algorith
 File - 508 Number of best bins: 82.0 number of bins: 83.0 best bins: 82 algorithm: 0
 File - 509 Number of best bins: 79.0 number of bins: 80.0 best bins: 79 algorithm: 0
 File - 510 Number of best bins: 83.0 number of bins: 84.0 best bins: 83 algorithm: 0
-File - 511 Number of best bins: 83.0 number of bins: 85.0 best bins: 83 algorithm: 0
+File - 511 Number of best bins: 83.0 number of bins: 84.0 best bins: 83 algorithm: 0
 File - 512 Number of best bins: 82.0 number of bins: 83.0 best bins: 82 algorithm: 0
 File - 513 Number of best bins: 83.0 number of bins: 84.0 best bins: 83 algorithm: 0
 File - 514 Number of best bins: 77.0 number of bins: 78.0 best bins: 77 algorithm: 0
@@ -614,7 +614,7 @@ File - 613 Number of best bins: 217.0 number of bins: 218.0 best bins: 217 algor
 File - 614 Number of best bins: 210.0 number of bins: 210.0 best bins: 210 algorithm: 0
 File - 615 Number of best bins: 212.0 number of bins: 212.0 best bins: 212 algorithm: 0
 File - 616 Number of best bins: 212.0 number of bins: 213.0 best bins: 212 algorithm: 0
-File - 617 Number of best bins: 210.0 number of bins: 210.0 best bins: 210 algorithm: 0
+File - 617 Number of best bins: 210.0 number of bins: 211.0 best bins: 210 algorithm: 0
 File - 618 Number of best bins: 212.0 number of bins: 213.0 best bins: 212 algorithm: 0
 File - 619 Number of best bins: 210.0 number of bins: 210.0 best bins: 210 algorithm: 0
 File - 620 Number of best bins: 212.0 number of bins: 212.0 best bins: 212 algorithm: 0

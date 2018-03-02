@@ -18,9 +18,9 @@ public class main {
 	}
 	
 	public static void main(String[] args) {
-		final File folderInput = new File("C://data_for_binpacking//bin2//");
-		final File folderOutput = new File("C://data_for_binpacking//bin2out//");
-		readResults("C://data_for_binpacking//resultsbin2.txt");
+		final File folderInput = new File("D://data_for_binpacking//bin3//");
+		final File folderOutput = new File("D://data_for_binpacking//bin3out//");
+		readResults("D://data_for_binpacking//resultsbin3.txt");
 		listFilesForFolder(folderInput, folderOutput);
 
 	}

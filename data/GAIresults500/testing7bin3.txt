@@ -1,0 +1,12 @@
+File - 1 Number of best bins: 57.0 number of bins: 59.0 best bins: 57 algorithm: 0
+File - 2 Number of best bins: 56.0 number of bins: 60.0 best bins: 56 algorithm: 0
+File - 3 Number of best bins: 55.0 number of bins: 60.0 best bins: 55 algorithm: 0
+File - 4 Number of best bins: 57.0 number of bins: 59.0 best bins: 57 algorithm: 0
+File - 5 Number of best bins: 56.0 number of bins: 60.0 best bins: 56 algorithm: 0
+File - 6 Number of best bins: 57.0 number of bins: 59.0 best bins: 57 algorithm: 0
+File - 7 Number of best bins: 55.0 number of bins: 60.0 best bins: 55 algorithm: 0
+File - 8 Number of best bins: 57.0 number of bins: 59.0 best bins: 57 algorithm: 0
+File - 9 Number of best bins: 56.0 number of bins: 60.0 best bins: 56 algorithm: 0
+File - 10 Number of best bins: 56.0 number of bins: 60.0 best bins: 56 algorithm: 0
+Result of - 0 sum of best: 562.0 sum of bins: 596.0 coeff: 1.0604982206405693
+sumOfBest 562 sumOfBins 596.0
