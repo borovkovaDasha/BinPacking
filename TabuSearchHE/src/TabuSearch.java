@@ -4,47 +4,86 @@ public class TabuSearch {
 	
 	private static int HEURISTICS_SIZE = 7;//8;
 	private static int NUMBER_OF_ITERATIONS = 1000;
-	private static int HEURISTICS_LIST_SIZE = 10;
+	private static int HEURISTICS_LIST_SIZE = 300;
 	private static int SHAKE_SIZE = 10;
 	private static int SHAKE_COUNT = 0;
 	private static int FILES_SIZE = 720;
+	private static int MAX_NUMBER = 10000;
 	private static int REPEATE = 3;
-	private static String FOLDER = "D:\\data_for_binpacking\\bin1out\\";
+	private static String FOLDER = "C:\\data_for_binpacking\\bin1out\\";
 	private ArrayList<Integer> heuristic_list_best;
-	private double sol_best;
+	private double sol_best_final;
 	private ArrayList<Integer> heuristic_list_best_ls;
 	private double sol_best_ls;
+	private double sol_best_ls_size;
+	private double sol_ls;
 	double bestBins;
 	double resBins;
+	int numberOfSolved;
 	
 	public void tabuSearch() {
 		heuristic_list_best = new ArrayList<Integer>();
+		heuristic_list_best_ls = new ArrayList<Integer>();
+		numberOfSolved = 0;
 		//List<int[]> tabuList = new ArrayList();
 		ArrayList<Integer> heuristic_list_new = new ArrayList<Integer>();
 		//sol_best = 1000.0;
-		//for (int i = 0; i < HEURISTICS_LIST_SIZE; i++) {
-			heuristic_list_best.add((int)5);//(int)(Math.random()*HEURISTICS_SIZE));
-		//}
-		sol_best = solve_all_tasks(heuristic_list_best);
-		System.out.println("starting best " + sol_best);
+		for (int i = 0; i < HEURISTICS_LIST_SIZE; i++) {
+			//heuristic_list_best.add((int)5);//(int)(Math.random()*HEURISTICS_SIZE));
+			heuristic_list_best.add((int)(Math.random()*HEURISTICS_SIZE));
+		}
+		sol_best_final = solve_all_tasks(heuristic_list_best);
+		heuristic_list_best_ls.add(5);
+		sol_best_ls = solve_all_tasks(heuristic_list_best_ls);
+		sol_best_ls_size = 1;
+		int max_number = 0;
 		for (int i = 0; i < NUMBER_OF_ITERATIONS; i++) {
 			// shaking
-			heuristic_list_new = shaking(heuristic_list_best);
-			// if heuristic_list_new is not in tabulist
-			// localsearch
-			localSearch(heuristic_list_new);
-			//System.out.println("result of local search " + sol_best_ls);
-			//System.out.println("current best =  " + sol_best);
-			if (sol_best_ls < sol_best) {
-				System.out.println("new is better " + sol_best_ls);
-				sol_best = sol_best_ls;
-				//add to tabulist
-				//remove the first from tabu
-				heuristic_list_best = heuristic_list_best_ls;
-				for (int j = 0; j < heuristic_list_best.size(); j++) {
-					System.out.print(heuristic_list_best.get(j) + " ");
+			while (numberOfSolved != FILES_SIZE || max_number == MAX_NUMBER) {
+				ArrayList<Integer> heuristic_for_shaking = new ArrayList<Integer>();
+				for (int j = 0; j < heuristic_list_best_ls.size(); j++)
+					heuristic_for_shaking.add(heuristic_list_best_ls.get(j));
+				heuristic_list_new = shaking(heuristic_for_shaking);
+				// if heuristic_list_new is not in tabulist
+				// localsearch
+				localSearch(heuristic_list_new);
+				max_number++;
+				//solve only part of task
+				double sol_best = solve_all_tasks(new ArrayList(heuristic_list_best.subList(0, heuristic_list_new.size())));
+				if (sol_ls <= sol_best ) {
+					//System.out.println("heuristic_list_new.size() " + heuristic_list_new.size());
+						sol_best_ls = sol_ls;
+						//System.out.println("new is better " + sol_best_ls);
+						sol_best_ls_size = heuristic_list_new.size();
+						//add to tabulist
+						//remove the first from tabu
+						for (int j = 0; j < heuristic_list_new.size(); j++) {
+							if (j >= heuristic_list_best_ls.size())
+								heuristic_list_best_ls.add(heuristic_list_new.get(j));
+							else
+								heuristic_list_best_ls.set(j, heuristic_list_new.get(j));
+						//}
+					}
+					//for (int j = 0; j < heuristic_list_best.size(); j++) {
+					//	System.out.print(heuristic_list_best.get(j) + " ");
+					//}
+					//System.out.println();
 				}
-				System.out.println();
+				//else
+				//	System.out.println("else! ");
+			}
+			if (numberOfSolved == FILES_SIZE) {
+				System.out.println("All solved!!!");
+				if (sol_best_ls <= sol_best_final) {
+					System.out.println("new solution is the best " + sol_best_ls);
+					for (int j = 0; j < heuristic_list_best_ls.size(); j++) {
+						System.out.print(heuristic_list_best_ls.get(j) + " ");
+					}
+					System.out.println();
+				}
+				heuristic_list_best_ls.clear();
+				heuristic_list_best_ls.add(5);
+				numberOfSolved = 0;
 			}
 		}
 	}
@@ -52,17 +91,16 @@ public class TabuSearch {
 	public void localSearch(ArrayList<Integer> heuristic_list_orig) {
 		ArrayList<Integer> list = heuristic_list_orig;
 		heuristic_list_best_ls = heuristic_list_orig;
-		sol_best_ls = solve_all_tasks(heuristic_list_orig);
+		sol_ls = solve_all_tasks(heuristic_list_orig);
 		//int i = (int)(Math.random()*(heuristic_list_orig.size()));
 		//int j = (int)(Math.random()*(heuristic_list_orig.size()));
-		
 		for (int i = 0; i < heuristic_list_orig.size() - 1; i++) {
 	           for (int k = i + 1; k < heuristic_list_orig.size(); k++) {
 	        	   list = opt2Swap(list, i, k);
 	        	   double sol_cur = solve_all_tasks(list);
-	               if (sol_cur < sol_best_ls) {
+	               if (sol_cur < sol_ls) {
 	            	   heuristic_list_best_ls = list;
-	            	   sol_best_ls = sol_cur;
+	            	   sol_ls = sol_cur;
 	            	   i = 0;
 	            	   k = i + 1;
 	               }
@@ -119,11 +157,11 @@ public class TabuSearch {
 		for (int i = 0; i <= shake_count; i++) {
 			int shake = (int)(Math.random()*SHAKE_SIZE);
 			switch (shake) {
-				case 0: case 1: case 2: case 6:  heuristic_list = shaking_swap(heuristic_list); 
+				case 0: heuristic_list = shaking_swap(heuristic_list); 
 				break;
-				case 3: case 4: case 5: case 7:  heuristic_list = shaking_change_random(heuristic_list);
+				case 3: case 4:  heuristic_list = shaking_change_random(heuristic_list);
 				break;
-				case 8:  heuristic_list = shaking_add(heuristic_list);
+				case 8: case 1: case 2: case 6: case 5: case 7:  heuristic_list = shaking_add(heuristic_list);
 				break;
 				case 9:  if (heuristic_list.size() > HEURISTICS_LIST_SIZE/2) heuristic_list = shaking_delete(heuristic_list);
 				else i--;
@@ -186,13 +224,13 @@ public class TabuSearch {
 		elements = rf.sort(elements);
 		int flag = 0;
 		int currentBin = 0;
-		int i = 0;
 		
-		while (flag == 0)
-		{
+		//while (flag == 0)
+		//{
+		for (int i = 0; i < heuristic_list.size(); i++) {
 			if (isSolved(elements))
 			{
-				flag = 1;
+				numberOfSolved++;
 				break;
 			}
 			int alg = (int)heuristic_list.get(i);
@@ -218,9 +256,9 @@ public class TabuSearch {
 				default:
 					break;
 			}
-			if (i == heuristic_list.size() - 1)
-				i = 0;
-			else i++;
+			//if (i == heuristic_list.size() - 1)
+			//	i = 0;
+			//else i++;
 			
 		}
 		double notEmptyBins = 0;
@@ -228,19 +266,19 @@ public class TabuSearch {
 			if (bins[j] < rf.binSize) {
 				notEmptyBins++;
 			}
-			if (bins[j] < 0) {
-				System.out.println("!!!");
-				System.exit(1);
-			}
+			//if (bins[j] < 0) {
+			//	System.out.println("!!!");
+			//	System.exit(1);
+			//}
 		}
-		if (notEmptyBins/rf.bestResult < 1) {
-			System.out.println("!!!error " + notEmptyBins/rf.bestResult);
-			System.exit(1);
-		}
+		//if (notEmptyBins/rf.bestResult < 1) {
+		//	System.out.println("!!!error " + notEmptyBins/rf.bestResult);
+		//	System.exit(1);
+		//}
 		//System.out.println("notEmptyBins " + notEmptyBins);
 		//System.out.println("elements.length " + elements.length);
-		bestBins = (double)rf.bestResult;
-		resBins = (double)notEmptyBins;
+		//bestBins = (double)rf.bestResult;
+		//resBins = (double)notEmptyBins;
 		return (double)notEmptyBins;
 	}
 	
