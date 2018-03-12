@@ -2,11 +2,24 @@ import java.util.ArrayList;
 
 public class SolveTask {
 	
-	private static int REPEATE = 1;
+	private static int REPEATE = 3;
 	double bestBins;
 	double resBins;
+	private static int FILES_SIZE = 720;
+	private static String FOLDER = "D:\\data_for_binpacking\\bin1out\\";
 	
-	public double solve(int LLHhIndex, ArrayList<Integer> heuristic_list, String fileName) {
+	public double solveAllTasks(ArrayList<Integer> heuristic_list) {
+		double solution = 0;
+		for (int i = 1; i <= FILES_SIZE; i++) {
+			bestBins = 0;
+			resBins = 0;
+			SolveTask st = new SolveTask();
+			solution += st.solve(heuristic_list, (FOLDER + i + ".txt"));
+		}
+		return solution;
+	}
+	
+	public double solve(ArrayList<Integer> heuristic_list, String fileName) {
 		ReadingFile rf = new ReadingFile();
 		int[][] elements = rf.readFile(fileName);
 		int[] bins = new int[elements.length];
@@ -18,28 +31,13 @@ public class SolveTask {
 			bins[i] = rf.binSize;
 		}
 		elements = rf.sort(elements);
-		int flag = 0;
 		int currentBin = 0;
-		
-		for (int i = 0; i <= heuristic_list.size(); i++)
+		int alg = 0;
+		int i = 0;
+		while(!isSolved(elements))
 		{
-			if (isSolved(elements))
-			{
-				flag = 1;
-				return -1;
-			}
-			int alg = 0;
-			if (i == heuristic_list.size() && LLHhIndex != -1) {
-				System.out.println("use LLHhIndex " + LLHhIndex);
-				alg = LLHhIndex;
-			}
-			else if (i == heuristic_list.size() && LLHhIndex == -1) {
-				break;
-			}
-			else {
-				alg = (int)heuristic_list.get(i);
-				System.out.println("alg " + alg);
-			}
+			alg = (int)heuristic_list.get(i);
+			System.out.println("alg " + alg);
 			switch (alg) {
 				case 0:  for (int j = 0; j < REPEATE; j++) currentBin = LargestFitDecreasing.startPacking(elements, bins, rf.binSize, solel, solbin);
 				break;
@@ -251,6 +249,12 @@ public class SolveTask {
 				break;
 				default:
 					break;
+			}
+			if (i == heuristic_list.size() - 1) {
+				i = 0;
+			}
+			else {
+				i++;
 			}
 			
 		}

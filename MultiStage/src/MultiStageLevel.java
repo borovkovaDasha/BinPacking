@@ -13,17 +13,18 @@ public class MultiStageLevel {
 	ArrayList<Integer> SBestOverAll;
 	ArrayList<Integer> SBestStage;
 	int counter;
-	private final int TERMINATION_CRITERIA = 10;
-	private final int TERMINATION_CRITERIA_S1HH = 10;
+	private final int TERMINATION_CRITERIA = 20;
+	private final int TERMINATION_CRITERIA_S1HH = 20;
 	private final int TERMINATION_CRITERIA_S2HH = 10;
 	private final int TIME_IMPOVED = 100;
 	
 	void start () {
 		int termination_criteria = 0;
 		initializeHeuristic();
+		int timeImproved = 0;
 		while (termination_criteria < TERMINATION_CRITERIA) {
 			S1HH s1hh = new S1HH(score, SInputStage1, SBestOverAll, SBestStage);
-			s1hh.solve(0, C[counter]);
+			s1hh.solve(timeImproved, TIME_IMPOVED, C[counter]);
 			termination_criteria++;
 		}
 		
@@ -38,7 +39,6 @@ public class MultiStageLevel {
 		SBestStage = new ArrayList<Integer>();
 		for (int i = 0; i < HEURISTIC_SIZE; i++) {
 			int alg = (int)(Math.random()*ALGORITHM_SIZE);
-			SInitial.add(alg);
 			SCurrent.add(alg);
 			SInputStage1.add(alg);
 			SInputStage2.add(alg);

@@ -7,9 +7,9 @@ public class S1HH {
 	ArrayList<Integer> SInputStage1;
 	ArrayList<Integer> SBestOverAll;
 	ArrayList<Integer> SBestStage;
-	private static int TIME_ELAPSED = 10;
-	private static int LIMIT = 10;
-	String fileName = "C:\\data_for_binpacking\\bin1out\\1.txt";
+	private static int LIMIT = 20;
+	private static int FILES_SIZE = 720;
+	private static String FOLDER = "D:\\data_for_binpacking\\bin1out\\";
 	
 	S1HH(double[] score, ArrayList<Integer> SInputStage1, ArrayList<Integer> SBestOverAll, ArrayList<Integer> SBestStage) {
 		this.score = score;
@@ -19,51 +19,49 @@ public class S1HH {
 		this.SBestStage = SBestStage;
 	}
 	
-	void solve(int timeImproved, double c) {
+	int solve(int timeImproved, int TIME_IMPROVED_MAXIMUM, double c) {
 		int hIndex = rouletteWheelSelection();
 		System.out.println("hIndex = " + hIndex);
 		int counter = 0;
 		double elipson = 0.0;
-		if (timeImproved >= TIME_ELAPSED) {
+		if (timeImproved >= TIME_IMPROVED_MAXIMUM) {
 			System.out.println("timeImproved = " + timeImproved);
-			SCurrent = SBestStage;
+			SCurrent = listEquals(SBestStage);
 			elipson = updateElipson(c);
 			System.out.println("elipson = " + elipson);
-			timeImproved++;
+			timeImproved = 0;
 		}
 		while(counter < LIMIT) {
 			double SNew = 0.0;
+			ArrayList<Integer> new_heuristic_list = getNewList(hIndex, SCurrent);
 			SolveTask st = new SolveTask();
-			SNew = st.solve(hIndex, SCurrent, fileName);
-			System.out.println("SNew " + SNew);
-			if (SNew == -1) {
-				System.out.println("SOLVED!!!");
-				System.exit(0);
-			}
-			double solutionBestStage = st.solve(-1, SBestStage, fileName);
+			SNew = st.solveAllTasks(new_heuristic_list);
+			double solutionBestStage = st.solveAllTasks(SBestStage);
 			System.out.println("solutionBestStage + " + solutionBestStage);
-			double solutionCurrent = st.solve(-1, SCurrent, fileName);
+			double solutionCurrent = st.solveAllTasks(SCurrent);
 			System.out.println("solutionCurrent + " + solutionCurrent);
-			double solutionBestOverAll = st.solve(-1, SBestOverAll, fileName);
+			double solutionBestOverAll = st.solveAllTasks(SBestOverAll);
 			System.out.println("solutionBestOverAll + " + solutionBestOverAll);
-			if (SNew <= solutionCurrent || SNew <= (1 + elipson)*solutionBestStage) {
+			if (SNew < solutionCurrent || SNew < (1 + elipson)*solutionBestStage) {
 				System.out.println("SCurrent.add + " + hIndex);
 				SCurrent.add(hIndex);
 				solutionCurrent = SNew;
 			}
-			if (solutionCurrent <= solutionBestStage) {
-				SBestStage = SCurrent;
-				timeImproved++;
-				System.out.println("solutionCurrent <= solutionBestStage timeImproved = " + timeImproved);
+			if (solutionCurrent < solutionBestStage) {
+				SBestStage = listEquals(SCurrent);
+				timeImproved = -1;
+				System.out.println("solutionCurrent < solutionBestStage timeImproved = " + timeImproved);
 			}
-			if (solutionCurrent <= solutionBestOverAll) {
-				System.out.println("solutionCurrent <= solutionBestOverAll ");
+			if (solutionCurrent < solutionBestOverAll) {
+				System.out.println("solutionCurrent < solutionBestOverAll ");
 				SBestOverAll = SCurrent;
 			}
 			counter ++;
+			timeImproved++;
 		}
-		SInputStage1 = SCurrent;
+		SInputStage1 = listEquals(SCurrent);
 		//return SCurrent, SBestOverAll, SBestStage
+		return timeImproved;
 	}
 	
 	int rouletteWheelSelection() {
@@ -89,8 +87,25 @@ public class S1HH {
 
 	double updateElipson(double c) {
 		SolveTask st = new SolveTask();
-		double solution = st.solve(-1, SBestStage, fileName);
+		double solution = st.solveAllTasks(SBestStage);
 		double elipson = (Math.log(solution) + c)/solution;
 		return elipson;
+	}
+	
+	public ArrayList<Integer> getNewList(int hIndex, ArrayList<Integer> heuristic_list) {
+		ArrayList<Integer> new_heuristic_list = new ArrayList<Integer>();
+		for (int i = 0; i < heuristic_list.size(); i++) {
+			new_heuristic_list.add(heuristic_list.get(i));
+		}
+		new_heuristic_list.add(hIndex);
+		return new_heuristic_list;
+	}
+	
+	public ArrayList<Integer> listEquals(ArrayList<Integer> heuristic_list) {
+		ArrayList<Integer> new_heuristic_list = new ArrayList<Integer>();
+		for (int i = 0; i < heuristic_list.size(); i++) {
+			new_heuristic_list.add(heuristic_list.get(i));
+		}
+		return new_heuristic_list;
 	}
 }
