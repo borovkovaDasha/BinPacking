@@ -68,10 +68,10 @@ public class TabuSearch {
 					System.out.print(heuristic_list_best_ls.get(j) + " ");
 				}
 				System.out.println();
-				heuristic_list_best_ls.clear();
-				for (int j = 0; j < HEURISTICS_LIST_SIZE; j++) {
-					heuristic_list_best_ls.add((int)(Math.random()*HEURISTICS_SIZE));
-				}
+				//heuristic_list_best_ls.clear();
+				//for (int j = 0; j < HEURISTICS_LIST_SIZE; j++) {
+				//	heuristic_list_best_ls.add((int)(Math.random()*HEURISTICS_SIZE));
+				//}
 			}
 		}
 	}
@@ -144,10 +144,10 @@ public class TabuSearch {
 		ArrayList<Integer> list = heuristic_list;
 		for (int i = 0; i < num_of_shaking; i++) {
 			int probability = (int)(Math.random()*2);
-			if (probability == 0) {
+			if (probability == 0 && (heuristic_list.size() > HEURISTICS_LIST_SIZE/4)) {
 				list = shaking_delete(heuristic_list);
 			}
-			else if (heuristic_list.size() > HEURISTICS_LIST_SIZE/4){
+			else if (probability == 1) {
 				list = shaking_add(heuristic_list);
 			}
 			else {

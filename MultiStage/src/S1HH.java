@@ -8,8 +8,6 @@ public class S1HH {
 	ArrayList<Integer> SBestOverAll;
 	ArrayList<Integer> SBestStage;
 	private static int LIMIT = 20;
-	private static int FILES_SIZE = 720;
-	private static String FOLDER = "D:\\data_for_binpacking\\bin1out\\";
 	
 	S1HH(double[] score, ArrayList<Integer> SInputStage1, ArrayList<Integer> SBestOverAll, ArrayList<Integer> SBestStage) {
 		this.score = score;
@@ -26,14 +24,14 @@ public class S1HH {
 		double elipson = 0.0;
 		if (timeImproved >= TIME_IMPROVED_MAXIMUM) {
 			System.out.println("timeImproved = " + timeImproved);
-			SCurrent = listEquals(SBestStage);
+			SCurrent = ListFunctions.listEquals(SBestStage);
 			elipson = updateElipson(c);
 			System.out.println("elipson = " + elipson);
 			timeImproved = 0;
 		}
 		while(counter < LIMIT) {
 			double SNew = 0.0;
-			ArrayList<Integer> new_heuristic_list = getNewList(hIndex, SCurrent);
+			ArrayList<Integer> new_heuristic_list = ListFunctions.getNewList(hIndex, SCurrent);
 			SolveTask st = new SolveTask();
 			SNew = st.solveAllTasks(new_heuristic_list);
 			double solutionBestStage = st.solveAllTasks(SBestStage);
@@ -48,18 +46,18 @@ public class S1HH {
 				solutionCurrent = SNew;
 			}
 			if (solutionCurrent < solutionBestStage) {
-				SBestStage = listEquals(SCurrent);
+				SBestStage = ListFunctions.listEquals(SCurrent);
 				timeImproved = -1;
 				System.out.println("solutionCurrent < solutionBestStage timeImproved = " + timeImproved);
 			}
 			if (solutionCurrent < solutionBestOverAll) {
 				System.out.println("solutionCurrent < solutionBestOverAll ");
-				SBestOverAll = SCurrent;
+				SBestOverAll = ListFunctions.listEquals(SCurrent);
 			}
 			counter ++;
 			timeImproved++;
 		}
-		SInputStage1 = listEquals(SCurrent);
+		SInputStage1 = ListFunctions.listEquals(SCurrent);
 		//return SCurrent, SBestOverAll, SBestStage
 		return timeImproved;
 	}
@@ -90,22 +88,5 @@ public class S1HH {
 		double solution = st.solveAllTasks(SBestStage);
 		double elipson = (Math.log(solution) + c)/solution;
 		return elipson;
-	}
-	
-	public ArrayList<Integer> getNewList(int hIndex, ArrayList<Integer> heuristic_list) {
-		ArrayList<Integer> new_heuristic_list = new ArrayList<Integer>();
-		for (int i = 0; i < heuristic_list.size(); i++) {
-			new_heuristic_list.add(heuristic_list.get(i));
-		}
-		new_heuristic_list.add(hIndex);
-		return new_heuristic_list;
-	}
-	
-	public ArrayList<Integer> listEquals(ArrayList<Integer> heuristic_list) {
-		ArrayList<Integer> new_heuristic_list = new ArrayList<Integer>();
-		for (int i = 0; i < heuristic_list.size(); i++) {
-			new_heuristic_list.add(heuristic_list.get(i));
-		}
-		return new_heuristic_list;
 	}
 }

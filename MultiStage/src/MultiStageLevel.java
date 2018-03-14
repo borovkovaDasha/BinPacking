@@ -22,10 +22,22 @@ public class MultiStageLevel {
 		int termination_criteria = 0;
 		initializeHeuristic();
 		int timeImproved = 0;
-		while (termination_criteria < TERMINATION_CRITERIA) {
+		//firstStage
+		while (termination_criteria < TERMINATION_CRITERIA_S1HH) {
 			S1HH s1hh = new S1HH(score, SInputStage1, SBestOverAll, SBestStage);
 			s1hh.solve(timeImproved, TIME_IMPOVED, C[counter]);
 			termination_criteria++;
+		}
+		if (counter == C.length - 1) {
+			SBestStage = listEquals(SCurrent);
+		}
+		
+		//secondStage
+		if (Math.random() < PS2HH) {
+			SolveTask st = new SolveTask();
+			if (st.solveAllTasks(SBestStage) <= st.solveAllTasks(SInputStage2)) {
+				
+			}
 		}
 		
 	}
@@ -51,5 +63,13 @@ public class MultiStageLevel {
 				score[i] = 1;
 			else score[i] = 0;
 		}
+	}
+	
+	public ArrayList<Integer> listEquals(ArrayList<Integer> heuristic_list) {
+		ArrayList<Integer> new_heuristic_list = new ArrayList<Integer>();
+		for (int i = 0; i < heuristic_list.size(); i++) {
+			new_heuristic_list.add(heuristic_list.get(i));
+		}
+		return new_heuristic_list;
 	}
 }
