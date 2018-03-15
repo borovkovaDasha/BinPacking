@@ -17,4 +17,11 @@ public class ListFunctions {
 		}
 		return new_heuristic_list;
 	}
+	
+	public static void printList(ArrayList<Integer> heuristic_list) {
+		for (int i = 0; i < heuristic_list.size(); i++) {
+			System.out.print(heuristic_list.get(i) + " ");
+		}
+		System.out.println();
+	}
 }

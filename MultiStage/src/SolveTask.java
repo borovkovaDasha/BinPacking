@@ -37,7 +37,7 @@ public class SolveTask {
 		while(!isSolved(elements))
 		{
 			alg = (int)heuristic_list.get(i);
-			System.out.println("alg " + alg);
+			//System.out.println("alg " + alg);
 			switch (alg) {
 				case 0:  for (int j = 0; j < REPEATE; j++) currentBin = LargestFitDecreasing.startPacking(elements, bins, rf.binSize, solel, solbin);
 				break;
@@ -248,6 +248,8 @@ public class SolveTask {
 				currentBin = DjangAndFinchTuplesFilter.startPacking(elements, bins, currentBin, rf.binSize, solel, solbin);
 				break;
 				default:
+					System.out.println("default?");
+					System.exit(1);
 					break;
 			}
 			if (i == heuristic_list.size() - 1) {
