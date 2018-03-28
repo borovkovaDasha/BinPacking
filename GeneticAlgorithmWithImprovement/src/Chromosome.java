@@ -10,6 +10,7 @@ public class Chromosome {
 	public List<Genome> chromosome;
 	public double years;
 	public int remainbunssize;
+	ArrayList<Integer> solveSeq;
 	
 	public Chromosome(int flag)
 	{
@@ -34,6 +35,7 @@ public class Chromosome {
 
 	public double solveProblem(int[][] elements, int size, int algnum, int bestResult)
 	{
+		solveSeq = new ArrayList<>();
 		int[] bins = new int[elements.length];
 		final ArrayList<Integer> solel = new ArrayList<Integer>();
 		final ArrayList<Integer> solbin = new ArrayList<Integer>();
@@ -94,6 +96,7 @@ public class Chromosome {
 			default:
 				break;
 		}
+			solveSeq.add(alg);
 		}
 				double notEmptyBins = 0;
 				int sumOfElements = 0;
@@ -118,8 +121,8 @@ public class Chromosome {
 					}*/
 					System.exit(1);
 				}
-				System.out.println("notEmptyBins " + notEmptyBins);
-				System.out.println("elements.length " + elements.length);
+				//System.out.println("notEmptyBins " + notEmptyBins);
+				//System.out.println("elements.length " + elements.length);
 				fitnessSum = fitnessSum + notEmptyBins/bestResult;
 				fitness = fitnessSum/years;
 				return notEmptyBins;
