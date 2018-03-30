@@ -1,29 +1,14 @@
-import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.OutputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
 public class GeneticAlgorithm {
 	public static final int POPULATION_SIZE = 40;
-	//public static final int CHROMOSOME_SIZE = 40;
 	public static final int NUMBER_OF_TASKS = 4;
-	public static final int NUMBER_OF_GA_ITERATIONS = 100;
-	public static final String RESULT_PATH = "D:\\data_for_binpacking\\solution\\";
-	//public static final int NUMBER_OF_FILES = 720;
-	//public static final int NUMBER_OF_FILES1 = 700;
-	//public static final int NUMBER_OF_FILES2 = 400;
-	//public static final int NUMBER_OF_FOLDER = 1;
+	//public static final String RESULT_PATH = "D:\\data_for_binpacking\\solution\\";
 	public static final String DATA_PATH = "D:\\data_for_binpacking\\bin1out\\";
-	//public static final String FILE_WITH_RESULTS = "C:\\data_for_binpacking\\bin1data\\results.txt";
-	int fileNum;
 	public static int size;
 	public static int bestBinNums;
 	List<Chromosome> population;
@@ -57,7 +42,6 @@ public class GeneticAlgorithm {
 				}
 				else if (sCurrentLine.contains("Num of Bins:"))
 				{
-					int space = 0;
 					str = sCurrentLine.substring(23, sCurrentLine.length());
 					if (str.contains(" "))
 					{
@@ -66,7 +50,6 @@ public class GeneticAlgorithm {
 					else
 						str = sCurrentLine.substring(23, sCurrentLine.length());
 					bestBinNums = Integer.parseInt(str);
-					//System.out.println("bestBinNums " + bestBinNums);
 				}
 				else
 				{
@@ -91,49 +74,17 @@ public class GeneticAlgorithm {
 				ex.printStackTrace();
 			}
 		}
-		int sum = 0;
-		//System.out.println("sum = " + sum);
-		//System.out.println("read file " + fileName);
-		//System.out.println("size = " + size);
-		//System.out.println("n = " + n);
 		return elements;
 	}
 	
-	public void writeFile(int num, int chromosomeNum) throws IOException
-	{
-		/*String s = "";
-	    for (int i = 0; i < population.size(); i++)
-	    {
-	    	s = s + "population " + i + " fitness " + population.get(i).fitness + " years " +  population.get(i).years + " length " + population.get(i).chromosome.size() + "\n"; 
-	    }
-	    s = s + "\n";
-	    for (int i = 0; i < population.size(); i++)
-	    {
-	    	for (int j = 0; j < population.get(i).chromosome.size(); j++)
-	    	{
-	    		s = s + population.get(i).chromosome.get(j).hugeItems + " " + population.get(i).chromosome.get(j).largeItems + " " + population.get(i).chromosome.get(j).mediumItems + " " + population.get(i).chromosome.get(j).smallItems + " " + population.get(i).chromosome.get(j).remainingItems + " " +population.get(i).chromosome.get(j).prevAlgorithm + " " + population.get(i).chromosome.get(j).algorithmNumber + "\n"; 
-	    	}
-	    	System.out.println("years - " + population.get(i).years);
-	    }*/
-		String s = "fitness = " + population.get(chromosomeNum).fitness + "\n";
-		for (int i = 0; i < population.get(chromosomeNum).solveSeq.size(); i++) {
-			s = s + population.get(chromosomeNum).solveSeq.get(i) + " ";
-		}
-		System.out.println("file " + num + " fitness " + population.get(chromosomeNum).fitness);
-	    String path = RESULT_PATH + num + ".txt";
-	    FileWriter writer = new FileWriter(path); 
-	    writer.write(s); 
-	    writer.flush();
-	    writer.close();
-	}
 	
-	public void go(int num) throws IOException{
-		fileNum = num;
-		initializePopulation();
+	public Chromosome go(List files, int GAIterations) throws IOException{
+		initializePopulation(files);
 		childrens = new ArrayList<Chromosome>();
-		for (int i = 0; i < NUMBER_OF_GA_ITERATIONS; i++)
+		System.out.println("GAIterations " + GAIterations);
+		System.out.println("files.size() " + files.size());
+		for (int i = 0; i < GAIterations; i++)
 		{
-			//System.out.println("!!!Generation is - " + i);
 			int[] flag = new int[population.size()];
 			for (int j = 0; j < population.size(); j++)
 			{
@@ -159,13 +110,11 @@ public class GeneticAlgorithm {
 			{
 				for (int k = 0; k < NUMBER_OF_TASKS; k++)
 				{
-					int tmp = num;
-					String fileName = DATA_PATH + (tmp) + ".txt";
+					int tmp = (int)(Math.random() * files.size()) + 1;
+					String fileName = DATA_PATH + tmp + ".txt";
 					int[][]elements = readFile(fileName);
 					childrens.get(j).solveProblem(elements, size, 0, bestBinNums);
-					//System.out.println("Children " + j + " solves problem " + fileName + " bins - " + childrens.get(j).fitness + " bestResult = " + bestBinNums);
 				}
-				//System.out.println("Children " + j + " fitness - " + childrens.get(j).fitness);
 			}
 			int[] flagss = new int[population.size()];
 			for (int j = 0; j < population.size(); j++)
@@ -182,13 +131,12 @@ public class GeneticAlgorithm {
 			population.add(findTheBest(childrens, flagsss));
 			population.add(findTheBest(childrens, flagsss));
 			childrens.clear();
-			int x = (int)num;
-			String fileName = DATA_PATH + (x) + ".txt";
+			int x = (int)(Math.random() * files.size()) + 1;
+			String fileName = DATA_PATH + x + ".txt";
 			int[][]elements = readFile(fileName);
 			for (int j = 0; j < population.size(); j ++)
 			{
 				population.get(j).solveProblem(elements, size, 0, bestBinNums);
-				//System.out.println("Population " + j + " solves problem " + fileName + " bins - " + population.get(j).fitness + " bestResult = " + bestBinNums);
 				for (int k = 0; k < elements.length; k++)
 				{
 					elements[k][1] = 0;				
@@ -200,9 +148,8 @@ public class GeneticAlgorithm {
 		{
 			flags[j] = 0;
 		}
-        int bestChromosome = findTheLastTheBest(population, flags);
-		//System.out.println("The best result is " + bestChromosome);
-		writeFile(num, bestChromosome);
+		Chromosome best = findTheLastTheBest(population);
+		return best;
 	}
 	
 	public Chromosome findTheBest(List<Chromosome> popul, int[] flag)
@@ -228,18 +175,17 @@ public class GeneticAlgorithm {
 			}
 		}
 		flag[x] = 1;
-		//System.out.println("The best x " + x);
 		return popul.get(x);
 	}
 	
-	public int findTheLastTheBest(List<Chromosome> popul, int[] flag)
+	public Chromosome findTheLastTheBest(List<Chromosome> popul)
 	{
 		Chromosome tmp = new Chromosome(0);
 		tmp.fitness = 1000000000;
 		int x = 0;
 		for (int i = 0; i < popul.size(); i++)
 		{
-			if ((flag[i] != 1) && (popul.get(i).fitness < tmp.fitness))
+			if (popul.get(i).fitness < tmp.fitness)
 			{
 				tmp = popul.get(i);
 				x = i;
@@ -253,12 +199,10 @@ public class GeneticAlgorithm {
 					x = i;
 				}
 			}
-			//System.out.println("i = " + i + " size = " + popul.get(i).chromosome.size());
 		}
-		flag[x] = 1;
-		//System.out.println("The best years " + popul.get(x).years);
-		return x;
+		return popul.get(x);
 	}
+
 	
 	public Chromosome findTheWorst(List<Chromosome> popul, int[] flag)
 	{
@@ -283,7 +227,6 @@ public class GeneticAlgorithm {
 			}
 		}
 		flag[x] = 1;
-		//System.out.println("The worst x " + x);
 		return popul.get(x);
 	}
 	
@@ -301,10 +244,9 @@ public class GeneticAlgorithm {
 		}
 	}
 	
-	public void initializePopulation(){
-		int xxx = (int)fileNum;
-		String fileName = DATA_PATH + (xxx) + ".txt";
-		//System.out.println(fileName);
+	public void initializePopulation(List files){
+		int xxx = (int)(Math.random() * files.size()) + 1;
+		String fileName = DATA_PATH + xxx + ".txt";
 		int[][]elements = readFile(fileName);
 		population = new ArrayList<Chromosome>();
 		
@@ -312,7 +254,6 @@ public class GeneticAlgorithm {
 		{
 			Chromosome tmp = new Chromosome(1);
 			tmp.solveProblem(elements, size, 0, bestBinNums);
-			//System.out.println("chromosome - " + i +" uses number of bins = " + tmp.fitness + " bestResult = " + bestBinNums);
 			population.add(tmp);
 			for (int j = 0; j < elements.length; j++)
 			{

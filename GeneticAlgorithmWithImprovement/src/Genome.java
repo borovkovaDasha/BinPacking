@@ -1,11 +1,5 @@
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 public class Genome {
-	    //final String str;
-	    //final int fitness;
 	public static final int ALGORITHM_NUMBER = 8;
 	double hugeItems, largeItems, mediumItems, smallItems, remainingItems;
 	int algorithmNumber, prevAlgorithm;
@@ -19,15 +13,7 @@ public class Genome {
 		    smallItems = Math.random();
 		    remainingItems = Math.random();
 		    algorithmNumber = (int)(Math.random()*ALGORITHM_NUMBER) + 1;
-		    /*while (algorithmNumber == 2)
-		    {
-		    	algorithmNumber = (int)(Math.random()*ALGORITHM_NUMBER) + 1;
-		    }*/
 		    prevAlgorithm =(int)(Math.random()*ALGORITHM_NUMBER) + 1;
-		    /*while (prevAlgorithm == 2)
-		    {
-		    	prevAlgorithm = (int)(Math.random()*ALGORITHM_NUMBER) + 1;
-		    }*/
 		}
 		else
 		{
@@ -39,5 +25,15 @@ public class Genome {
 		    algorithmNumber = 0;
 		    prevAlgorithm = 0;
 		}
+	}
+	
+	public String toString() {
+		String debugLine = hugeItems + " " + largeItems + " " + mediumItems + " " + smallItems +
+				" " + remainingItems + " " + algorithmNumber + " " + prevAlgorithm;
+		return debugLine;
+	}
+	public String toStringAlg() {
+		String debugLine = algorithmNumber + " " ;
+		return debugLine;
 	}
 }

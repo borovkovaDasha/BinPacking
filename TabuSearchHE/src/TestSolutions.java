@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class TestSolutions {
 	
-	public static final int ALGORITHM_NUMBER = 8;
+	public static final int ALGORITHM_NUMBER = 7;
 	public static final String DATA_PATH = "D:\\data_for_binpacking\\bin2out\\";
 	public static final String RESULT_FILE = "D:\\data_for_binpacking\\tabu\\res1bin2.txt";
 	public static final int NUMBER_OF_FILES = 480;
@@ -12,7 +12,7 @@ public class TestSolutions {
 	
 	public void start() throws Exception
 	{
-		int[] hyper_heuristic_arr = {6, 6, 6, 5, 6, 6, 5};
+		int[] hyper_heuristic_arr = {5, 5, 6, 2, 5, 5, 5};
 		ArrayList<Integer> hyper_heuristic = new ArrayList<Integer>();
 		for (int i = 0; i < hyper_heuristic_arr.length; i++) {
 			hyper_heuristic.add(hyper_heuristic_arr[i]);
@@ -31,9 +31,10 @@ public class TestSolutions {
 				}
 				System.out.println("file " + i);
 				double t = ts.solve(hyper_heuristic, (DATA_PATH + Integer.toString(i) + ".txt"));
-				sumOfBins = sumOfBins + ts.resBins;
+				//System.out.println("ts.resBins " + ts.resBins);
+				sumOfBins = sumOfBins + t;
 				sumOfBest = sumOfBest + ts.bestBins;
-				writeFile(i, ts.bestBins, ts.resBins, j);
+				writeFile(i, ts.bestBins, t, j);
 			}
 			writeResFile(sumOfBest,sumOfBins,j);
 			sumOfBest = 0;

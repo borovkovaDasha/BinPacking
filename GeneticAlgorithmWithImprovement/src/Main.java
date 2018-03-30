@@ -1,13 +1,7 @@
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		System.out.println("GA");
-		for (int i = 1; i <= 720; i++)
-		{
-			System.out.println("!!!!!GA " + i);
-			GeneticAlgorithm GA = new GeneticAlgorithm();
-			GA.go(i);
-		}
+
 		/*String[] result_files = new String[6];
 		result_files[0] = "D:\\data_for_binpacking\\GAIsolution500\\test1.txt";
 		result_files[1] = "D:\\data_for_binpacking\\GAIsolution500\\test2.txt";
@@ -57,6 +51,8 @@ public class Main {
 			TestChromosome TC = new TestChromosome();
 			TC.start(result_files[i],chromosome_files[i]);
 		}*/
+		Clustering clustering = new Clustering();
+		clustering.start_clustering(5);
 	}
 }
 

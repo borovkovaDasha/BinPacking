@@ -3,14 +3,14 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Chromosome {
-	public int CHROMOSOME_SIZE = 16;
+	public int CHROMOSOME_SIZE = 10;
 	public double fitness = 0;
 	public double fitnessSum = 0;
 	
 	public List<Genome> chromosome;
 	public double years;
 	public int remainbunssize;
-	ArrayList<Integer> solveSeq;
+	ArrayList<Genome> solveSeq;
 	
 	public Chromosome(int flag)
 	{
@@ -48,6 +48,7 @@ public class Chromosome {
 					bins[i] = size;
 				}
 				int alg = 0;
+				Genome gen = new Genome(0);
 				elements = sort(elements);
 				int flag = 0;
 				int currentBin = 0;
@@ -61,7 +62,8 @@ public class Chromosome {
 					}
 					if (algnum == 0)
 					{
-						alg = findCloser(state);
+						gen = findCloser(state);
+						alg = gen.algorithmNumber;
 					}
 					else
 					{
@@ -96,7 +98,7 @@ public class Chromosome {
 			default:
 				break;
 		}
-			solveSeq.add(alg);
+			solveSeq.add(gen);
 		}
 				double notEmptyBins = 0;
 				int sumOfElements = 0;
@@ -128,9 +130,9 @@ public class Chromosome {
 				return notEmptyBins;
 	}
 	
-	public int findCloser(Genome gen){//List<Genome> chromosome, Genome gen){
-		int algorithm = 0;
+	public Genome findCloser(Genome gen){//List<Genome> chromosome, Genome gen){
 		double tmpres = 100;
+		Genome closest = new Genome(0);
 		for (int i = 0; i < chromosome.size(); i++)
 		{
 			Genome tmp = chromosome.get(i);
@@ -139,14 +141,20 @@ public class Chromosome {
 			if(Math.sqrt(Math.pow(tmp.hugeItems-gen.hugeItems,2) + Math.pow(tmp.largeItems-gen.largeItems,2)
 			+ Math.pow(tmp.smallItems-gen.smallItems,2) + Math.pow(tmp.remainingItems-gen.remainingItems,2) + Math.pow(tmp.prevAlgorithm-gen.prevAlgorithm,2)) < tmpres)
 			{
-				algorithm = tmp.algorithmNumber;
+				closest.hugeItems = tmp.hugeItems;
+				closest.largeItems = tmp.largeItems;
+				closest.mediumItems = tmp.mediumItems;
+				closest.smallItems = tmp.smallItems;
+				closest.remainingItems = tmp.remainingItems;
+				closest.prevAlgorithm = tmp.prevAlgorithm;
+				closest.algorithmNumber = tmp.algorithmNumber;
 				////System.out.println("new closet algorithm is " + algorithm);
 				tmpres = Math.sqrt(Math.pow(tmp.hugeItems-gen.hugeItems,2) + Math.pow(tmp.largeItems-gen.largeItems,2)
 				+ Math.pow(tmp.smallItems-gen.smallItems,2) + Math.pow(tmp.remainingItems-gen.remainingItems,2) + Math.pow(tmp.prevAlgorithm-gen.prevAlgorithm,2));
 			}
 		}
 		//System.out.println("the closet algorithm is " + algorithm);
-		return algorithm;
+		return closest;
 	}
 	
 	public Genome getCurrentState(int[][]a, int size, int prevAlgorithm){
