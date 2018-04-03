@@ -1,3 +1,4 @@
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,10 +11,11 @@ public class Clustering {
 	HashMap filesIterations;
 	int firstSeq;
 	int secondSeq;
+	public static String RESULT_PATH = "D:\\data_for_binpacking\\solution\\solution.txt";
 	
 	void start_clustering(int fileSize) {
 		initialize_clusters(fileSize);
-		for (int i = 0; i < fileSize; i++) {
+		for (int i = 0; i < fileSize - 1; i++) {
 			System.out.println("iteration " + i);
 			find_closest();
 			System.out.println("closest " + firstSeq + " " + secondSeq);
@@ -29,6 +31,8 @@ public class Clustering {
 			clusters.remove(secondSeq);
 			clusters.remove(firstSeq);
 			try {
+				System.out.println("cluster.files " + cluster.files);
+				System.out.println("(Integer)filesIterations.get(cluster.files.size()) " + (Integer)filesIterations.get(cluster.files.size()));
 				chromosome = GA.go(cluster.files, (Integer)filesIterations.get(cluster.files.size()));
 				for (int j = 0; j < chromosome.solveSeq.size(); j++) {
 					Genome gen = new Genome(0);
@@ -39,11 +43,11 @@ public class Clustering {
 					gen.remainingItems = chromosome.solveSeq.get(j).remainingItems;
 					gen.prevAlgorithm = chromosome.solveSeq.get(j).prevAlgorithm;
 					gen.algorithmNumber = chromosome.solveSeq.get(j).algorithmNumber;
-					cluster.solutionSeq.add(gen);
+					cluster.genes.add(gen);
 					System.out.print(chromosome.solveSeq.get(j));
 				}
+				cluster.setFileAndSolution();
 				System.out.println();
-				cluster.fitness = chromosome.fitness;
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -56,9 +60,10 @@ public class Clustering {
 		System.out.println("initialize_clusters");
 		initialize_hashMap(fileSize);
 		clusters = new ArrayList<>();
-		for (int i = 0; i < fileSize; i++) {
+		for (int i = 1; i <= fileSize; i++) {
 			Cluster cluster = new Cluster();
 			cluster.files.add(i);
+			System.out.println("i " + i);
 			GeneticAlgorithm GA = new GeneticAlgorithm();
 			Chromosome chromosome = null;
 			try {
@@ -72,12 +77,12 @@ public class Clustering {
 					gen.remainingItems = chromosome.solveSeq.get(j).remainingItems;
 					gen.prevAlgorithm = chromosome.solveSeq.get(j).prevAlgorithm;
 					gen.algorithmNumber = chromosome.solveSeq.get(j).algorithmNumber;
-					cluster.solutionSeq.add(gen);
-					System.out.print(cluster.solutionSeq.get(j).toStringAlg());
+					cluster.genes.add(gen);
+					System.out.print(cluster.genes.get(j).toStringAlg());
 				}
 				System.out.println();
-				System.out.println("cluster.solutionSeq " + cluster.solutionSeq.size());
-				cluster.fitness = chromosome.fitness;
+				System.out.println("cluster.solutionSeq " + cluster.genes.size());
+				cluster.setFileAndSolution();
 				System.out.println("fitness = " + cluster.fitness);
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -90,7 +95,7 @@ public class Clustering {
 	void initialize_hashMap(int fileSize) {
 		filesIterations = new HashMap<Integer,Integer>();
 		int iter = 100;
-		for (int i = 0; i < fileSize; i++) {
+		for (int i = 1; i < fileSize + 1; i++) {
 			if (fileSize%50 == 0) {
 				iter += 100;
 			}
@@ -98,30 +103,46 @@ public class Clustering {
 		}
 	}
 	
-	void find_closest() {
+	void find_closest() { //change clusters to find in hashmap
 		int x = 0;
 		int y = 0;
 		int lenSubSeq = 0;
-		for (int i = 0; i < clusters.size() - 1; i++) {
-			for (int j = i + 1; j < clusters.size(); j++) {
-				char[] first = new char[clusters.get(i).solutionSeq.size()];
-				char[] second = new char[clusters.get(j).solutionSeq.size()];
-				for (int k = 0; k < first.length; k++) {
-					first[k] = (char) clusters.get(i).solutionSeq.get(k).algorithmNumber;
-				}
-				for (int k = 0; k < first.length; k++) {
-					second[k] = (char) clusters.get(j).solutionSeq.get(k).algorithmNumber;
-				}
-				int longestSubSeq = longestCommonSubsequence(first, second);
-				if (longestSubSeq >= lenSubSeq) {
-					x = i;
-					y = j;
-					lenSubSeq = longestSubSeq;
+		System.out.println("find_closest()");
+        for (int i = 0; i < clusters.size() - 1; i++) { //choose first cluster
+			for (int j = i + 1; j < clusters.size(); j++) { //choose second cluster
+				
+				for (int k = 0; k < clusters.get(i).fileAndSolution.size(); k++) { //choose in first cluster sequence
+					int num1 = (int)clusters.get(i).fileAndSolution.keySet().toArray()[k];
+					char[] first = new char[clusters.get(i).fileAndSolution.get(num1).size()];
+					
+					for (int p = 0; p < clusters.get(j).fileAndSolution.size(); p++) { //choose in second cluster sequence
+						int num2 = (int)clusters.get(j).fileAndSolution.keySet().toArray()[p];
+						char[] second = new char[clusters.get(j).fileAndSolution.get(num2).size()];
+						
+						for (int l = 0; l < first.length; l++) {
+							first[l] = (char) clusters.get(i).fileAndSolution.get(num1).get(l).algorithmNumber;
+						}
+						for (int l = 0; l < second.length; l++) {
+							second[l] = (char) clusters.get(j).fileAndSolution.get(num2).get(l).algorithmNumber;
+						}
+						int longestSubSeq = longestCommonSubsequence(first, second);
+						if (longestSubSeq >= lenSubSeq) {
+							x = i;
+							y = j;
+							lenSubSeq = longestSubSeq;
+							System.out.println("find_closest() x " + x);
+							System.out.println("find_closest() y " + y);
+							System.out.println("find_closest() lenSubSeq " + lenSubSeq);
+						}
+					}
 				}
 			}
-		}
+        }
 		firstSeq = x;
 		secondSeq = y;
+		System.out.println("find_closest() firstSeq " + firstSeq);
+		System.out.println("find_closest() secondSeq " + secondSeq);
+		//System.exit(1);
 	}
 	
     public static int longestCommonSubsequence(char[] firstWord, char[] secondWord) {
@@ -136,39 +157,34 @@ public class Clustering {
         return lcsMatrix[firstWord.length][secondWord.length];
     }
 	
-	public void writeFile(int num, int chromosomeNum) throws IOException
+	public void writeFile()
 	{
-		/*String s = "";
-	    for (int i = 0; i < population.size(); i++)
-	    {
-	    	s = s + "population " + i + " fitness " + population.get(i).fitness + " years " +  population.get(i).years + " length " + population.get(i).chromosome.size() + "\n"; 
-	    }
-	    s = s + "\n";
-	    for (int i = 0; i < population.size(); i++)
-	    {
-	    	for (int j = 0; j < population.get(i).chromosome.size(); j++)
-	    	{
-	    		s = s + population.get(i).chromosome.get(j).hugeItems + " " + population.get(i).chromosome.get(j).largeItems + " " + population.get(i).chromosome.get(j).mediumItems + " " + population.get(i).chromosome.get(j).smallItems + " " + population.get(i).chromosome.get(j).remainingItems + " " +population.get(i).chromosome.get(j).prevAlgorithm + " " + population.get(i).chromosome.get(j).algorithmNumber + "\n"; 
-	    	}
-	    	System.out.println("years - " + population.get(i).years);
-	    }*/
-		/*String s = "fitness = " + population.get(chromosomeNum).fitness + "\n";
-		for (int i = 0; i < population.get(chromosomeNum).solveSeq.size(); i++) {
-			s = s + population.get(chromosomeNum).solveSeq.get(i) + " ";
+		String s = "";
+		for (int i = 0; i < clusters.size(); i++) {
+			s+= "cluster - " + i;
+			s+= "\n";
+			s+= clusters.get(i).toString();
+			s+= "\n";
 		}
-		System.out.println("file " + num + " fitness " + population.get(chromosomeNum).fitness);
-	    String path = RESULT_PATH + num + ".txt";
-	    FileWriter writer = new FileWriter(path); 
-	    writer.write(s); 
-	    writer.flush();
-	    writer.close();*/
+		String path = RESULT_PATH;
+		BufferedWriter writer;
+		try {
+			writer = new BufferedWriter(new FileWriter(path, true));
+		    writer.write(s); 
+		    writer.flush();
+		    writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} 
 	}
 	
 	public void printClusters() {
+		System.out.println("clusters.size - " + clusters.size());
 		for (int i = 0; i < clusters.size(); i++) {
 			System.out.println("cluster - " + i);
 			System.out.println(clusters.get(i).toString());
 		}
+		writeFile();
 	}
 
 }
