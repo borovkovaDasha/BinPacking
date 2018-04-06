@@ -15,7 +15,10 @@ public class Clustering {
 	
 	void start_clustering(int fileSize) {
 		initialize_clusters(fileSize);
-		for (int i = 0; i < fileSize - 1; i++) {
+		for (int i = 1; i <= fileSize; i++) {
+			if (clusters.size() == 1) {
+				return;
+			}
 			System.out.println("iteration " + i);
 			find_closest();
 			System.out.println("closest " + firstSeq + " " + secondSeq);
@@ -31,26 +34,27 @@ public class Clustering {
 			clusters.remove(secondSeq);
 			clusters.remove(firstSeq);
 			try {
-				System.out.println("cluster.files " + cluster.files);
+				System.out.println("cluster.files " + cluster.files + " cluster.files.size() " + cluster.files.size());
 				System.out.println("(Integer)filesIterations.get(cluster.files.size()) " + (Integer)filesIterations.get(cluster.files.size()));
 				chromosome = GA.go(cluster.files, (Integer)filesIterations.get(cluster.files.size()));
-				for (int j = 0; j < chromosome.solveSeq.size(); j++) {
+				for (int j = 0; j < chromosome.chromosome.size(); j++) {
 					Genome gen = new Genome(0);
-					gen.hugeItems = chromosome.solveSeq.get(j).hugeItems;
-					gen.largeItems = chromosome.solveSeq.get(j).largeItems;
-					gen.mediumItems = chromosome.solveSeq.get(j).mediumItems;
-					gen.smallItems = chromosome.solveSeq.get(j).smallItems;
-					gen.remainingItems = chromosome.solveSeq.get(j).remainingItems;
-					gen.prevAlgorithm = chromosome.solveSeq.get(j).prevAlgorithm;
-					gen.algorithmNumber = chromosome.solveSeq.get(j).algorithmNumber;
+					gen.hugeItems = chromosome.chromosome.get(j).hugeItems;
+					gen.largeItems = chromosome.chromosome.get(j).largeItems;
+					gen.mediumItems = chromosome.chromosome.get(j).mediumItems;
+					gen.smallItems = chromosome.chromosome.get(j).smallItems;
+					gen.remainingItems = chromosome.chromosome.get(j).remainingItems;
+					gen.prevAlgorithm = chromosome.chromosome.get(j).prevAlgorithm;
+					gen.algorithmNumber = chromosome.chromosome.get(j).algorithmNumber;
 					cluster.genes.add(gen);
-					System.out.print(chromosome.solveSeq.get(j));
+					System.out.print(chromosome.chromosome.get(j));
 				}
 				cluster.setFileAndSolution();
 				System.out.println();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+			update_clusters(i);
 			clusters.add(cluster);
 			printClusters();
 		}
@@ -68,22 +72,22 @@ public class Clustering {
 			Chromosome chromosome = null;
 			try {
 				chromosome = GA.go(cluster.files, (Integer)filesIterations.get(cluster.files.size()));
-				for (int j = 0; j < chromosome.solveSeq.size(); j++) {
+				for (int j = 0; j < chromosome.chromosome.size(); j++) {
 					Genome gen = new Genome(0);
-					gen.hugeItems = chromosome.solveSeq.get(j).hugeItems;
-					gen.largeItems = chromosome.solveSeq.get(j).largeItems;
-					gen.mediumItems = chromosome.solveSeq.get(j).mediumItems;
-					gen.smallItems = chromosome.solveSeq.get(j).smallItems;
-					gen.remainingItems = chromosome.solveSeq.get(j).remainingItems;
-					gen.prevAlgorithm = chromosome.solveSeq.get(j).prevAlgorithm;
-					gen.algorithmNumber = chromosome.solveSeq.get(j).algorithmNumber;
+					gen.hugeItems = chromosome.chromosome.get(j).hugeItems;
+					gen.largeItems = chromosome.chromosome.get(j).largeItems;
+					gen.mediumItems = chromosome.chromosome.get(j).mediumItems;
+					gen.smallItems = chromosome.chromosome.get(j).smallItems;
+					gen.remainingItems = chromosome.chromosome.get(j).remainingItems;
+					gen.prevAlgorithm = chromosome.chromosome.get(j).prevAlgorithm;
+					gen.algorithmNumber = chromosome.chromosome.get(j).algorithmNumber;
 					cluster.genes.add(gen);
-					System.out.print(cluster.genes.get(j).toStringAlg());
+//					System.out.print(cluster.genes.get(j).toStringAlg());
 				}
-				System.out.println();
-				System.out.println("cluster.solutionSeq " + cluster.genes.size());
+//				System.out.println();
+//				System.out.println("cluster.solutionSeq " + cluster.genes.size());
 				cluster.setFileAndSolution();
-				System.out.println("fitness = " + cluster.fitness);
+//				System.out.println("fitness = " + cluster.fitness);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -92,22 +96,61 @@ public class Clustering {
 		printClusters();
 	}
 	
+	void update_clusters(int iteration) {
+		System.out.println();
+		System.out.println("update_clusters " + clusters.size());
+		for (int i = 0; i < clusters.size(); i++) {
+			System.out.println("i " + i);
+			clusters.get(i).genes.clear();
+			clusters.get(i).fileAndSolution.clear();
+			GeneticAlgorithm GA = new GeneticAlgorithm();
+			Chromosome chromosome = null;
+			try {
+				int newIteration = (Integer)filesIterations.get(clusters.get(i).files.size() + iteration) > 5000 ?
+						5000 : (Integer)filesIterations.get(clusters.get(i).files.size() + iteration);
+				chromosome = GA.go(clusters.get(i).files, newIteration);
+				for (int j = 0; j < chromosome.chromosome.size(); j++) {
+					Genome gen = new Genome(0);
+					gen.hugeItems = chromosome.chromosome.get(j).hugeItems;
+					gen.largeItems = chromosome.chromosome.get(j).largeItems;
+					gen.mediumItems = chromosome.chromosome.get(j).mediumItems;
+					gen.smallItems = chromosome.chromosome.get(j).smallItems;
+					gen.remainingItems = chromosome.chromosome.get(j).remainingItems;
+					gen.prevAlgorithm = chromosome.chromosome.get(j).prevAlgorithm;
+					gen.algorithmNumber = chromosome.chromosome.get(j).algorithmNumber;
+					clusters.get(i).genes.add(gen);
+//					System.out.print(clusters.get(i).genes.get(j).toStringAlg());
+				}
+//				System.out.println();
+				clusters.get(i).setFileAndSolution();
+//				System.out.println("fitness = " + clusters.get(i).fitness);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			//clusters.add(cluster);
+		}
+		printClusters();
+	}
+	
 	void initialize_hashMap(int fileSize) {
 		filesIterations = new HashMap<Integer,Integer>();
-		int iter = 100;
-		for (int i = 1; i < fileSize + 1; i++) {
-			if (fileSize%50 == 0) {
-				iter += 100;
+		int iter = 200;
+		for (int i = 1; i <= fileSize; i++) {
+			if (i%2 == 0) {
+				if (iter != 5000) {
+					iter += 100;
+				}
 			}
-			filesIterations.put(i, iter);
+			filesIterations.put(i, iter);			
 		}
+		System.out.println(filesIterations);
 	}
 	
 	void find_closest() { //change clusters to find in hashmap
-		int x = 0;
-		int y = 0;
 		int lenSubSeq = 0;
-		System.out.println("find_closest()");
+		ArrayList<Integer> x = new ArrayList<>();
+		ArrayList<Integer> y = new ArrayList<>();
+//		System.out.println("find_closest()");
         for (int i = 0; i < clusters.size() - 1; i++) { //choose first cluster
 			for (int j = i + 1; j < clusters.size(); j++) { //choose second cluster
 				
@@ -127,21 +170,26 @@ public class Clustering {
 						}
 						int longestSubSeq = longestCommonSubsequence(first, second);
 						if (longestSubSeq >= lenSubSeq) {
-							x = i;
-							y = j;
+							if (longestSubSeq > lenSubSeq) {
+								x.clear();
+								y.clear();
+							}
+							x.add(i);
+							y.add(j);
 							lenSubSeq = longestSubSeq;
-							System.out.println("find_closest() x " + x);
-							System.out.println("find_closest() y " + y);
-							System.out.println("find_closest() lenSubSeq " + lenSubSeq);
 						}
 					}
 				}
 			}
         }
-		firstSeq = x;
-		secondSeq = y;
-		System.out.println("find_closest() firstSeq " + firstSeq);
-		System.out.println("find_closest() secondSeq " + secondSeq);
+        int pair = (int)(Math.random() * x.size());
+        if (x.size() > 1) {
+//        	System.out.println("!!!!");
+        }
+		firstSeq = x.get(pair);
+		secondSeq = y.get(pair);
+//		System.out.println("find_closest() firstSeq " + firstSeq);
+//		System.out.println("find_closest() secondSeq " + secondSeq);
 		//System.exit(1);
 	}
 	

@@ -8,7 +8,7 @@ public class GeneticAlgorithm {
 	public static final int POPULATION_SIZE = 40;
 	public static final int NUMBER_OF_TASKS = 4;
 	//public static final String RESULT_PATH = "D:\\data_for_binpacking\\solution\\";
-	public static final String DATA_PATH = "D:\\data_for_binpacking\\bin1out\\";
+	public static final String DATA_PATH = "D:\\data_for_binpacking\\bin_training\\";
 	public static int size;
 	public static int bestBinNums;
 	List<Chromosome> population;

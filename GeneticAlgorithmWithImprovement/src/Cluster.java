@@ -9,7 +9,7 @@ public class Cluster {
 	Double fitness;
 	List<Genome> genes;
 	HashMap<Integer, List<Genome>> fileAndSolution;
-	public static String DATA_PATH = "D:\\data_for_binpacking\\bin1out\\";
+	public static String DATA_PATH = "D:\\data_for_binpacking\\bin_training\\";
 	
 	public Cluster() {
 		files = new ArrayList<>();
@@ -30,14 +30,14 @@ public class Cluster {
 			debugString += genes.get(i).algorithmNumber + " ";
 		}
 		debugString += " ";*/
-		System.out.println("toString() fileAndSolution.size() " + fileAndSolution.size());
+//		System.out.println("toString() fileAndSolution.size() " + fileAndSolution.size());
 		String debugString = "";
 		Set <Integer> keys = fileAndSolution.keySet();
 		debugString += "fitness " + fitness + "\n";
 		for (int i = 0; i < fileAndSolution.size(); i++) {
 			int filenum = (int)keys.toArray()[i];
 			int realFileNumber = files.get(filenum);
-			System.out.println("toString() filenum " + realFileNumber);
+//			System.out.println("filenum " + realFileNumber);
 			debugString += "file " + realFileNumber + "\n";
 			for (int j = 0; j < fileAndSolution.get(filenum).size(); j++) {
 				debugString += fileAndSolution.get(filenum).get(j).algorithmNumber + " ";
@@ -49,16 +49,16 @@ public class Cluster {
 	
 	public void setFileAndSolution() {
 		double fit = 0;
-		System.out.println("setFileAndSolution()");
+//		System.out.println("setFileAndSolution()");
 		for (int i = 0; i < files.size(); i++) {
-			System.out.println("setFileAndSolution() file " + files.get(i));
+//			System.out.println("setFileAndSolution() file " + files.get(i));
 			Chromosome chromosome = new Chromosome(0);
 			GeneticAlgorithm ga = new GeneticAlgorithm();
 			int [][] elements = ga.readFile(DATA_PATH + files.get(i) + ".txt");
 			chromosome.chromosome = genes;
 			chromosome.solveProblem(elements, ga.size, 0, ga.bestBinNums);
 			ArrayList solution = new ArrayList<>();
-			System.out.println("setFileAndSolution() solved");
+//			System.out.println("setFileAndSolution() solved");
 			for (int j = 0; j < chromosome.solveSeq.size(); j++) {
 				solution.add(chromosome.solveSeq.get(j));
 			}

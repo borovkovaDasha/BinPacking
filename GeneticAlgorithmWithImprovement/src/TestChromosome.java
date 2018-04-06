@@ -7,12 +7,9 @@ import java.util.ArrayList;
 public class TestChromosome {
 	
 	public static final int ALGORITHM_NUMBER = 8;
-//	public static final String RESULT_FILE = "C:\\data_for_binpacking\\GAIsolution500test\\test3.txt";
-//	public static final String CHROMOSOME_TEST = "C:\\data_for_binpacking\\GAIresults500test\\testing3bin1.txt";
-	public static final String DATA_PATH = "D:\\data_for_binpacking\\bin1out\\";
-	public static final int NUMBER_OF_FILES = 720; // bin1
-//	public static final int NUMBER_OF_FILES = 480; // bin2
-	//public static final int NUMBER_OF_FILES = 1; //bin3
+	public static final String DATA_PATH = "D:\\data_for_binpacking\\bin_training\\";
+	public static final String RESULT_FILE = "D:\\data_for_binpacking\\solution\\solution8.txt";
+	public static final int NUMBER_OF_FILES = 54;
 	public Chromosome cleverchromosome;
 	public GeneticAlgorithm GA;
 	public int sumOfBest;
@@ -20,21 +17,17 @@ public class TestChromosome {
 	
 	public FileWriter writer;
 	 
-	public void start(String result_file, String chromosome_file) throws Exception
+	public void start() throws Exception//String result_file, String chromosome_file) throws Exception
 	{
 		GA = new GeneticAlgorithm();
-		parseFile(result_file);
-	    writer = new FileWriter(chromosome_file); 
-//		for (int j = 0; j <= ALGORITHM_NUMBER; j++)
-	    for (int j = 0; j <= 0; j++)
+		parseFile("123");//result_file);
+	    writer = new FileWriter(RESULT_FILE);//chromosome_file); 
+	    for (int j = 8; j <= 8; j++)
 		{
 			System.out.println("algorithm " + j);
 			double p = 0;
-			for (int i = 1; i <= NUMBER_OF_FILES; i++)//GA.NUMBER_OF_FILES; i++)
+			for (int i = 1; i <= NUMBER_OF_FILES; i++)
 			{
-//				if (i >=310 && i < 400 || i > 420) {
-//					continue;
-//				}
 				int [][] elements = readFile(DATA_PATH + Integer.toString(i) + ".txt");
 				System.out.println("file " + i);
 				System.out.println("GA.size " + GA.size);
@@ -60,7 +53,7 @@ public class TestChromosome {
 	public void parseFile(String fileName) throws Exception
 	{
 		cleverchromosome = new Chromosome(0);
-		BufferedReader br = null;
+		/*BufferedReader br = null;
 		FileReader fr = null;
 		int n = 0;
 		
@@ -100,7 +93,7 @@ public class TestChromosome {
 			} catch (IOException ex) {
 				ex.printStackTrace();
 			}
-		}	
+		}*/
 		return;
 	}
 	

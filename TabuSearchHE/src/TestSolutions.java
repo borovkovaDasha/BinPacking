@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class TestSolutions {
 	
 	public static final int ALGORITHM_NUMBER = 7;
-	public static final String DATA_PATH = "D:\\data_for_binpacking\\bin2out\\";
-	public static final String RESULT_FILE = "D:\\data_for_binpacking\\tabu\\res1bin2.txt";
-	public static final int NUMBER_OF_FILES = 480;
+	public static final String DATA_PATH = "D:\\data_for_binpacking\\bin_training\\";
+	public static final String RESULT_FILE = "D:\\data_for_binpacking\\solution\\solution8.txt";
+	public static final int NUMBER_OF_FILES = 54;
 	public FileWriter writer;
 	
 	public void start() throws Exception
@@ -22,13 +22,13 @@ public class TestSolutions {
 	    double sumOfBins = 0;
 	    double sumOfBest = 0;
 //		for (int j = 0; j <= ALGORITHM_NUMBER; j++)
-	    for (int j = 0; j <= 0; j++)
+	    for (int j = 7; j <= 7; j++)
 		{
 			System.out.println("algorithm " + j);
 			for (int i = 1; i <= NUMBER_OF_FILES; i++) {
-				if ( i>=310 && i < 400 || i > 420) {
-					continue;
-				}
+//				if ( i>=310 && i < 400 || i > 420) {
+//					continue;
+//				}
 				System.out.println("file " + i);
 				double t = ts.solve(hyper_heuristic, (DATA_PATH + Integer.toString(i) + ".txt"));
 				//System.out.println("ts.resBins " + ts.resBins);
