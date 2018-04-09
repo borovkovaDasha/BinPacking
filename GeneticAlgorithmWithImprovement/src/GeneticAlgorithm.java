@@ -8,13 +8,17 @@ public class GeneticAlgorithm {
 	public static final int POPULATION_SIZE = 40;
 	public static final int NUMBER_OF_TASKS = 4;
 	//public static final String RESULT_PATH = "D:\\data_for_binpacking\\solution\\";
-	public static final String DATA_PATH = "D:\\data_for_binpacking\\bin_training\\";
+	public static final String DATA_PATH = "C:\\data_for_binpacking\\bin_testing\\";
 	public static int size;
 	public static int bestBinNums;
 	List<Chromosome> population;
 	List<Chromosome> childrens;
 	
 	public int[][] readFile(String fileName){
+		//System.out.println("read file " + fileName);
+//		if (fileName.contains("2")) {
+//			System.out.println("read file " + fileName);
+//		}
 		BufferedReader br = null;
 		FileReader fr = null;
 		int n = 0;
@@ -74,6 +78,7 @@ public class GeneticAlgorithm {
 				ex.printStackTrace();
 			}
 		}
+		//System.out.println("file was read");
 		return elements;
 	}
 	
@@ -82,7 +87,7 @@ public class GeneticAlgorithm {
 		initializePopulation(files);
 		childrens = new ArrayList<Chromosome>();
 		System.out.println("GAIterations " + GAIterations);
-		System.out.println("files.size() " + files.size());
+		System.out.println("files " + files);
 		for (int i = 0; i < GAIterations; i++)
 		{
 			int[] flag = new int[population.size()];
@@ -110,8 +115,8 @@ public class GeneticAlgorithm {
 			{
 				for (int k = 0; k < NUMBER_OF_TASKS; k++)
 				{
-					int tmp = (int)(Math.random() * files.size()) + 1;
-					String fileName = DATA_PATH + tmp + ".txt";
+					int tmp = (int)(Math.random() * files.size());
+					String fileName = DATA_PATH + files.get(tmp) + ".txt";
 					int[][]elements = readFile(fileName);
 					childrens.get(j).solveProblem(elements, size, 0, bestBinNums);
 				}
@@ -131,8 +136,8 @@ public class GeneticAlgorithm {
 			population.add(findTheBest(childrens, flagsss));
 			population.add(findTheBest(childrens, flagsss));
 			childrens.clear();
-			int x = (int)(Math.random() * files.size()) + 1;
-			String fileName = DATA_PATH + x + ".txt";
+			int x = (int)(Math.random() * files.size());
+			String fileName = DATA_PATH + files.get(x) + ".txt";
 			int[][]elements = readFile(fileName);
 			for (int j = 0; j < population.size(); j ++)
 			{
@@ -245,11 +250,11 @@ public class GeneticAlgorithm {
 	}
 	
 	public void initializePopulation(List files){
-		int xxx = (int)(Math.random() * files.size()) + 1;
-		String fileName = DATA_PATH + xxx + ".txt";
+		int xxx = (int)(Math.random() * files.size());
+		String fileName = DATA_PATH + files.get(xxx) + ".txt";
 		int[][]elements = readFile(fileName);
 		population = new ArrayList<Chromosome>();
-		
+		System.out.println("elements size " + elements.length);
 		for (int i = 0; i < POPULATION_SIZE; i++)
 		{
 			Chromosome tmp = new Chromosome(1);
@@ -260,6 +265,7 @@ public class GeneticAlgorithm {
 				elements[j][1] = 0;				
 			}
 		}
+		System.out.println("was initialized");
 	}
 	
 	void first_crossover(Chromosome parent1, Chromosome parent2) {

@@ -11,7 +11,7 @@ public class Clustering {
 	HashMap filesIterations;
 	int firstSeq;
 	int secondSeq;
-	public static String RESULT_PATH = "D:\\data_for_binpacking\\solution\\solution.txt";
+	public static String RESULT_PATH = "C:\\data_for_binpacking\\solution\\solution1.txt";
 	
 	void start_clustering(int fileSize) {
 		initialize_clusters(fileSize);
@@ -71,6 +71,7 @@ public class Clustering {
 			GeneticAlgorithm GA = new GeneticAlgorithm();
 			Chromosome chromosome = null;
 			try {
+//				System.out.println("cluster.files " + cluster.files);
 				chromosome = GA.go(cluster.files, (Integer)filesIterations.get(cluster.files.size()));
 				for (int j = 0; j < chromosome.chromosome.size(); j++) {
 					Genome gen = new Genome(0);
@@ -106,8 +107,12 @@ public class Clustering {
 			GeneticAlgorithm GA = new GeneticAlgorithm();
 			Chromosome chromosome = null;
 			try {
-				int newIteration = (Integer)filesIterations.get(clusters.get(i).files.size() + iteration) > 5000 ?
-						5000 : (Integer)filesIterations.get(clusters.get(i).files.size() + iteration);
+				System.out.println("clusters.size() " + clusters.size());
+				System.out.println("clusters.get(i).files.size() " + clusters.get(i).files.size());
+				int number = clusters.get(i).files.size() + iteration > filesIterations.size() - 1 ? 
+						filesIterations.size() - 1 : clusters.get(i).files.size() + iteration;
+				int newIteration = (Integer)filesIterations.get(number) > 5000 ?
+						5000 : (Integer)filesIterations.get(number);
 				chromosome = GA.go(clusters.get(i).files, newIteration);
 				for (int j = 0; j < chromosome.chromosome.size(); j++) {
 					Genome gen = new Genome(0);
@@ -134,13 +139,13 @@ public class Clustering {
 	
 	void initialize_hashMap(int fileSize) {
 		filesIterations = new HashMap<Integer,Integer>();
-		int iter = 200;
+		int iter = 50;//200;
 		for (int i = 1; i <= fileSize; i++) {
-			if (i%2 == 0) {
-				if (iter != 5000) {
-					iter += 100;
-				}
-			}
+			//if (i%2 == 0) {
+			//	if (iter != 5000) {
+			//		iter += 100;
+			//	}
+			//}
 			filesIterations.put(i, iter);			
 		}
 		System.out.println(filesIterations);
