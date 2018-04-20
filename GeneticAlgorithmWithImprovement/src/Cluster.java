@@ -9,7 +9,7 @@ public class Cluster {
 	Double fitness;
 	List<Genome> genes;
 	HashMap<Integer, List<Genome>> fileAndSolution;
-	public static String DATA_PATH = "C:\\data_for_binpacking\\bin_testing\\";
+	public static String DATA_PATH = "D:\\data_for_binpacking\\bin_training\\";
 	
 	public Cluster() {
 		files = new ArrayList<>();

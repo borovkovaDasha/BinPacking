@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Chromosome {
-	public int CHROMOSOME_SIZE = 10;
+	public int CHROMOSOME_SIZE = 20;
 	public double fitness = 0;
 	public double fitnessSum = 0;
 	
@@ -55,6 +55,7 @@ public class Chromosome {
 				while (flag == 0)
 				{
 					Genome state = getCurrentState(elements, size, prevAlgorithm);
+//					System.out.println("state.remainingItems " + state.remainingItems);
 					if (state.remainingItems == 0)
 					{
 						flag = 1;
@@ -69,37 +70,37 @@ public class Chromosome {
 					{
 						alg = algnum;
 					}
-			prevAlgorithm = alg;
-			switch (alg) {
-			case 1:  LargestFitDecreasing LFD = new LargestFitDecreasing();
-			currentBin = LFD.startPacking(elements, bins, size, solel, solbin);
-			break;
-			case 2:  NextFitDecreasing NFD = new NextFitDecreasing();
-			currentBin = NFD.startPacking(elements, bins, currentBin, size, solel, solbin);
-			break;
-			case 3:  DjangAndFinch DAF = new DjangAndFinch();
-			currentBin = DAF.startPacking(elements, bins, currentBin, size, solel, solbin);
-			break;
-			case 4:  DjangAndFinchTuples DAFT = new DjangAndFinchTuples();
-			currentBin = DAFT.startPacking(elements, bins, currentBin, size, solel, solbin);
-			break;
-			case 5:	LargestFitDecreasingFilter LFDF = new LargestFitDecreasingFilter();
-			currentBin = LFDF.startPacking(elements, bins, currentBin, size, solel, solbin);
-			break;
-			case 6:	NextFitDecreasingFilter NFDF = new NextFitDecreasingFilter();
-			currentBin = NFDF.startPacking(elements, bins, currentBin, size, solel, solbin);
-			break;
-			case 7:	DjangAndFinchFilter DAFF = new DjangAndFinchFilter();
-			currentBin = DAFF.startPacking(elements, bins, currentBin, size, solel, solbin);
-			break;
-			case 8:	DjangAndFinchTuplesFilter DAFTF = new DjangAndFinchTuplesFilter();
-			currentBin = DAFTF.startPacking(elements, bins, currentBin, size, solel, solbin);
-			break;
-			default:
-				break;
-		}
-			solveSeq.add(gen);
-		}
+					prevAlgorithm = alg;
+					switch (alg) {
+						case 1:  LargestFitDecreasing LFD = new LargestFitDecreasing();
+							currentBin = LFD.startPacking(elements, bins, size, solel, solbin);
+							break;
+						case 2:  NextFitDecreasing NFD = new NextFitDecreasing();
+							currentBin = NFD.startPacking(elements, bins, currentBin, size, solel, solbin);
+							break;
+						case 3:  DjangAndFinch DAF = new DjangAndFinch();
+							currentBin = DAF.startPacking(elements, bins, currentBin, size, solel, solbin);
+							break;
+						case 4:  DjangAndFinchTuples DAFT = new DjangAndFinchTuples();
+							currentBin = DAFT.startPacking(elements, bins, currentBin, size, solel, solbin);
+							break;
+						case 5:	LargestFitDecreasingFilter LFDF = new LargestFitDecreasingFilter();
+							currentBin = LFDF.startPacking(elements, bins, currentBin, size, solel, solbin);
+							break;
+						case 6:	NextFitDecreasingFilter NFDF = new NextFitDecreasingFilter();
+							currentBin = NFDF.startPacking(elements, bins, currentBin, size, solel, solbin);
+							break;
+						case 7:	DjangAndFinchFilter DAFF = new DjangAndFinchFilter();
+							currentBin = DAFF.startPacking(elements, bins, currentBin, size, solel, solbin);
+							break;
+						case 8:	DjangAndFinchTuplesFilter DAFTF = new DjangAndFinchTuplesFilter();
+							currentBin = DAFTF.startPacking(elements, bins, currentBin, size, solel, solbin);
+							break;
+						default:
+							break;
+					}
+					solveSeq.add(gen);
+				}
 				double notEmptyBins = 0;
 				int sumOfElements = 0;
 				int sumOfElements1 = 0;
@@ -153,7 +154,7 @@ public class Chromosome {
 				+ Math.pow(tmp.smallItems-gen.smallItems,2) + Math.pow(tmp.remainingItems-gen.remainingItems,2) + Math.pow(tmp.prevAlgorithm-gen.prevAlgorithm,2));
 			}
 		}
-		//System.out.println("the closet algorithm is " + algorithm);
+//		System.out.println("the closet algorithm is " + closest.algorithmNumber);
 		return closest;
 	}
 	

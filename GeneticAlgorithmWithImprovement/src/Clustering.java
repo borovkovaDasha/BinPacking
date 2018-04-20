@@ -11,7 +11,7 @@ public class Clustering {
 	HashMap filesIterations;
 	int firstSeq;
 	int secondSeq;
-	public static String RESULT_PATH = "C:\\data_for_binpacking\\solution\\solution1.txt";
+	public static String RESULT_PATH = "D:\\data_for_binpacking\\solution\\solution2.txt";
 	
 	void start_clustering(int fileSize) {
 		initialize_clusters(fileSize);
@@ -139,13 +139,13 @@ public class Clustering {
 	
 	void initialize_hashMap(int fileSize) {
 		filesIterations = new HashMap<Integer,Integer>();
-		int iter = 50;//200;
+		int iter = 200;
 		for (int i = 1; i <= fileSize; i++) {
-			//if (i%2 == 0) {
-			//	if (iter != 5000) {
-			//		iter += 100;
-			//	}
-			//}
+			if (i%2 == 0) {
+				if (iter != 5000) {
+					iter += 100;
+				}
+			}
 			filesIterations.put(i, iter);			
 		}
 		System.out.println(filesIterations);

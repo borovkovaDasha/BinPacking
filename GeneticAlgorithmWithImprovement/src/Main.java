@@ -51,10 +51,10 @@ public class Main {
 			TestChromosome TC = new TestChromosome();
 			TC.start(result_files[i],chromosome_files[i]);
 		}*/
-		Clustering clustering = new Clustering();
-		clustering.start_clustering(10);//54);
-//		TestChromosome TC = new TestChromosome();
-//		TC.start();
+//		Clustering clustering = new Clustering();
+//		clustering.start_clustering(80);
+		TestChromosome TC = new TestChromosome();
+		TC.start();
 	}
 }
 

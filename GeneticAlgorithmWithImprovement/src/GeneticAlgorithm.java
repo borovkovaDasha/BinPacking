@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +9,8 @@ public class GeneticAlgorithm {
 	public static final int POPULATION_SIZE = 40;
 	public static final int NUMBER_OF_TASKS = 4;
 	//public static final String RESULT_PATH = "D:\\data_for_binpacking\\solution\\";
-	public static final String DATA_PATH = "C:\\data_for_binpacking\\bin_testing\\";
+	public static final String DATA_PATH = "D:\\data_for_binpacking\\bin_training\\";
+	public static final String RESULT_PATH = "D:\\data_for_binpacking\\solution\\";
 	public static int size;
 	public static int bestBinNums;
 	List<Chromosome> population;
@@ -82,6 +84,21 @@ public class GeneticAlgorithm {
 		return elements;
 	}
 	
+	public void writeFile(String fileName, Chromosome best) throws IOException
+	{
+		String s = "";
+	    for (int j = 0; j < best.chromosome.size(); j++)
+	    {
+	    		s = s + best.chromosome.get(j).hugeItems + " " + best.chromosome.get(j).largeItems + " " + 
+	    best.chromosome.get(j).mediumItems + " " + best.chromosome.get(j).smallItems + " " + best.chromosome.get(j).remainingItems + " " + 
+	    best.chromosome.get(j).algorithmNumber + "\n"; 
+	    }
+	    String path = RESULT_PATH + fileName + ".txt";
+	    FileWriter writer = new FileWriter(path); 
+	    writer.write(s); 
+	    writer.flush();
+	    writer.close();
+	}
 	
 	public Chromosome go(List files, int GAIterations) throws IOException{
 		initializePopulation(files);
@@ -90,6 +107,7 @@ public class GeneticAlgorithm {
 		System.out.println("files " + files);
 		for (int i = 0; i < GAIterations; i++)
 		{
+//			System.out.println("iteration = " + i);
 			int[] flag = new int[population.size()];
 			for (int j = 0; j < population.size(); j++)
 			{
@@ -154,6 +172,10 @@ public class GeneticAlgorithm {
 			flags[j] = 0;
 		}
 		Chromosome best = findTheLastTheBest(population);
+		String fileName = "";
+		for (int i = 0; i < files.size(); i++)
+			fileName += files.get(i) + " ";
+		writeFile(fileName, best);
 		return best;
 	}
 	

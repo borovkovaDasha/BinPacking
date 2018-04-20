@@ -27,7 +27,7 @@ public class LargestFitDecreasing {
 						a[i][1] = 1;
 						solel.add(a[i][0]);
 						solbin.add(j);
-						//System.out.println("Element " + a[i][0] + " is packed to " + j);
+						System.out.println("Element " + a[i][0] + " is packed to " + j);
 						return j;
 					}
 					if (a[i][0] > size)
