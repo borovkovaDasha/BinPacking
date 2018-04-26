@@ -1,6 +1,6 @@
 nullNumber of elements: 200
 Bin size: 100000
-Num of Bins: HARD6 	57
+Num of Bins: N1W1B1R0 	57
 34955
 34773
 34641
